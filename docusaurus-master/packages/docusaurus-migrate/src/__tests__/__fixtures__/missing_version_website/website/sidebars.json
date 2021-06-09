@@ -1,6 +1,3 @@
 {
-    "API": [
-      "commands",
-    "doc-markdown",
-    ]
+  "API": ["commands", "doc-markdown"]
 }

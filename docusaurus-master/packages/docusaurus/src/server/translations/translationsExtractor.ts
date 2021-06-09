@@ -89,10 +89,11 @@ export async function extractSiteSourceCodeTranslations(
 
   const sourceCodeFilePaths = await getSourceCodeFilePaths(siteDir, plugins);
 
-  const sourceCodeFilesTranslations = await extractAllSourceCodeFileTranslations(
-    sourceCodeFilePaths,
-    babelOptions,
-  );
+  const sourceCodeFilesTranslations =
+    await extractAllSourceCodeFileTranslations(
+      sourceCodeFilePaths,
+      babelOptions,
+    );
 
   logSourceCodeFileTranslationsWarnings(sourceCodeFilesTranslations);
 
@@ -205,9 +206,10 @@ function extractSourceCodeAstTranslations(
         if (attributePath) {
           const attributeValue = attributePath.get('value') as NodePath;
 
-          const attributeValueEvaluated = attributeValue.isJSXExpressionContainer()
-            ? (attributeValue.get('expression') as NodePath).evaluate()
-            : attributeValue.evaluate();
+          const attributeValueEvaluated =
+            attributeValue.isJSXExpressionContainer()
+              ? (attributeValue.get('expression') as NodePath).evaluate()
+              : attributeValue.evaluate();
 
           if (
             attributeValueEvaluated.confident &&
@@ -255,9 +257,9 @@ function extractSourceCodeAstTranslations(
         singleChildren.isJSXExpressionContainer() &&
         (singleChildren.get('expression') as NodePath).evaluate().confident
       ) {
-        const message = (singleChildren.get(
-          'expression',
-        ) as NodePath).evaluate().value;
+        const message = (
+          singleChildren.get('expression') as NodePath
+        ).evaluate().value;
 
         const id = evaluateJSXProp('id');
         const description = evaluateJSXProp('description');

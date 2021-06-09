@@ -359,8 +359,7 @@ module.exports = {
     'https://docusaurus.io/script.js',
     // Object format.
     {
-      src:
-        'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+      src: 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
       async: true,
     },
   ],

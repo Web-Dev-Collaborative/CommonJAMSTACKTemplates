@@ -59,9 +59,8 @@ function useTOCHighlight(
         let itemHighlighted = false;
 
         // @ts-expect-error: Must be <a> tags.
-        const links: HTMLCollectionOf<HTMLAnchorElement> = document.getElementsByClassName(
-          linkClassName,
-        );
+        const links: HTMLCollectionOf<HTMLAnchorElement> =
+          document.getElementsByClassName(linkClassName);
         while (index < links.length && !itemHighlighted) {
           const link = links[index];
           const {href} = link;

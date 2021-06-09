@@ -132,7 +132,7 @@ export default function CodeBlock({
     languageClassName &&
     // Force Prism's language union type to `any` because it does not contain all available languages
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    ((languageClassName.replace(/language-/, '') as Language) as any);
+    (languageClassName.replace(/language-/, '') as Language as any);
 
   if (!language && prism.defaultLanguage) {
     language = prism.defaultLanguage;

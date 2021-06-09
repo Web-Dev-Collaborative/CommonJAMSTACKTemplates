@@ -7,8 +7,6 @@
         "type": "superman"
       }
     ],
-    "Guides": [
-      "hello"
-    ]
+    "Guides": ["hello"]
   }
 }

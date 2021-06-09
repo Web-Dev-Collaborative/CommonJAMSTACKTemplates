@@ -387,7 +387,7 @@ export async function processSidebars({
 
 function collectSidebarItemsOfType<
   Type extends SidebarItemType,
-  Item extends SidebarItem & {type: SidebarItemType}
+  Item extends SidebarItem & {type: SidebarItemType},
 >(type: Type, sidebar: Sidebar): Item[] {
   function collectRecursive(item: SidebarItem): Item[] {
     const currentItemsCollected: Item[] =
@@ -447,16 +447,14 @@ export function createSidebarsUtils(sidebars: Sidebars) {
 
   function getSidebarNameByDocId(docId: string): string | undefined {
     // TODO lookup speed can be optimized
-    const entry = Object.entries(
-      sidebarNameToDocIds,
-    ).find(([_sidebarName, docIds]) => docIds.includes(docId));
+    const entry = Object.entries(sidebarNameToDocIds).find(
+      ([_sidebarName, docIds]) => docIds.includes(docId),
+    );
 
     return entry?.[0];
   }
 
-  function getDocNavigation(
-    docId: string,
-  ): {
+  function getDocNavigation(docId: string): {
     sidebarName: string | undefined;
     previousId: string | undefined;
     nextId: string | undefined;

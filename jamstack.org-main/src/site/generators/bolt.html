@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Bolt</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Bolt</h1>
+    </header>
+    <h3 id="why-use-bolt">Why use Bolt?</h3>
+    <ol type="1">
+      <li>
+        Dev builds are extremely legible, source mapped, and ready for debugging
+        with your tools <code>grunt</code>
+      </li>
+      <li>
+        Production builds squish the crap out [images,css,html,js,svg]
+        <code>grunt --prod</code>
+      </li>
+      <li>
+        Dev and Prod builds have their own output directory, they don’t share a
+        <code>dist/</code> folder
+      </li>
+      <li>
+        Very fast concurrent Grunt builds with jit a plugin for really fast
+        watch task running
+      </li>
+      <li>
+        Concise
+        <a href="https://github.com/argyleink/Bolt/blob/master/gruntfile.coffee"
+          >Grunt main file</a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/argyleink/Bolt/tree/master/tasks"
+          >Grunt tasks</a
+        >
+        are individual, short, easy as hell to read
+      </li>
+      <li>
+        <a href="https://github.com/argyleink/Bolt/blob/master/app.coffee"
+          >Configuration file</a
+        >
+        keeps project assets and plugins centralized
+      </li>
+      <li>Bower libs go straight into jade and stylus for you</li>
+      <li>
+        <a href="http://www.browsersync.io">BrowserSync</a> dev server syncs all
+        your clicks, scrolls, and more during development
+      </li>
+      <li>
+        BrowserSync live reload and hot css pushes for really rad fast front end
+        crafting
+      </li>
+      <li>BrowserSync Weinre remote inspect built in</li>
+      <li>Externally accessible server</li>
+      <li>
+        Proper
+        <a href="https://github.com/paulyoung/jade-inheritance"
+          >Jade inheritance</a
+        >
+        compilation, so 1 file changed doesn’t require the whole project to
+        compile
+      </li>
+      <li>
+        <a
+          href="https://github.com/argyleink/Bolt/blob/master/tasks/manifest.coffee"
+          >Auto generated</a
+        >
+        HTML5 appcache for production builds
+      </li>
+      <li>Autoprefixed stylus</li>
+      <li>
+        2 powerful stylus mixin libraries
+        <a href="https://github.com/stylus/nib">Nib</a> and
+        <a href="http://axis.netlify.com">Axis</a> (will never bloat your file
+        with crap you aren’t using)
+      </li>
+      <li>Git tagging and releasing <code>grunt bump</code></li>
+      <li>
+        Easily create custom
+        <a
+          href="https://github.com/argyleink/Bolt/blob/master/tasks/notify.coffee"
+          >build notifications</a
+        >
+      </li>
+      <li>Customize your crunched files comment banner</li>
+      <li>
+        Ready to run custom
+        <a
+          href="https://github.com/argyleink/Bolt/blob/master/tasks/shell.coffee"
+          >shell commands</a
+        >
+      </li>
+      <li>Concurrent image crunching</li>
+      <li>
+        <a
+          href="https://github.com/argyleink/Bolt/blob/master/app.sublime-project"
+          >Sublime project file</a
+        >
+        for easy project editing and standards establishment
+      </li>
+      <li>
+        Grunt
+        <a href="https://github.com/argyleink/Bolt/wiki/Deployments">Heroku</a>
+        task for easy CI integration <code>grunt heroku</code>
+      </li>
+      <li>
+        <a href="https://github.com/argyleink/Bolt-cli">CLI</a> for easy setup
+        of new projects <code>bolt new my_app</code>
+      </li>
+    </ol>
+    <h2 id="goal">Goal</h2>
+    <p>
+      Offer a FAST, Grunt based, rather un-opinionated build system. Use it for
+      whatever. The project seed I’ve made here is a cache heavy, smart loading,
+      mobile first, front end static site project for ya. It comes with
+      <a href="http://jade-lang.com/">Jade</a> &amp;
+      <a href="http://learnboost.github.io/stylus/">Stylus</a> as defaults, but
+      swap it for whatever you want, easily. Or want more than 1 preprocessor,
+      it’s ready. At the end of the day, it’s
+      <a href="http://gruntjs.com/">Grunt</a>, do whatever you want.
+    </p>
+    <p>
+      This project’s default setup is for creating static sites to be hosted
+      somewhere on the web. This could be a webview hybrid app, single page app,
+      marketing site, who cares. This tool comes with all the tips, tricks, meta
+      data, and automated tasks that help you build quick and efficient front
+      ends across browsers.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Polo</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Polo</h1>
+    </header>
+    <p>polo is a static blog rendering tool created with Golang.</p>
+    <p>
+      I’m happily using it on my blog: http://agonzalezro.github.io, which means
+      that works fine :)
+    </p>
+    <p>
+      Yes, I know that there a lot of them out there but I just want mine to
+      learn a little bit of Go coding.
+    </p>
+    <h3 id="key-features">Key features</h3>
+    <ul>
+      <li>
+        Markdown support with Metadata parsing compatible with Jekyll, Pelican
+        &amp; others
+      </li>
+      <li>
+        Embedded daemon with autoregeneration of the htmls in case of any change
+        on the input files.
+      </li>
+      <li>Archive, tags, RSS &amp; pages support</li>
+      <li>Disqus comments</li>
+      <li>Google Analytics support with just a change on the settings</li>
+      <li>Share this support as well</li>
+      <li>
+        Cool &amp; easy way to re-template it, check
+        <a href="https://github.com/agonzalezro/polo#templating"
+          >the documentation</a
+        >
+        or
+        <a href="http://agonzalezro.github.io/polo-supports-theming-now.html"
+          >my blog post about it</a
+        >
+      </li>
+      <li>Quick!</li>
+    </ul>
+    <h3 id="quickstart">Quickstart</h3>
+    <ol type="1">
+      <li>
+        Download your version from
+        <a href="http://gobuild.io/github.com/agonzalezro/polo">Gobuild</a>
+      </li>
+      <li>
+        Get a JSON config
+        <a href="https://github.com/agonzalezro/polo/blob/master/config.json"
+          >from here</a
+        >
+      </li>
+      <li>
+        Run
+        <code
+          >polo -config [path_to_your_conf] [your_folder_with_mds]
+          [your_output_path]</code
+        >
+      </li>
+    </ol>
+    <p>
+      If the config is called <code>config.json</code> and it’s on your current
+      directory, you don’t even need to specify it.
+    </p>
+    <h3 id="one-more-thing">One more thing</h3>
+    <p>
+      You can run polo with the <code>-daemon</code> option which will start a
+      server serving your generated content and in case that you change any of
+      the files in the input folder it’s going to autoregenerate the site.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+        />
+        <title>variables</title>
+        <style type="text/css">
+            code {
+                white-space: pre-wrap;
+            }
+            span.smallcaps {
+                font-variant: small-caps;
+            }
+            span.underline {
+                text-decoration: underline;
+            }
+            div.column {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="variables">Variables</h1>
+        <p>
+            The following is a reference of the available data during book’s
+            parsing and theme generation.
+        </p>
+        <h3 id="global-variables">Global Variables</h3>
+        <table>
+            <colgroup>
+                <col style="width: 42%" />
+                <col style="width: 57%" />
+            </colgroup>
+            <thead>
+                <tr class="header">
+                    <th>Variable</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td><code>book</code></td>
+                    <td>
+                        Book-wide information + configuration settings from
+                        <code>book.json</code>. See below for details.
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td><code>gitbook</code></td>
+                    <td>GitBook specific information</td>
+                </tr>
+                <tr class="odd">
+                    <td><code>page</code></td>
+                    <td>Current page specific information</td>
+                </tr>
+                <tr class="even">
+                    <td><code>file</code></td>
+                    <td>
+                        File associated with the current page specific
+                        information
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td><code>readme</code></td>
+                    <td>Information about the Readme</td>
+                </tr>
+                <tr class="even">
+                    <td><code>glossary</code></td>
+                    <td>Information about the Glossary</td>
+                </tr>
+                <tr class="odd">
+                    <td><code>summary</code></td>
+                    <td>Information about the table of contents</td>
+                </tr>
+                <tr class="even">
+                    <td><code>languages</code></td>
+                    <td>List of languages for multi-lingual books</td>
+                </tr>
+                <tr class="odd">
+                    <td><code>output</code></td>
+                    <td>Information about the output generator</td>
+                </tr>
+                <tr class="even">
+                    <td><code>config</code></td>
+                    <td>Dump of the <code>book.json</code></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 id="book-variables">Book Variables</h3>
+        <table>
+            <colgroup>
+                <col style="width: 42%" />
+                <col style="width: 57%" />
+            </colgroup>
+            <thead>
+                <tr class="header">
+                    <th>Variable</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td><code>book.[CONFIGURATION_DATA]</code></td>
+                    <td>
+                        All the <code>variables</code> set via the
+                        <code>book.json</code> are available through the book
+                        variable.
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td><code>book.language</code></td>
+                    <td>Current language for a multilingual book</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 id="gitbook-variables">GitBook Variables</h3>
+        <table>
+            <thead>
+                <tr class="header">
+                    <th>Variable</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td><code>gitbook.time</code></td>
+                    <td>
+                        The current time (when you run the
+                        <code>gitbook</code> command) .
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td><code>gitbook.version</code></td>
+                    <td>Version of GitBook used to generate the book</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 id="file-variables">File Variables</h3>
+        <table>
+            <colgroup>
+                <col style="width: 42%" />
+                <col style="width: 57%" />
+            </colgroup>
+            <thead>
+                <tr class="header">
+                    <th>Variable</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td><code>file.path</code></td>
+                    <td>The path to the raw page</td>
+                </tr>
+                <tr class="even">
+                    <td><code>file.mtime</code></td>
+                    <td>Modified Time. Last time the file was modified</td>
+                </tr>
+                <tr class="odd">
+                    <td><code>file.type</code></td>
+                    <td>
+                        The name of the parser used to compile this file (ex:
+                        <code>markdown</code>, <code>asciidoc</code>, etc)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 id="page-variables">Page Variables</h4>
+        <table>
+            <colgroup>
+                <col style="width: 42%" />
+                <col style="width: 57%" />
+            </colgroup>
+            <thead>
+                <tr class="header">
+                    <th>Variable</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td><code>page.title</code></td>
+                    <td>Title of the page</td>
+                </tr>
+                <tr class="even">
+                    <td><code>page.previous</code></td>
+                    <td>
+                        Previous page in the Table of Contents (can be
+                        <code>null</code>)
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td><code>page.next</code></td>
+                    <td>
+                        Next page in the Table of Contents (can be
+                        <code>null</code>)
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td><code>page.dir</code></td>
+                    <td>
+                        Text direction, based on configuration or detected from
+                        content (<code>rtl</code> or <code>ltr</code>)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 id="table-of-contents-variables">Table of Contents Variables</h4>
+        <table>
+            <thead>
+                <tr class="header">
+                    <th>Variable</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td><code>summary.parts</code></td>
+                    <td>List of sections in the Table of Contents</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            The whole table of contents (<code>SUMMARY.md</code>) can be
+            accessed:
+        </p>
+        <p>
+            <code>summary.parts[0].articles[0].title</code> will return the
+            title of the first article.
+        </p>
+        <h4 id="multi-lingual-book-variable">Multi-lingual book Variable</h4>
+        <table>
+            <thead>
+                <tr class="header">
+                    <th>Variable</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td><code>languages.list</code></td>
+                    <td>List of languages for this book</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Languages are defined by
+            <code>{ id: 'en', title: 'English' }</code>.
+        </p>
+        <h3 id="output-variables">Output Variables</h3>
+        <table>
+            <colgroup>
+                <col style="width: 42%" />
+                <col style="width: 57%" />
+            </colgroup>
+            <thead>
+                <tr class="header">
+                    <th>Variable</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td><code>output.name</code></td>
+                    <td>
+                        Name of the output generator, possible values are
+                        <code>website</code>, <code>json</code>,
+                        <code>ebook</code>
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td><code>output.format</code></td>
+                    <td>
+                        When <code>output.name == "ebook"</code>,
+                        <code>format</code> defines the ebook format that will
+                        be generated, possible values are <code>pdf</code>,
+                        <code>epub</code> or <code>mobi</code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 id="readme-variables">Readme Variables</h3>
+        <table>
+            <thead>
+                <tr class="header">
+                    <th>Variable</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td><code>readme.path</code></td>
+                    <td>Path to the Readme in the book</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 id="glossary-variables">Glossary Variables</h3>
+        <table>
+            <thead>
+                <tr class="header">
+                    <th>Variable</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td><code>glossary.path</code></td>
+                    <td>Path to the Glossary in the book</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -131,9 +131,8 @@ function execute(port, host) {
       next();
       return;
     }
-    const {rawContent, metadata: rawMetadata} = metadataUtils.extractMetadata(
-      file,
-    );
+    const {rawContent, metadata: rawMetadata} =
+      metadataUtils.extractMetadata(file);
 
     // if any of the followings is changed, reload the metadata
     const reloadTriggers = ['sidebar_label', 'hide_title', 'title'];

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Monkeyman</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Monkeyman</h1>
+    </header>
+    <p>
+      Monkeyman is a Scala static web site generator, similar to Middleman. At
+      this stage, it doesn’t even come close to the features Middleman has to
+      offer, but it has one major advantage for Scala programmers: it’s written
+      in Scala.
+    </p>
+    <p>
+      Monkeyman was created out of unease with the existing blogging solutions.
+      I know, that sounds weird, because there’s an abundance of Blogging
+      solutions out there, and this certainly isn’t the first static web site
+      generator. However, this tool would not have been created if there
+      <em>would</em> have been a solution that supports:
+    </p>
+    <ul>
+      <li>Layouts in HAML (or in this case, SCAML)</li>
+      <li>Content pages in Markdown</li>
+      <li>Nice permalinks</li>
+      <li>Offline editing and preview</li>
+      <li>Scala extensions</li>
+    </ul>
+    <p>
+      If ever such a solution arrives, then there is a chance Monkeyman will no
+      longer be maintained.
+    </p>
+    <h3 id="features">Features</h3>
+    <ul>
+      <li>Jade, HAML (SCAML), Mustache, SSP for layouts</li>
+      <li>LESS and ZUSS to CSS transformation</li>
+      <li>Live preview (web server running on port 4567)</li>
+      <li>Live updates (monitoring file system changes)</li>
+      <li>Static web site generation</li>
+      <li>Content management through tags</li>
+    </ul>
+  </body>
+</html>

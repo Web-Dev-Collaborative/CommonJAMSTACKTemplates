@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Google Drive CMS</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Google Drive CMS</h1>
+</header>
+<h2 id="drive-cms">Drive CMS</h2>
+<p>The Google Drive CMS uses a combination of Google Sheets and Google Docs to maintain content on a website. These documents are sent to a site or a supporting service (e.g. a Firebase database) via a POST request to an API the admin specifies.</p>
+<p>The only requirements to run the Google Drive CMS are:</p>
+<ul>
+<li>A duplicate copy of the Google Drive CMS template</li>
+<li>An API endpoint to handle the data sent from the spreadsheet</li>
+</ul>
+<p>It is possible to run the CMS without writing server side code at the chosen API endpoint. The CMS’ content can be exported as a JSON file, or it can be added directly to any PAAS databases that expose an API. An example of using Firebase to create the latter of these flows can be found on our examples page.</p>
+<h3 id="practical-examples">Practical examples</h3>
+<p>The following scenarios are good use cases for the Google Drive CMS:</p>
+<ul>
+<li>A spreadsheet of names and addresses that are sent to an event website’s REST API</li>
+<li>A news blog posting rich text content pulled from a Firebase database</li>
+<li>For exporting JSON to consume as part of the generation of a static site through Jekyll</li>
+<li>Triggering and writing email MailChimp campaigns through a Zapier backed service</li>
+</ul>
+</body>
+</html>

@@ -24,15 +24,8 @@ function Layout(props: Props): JSX.Element {
     themeConfig: {image: defaultImage, metadatas},
     url: siteUrl,
   } = siteConfig;
-  const {
-    children,
-    title,
-    noFooter,
-    description,
-    image,
-    keywords,
-    permalink,
-  } = props;
+  const {children, title, noFooter, description, image, keywords, permalink} =
+    props;
   const metaTitle = useTitleFormatter(title);
   const metaImage = image || defaultImage;
   let metaImageUrl = siteUrl + useBaseUrl(metaImage);

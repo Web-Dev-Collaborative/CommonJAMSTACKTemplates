@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Daptin</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Daptin</h1>
+</header>
+<h2 id="daptin">Daptin</h2>
+<p>Easily consume the following features on any device (cross platform static build release based on golang)</p>
+<ul>
+<li><a href="https://daptin.github.io/daptin/setting-up/installation/#database-configuration">Database backed</a> persistence, 3NF normalized tables</li>
+<li><a href="https://daptin.github.io/daptin/apis/overview/">JSON API</a>/<a href="https://daptin.github.io/daptin/features/enable-graphql/">GraphQL</a> for CRUD apis</li>
+<li><a href="https://daptin.github.io/daptin/setting-up/access/">User</a> and <a href="https://daptin.github.io/daptin/setting-up/access/">group management</a> and access control</li>
+<li>Social login with <a href="https://daptin.github.io/daptin/extend/oauth_connection/">OAuth</a>: tested with google, github, linkedin</li>
+<li><a href="https://daptin.github.io/daptin/actions/overview/">Actions</a> for abstracting out business flows</li>
+<li>Extensive <a href="https://daptin.github.io/daptin/state/machines/">state tracking APIs</a></li>
+<li>Enable <a href="https://daptin.github.io/daptin/features/enable-data-auditing/">Data Auditing</a> from a single toggle</li>
+<li><a href="https://daptin.github.io/daptin/extend/data_exchange/">Synchronous Data Exchange</a> with 3rd party APIs</li>
+<li><a href="https://daptin.github.io/daptin/features/enable-multilingual-table/">Multilingual tables</a> support, supports Accept-Language header</li>
+<li><a href="https://daptin.github.io/daptin/extend/marketplacce/">Market place</a> API to manage and share schemas</li>
+<li><a href="https://daptin.github.io/daptin/cloudstore/cloudstore/">Cloud storage sync</a> like gdrive, dropbox, b2, s3 and more</li>
+<li><a href="https://daptin.github.io/daptin/cloudstore/assetcolumns/">Asset column</a> to hold file and blob data, backed by storage</li>
+<li><a href="https://daptin.github.io/daptin/subsite/subsite/">Multiple websites</a> under separate sub-domain/sub-paths</li>
+<li><a href="https://daptin.github.io/daptin/integrations/overview/">Connect with external APIs</a> by using extension points</li>
+<li><a href="https://daptin.github.io/daptin/streams/streams/">Data View Streams</a></li>
+<li>Flexible <a href="https://daptin.github.io/daptin/setting-up/data_import/">data import</a> (auto create new tables and automated schema generation)
+<ul>
+<li>XLSX</li>
+<li>JSON</li>
+<li>CSV</li>
+</ul></li>
+</ul>
+<p>Define Schema</p>
+<p><img src="https://github.com/daptin/daptin/raw/master/images/api.jpg"></p>
+<p>Find <img src="https://github.com/daptin/daptin/raw/master/images/apigetall.png"></p>
+<p>Get By Id <img src="https://github.com/daptin/daptin/raw/master/images/apigetbyid.png"></p>
+<p>Create <img src="https://github.com/daptin/daptin/raw/master/images/apicreate.png"></p>
+<p>Delete <img src="https://github.com/daptin/daptin/raw/master/images/apidelete.png"></p>
+<p>Delete relations <img src="https://github.com/daptin/daptin/raw/master/images/apideleterelated.png"></p>
+<p>List relations <img src="https://github.com/daptin/daptin/raw/master/images/apifetchrelated.png"></p>
+<ul>
+<li>Versioning of the data</li>
+<li>Authentication and authorization</li>
+<li>JSON API endpoint</li>
+<li>GraphQL endpoint</li>
+<li>Actions and integrations with external services</li>
+</ul>
+<h2 id="get-started">Get Started</h2>
+<ul>
+<li><a href="https://docs.dapt.in/setting-up/installation/#native-binary">Native binary</a></li>
+<li><a href="https://docs.dapt.in/setting-up/installation/#heroku-deployment">Heroku</a></li>
+<li><a href="https://docs.dapt.in/setting-up/installation/#docker-image">Docker image</a></li>
+<li><a href="https://docs.dapt.in/setting-up/installation/#kubernetes-deployment">Kubernetes YAML</a></li>
+</ul>
+<h2 id="features">Features</h2>
+<ul>
+<li>Declarative Data Modeling system
+<ul>
+<li>Unique/Primary keys</li>
+<li>Single/Multiple Relation</li>
+<li>Normalizations and conformations</li>
+<li>Scripting using JS</li>
+</ul></li>
+<li>CRUD JSON APIs’ for all tables
+<ul>
+<li>Create, Read, Update, Delete</li>
+<li>Sort, filter, search, group by single/multiple columns</li>
+<li>Authentication and Group based authorization</li>
+<li>Pluggable middleware, conformations and normalizations</li>
+<li>Trigger actions/pipelines</li>
+</ul></li>
+<li>GraphQL APIs
+<ul>
+<li>Read and Mutations APIs for all tables</li>
+<li>One level of relationship fetching</li>
+</ul></li>
+<li>Client SDK libraries for all platforms</li>
+<li>Rich data types
+<ul>
+<li>Column types ranging from number to json to file/image assets</li>
+</ul></li>
+<li>Sub sites hosting
+<ul>
+<li>Expose multiple websites from a single instance</li>
+<li>Connect multiple domains/sub-domains</li>
+</ul></li>
+<li>Pluggable Social Auth, Basic Auth or Username/Password Auth</li>
+<li>Cloud storage
+<ul>
+<li>Connect to external cloud storage services seamlessly</li>
+<li>Pull data/Push data</li>
+</ul></li>
+<li>Action APIs
+<ul>
+<li>Define work-flows</li>
+<li>Expose custom endpoints for other services</li>
+</ul></li>
+<li>Ready to use web dashboard
+<ul>
+<li>Responsive to desktop, mobile and table</li>
+</ul></li>
+<li>Cross platform
+<ul>
+<li>Windows, Mac, Linux and more</li>
+</ul></li>
+</ul>
+<h3 id="apis">APIs</h3>
+<ul>
+<li>CRUD APIs
+<ul>
+<li><a href="https://docs.dapt.in/apis/read">Read, search, filter</a></li>
+<li><a href="https://docs.dapt.in/apis/create">Create</a></li>
+<li><a href="https://docs.dapt.in/apis/update">Update</a></li>
+<li><a href="https://docs.dapt.in/apis/delete">Delete</a></li>
+<li><a href="https://docs.dapt.in/apis/relation">Relations</a></li>
+<li><a href="https://docs.dapt.in/apis/execute">Execute</a></li>
+</ul></li>
+<li>Action APIs
+<ul>
+<li><a href="https://docs.dapt.in/actions/actions">Using actions</a></li>
+<li><a href="https://docs.dapt.in/actions/default_actions">Actions list</a></li>
+</ul></li>
+<li>User APIs
+<ul>
+<li><a href="https://docs.dapt.in/actions/signup">User registration/signup</a></li>
+<li><a href="https://docs.dapt.in/actions/signin">User login/signin</a></li>
+</ul></li>
+<li>State tracking APIs
+<ul>
+<li><a href="https://docs.dapt.in/state/machines">State machines</a></li>
+</ul></li>
+</ul>
+<h3 id="users">Users</h3>
+<ul>
+<li><a href="https://docs.dapt.in/auth/guests">Guests</a></li>
+<li><a href="https://docs.dapt.in/auth/users">Adding users</a></li>
+<li><a href="https://docs.dapt.in/auth/usergroups">Usergroups</a></li>
+<li><a href="https://docs.dapt.in/auth/permissions">Data access permission</a></li>
+<li><a href="https://docs.dapt.in/auth/social_login">Social login</a></li>
+</ul>
+<h3 id="asset-and-file-storage">Asset and file storage</h3>
+<ul>
+<li><a href="https://docs.dapt.in/cloudstore/cloudstore">Cloud storage</a></li>
+</ul>
+<h3 id="sub-sites">Sub-sites</h3>
+<ul>
+<li><a href="https://docs.dapt.in/subsite/subsite">Creating a subsite</a></li>
+</ul>
+</body>
+</html>

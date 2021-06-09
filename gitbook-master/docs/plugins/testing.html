@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+        />
+        <title>testing</title>
+        <style type="text/css">
+            code {
+                white-space: pre-wrap;
+            }
+            span.smallcaps {
+                font-variant: small-caps;
+            }
+            span.underline {
+                text-decoration: underline;
+            }
+            div.column {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="testing-your-plugin">Testing your plugin</h1>
+        <h3 id="testing-your-plugin-locally">Testing your plugin locally</h3>
+        <p>
+            Testing your plugin on your book before publishing it is possible
+            using <a href="https://docs.npmjs.com/cli/link">npm link</a>.
+        </p>
+        <p>In the plugin’s folder, run:</p>
+        <pre><code>$ npm link</code></pre>
+        <p>Then in your book’s folder:</p>
+        <pre><code>$ npm link gitbook-plugin-&lt;plugin&#39;s name&gt;</code></pre>
+        <h3 id="unit-testing-on-travis">Unit testing on Travis</h3>
+        <p>
+            <a href="https://github.com/todvora/gitbook-tester"
+                >gitbook-tester</a
+            >
+            makes it easy to write <strong>Node.js/Mocha</strong> unit tests for
+            your plugins. Using <a href="https://travis.org">Travis.org</a>,
+            tests can be run on each commits/tags.
+        </p>
+    </body>
+</html>

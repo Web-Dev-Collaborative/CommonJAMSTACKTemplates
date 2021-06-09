@@ -195,8 +195,9 @@ function diffLatestDoc(file, id) {
 // return metadata for a versioned file given the file, its version (requested),
 // the version of the file to be used, and its language
 function processVersionMetadata(file, version, useVersion, language) {
-  const metadata = metadataUtils.extractMetadata(fs.readFileSync(file, 'utf8'))
-    .metadata;
+  const metadata = metadataUtils.extractMetadata(
+    fs.readFileSync(file, 'utf8'),
+  ).metadata;
 
   // Add subdirectory information to versioned_doc metadata
   // Example: `versioned_docs/version-1.1.6/projectA/readme.md` file with id `version-1.1.6-readme`

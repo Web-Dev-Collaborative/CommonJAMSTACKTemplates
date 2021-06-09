@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+        />
+        <title>conrefs</title>
+        <style type="text/css">
+            code {
+                white-space: pre-wrap;
+            }
+            span.smallcaps {
+                font-variant: small-caps;
+            }
+            span.underline {
+                text-decoration: underline;
+            }
+            div.column {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="content-references">Content References</h1>
+        <p>
+            Content referencing (conref) is a convenient mechanism to reuse
+            content from other files or books.
+        </p>
+        <h3 id="importing-local-files">Importing local files</h3>
+        <p>
+            Importing an other file’s content is easy using the
+            <code>include</code> tag:
+        </p>
+        <pre><code>{% include &quot;./test.md&quot; %}</code></pre>
+        <h3 id="importing-file-from-another-book">
+            Importing file from another book
+        </h3>
+        <p>GitBook can also resolve the include path by using git:</p>
+        <pre><code>{% include &quot;git+https://github.com/GitbookIO/documentation.git/README.md#0.0.1&quot; %}</code></pre>
+        <p>The format of git url is:</p>
+        <pre><code>git+https://user@hostname/owner/project.git/file#commit-ish</code></pre>
+        <p>
+            The real git url part should finish with <code>.git</code>, the
+            filename to import is extracted after the <code>.git</code> till the
+            fragment of the url.
+        </p>
+        <p>
+            The <code>commit-ish</code> can be any tag, sha, or branch which can
+            be supplied as an argument to <code>git checkout</code>. The default
+            is <code>master</code>.
+        </p>
+        <h3 id="inheritance">Inheritance</h3>
+        <p>
+            Template inheritance is a way to make it easy to reuse templates.
+            When writing a template, you can define “blocks” that child
+            templates can override. The inheritance chain can be as long as you
+            like.
+        </p>
+        <p>
+            <code>block</code> defines a section on the template and identifies
+            it with a name. Base templates can specify blocks and child
+            templates can override them with new content.
+        </p>
+        <pre><code>{% extends &quot;./mypage.md&quot; %}
+
+{% block pageContent %}
+# This is my page content
+{% endblock %}</code></pre>
+        <p>
+            In the file <code>mypage.md</code>, you should specify the blocks
+            that can be extended:
+        </p>
+        <pre><code>{% block pageContent %}
+This is the default content
+{% endblock %}
+
+# License
+
+{% include &quot;./LICENSE&quot; %}</code></pre>
+    </body>
+</html>

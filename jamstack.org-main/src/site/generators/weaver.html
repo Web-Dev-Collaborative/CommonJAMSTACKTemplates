@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Weaver</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Weaver</h1>
+</header>
+<h2 id="about">About</h2>
+<p>Weaver is a simple Ruby-based DSL that allows you to create a static website using Ruby code and has shortcuts for many bootstrap idioms and jquery plugins.</p>
+<p>It uses Sinatra to allow you to preview your site as you change it, and then lets you build it for deploying.</p>
+<p>Take advantage of being able to use Ruby to generate your blog, search page, listing, basically anything you would do in a static website!</p>
+<h2 id="how-to-use">How to use</h2>
+<p>Simply install weaver using <code>gem install weaver</code></p>
+<p>Then, <code>weaver create my-site</code></p>
+<p>Then, <code>cd my-site &amp;&amp; bundle install &amp;&amp; bundle exec weaver</code></p>
+<p>And then view your site at <code>http://localhost:4567</code></p>
+<p>Once you are done, <code>bundle exec weaver build</code> to generate your website’s code into the <code>build</code> directory and copy it to your static host or CDN!</p>
+<h2 id="philosophy">Philosophy</h2>
+<p>Weaver tries to make writing rich static websites as easy and predictably possible by using a DSL. Images are stored in a special images folder because images are quite special, freeing you from constantly copy pasting the directory structure. Generating code should be as painless as possible, and even making forms should be easy. The weaver documentation is written in weaver itself.</p>
+</body>
+</html>

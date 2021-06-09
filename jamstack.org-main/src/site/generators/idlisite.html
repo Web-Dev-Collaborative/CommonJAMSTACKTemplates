@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>idlisite</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">idlisite</h1>
+    </header>
+    <p>idli.site generates a static web page from your Google Docs content</p>
+    <h2 id="how">How?</h2>
+    <ul>
+      <li>Fork or clone the GitHub repo</li>
+      <li>
+        On your google doc, click on File &gt; Publish to the web; get the link.
+      </li>
+      <li>Paste the link in the build.py file, against the ‘url’ variable</li>
+      <li>Run build.py to generate your website</li>
+      <li>
+        After changing content on Google Doc, rebuild the website by running
+        build.py again
+      </li>
+      <li>
+        This pipeline can be automated with
+        <a href="https://netlify.com">netlify.com</a>
+      </li>
+    </ul>
+  </body>
+</html>

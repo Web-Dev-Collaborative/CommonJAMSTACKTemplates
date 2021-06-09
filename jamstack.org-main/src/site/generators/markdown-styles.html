@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>markdown-styles</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">markdown-styles</h1>
+    </header>
+    <p>Converts Markdown files to HTML, with over a dozen builtin themes.</p>
+    <h2 id="features">Features</h2>
+    <ul>
+      <li>
+        Includes 15+ ready-made CSS stylesheets for Markdown, see the bottom of
+        the readme for screenshots.
+      </li>
+      <li>
+        Reuse the stylesheets or use the <code>generate-md</code> tool to
+        convert a folder of Markdown files to HTML using one of the built-in
+        layouts or a custom layout.
+      </li>
+      <li>Completely static output is easy to host anywhere.</li>
+      <li>
+        Metadata support: Each file can include additional metadata in a header
+        section, such as the page title and author name which can then be used
+        in the layout.
+      </li>
+    </ul>
+    <h3 id="layout-features">Layout features</h3>
+    <ul>
+      <li>
+        Built in support for code syntax highlighting via highlight.js; all
+        layouts include a Github-style code highlighting theme by default.
+      </li>
+      <li>
+        Built in table of contents generation from Markdown headings, fully
+        customizable by replacing the <code>{{&gt; toc}}</code> partial in
+        custom layout.
+      </li>
+      <li>
+        Built in header id and anchor generation for headings written in
+        Markdown; all layouts support revealing the URL via header hover links.
+      </li>
+      <li>
+        Support for custom logic for rendering code blocks via
+        <code>--highlight-*</code>; this can be used to implement custom blocks
+        that render the content of the code block in some interesting way.
+      </li>
+      <li>
+        Automatically detects the document title from the first heading in the
+        Markdown markup.
+      </li>
+      <li>
+        Create your own layout based on an existing layout via
+        <code>--layout</code> with:
+        <ul>
+          <li>
+            Full <a href="http://handlebarsjs.com/">Handlebars</a> support for
+            layouts, helpers and partials
+          </li>
+          <li>
+            Fully customizable table of contents template via the
+            <code>toc</code> partial
+          </li>
+          <li>
+            Support for relative path generation via the
+            <code>{{asset 'path'}}</code> helper
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

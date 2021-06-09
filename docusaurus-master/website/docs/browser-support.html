@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Browser support</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+    <style type="text/css">
+      a.sourceLine {
+        display: inline-block;
+        line-height: 1.25;
+      }
+      a.sourceLine {
+        pointer-events: none;
+        color: inherit;
+        text-decoration: inherit;
+      }
+      a.sourceLine:empty {
+        height: 1.2em;
+      }
+      .sourceCode {
+        overflow: visible;
+      }
+      code.sourceCode {
+        white-space: pre;
+        position: relative;
+      }
+      div.sourceCode {
+        margin: 1em 0;
+      }
+      pre.sourceCode {
+        margin: 0;
+      }
+      @media screen {
+        div.sourceCode {
+          overflow: auto;
+        }
+      }
+      @media print {
+        code.sourceCode {
+          white-space: pre-wrap;
+        }
+        a.sourceLine {
+          text-indent: -1em;
+          padding-left: 1em;
+        }
+      }
+      pre.numberSource a.sourceLine {
+        position: relative;
+        left: -4em;
+      }
+      pre.numberSource a.sourceLine::before {
+        content: attr(title);
+        position: relative;
+        left: -1em;
+        text-align: right;
+        vertical-align: baseline;
+        border: none;
+        pointer-events: all;
+        display: inline-block;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 4px;
+        width: 4em;
+        color: #aaaaaa;
+      }
+      pre.numberSource {
+        margin-left: 3em;
+        border-left: 1px solid #aaaaaa;
+        padding-left: 4px;
+      }
+      div.sourceCode {
+      }
+      @media screen {
+        a.sourceLine::before {
+          text-decoration: underline;
+        }
+      }
+      code span.al {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Alert */
+      code span.an {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Annotation */
+      code span.at {
+        color: #7d9029;
+      } /* Attribute */
+      code span.bn {
+        color: #40a070;
+      } /* BaseN */
+      code span.bu {
+      } /* BuiltIn */
+      code span.cf {
+        color: #007020;
+        font-weight: bold;
+      } /* ControlFlow */
+      code span.ch {
+        color: #4070a0;
+      } /* Char */
+      code span.cn {
+        color: #880000;
+      } /* Constant */
+      code span.co {
+        color: #60a0b0;
+        font-style: italic;
+      } /* Comment */
+      code span.cv {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* CommentVar */
+      code span.do {
+        color: #ba2121;
+        font-style: italic;
+      } /* Documentation */
+      code span.dt {
+        color: #902000;
+      } /* DataType */
+      code span.dv {
+        color: #40a070;
+      } /* DecVal */
+      code span.er {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Error */
+      code span.ex {
+      } /* Extension */
+      code span.fl {
+        color: #40a070;
+      } /* Float */
+      code span.fu {
+        color: #06287e;
+      } /* Function */
+      code span.im {
+      } /* Import */
+      code span.in {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Information */
+      code span.kw {
+        color: #007020;
+        font-weight: bold;
+      } /* Keyword */
+      code span.op {
+        color: #666666;
+      } /* Operator */
+      code span.ot {
+        color: #007020;
+      } /* Other */
+      code span.pp {
+        color: #bc7a00;
+      } /* Preprocessor */
+      code span.sc {
+        color: #4070a0;
+      } /* SpecialChar */
+      code span.ss {
+        color: #bb6688;
+      } /* SpecialString */
+      code span.st {
+        color: #4070a0;
+      } /* String */
+      code span.va {
+        color: #19177c;
+      } /* Variable */
+      code span.vs {
+        color: #4070a0;
+      } /* VerbatimString */
+      code span.wa {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Warning */
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Browser support</h1>
+    </header>
+    <p>
+      Docusaurus allows sites to define the list of supported browsers through a
+      <a href="https://github.com/browserslist/browserslist"
+        >browserslist configuration</a
+      >.
+    </p>
+    <h2 id="purpose">Purpose</h2>
+    <p>
+      Websites need to balance between backward compatibility and bundle size.
+      As old browsers do not support modern APIs or syntax, more code is needed
+      to implement the same functionality, penalizing all other users with
+      increased site load time. As a tradeoff, the Docusaurus bundler only
+      supports browser versions defined in the browser list.
+    </p>
+    <p>
+      The browser list by default is provided through the
+      <code>package.json</code> file as a root <code>browserslist</code> field.
+    </p>
+    <div class="caution">
+      <p>
+        On old browsers, the compiled output will use unsupported (too recent)
+        JS syntax, causing React to fail to initialize and ending up with a
+        static website with only HTML/CSS and no JS.
+      </p>
+    </div>
+    <h2 id="default-values">Default values</h2>
+    <p>
+      Websites initialized with the default classic template has the following
+      in <code>package.json</code>:
+    </p>
+    <p>
+      <code
+        >json {4-11} title="package.json" { "name": "docusaurus", // ...
+        "browserslist": { "production": ["&gt;0.5%", "not dead", "not op_mini
+        all"], "development": [ "last 1 chrome version", "last 1 firefox
+        version", "last 1 safari version" ] } // ... }</code
+      >
+    </p>
+    <p>
+      Explained in natural language, the browsers supported in production are
+      those:
+    </p>
+    <ul>
+      <li>With more than 0.5% of market share; <em>and</em></li>
+      <li>
+        Has official support or updates in the past 24 months (the opposite of
+        “dead”); <em>and</em>
+      </li>
+      <li>Is not Opera Mini.</li>
+    </ul>
+    <p>And browsers used in development are:</p>
+    <ul>
+      <li>
+        The latest version of Chrome <em>or</em> Firefox <em>or</em> Safari.
+      </li>
+    </ul>
+    <p>
+      You can “evaluate” any config with the <code>browserlist</code> cli to
+      obtain the actual list:
+    </p>
+    <div class="sourceCode" id="cb1">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> browserslist --env=<span class="st">&quot;production&quot;</span></a></code></pre>
+    </div>
+    <p>
+      The output are all browsers supported in production. Below is the output
+      in May, 2021:
+    </p>
+    <pre class="text"><code>and_chr 89
+and_uc 12.12
+chrome 89
+chrome 88
+chrome 87
+edge 89
+edge 88
+firefox 86
+ie 11
+ios_saf 14.0-14.5
+ios_saf 13.4-13.7
+safari 14
+safari 13.1
+samsung 13.0</code></pre>
+    <h2 id="read-more">Read more</h2>
+    <p>
+      You may wish to visit the
+      <a href="https://github.com/browserslist/browserslist/blob/main/README.md"
+        >browserslist documentation</a
+      >
+      for more specifications, especially the accepted
+      <a
+        href="https://github.com/browserslist/browserslist/blob/main/README.md#queries"
+        >query values</a
+      >
+      and
+      <a
+        href="https://github.com/browserslist/browserslist/blob/main/README.md#best-practices"
+        >best practices</a
+      >.
+    </p>
+  </body>
+</html>

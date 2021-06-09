@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+        />
+        <title>config</title>
+        <style type="text/css">
+            code {
+                white-space: pre-wrap;
+            }
+            span.smallcaps {
+                font-variant: small-caps;
+            }
+            span.underline {
+                text-decoration: underline;
+            }
+            div.column {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="configuration">Configuration</h1>
+        <p>
+            GitBook allows you to customize your book using a flexible
+            configuration. These options are specified in a
+            <code>book.json</code> file. For authors unfamiliar with the JSON
+            syntax, you can validate the syntax using tools such as
+            <a href="http://jsonlint.com">JSONlint</a>.
+        </p>
+        <h3 id="general-settings">General Settings</h3>
+        <table>
+            <colgroup>
+                <col style="width: 42%" />
+                <col style="width: 57%" />
+            </colgroup>
+            <thead>
+                <tr class="header">
+                    <th>Variable</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td><code>root</code></td>
+                    <td>
+                        Path to the root folder containing all the book’s files,
+                        except <code>book.json</code>
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td><code>structure</code></td>
+                    <td>
+                        To specify paths for Readme, Summary, Glossary etc. See
+                        <a href="#structure">Structure paragraph</a>.
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td><code>title</code></td>
+                    <td>
+                        Title of your book, default value is extracted from the
+                        README. On legacy.gitbook.com this field is pre-filled.
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td><code>description</code></td>
+                    <td>
+                        Description of your book, default value is extracted
+                        from the README. On legacy.gitbook.com this field is
+                        pre-filled.
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td><code>author</code></td>
+                    <td>
+                        Name of the author. On legacy.gitbook.com this field is
+                        pre-filled.
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td><code>isbn</code></td>
+                    <td>ISBN of the book</td>
+                </tr>
+                <tr class="odd">
+                    <td><code>language</code></td>
+                    <td>
+                        <a
+                            href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes"
+                            >ISO code</a
+                        >
+                        of the book’s language, default value is <code>en</code>
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td><code>direction</code></td>
+                    <td>
+                        Text’s direction. Can be <code>rtl</code> or
+                        <code>ltr</code>, the default value depends on the value
+                        of <code>language</code>
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td><code>gitbook</code></td>
+                    <td>
+                        Version of GitBook that should be used. Uses the
+                        <a href="http://semver.org">SemVer</a> specification and
+                        accepts conditions like <code>"&gt;= 3.0.0"</code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 id="plugins">Plugins</h3>
+        <p>
+            Plugins and their configurations are specified in the
+            <code>book.json</code>. See
+            <a href="plugins/README.md">the plugins section</a> for more
+            details.
+        </p>
+        <p>
+            Since version 3.0.0, GitBook can use themes. See
+            <a href="themes/README.md">the theming section</a> for more details.
+        </p>
+        <table>
+            <thead>
+                <tr class="header">
+                    <th>Variable</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td><code>plugins</code></td>
+                    <td>List of plugins to load</td>
+                </tr>
+                <tr class="even">
+                    <td><code>pluginsConfig</code></td>
+                    <td>Configuration for plugins</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 id="structure">Structure</h3>
+        <p>
+            In addition to the <code>root</code> variable, you can tell Gitbook
+            the name of the files for Readme, Summary, Glossary, Languages
+            (instead of using the default names such as <code>README.md</code>).
+            These files must be at the root of your book (or the root of every
+            language book). Paths such as <code>dir/MY_README.md</code> are not
+            accepted.
+        </p>
+        <table>
+            <thead>
+                <tr class="header">
+                    <th>Variable</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td><code>structure.readme</code></td>
+                    <td>
+                        Readme file name (defaults to <code>README.md</code>)
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td><code>structure.summary</code></td>
+                    <td>
+                        Summary file name (defaults to <code>SUMMARY.md</code>)
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td><code>structure.glossary</code></td>
+                    <td>
+                        Glossary file name (defaults to
+                        <code>GLOSSARY.md</code>)
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td><code>structure.languages</code></td>
+                    <td>
+                        Languages file name (defaults to <code>LANGS.md</code>)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 id="pdf-options">PDF Options</h3>
+        <p>
+            PDF Output can be customized using a set of options in the
+            <code>book.json</code>:
+        </p>
+        <table>
+            <colgroup>
+                <col style="width: 42%" />
+                <col style="width: 57%" />
+            </colgroup>
+            <thead>
+                <tr class="header">
+                    <th>Variable</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td><code>pdf.pageNumbers</code></td>
+                    <td>
+                        Add page numbers to the bottom of every page (default is
+                        <code>true</code>)
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td><code>pdf.fontSize</code></td>
+                    <td>Base font size (default is <code>12</code>)</td>
+                </tr>
+                <tr class="odd">
+                    <td><code>pdf.fontFamily</code></td>
+                    <td>Base font family (default is <code>Arial</code>)</td>
+                </tr>
+                <tr class="even">
+                    <td><code>pdf.paperSize</code></td>
+                    <td>
+                        Paper size, options are
+                        <code
+                            >'a0', 'a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'b0',
+                            'b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'legal',
+                            'letter'</code
+                        >
+                        (default is <code>a4</code>)
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td><code>pdf.margin.top</code></td>
+                    <td>Top margin (default is <code>56</code>)</td>
+                </tr>
+                <tr class="even">
+                    <td><code>pdf.margin.bottom</code></td>
+                    <td>Bottom margin (default is <code>56</code>)</td>
+                </tr>
+                <tr class="odd">
+                    <td><code>pdf.margin.right</code></td>
+                    <td>Right margin (default is <code>62</code>)</td>
+                </tr>
+                <tr class="even">
+                    <td><code>pdf.margin.left</code></td>
+                    <td>Left margin (default is <code>62</code>)</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

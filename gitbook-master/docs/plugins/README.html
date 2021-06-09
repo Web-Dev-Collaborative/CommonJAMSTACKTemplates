@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+        />
+        <title>README</title>
+        <style type="text/css">
+            code {
+                white-space: pre-wrap;
+            }
+            span.smallcaps {
+                font-variant: small-caps;
+            }
+            span.underline {
+                text-decoration: underline;
+            }
+            div.column {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="plugins">Plugins</h1>
+        <p>
+            Plugins are the best way to extend GitBook functionalities (ebook
+            and website). There exist plugins to do a lot of things: bring math
+            formulas display support, track visits using Google Analytic, etc.
+        </p>
+        <h3 id="how-to-find-plugins">How to find plugins?</h3>
+        <p>
+            Plugins can be easily searched on
+            <a href="https://plugins.gitbook.com">plugins.gitbook.com</a>.
+        </p>
+        <h3 id="how-to-install-a-plugin">How to install a plugin?</h3>
+        <p>
+            Once you find a plugin that you want to install, you need to add it
+            to your <code>book.json</code>:
+        </p>
+        <pre><code>{
+    &quot;plugins&quot;: [&quot;myPlugin&quot;, &quot;anotherPlugin&quot;]
+}</code></pre>
+        <p>
+            You can also specify a specific version using:
+            <code>"myPlugin@0.3.1"</code>. By default GitBook will resolve the
+            latest version of the plugin compatbile with the current GitBook
+            version.
+        </p>
+        <h3 id="legacy.gitbook.com">legacy.gitbook.com</h3>
+        <p>
+            Plugins are automatically installed on
+            <a href="https://legacy.gitbook.com">legacy.gitbook.com</a>.
+            Locally, run <code>gitbook install</code> to install and prepare all
+            plugins for your books.
+        </p>
+        <h3 id="configuring-plugins">Configuring plugins</h3>
+        <p>
+            Plugins specific configurations are stored in
+            <code>pluginsConfig</code>. You have to refer to the documentation
+            of the plugin itself for details about the available options.
+        </p>
+    </body>
+</html>

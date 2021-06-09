@@ -5,12 +5,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const users =   {
-    caption: 'DevSpace',
-    image: '/img/users/devspace.svg',
-    infoLink: 'https://devspace.cloud/docs/',
-    fbOpenSource: false,
-    pinned: false,
+const users = {
+  caption: 'DevSpace',
+  image: '/img/users/devspace.svg',
+  infoLink: 'https://devspace.cloud/docs/',
+  fbOpenSource: false,
+  pinned: false,
 };
 
 const siteConfig = {

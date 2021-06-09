@@ -4,7 +4,7 @@
       {
         "type": "category",
         "label": "foo",
-        "items": ["foo/bar", "foo/baz"] 
+        "items": ["foo/bar", "foo/baz"]
       },
       {
         "type": "link",
@@ -16,8 +16,6 @@
         "id": "hello"
       }
     ],
-    "Guides": [
-      "hello"
-    ]
+    "Guides": ["hello"]
   }
 }

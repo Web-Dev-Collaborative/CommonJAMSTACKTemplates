@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+        />
+        <title>setup</title>
+        <style type="text/css">
+            code {
+                white-space: pre-wrap;
+            }
+            span.smallcaps {
+                font-variant: small-caps;
+            }
+            span.underline {
+                text-decoration: underline;
+            }
+            div.column {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="setup-and-installation-of-gitbook">
+            Setup and Installation of GitBook
+        </h1>
+        <p>
+            Getting GitBook installed and ready-to-go should only take a few
+            minutes.
+        </p>
+        <h3 id="legacy.gitbook.com">legacy.gitbook.com</h3>
+        <p>
+            <a href="https://legacy.gitbook.com">legacy.gitbook.com</a> is an
+            easy to use solution to write, publish and host books. It is the
+            easiest solution for publishing your content and collaborating on
+            it.
+        </p>
+        <p>
+            It integrates well with the
+            <a href="https://legacy.gitbook.com/editor">GitBook Editor</a>.
+        </p>
+        <h3 id="local-installation">Local Installation</h3>
+        <h5 id="requirements">Requirements</h5>
+        <p>
+            Installing GitBook is easy and straightforward. Your system just
+            needs to meet these two requirements:
+        </p>
+        <ul>
+            <li>NodeJS (v4.0.0 and above is recommended)</li>
+            <li>Windows, Linux, Unix, or Mac OS X</li>
+        </ul>
+        <h5 id="install-with-npm">Install with NPM</h5>
+        <p>
+            The best way to install GitBook is via <strong>NPM</strong>. At the
+            terminal prompt, simply run the following command to install
+            GitBook:
+        </p>
+        <pre><code>$ npm install gitbook-cli -g</code></pre>
+        <p>
+            <code>gitbook-cli</code> is an utility to install and use multiple
+            versions of GitBook on the same system. It will automatically
+            install the required version of GitBook to build a book.
+        </p>
+        <h5 id="create-a-book">Create a book</h5>
+        <p>GitBook can setup a boilerplate book:</p>
+        <pre><code>$ gitbook init</code></pre>
+        <p>
+            If you wish to create the book into a new directory, you can do so
+            by running <code>gitbook init ./directory</code>
+        </p>
+        <p>Preview and serve your book using:</p>
+        <pre><code>$ gitbook serve</code></pre>
+        <p>Or build the static website using:</p>
+        <pre><code>$ gitbook build</code></pre>
+        <h5 id="install-pre-releases">Install pre-releases</h5>
+        <p>
+            <code>gitbook-cli</code> makes it easy to download and install other
+            versions of GitBook to test with your book:
+        </p>
+        <pre><code>$ gitbook fetch beta</code></pre>
+        <p>
+            Use <code>gitbook ls-remote</code> to list remote versions available
+            for install.
+        </p>
+        <h5 id="debugging">Debugging</h5>
+        <p>
+            You can use the options <code>--log=debug</code> and
+            <code>--debug</code> to get better error messages (with stack
+            trace). For example:
+        </p>
+        <pre><code>$ gitbook build ./ --log=debug --debug</code></pre>
+    </body>
+</html>

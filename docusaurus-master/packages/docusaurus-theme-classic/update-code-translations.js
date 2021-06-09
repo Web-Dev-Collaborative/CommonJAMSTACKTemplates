@@ -55,9 +55,9 @@ async function extractThemeCodeMessages() {
     extractAllSourceCodeFileTranslations,
   } = require('@docusaurus/core/lib/server/translations/translationsExtractor');
 
-  const filePaths = (
-    await globSourceCodeFilePaths(CodeDirPaths)
-  ).filter((filePath) => ['.js', '.jsx'].includes(path.extname(filePath)));
+  const filePaths = (await globSourceCodeFilePaths(CodeDirPaths)).filter(
+    (filePath) => ['.js', '.jsx'].includes(path.extname(filePath)),
+  );
 
   const filesExtractedTranslations = await extractAllSourceCodeFileTranslations(
     filePaths,
@@ -150,8 +150,8 @@ ${logKeys(unknownMessages)}`),
     (acc, [key]) => {
       return {
         ...acc,
-        [`${key}${DescriptionSuffix}`]: codeExtractedTranslations[key]
-          .description,
+        [`${key}${DescriptionSuffix}`]:
+          codeExtractedTranslations[key].description,
       };
     },
     {},

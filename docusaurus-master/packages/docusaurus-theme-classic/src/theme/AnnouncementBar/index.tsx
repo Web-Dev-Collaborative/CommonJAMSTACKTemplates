@@ -14,10 +14,8 @@ import {translate} from '@docusaurus/Translate';
 import styles from './styles.module.css';
 
 function AnnouncementBar(): JSX.Element | null {
-  const {
-    isAnnouncementBarClosed,
-    closeAnnouncementBar,
-  } = useUserPreferencesContext();
+  const {isAnnouncementBarClosed, closeAnnouncementBar} =
+    useUserPreferencesContext();
   const {announcementBar} = useThemeConfig();
 
   if (!announcementBar) {

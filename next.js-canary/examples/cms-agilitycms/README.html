@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<h1 id="a-statically-generated-blog-example-using-next.js-and-agility-cms">A statically generated blog example using Next.js and Agility CMS</h1>
+<p>This example showcases Next.js’s <a href="https://nextjs.org/docs/basic-features/pages">Static Generation</a> feature using <a href="https://www.agilitycms.com">Agility CMS</a> as the data source.</p>
+<blockquote>
+<p><code>IMPORTANT</code> - This example uses Agility CMS’s <a href="https://agilitycms.com/resources/posts/page-management-in-agility-cms-vs-other-headless-cmss"><strong>Page Management</strong></a> features. This means that the CMS ultimately drives what pages are available and what content is on each page. This enables <strong>Editors</strong> to focus on managing their pages, while allowing you, (the <strong>Developer</strong>) to focus on building UI components for the editors to compose their pages.</p>
+</blockquote>
+<h2 id="demo">Demo</h2>
+<ul>
+<li><strong>Live</strong>: <a href="https://next-blog-agilitycms.vercel.app/">https://next-blog-agilitycms.vercel.app/</a></li>
+<li><strong>Preview Mode</strong>: <a href="https://next-blog-agilitycms.vercel.app/?agilitypreviewkey=GzL%2fio1pLkfKc9BR1%2fC1cDQeKjL0AkwrTAJ22q3UEjAcOhyrqZejDkDv4kMlBKqrEuQxsuRyiP%2bUaykDYlJ%2fJg%3d%3d">https://next-blog-agilitycms.vercel.app/?agilitypreviewkey=…</a></li>
+</ul>
+<h2 id="deploy-your-own">Deploy your own</h2>
+<p>Once you have access to <a href="#step-15-set-up-environment-variables">the environment variables you’ll need</a>, deploy the example using <a href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a>:</p>
+<p><a href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/cms-agilitycms&amp;project-name=cms-agilitycms&amp;repository-name=cms-agilitycms&amp;env=AGILITY_CMS_GUID,AGILITY_CMS_API_FETCH_KEY,AGILITY_CMS_API_PREVIEW_KEY,AGILITY_CMS_SECURITY_KEY&amp;envDescription=API%20Keys%20required%20by%20Agility%20CMS&amp;envLink=https://vercel.link/agility-cms-env"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a></p>
+<h3 id="related-examples">Related examples</h3>
+<ul>
+<li><a href="/examples/cms-wordpress">WordPress</a></li>
+<li><a href="/examples/cms-datocms">DatoCMS</a></li>
+<li><a href="/examples/cms-sanity">Sanity</a></li>
+<li><a href="/examples/cms-takeshape">TakeShape</a></li>
+<li><a href="/examples/cms-prismic">Prismic</a></li>
+<li><a href="/examples/cms-contentful">Contentful</a></li>
+<li><a href="/examples/cms-strapi">Strapi</a></li>
+<li><a href="/examples/cms-cosmic">Cosmic</a></li>
+<li><a href="/examples/cms-buttercms">ButterCMS</a></li>
+<li><a href="/examples/cms-storyblok">Storyblok</a></li>
+<li><a href="/examples/cms-graphcms">GraphCMS</a></li>
+<li><a href="/examples/cms-kontent">Kontent</a></li>
+<li><a href="/examples/cms-ghost">Ghost</a></li>
+<li><a href="/examples/blog-starter">Blog Starter</a></li>
+</ul>
+<h2 id="how-to-use">How to use</h2>
+<p>Execute <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"><code>create-next-app</code></a> with <a href="https://docs.npmjs.com/cli/init">npm</a> or <a href="https://yarnpkg.com/lang/en/docs/cli/create/">Yarn</a> to bootstrap the example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> create-next-app --example cms-agilitycms cms-agilitycms-app</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="co"># or</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="ex">yarn</span> create next-app --example cms-agilitycms cms-agilitycms-app</a></code></pre></div>
+<h2 id="configuration">Configuration</h2>
+<h3 id="how-is-this-different-from-other-cms-examples">How is this Different from Other CMS Examples?</h3>
+<p>The key principle behind Agility CMS is that <strong>Editors</strong> should have full control of their pages and what content is on each page without getting into code.</p>
+<p>This means you’ll not only be defining <strong>Content</strong> for your <code>Posts</code> and <code>Authors</code>, but you’ll also be defining UI Components to compose your pages. This site will consist of a single <strong>Page Template</strong> and a collection of <strong>Modules</strong> that represent the UI components you see on the page.</p>
+<blockquote>
+<p><strong>NOTE</strong> - <code>Modules</code> and <code>Page Templates</code> in Agility CMS simply correspond to <code>React Components</code> in your website.</p>
+</blockquote>
+<p>Once you’ve gone through the steps below, you’ll be able to dynamically manage pages (and what is on them) directly through the CMS without requiring a developer.</p>
+<h3 id="step-1.-create-an-account-and-a-project-on-agility-cms">Step 1. Create an account and a project on <code>Agility CMS</code></h3>
+<p>First, <a href="https://agilitycms.com">create an account on Agility CMS</a>.</p>
+<p>After creating an account you’ll be asked to create a new project. Use any name of your liking as the <strong>Project Name</strong> and select the <strong>Blank (advanced users)</strong> template to create a blank Agility CMS instance.</p>
+<h3 id="step-2.-create-an-author-content-definition">Step 2. Create an <code>Author</code> Content Definition</h3>
+<p>From within the Agility CMS Content Manager, navigate to <strong>Settings</strong> &gt; <strong>Content Definitions</strong> and click <strong>New</strong> to create a new <strong>Content Definition</strong>.</p>
+<ul>
+<li>The <strong>Title</strong> should be <code>Author</code>. This will also pre-populate <strong>Reference Name</strong> for you.</li>
+</ul>
+<p>Next, add these fields via the <strong>Form Builder</strong> tab (you don’t have to modify any other settings):</p>
+<ul>
+<li><code>Name</code> - Set <strong>Field Label</strong> to <code>Name</code> and <strong>Field Type</strong> to <code>Text</code></li>
+<li><code>Picture</code> - Set <strong>Field Label</strong> to <code>Picture</code> and <strong>Field Type</strong> to <code>Image</code></li>
+</ul>
+<p>When you are done, click <strong>Save &amp; Close</strong> to save your <code>Author</code> content definition.</p>
+<h3 id="step-3.-create-a-list-based-on-your-author-content-definition">Step 3. Create a <code>List</code> based on your <code>Author</code> Content Definition</h3>
+<p>From within the Agility CMS Content Manager, navigate to <strong>Shared Content</strong> and click the <strong>+ (New)</strong> button, then fill the form like so:</p>
+<ul>
+<li><strong>Type</strong> should be <code>Content List</code></li>
+<li><strong>Content Definition</strong> should be <strong>Author</strong></li>
+<li><strong>Display Name</strong> should be set to <strong>Authors</strong>. This will also pre-populate <strong>Reference Name</strong> for you.</li>
+</ul>
+<h3 id="step-4.-create-a-post-content-definition">Step 4. Create a <code>Post</code> Content Definition</h3>
+<p>From within the Agility CMS Content Manager, navigate to <strong>Settings</strong> &gt; <strong>Content Definitions</strong> and click <strong>New</strong> to create a new <strong>Content Definition</strong>.</p>
+<ul>
+<li>The <strong>Title</strong> should be <code>Post</code>.</li>
+</ul>
+<p>Next, add these fields via the <strong>Form Builder</strong> tab (you don’t have to modify any other settings):</p>
+<ul>
+<li><code>Title</code> - Set <strong>Field Type</strong> to <code>Text</code></li>
+<li><code>Slug</code> - Set <strong>Field Type</strong> to <code>Text</code></li>
+<li><code>Date</code> - Set <strong>Field Type</strong> to <code>Date/Time</code></li>
+<li><code>AuthorID</code> - Set <strong>Field Type</strong> to <code>Number</code> and enable <strong>Hide field from input form</strong></li>
+<li><code>Author</code> - Do the following:
+<ul>
+<li><strong>Field Type</strong> - <code>Linked Content</code></li>
+<li><strong>Content Definition</strong> - <code>Author</code></li>
+<li><strong>Content View</strong> - <code>Shared Content</code></li>
+<li><strong>Shared Content</strong> - <code>Authors</code></li>
+<li><strong>Render As</strong> - <code>Dropdown List</code></li>
+<li><strong>Save Value To Field</strong> - <code>AuthorID</code></li>
+</ul></li>
+<li><code>Excerpt</code> - Set <strong>Field Type</strong> to <code>Text</code></li>
+<li><code>Content</code> - Set <strong>Field Type</strong> to <code>HTML</code></li>
+<li><code>Cover Image</code> - Set <strong>Field Type</strong> to <code>Image</code></li>
+</ul>
+<p>When you are done, click <strong>Save &amp; Close</strong> to save your <code>Post</code> content definition.</p>
+<h3 id="step-5.-create-a-dynamic-page-list-based-on-your-posts-content-definition">Step 5. Create a <code>Dynamic Page List</code> based on your <code>Posts</code> Content Definition</h3>
+<p>From within the Agility CMS Content Manager, navigate to <strong>Shared Content</strong> and click the <strong>+ (New)</strong> button, then fill the form like so:</p>
+<ul>
+<li><strong>Type</strong> should be <code>Dynamic Page List</code></li>
+<li><strong>Content Definition</strong> should be <code>Post</code></li>
+<li><strong>Display Name</strong> should be <code>Posts</code>. This will also pre-populate <strong>Reference Name</strong> for you</li>
+</ul>
+<h3 id="step-6.-populate-content">Step 6. Populate Content</h3>
+<p>Go to <strong>Shared Content</strong>, select the <strong>Authors</strong> list and click the <strong>+ New</strong> button to create a new content item:</p>
+<ul>
+<li>You just need <strong>1 Author content item</strong>.</li>
+<li>Use dummy data for the text.</li>
+<li>For the image, you can download one from <a href="https://unsplash.com/">Unsplash</a>.</li>
+</ul>
+<p>Click on <strong>Save</strong> and <strong>Publish</strong> once you’re done.</p>
+<p>Next, select the <strong>Posts</strong> list and click the <strong>+ New</strong> button to create a new content item:</p>
+<ul>
+<li>We recommend creating at least <strong>2 Post content items</strong>.</li>
+<li>Use dummy data for the text.</li>
+<li>You can write markdown for the <strong>Content</strong> field.</li>
+<li>For the images, you can download ones from <a href="https://unsplash.com/">Unsplash</a>.</li>
+<li>Pick the <strong>Author</strong> you created earlier.</li>
+</ul>
+<p>For each post content item, you need to click <code>Publish</code> after saving. If not, the post will be in the <code>Staging</code> state.</p>
+<h3 id="step-7.-define-your-intro-module">Step 7. Define your <code>Intro</code> Module</h3>
+<p>Navigate to <strong>Settings</strong> &gt; <strong>Module Definitions</strong> and click <strong>New</strong> to create a new <strong>Module Definition</strong>.</p>
+<ul>
+<li>Set <strong>Title</strong> to <code>Intro</code></li>
+<li>Set <strong>Description</strong> to <code>Displays an intro message.</code></li>
+</ul>
+<p>In this case, we are not adding any fields to control the output or behavior, since the content is actually hard-coded in the template.</p>
+<p>Click <strong>Save &amp; Close</strong> to save the definition.</p>
+<h3 id="step-8.-define-your-hero-post-module">Step 8. Define your <code>Hero Post</code> Module</h3>
+<p>Navigate to <strong>Settings</strong> &gt; <strong>Module Definitions</strong> and click <strong>New</strong> to create a new <strong>Module Definition</strong>.</p>
+<ul>
+<li>Set <strong>Title</strong> to <code>Hero Post</code></li>
+<li>Set <strong>Description</strong> to <code>Displays the latest Post.</code></li>
+</ul>
+<p>In this case, we are not adding any fields to control the output or behavior, since the latest post will be used by default and all of the data is associated to the post itself.</p>
+<p>Click <strong>Save &amp; Close</strong> to save the definition.</p>
+<h3 id="step-9.-define-your-more-stories-module">Step 9. Define your <code>More Stories</code> Module</h3>
+<p>Navigate to <strong>Settings</strong> &gt; <strong>Module Definitions</strong> and click <strong>New</strong> to create a new <strong>Module Definition</strong>.</p>
+<ul>
+<li>Set <strong>Title</strong> to <code>More Stories</code></li>
+<li>Set <strong>Description</strong> to <code>Displays a listing of Posts.</code></li>
+</ul>
+<p>Next, add the following field:</p>
+<ul>
+<li><code>Title</code> - Set <strong>Field Type</strong> to <code>Text</code></li>
+</ul>
+<p>Click <strong>Save &amp; Close</strong> to save the definition.</p>
+<h3 id="step-10.-define-your-post-details-module">Step 10. Define your <code>Post Details</code> Module</h3>
+<p>Navigate to <strong>Settings</strong> &gt; <strong>Module Definitions</strong> and click <strong>New</strong> to create a new <strong>Module Definition</strong>.</p>
+<ul>
+<li>Set <strong>Title</strong> to <code>Post Details</code></li>
+<li>Set <strong>Description</strong> to <code>Displays the details of a Post.</code></li>
+</ul>
+<p>In this case, we are not adding any fields to control the output or behavior, since the data is associated to the post itself.</p>
+<p>Click <strong>Save &amp; Close</strong> to save the definition.</p>
+<h3 id="step-11.-define-a-one-column-page-template">Step 11. Define a <code>One Column</code> Page Template</h3>
+<p>Navigate to <strong>Settings</strong> &gt; <strong>Page Templates</strong> and click <strong>New</strong> to create a new <strong>Page Template</strong>.</p>
+<ul>
+<li><strong>Name</strong> should be <code>One Column Template</code></li>
+<li><strong>Digital Channel Type</strong> should be <code>Website</code></li>
+<li>Under <strong>Module Zones</strong> click <code>+ (New)</code>
+<ul>
+<li>Set <strong>Display Name</strong> to <code>Main Content Zone</code>, it will populate <strong>Reference Name</strong> for you</li>
+<li>Click <code>Save</code> to apply the <code>Main Content Zone</code></li>
+</ul></li>
+</ul>
+<p>Click <strong>Save &amp; Close</strong> to save the page template.</p>
+<h3 id="step-12.-add-a-new-page-called-home">Step 12. Add a new Page called <code>home</code></h3>
+<p>Navigate to <strong>Pages</strong> and click the <strong>+ (New)</strong> button in the page tree to create a new <strong>Page</strong>.</p>
+<ul>
+<li>Set <strong>Type</strong> to <code>Page</code></li>
+<li>Set <strong>Page Template</strong> to <code>One Column Template</code></li>
+<li>Set <strong>Menu Text</strong> to <code>Home</code> - <strong>Page Title</strong> and <strong>Page Name</strong> fields will be auto-populated.</li>
+</ul>
+<p>Click <strong>Save</strong> to create the <code>/home</code> page.</p>
+<p>Next, let’s add the <code>Intro</code>, <code>Hero Post</code> and <code>More Stories</code> modules to the <code>Main Content Zone</code> of the <code>home</code> page:</p>
+<ul>
+<li>Click the <strong>+ (New)</strong> button on <code>Main Content Zone</code> and select <code>Intro</code> to add the module to the page</li>
+<li><p>Click <strong>Save &amp; Close</strong> on the module to return back to the page</p></li>
+<li>Click the <strong>+ (New)</strong> button on <code>Main Content Zone</code> and select <code>Hero Post</code> to add the module to the page</li>
+<li><p>Click <strong>Save &amp; Close</strong> on the module to return back to the page</p></li>
+<li>Click the <strong>+ (New)</strong> button on <code>Main Content Zone</code> and select <code>More Stories</code> to add the module to the page
+<ul>
+<li>Set <strong>Title</strong> to <code>More Stories</code></li>
+</ul></li>
+<li><p>Click <strong>Save &amp; Close</strong> on the module to return back to the page</p></li>
+</ul>
+<p>Then click <strong>Publish</strong> on the page in order to publish the page and all of its modules.</p>
+<h3 id="step-13.-add-a-new-folder-called-posts">Step 13. Add a new Folder called <code>posts</code></h3>
+<p>Navigate to <strong>Pages</strong> and click the <code>Website</code> channel, then click the <strong>+ (New)</strong> button in the page tree to create a new <strong>Folder</strong> in the root of the site:</p>
+<ul>
+<li>Set <strong>Type</strong> to <code>Folder</code></li>
+<li>Set <strong>Menu Text</strong> to <code>Posts</code>, <strong>Folder Name</strong> will be auto-populated to <code>posts</code></li>
+</ul>
+<p>Click <strong>Save</strong> to create the <code>/posts</code> folder.</p>
+<p><strong>Important:</strong> Click <strong>Publish</strong> on the folder.</p>
+<h3 id="step-14.-add-a-new-dynamic-page-called-posts-dynamic">Step 14. Add a new Dynamic Page called <code>posts-dynamic</code></h3>
+<p>Navigate to <strong>Pages</strong> and select the existing <code>/posts</code> folder. Click the <strong>+ (New)</strong> button in the page tree to create a new <strong>Dynamic Page</strong> underneath the <code>posts</code> page.</p>
+<ul>
+<li>Set <strong>Type</strong> to <code>Dynamic Page</code></li>
+<li>Set <strong>Page Template</strong> to <code>One Column Template</code></li>
+<li>Set <strong>Build Pages From</strong> to <code>Posts</code></li>
+<li>Set <strong>Sitemap Label</strong> to <code>posts-dynamic</code></li>
+<li>Set <strong>Page Path Formula</strong> to <code>##Slug##</code></li>
+<li>Set <strong>Page Title Formula</strong> and <strong>Menu Text Formula</strong> to <code>##Title##</code></li>
+</ul>
+<p>Click <strong>Save</strong> to create the <code>/posts/posts-dynamic</code> dynamic page.</p>
+<p>Next, let’s add the <code>Post Details</code> and <code>More Stories</code> modules to the <code>Main Content Zone</code> of the <code>posts-dynamic</code> page:</p>
+<ul>
+<li>Click the <strong>+ (New)</strong> button on <code>Main Content Zone</code> and select <code>Post Details</code> to add the module to the page</li>
+<li>Click the <strong>+ (New)</strong> button on <code>Main Content Zone</code> and select <code>More Stories</code> to add the module to the page
+<ul>
+<li>Set <strong>Title</strong> to <code>More Stories</code></li>
+</ul></li>
+<li>Click <strong>Save &amp; Close</strong> on the module to return back to the <code>posts-dynamic</code> page</li>
+</ul>
+<p>Then click <strong>Publish</strong> on the page in order to publish the page and all of its modules.</p>
+<h3 id="step-15.-set-up-environment-variables">Step 15. Set up environment variables</h3>
+<p>Copy the <code>.env.local.example</code> file in this directory to <code>.env.local</code> (which will be ignored by Git):</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">cp</span> .env.local.example .env.local</a></code></pre></div>
+<p>Go to the <strong>Getting Started</strong> section from the menu and click on <strong>API Keys</strong>. You should see a new modal called <code>Content API Details</code>, then click in the <strong>Show API Key(s)</strong> button within it.</p>
+<p>Then set each variable on <code>.env.local</code>:</p>
+<ul>
+<li><code>AGILITY_CMS_GUID</code> should be the <strong>Instance GUID</strong> field</li>
+<li><code>AGILITY_CMS_API_FETCH_KEY</code> should be the <strong>Live API Key</strong> field</li>
+<li><code>AGILITY_CMS_API_PREVIEW_KEY</code> should be the <strong>Preview API Key</strong> field - this is used when the site is in <a href="https://nextjs.org/docs/advanced-features/preview-mode">Preview Mode</a> and allows your site to pull the latest content, regardless of whether it is published or not.</li>
+<li><code>AGILITY_CMS_SECURITY_KEY</code> should be the <strong>Security Key</strong> field that can be found in <strong>Settings</strong> &gt; <strong>Global Security</strong> - this is used to communicate between the CMS and your site to validate <a href="https://nextjs.org/docs/advanced-features/preview-mode">Preview Mode</a></li>
+</ul>
+<p>Your <code>.env.local</code> file should look like this:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="va">AGILITY_CMS_GUID=</span>...</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="va">AGILITY_CMS_API_FETCH_KEY=</span>...</a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="va">AGILITY_CMS_API_PREVIEW_KEY=</span>...</a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="va">AGILITY_CMS_SECURITY_KEY=</span>...</a></code></pre></div>
+<h3 id="step-16.-run-next.js-in-development-mode">Step 16. Run Next.js in development mode</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">npm</span> install</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="ex">npm</span> run dev</a>
+<a class="sourceLine" id="cb4-3" title="3"></a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="co"># or</span></a>
+<a class="sourceLine" id="cb4-5" title="5"></a>
+<a class="sourceLine" id="cb4-6" title="6"><span class="ex">yarn</span> install</a>
+<a class="sourceLine" id="cb4-7" title="7"><span class="ex">yarn</span> dev</a></code></pre></div>
+<p>Your blog should be up and running on <a href="http://localhost:3000">http://localhost:3000</a>! If it doesn’t work, post on <a href="https://github.com/vercel/next.js/discussions">GitHub discussions</a>.</p>
+<h3 id="step-17.-deploy-on-vercel">Step 17. Deploy on Vercel</h3>
+<p>You can deploy this app to the cloud with <a href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a> (<a href="https://nextjs.org/docs/deployment">Documentation</a>).</p>
+<h4 id="deploy-your-local-project">Deploy Your Local Project</h4>
+<p>To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and <a href="https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">import to Vercel</a>.</p>
+<p><strong>Important</strong>: When you import your project on Vercel, make sure to click on <strong>Environment Variables</strong> and set them to match your <code>.env.local</code> file.</p>
+<h4 id="deploy-from-our-template">Deploy from Our Template</h4>
+<p>Alternatively, you can deploy using our template by clicking on the Deploy button below.</p>
+<p><a href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/cms-agilitycms&amp;project-name=cms-agilitycms&amp;repository-name=cms-agilitycms&amp;env=AGILITY_CMS_GUID,AGILITY_CMS_API_FETCH_KEY,AGILITY_CMS_API_PREVIEW_KEY,AGILITY_CMS_SECURITY_KEY&amp;envDescription=API%20Keys%20required%20by%20Agility%20CMS&amp;envLink=https://vercel.link/agility-cms-env"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a></p>
+<h3 id="step-18.-try-preview-mode">Step 18. Try preview mode</h3>
+<p>Now that you’ve deployed your app to Vercel, take note of the URL of your deployed site. This will be registered in Agility CMS so that when editors click the <code>Preview</code> button within Agility CMS, your app is loaded in <strong>Preview Mode</strong>. Learn more about <a href="https://nextjs.org/docs/advanced-features/preview-mode">NextJS Preview Mode</a>).</p>
+<p>To enable the Preview Mode, you’ll need to add your site to <strong>Domain Configuration</strong> in Agility CMS:</p>
+<ul>
+<li>Go to <strong>Settings</strong> &gt; <strong>Domain Configuration</strong></li>
+<li>Click on the existing channel in the list called <code>Website</code></li>
+<li>Click on the <strong>+ (New)</strong> button to add a new domain:
+<ul>
+<li>Set <strong>Name</strong> to <code>Production</code></li>
+<li>Set <strong>Domain URL</strong> to the URL of your production deployment, it should look like <code>https://&lt;your-vercel-domain&gt;.vercel.app</code></li>
+<li>Enable <strong>Preview Domain</strong></li>
+<li>Click <strong>Save</strong> to save your settings</li>
+</ul></li>
+</ul>
+<p>Go to one of your <code>Posts</code> and update the title. For example, you can add <code>[Staging]</code> in front of the title. Click <strong>Save</strong>, but <strong>DO NOT</strong> click <strong>Publish</strong>. By doing this, the post will be in the staging state.</p>
+<p>To enter <strong>Preview Mode</strong>, click the <code>Preview</code> button on the details of your <code>Post</code>. This redirects you to the <code>/</code> page, however you will now be in <strong>Preview Mode</strong> so you can navigate to your <code>Post</code> you want to view on the website.</p>
+<p>You should now be able to see the updated title. To exit the preview mode, you can click <strong>Click here to exit preview mode</strong> at the top.</p>
+<blockquote>
+<p>NOTE - To set up preview on a specific <code>Post</code> (as opposed to the <code>/</code> page), click on the <strong>Settings</strong> tab of the <code>Post</code> list in <strong>Shared Content</strong>. For <strong>Item Preview Page</strong> set it to <code>~/posts/posts-dynamic</code> and for <strong>Item Preview Query String Parameter</strong> set it to <code>contentid</code>.</p>
+</blockquote>
+</body>
+</html>

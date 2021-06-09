@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>R Markdown</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+    <style type="text/css">
+      a.sourceLine {
+        display: inline-block;
+        line-height: 1.25;
+      }
+      a.sourceLine {
+        pointer-events: none;
+        color: inherit;
+        text-decoration: inherit;
+      }
+      a.sourceLine:empty {
+        height: 1.2em;
+      }
+      .sourceCode {
+        overflow: visible;
+      }
+      code.sourceCode {
+        white-space: pre;
+        position: relative;
+      }
+      div.sourceCode {
+        margin: 1em 0;
+      }
+      pre.sourceCode {
+        margin: 0;
+      }
+      @media screen {
+        div.sourceCode {
+          overflow: auto;
+        }
+      }
+      @media print {
+        code.sourceCode {
+          white-space: pre-wrap;
+        }
+        a.sourceLine {
+          text-indent: -1em;
+          padding-left: 1em;
+        }
+      }
+      pre.numberSource a.sourceLine {
+        position: relative;
+        left: -4em;
+      }
+      pre.numberSource a.sourceLine::before {
+        content: attr(title);
+        position: relative;
+        left: -1em;
+        text-align: right;
+        vertical-align: baseline;
+        border: none;
+        pointer-events: all;
+        display: inline-block;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 4px;
+        width: 4em;
+        color: #aaaaaa;
+      }
+      pre.numberSource {
+        margin-left: 3em;
+        border-left: 1px solid #aaaaaa;
+        padding-left: 4px;
+      }
+      div.sourceCode {
+      }
+      @media screen {
+        a.sourceLine::before {
+          text-decoration: underline;
+        }
+      }
+      code span.al {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Alert */
+      code span.an {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Annotation */
+      code span.at {
+        color: #7d9029;
+      } /* Attribute */
+      code span.bn {
+        color: #40a070;
+      } /* BaseN */
+      code span.bu {
+      } /* BuiltIn */
+      code span.cf {
+        color: #007020;
+        font-weight: bold;
+      } /* ControlFlow */
+      code span.ch {
+        color: #4070a0;
+      } /* Char */
+      code span.cn {
+        color: #880000;
+      } /* Constant */
+      code span.co {
+        color: #60a0b0;
+        font-style: italic;
+      } /* Comment */
+      code span.cv {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* CommentVar */
+      code span.do {
+        color: #ba2121;
+        font-style: italic;
+      } /* Documentation */
+      code span.dt {
+        color: #902000;
+      } /* DataType */
+      code span.dv {
+        color: #40a070;
+      } /* DecVal */
+      code span.er {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Error */
+      code span.ex {
+      } /* Extension */
+      code span.fl {
+        color: #40a070;
+      } /* Float */
+      code span.fu {
+        color: #06287e;
+      } /* Function */
+      code span.im {
+      } /* Import */
+      code span.in {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Information */
+      code span.kw {
+        color: #007020;
+        font-weight: bold;
+      } /* Keyword */
+      code span.op {
+        color: #666666;
+      } /* Operator */
+      code span.ot {
+        color: #007020;
+      } /* Other */
+      code span.pp {
+        color: #bc7a00;
+      } /* Preprocessor */
+      code span.sc {
+        color: #4070a0;
+      } /* SpecialChar */
+      code span.ss {
+        color: #bb6688;
+      } /* SpecialString */
+      code span.st {
+        color: #4070a0;
+      } /* String */
+      code span.va {
+        color: #19177c;
+      } /* Variable */
+      code span.vs {
+        color: #4070a0;
+      } /* VerbatimString */
+      code span.wa {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Warning */
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">R Markdown</h1>
+    </header>
+    <p>
+      <a href="https://travis-ci.org/rstudio/rmarkdown"
+        ><img
+          src="https://travis-ci.org/rstudio/rmarkdown.svg?branch=master"
+          alt="Build Status"
+      /></a>
+      <a href="https://cran.r-project.org/package=rmarkdown"
+        ><img
+          src="https://cranlogs.r-pkg.org/badges/rmarkdown"
+          alt="Downloads from the RStudio CRAN mirror"
+      /></a>
+    </p>
+    <p>
+      The <strong>rmarkdown</strong> package helps you create dynamic analysis
+      documents that combine code, rendered output (such as figures), and prose.
+      You bring your data, code, and ideas, and R Markdown renders your content
+      into a polished document that can be used to:
+    </p>
+    <p>
+      <img
+        src="https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdown.png"
+        alt="The rmarkddown hex sticker"
+        width="200"
+        style="padding: 0 15px; float: right"
+      />
+    </p>
+    <ul>
+      <li><p>Do data science interactively within the RStudio IDE,</p></li>
+      <li><p>Reproduce your analyses,</p></li>
+      <li><p>Collaborate and share code with others, and</p></li>
+      <li><p>Communicate your results with others.</p></li>
+    </ul>
+    <p>
+      R Markdown documents can be rendered to many output formats including HTML
+      documents, PDFs, Word files, slideshows, and more, allowing you to focus
+      on the content while R Markdown takes care of your presentation.
+    </p>
+    <h3 id="installation">Installation</h3>
+    <p>
+      The easiest way to install the <strong>rmarkdown</strong> package is from
+      within the
+      <a href="http://www.rstudio.com/ide/download/preview">RStudio IDE</a>, but
+      you don’t need to explicitly install it or load it, as RStudio
+      automatically does both when needed. A recent version of Pandoc (&gt;=
+      1.12.3) is also required; RStudio also automatically includes this too so
+      you do not need to download Pandoc if you plan to use rmarkdown from the
+      RStudio IDE.
+    </p>
+    <p>
+      If you want to use the rmarkdown package outside of RStudio, you can
+      install the package from CRAN as follows:
+    </p>
+    <div class="sourceCode" id="cb1">
+      <pre
+        class="sourceCode r"
+      ><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</a></code></pre>
+    </div>
+    <p>
+      If you want to use the development version of the rmarkdown package
+      (either with or without RStudio), you can install the package from GitHub
+      via the
+      <a href="https://remotes.r-lib.org"><strong>remotes</strong> package</a>:
+    </p>
+    <div class="sourceCode" id="cb2">
+      <pre
+        class="sourceCode r"
+      ><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&#39;rstudio/rmarkdown&#39;</span>)</a></code></pre>
+    </div>
+    <p>
+      If not using the RStudio IDE, you’ll need to install a recent version of
+      Pandoc (&gt;= 1.12.3); see the
+      <a href="https://rmarkdown.rstudio.com/docs/articles/pandoc.html"
+        >Pandoc installation instructions</a
+      >
+      for help.
+    </p>
+    <h3 id="usage">Usage</h3>
+    <p>
+      The easiest way to make a new R Markdown document is from within RStudio.
+      Go to <em>File &gt; New File &gt; R Markdown</em>. From the new file
+      wizard, you may:
+    </p>
+    <ul>
+      <li>Provide a document title (<em>optional but recommended</em>),</li>
+      <li>Provide an author name (<em>optional but recommended</em>),</li>
+      <li>
+        Select a default output format- HTML is the recommended format for
+        authoring, and you can switch the output format anytime
+        (<em>required</em>),
+      </li>
+      <li>Click <strong>OK</strong> (<em>required</em>).</li>
+    </ul>
+    <p>
+      Once inside your new <code>.Rmd</code> file, you should see some
+      boilerplate text that includes code chunks. Use the “Knit” button in the
+      RStudio IDE to render the file and preview the output with a single click
+      or use the keyboard shortcut Cmd/Ctrl + Shift + K.
+    </p>
+    <p>
+      You can also delete all the text below the YAML frontmatter and fill in
+      your own <code>.Rmd</code> by:
+    </p>
+    <ul>
+      <li>
+        Adding code chunks (keyboard shortcut: <code>Ctrl + Alt + I</code>; OS
+        X: <code>Cmd + Option + I</code>),
+      </li>
+      <li>
+        Writing prose with
+        <a href="https://www.markdowntutorial.com/">Markdown formatting</a>, and
+      </li>
+      <li>
+        Running each code chunk interactively by clicking the
+        <img
+          src="https://rmarkdown.rstudio.com/images/notebook-run-chunk.png"
+          alt="The run button"
+        />
+        icon within RStudio.
+      </li>
+    </ul>
+    <p>
+      You can also click “Knit to HTML” again to render the full document with
+      all code chunks. For more help getting started in R Markdown, please see
+      the
+      <a href="https://rmarkdown.rstudio.com/lesson-1.html"
+        >R Markdown website</a
+      >
+      or use the <strong>“Get Started”</strong> links at the top of this page.
+    </p>
+    <h3 id="getting-help">Getting help</h3>
+    <p>There are two main places to get help:</p>
+    <ol type="1">
+      <li>
+        <p>
+          The
+          <a href="https://community.rstudio.com/c/R-Markdown"
+            >RStudio community</a
+          >
+          is a friendly place to ask any questions about rmarkdown and the R
+          Markdown family of packages.
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href="https://stackoverflow.com/questions/tagged/r-markdown"
+            >Stack Overflow</a
+          >
+          is a great source of answers to common rmarkdown questions. It is also
+          a great place to get help, once you have created a reproducible
+          example that illustrates your problem.
+        </p>
+      </li>
+    </ol>
+  </body>
+</html>

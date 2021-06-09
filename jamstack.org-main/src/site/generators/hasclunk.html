@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>HasClunk</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">HasClunk</h1>
+    </header>
+    <p>
+      <code>HasClunk</code> is a very lightweight blog generator made in
+      Haskell. It supports posts, pages, categories and RSS. You can write your
+      posts in whatever format you like and setup your conversion shell command
+      in the config. Templating is simple, just a header.html and a footer.html
+      that will sandwich your posts and pages. You can use special tags like
+      {base_url} to refer to the blog’s url that is setup in your config file.
+    </p>
+    <p>
+      The Haskell code is clean, well-documented and uses very little
+      dependencies (to avoid Cabal Hell). All the internally generated HTML5 is
+      put in one Haskell file (Html.hs), which you can edit, but you’ll probably
+      find that editing the default css and template will fit your needs.
+    </p>
+  </body>
+</html>

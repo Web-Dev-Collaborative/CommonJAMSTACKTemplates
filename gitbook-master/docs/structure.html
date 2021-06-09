@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+        />
+        <title>structure</title>
+        <style type="text/css">
+            code {
+                white-space: pre-wrap;
+            }
+            span.smallcaps {
+                font-variant: small-caps;
+            }
+            span.underline {
+                text-decoration: underline;
+            }
+            div.column {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="directory-structure">Directory Structure</h1>
+        <p>
+            GitBook uses a simple directory structure. All Markdown/Asciidoc
+            files listed in the <a href="pages.md">SUMMARY</a> will be
+            transformed as HTML. Multi-Lingual books have a slightly
+            <a href="languages.md">different structure</a>.
+        </p>
+        <p>A basic GitBook usually looks something like this:</p>
+        <pre><code>.
+├── book.json
+├── README.md
+├── SUMMARY.md
+├── chapter-1/
+|   ├── README.md
+|   └── something.md
+└── chapter-2/
+    ├── README.md
+    └── something.md</code></pre>
+        <p>An overview of what each of these does:</p>
+        <table>
+            <thead>
+                <tr class="header">
+                    <th>File</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd">
+                    <td><code>book.json</code></td>
+                    <td>
+                        Stores <a href="config.md">configuration</a> data
+                        (<strong>optional</strong>)
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td><code>README.md</code></td>
+                    <td>
+                        Preface / Introduction for your book
+                        (<strong>required</strong>)
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td><code>SUMMARY.md</code></td>
+                    <td>
+                        Table of Contents (See <a href="pages.md">Pages</a>)
+                        (<strong>optional</strong>)
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td><code>GLOSSARY.md</code></td>
+                    <td>
+                        Lexicon / List of terms to annotate (See
+                        <a href="lexicon.md">Glossary</a>)
+                        (<strong>optional</strong>)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 id="static-files-and-images">Static files and Images</h3>
+        <p>
+            A static file is a file that is not listed in the
+            <code>SUMMARY.md</code>. All static files, unless
+            <a href="#ignore">ignored</a>, are copied to the output.
+        </p>
+        <h3 id="ignore">Ignoring files &amp; folders</h3>
+        <p>
+            GitBook will read the <code>.gitignore</code>,
+            <code>.bookignore</code> and <code>.ignore</code> files to get a
+            list of files and folders to skip. The format inside those files,
+            follows the same convention as <code>.gitignore</code>:
+        </p>
+        <pre><code># This is a comment
+
+# Ignore the file test.md
+test.md
+
+# Ignore everything in the directory &quot;bin&quot;
+bin/*</code></pre>
+        <h3 id="subdirectory">Project integration with subdirectory</h3>
+        <p>
+            For software projects, you can use a subdirectory (like
+            <code>docs/</code>) to store the book for the project’s
+            documentation. You can configure the
+            <a href="config.md"><code>root</code> option</a> to indicate the
+            folder where GitBook can find the book’s files:
+        </p>
+        <pre><code>.
+├── book.json
+└── docs/
+    ├── README.md
+    └── SUMMARY.md</code></pre>
+        <p>With <code>book.json</code> containing:</p>
+        <pre><code>{
+    &quot;root&quot;: &quot;./docs&quot;
+}</code></pre>
+    </body>
+</html>

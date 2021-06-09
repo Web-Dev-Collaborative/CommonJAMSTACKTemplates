@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>elm-starter</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">elm-starter</h1>
+    </header>
+    <p>
+      <code>elm-starter</code> is an Elm-based Elm bootstrapper that can also be
+      plugged into already existing Elm applications.
+    </p>
+    <h1 id="characteristics">Characteristics</h1>
+    <ul>
+      <li>Generate a PWA (Progressive Web Application)</li>
+      <li>Mostly written in Elm</li>
+      <li>Pages are pre-rendered at build time</li>
+      <li>Works offline</li>
+      <li>Works without Javascript(*)</li>
+      <li>SEO</li>
+      <li>Preview cards (Facebook, Twitter, etc.) work as expected</li>
+      <li>Installable both on desktop and on mobile</li>
+      <li>High score with Lighthouse</li>
+      <li>
+        Friendly notifications: “Loading…”, “Must enable Javascript…”, “Better
+        enable Javascript…”
+      </li>
+      <li>
+        Potentially compatible with all Elm libraries (elm-ui, elm-spa, etc.)
+      </li>
+      <li>Hopefully relatively simple to use and maintain</li>
+      <li>Works with Netlify, Surge, etc.</li>
+    </ul>
+    <h1 id="install">Install</h1>
+    <pre><code>$ git clone https://github.com/lucamug/elm-starter
+$ mv elm-starter my-new-project
+$ cd my-new-project
+$ rm -rf .git
+$ npm install</code></pre>
+    <h1 id="develop">Develop</h1>
+    <pre><code>$ npm start</code></pre>
+    <h1 id="build">Build</h1>
+    <pre><code>$ npm run build</code></pre>
+  </body>
+</html>

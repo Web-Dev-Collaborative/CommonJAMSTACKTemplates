@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Generic Static Site Generator</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+    <style type="text/css">
+      a.sourceLine {
+        display: inline-block;
+        line-height: 1.25;
+      }
+      a.sourceLine {
+        pointer-events: none;
+        color: inherit;
+        text-decoration: inherit;
+      }
+      a.sourceLine:empty {
+        height: 1.2em;
+      }
+      .sourceCode {
+        overflow: visible;
+      }
+      code.sourceCode {
+        white-space: pre;
+        position: relative;
+      }
+      div.sourceCode {
+        margin: 1em 0;
+      }
+      pre.sourceCode {
+        margin: 0;
+      }
+      @media screen {
+        div.sourceCode {
+          overflow: auto;
+        }
+      }
+      @media print {
+        code.sourceCode {
+          white-space: pre-wrap;
+        }
+        a.sourceLine {
+          text-indent: -1em;
+          padding-left: 1em;
+        }
+      }
+      pre.numberSource a.sourceLine {
+        position: relative;
+        left: -4em;
+      }
+      pre.numberSource a.sourceLine::before {
+        content: attr(title);
+        position: relative;
+        left: -1em;
+        text-align: right;
+        vertical-align: baseline;
+        border: none;
+        pointer-events: all;
+        display: inline-block;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 4px;
+        width: 4em;
+        color: #aaaaaa;
+      }
+      pre.numberSource {
+        margin-left: 3em;
+        border-left: 1px solid #aaaaaa;
+        padding-left: 4px;
+      }
+      div.sourceCode {
+      }
+      @media screen {
+        a.sourceLine::before {
+          text-decoration: underline;
+        }
+      }
+      code span.al {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Alert */
+      code span.an {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Annotation */
+      code span.at {
+        color: #7d9029;
+      } /* Attribute */
+      code span.bn {
+        color: #40a070;
+      } /* BaseN */
+      code span.bu {
+      } /* BuiltIn */
+      code span.cf {
+        color: #007020;
+        font-weight: bold;
+      } /* ControlFlow */
+      code span.ch {
+        color: #4070a0;
+      } /* Char */
+      code span.cn {
+        color: #880000;
+      } /* Constant */
+      code span.co {
+        color: #60a0b0;
+        font-style: italic;
+      } /* Comment */
+      code span.cv {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* CommentVar */
+      code span.do {
+        color: #ba2121;
+        font-style: italic;
+      } /* Documentation */
+      code span.dt {
+        color: #902000;
+      } /* DataType */
+      code span.dv {
+        color: #40a070;
+      } /* DecVal */
+      code span.er {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Error */
+      code span.ex {
+      } /* Extension */
+      code span.fl {
+        color: #40a070;
+      } /* Float */
+      code span.fu {
+        color: #06287e;
+      } /* Function */
+      code span.im {
+      } /* Import */
+      code span.in {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Information */
+      code span.kw {
+        color: #007020;
+        font-weight: bold;
+      } /* Keyword */
+      code span.op {
+        color: #666666;
+      } /* Operator */
+      code span.ot {
+        color: #007020;
+      } /* Other */
+      code span.pp {
+        color: #bc7a00;
+      } /* Preprocessor */
+      code span.sc {
+        color: #4070a0;
+      } /* SpecialChar */
+      code span.ss {
+        color: #bb6688;
+      } /* SpecialString */
+      code span.st {
+        color: #4070a0;
+      } /* String */
+      code span.va {
+        color: #19177c;
+      } /* Variable */
+      code span.vs {
+        color: #4070a0;
+      } /* VerbatimString */
+      code span.wa {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Warning */
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Generic Static Site Generator</h1>
+    </header>
+    <h1 id="generic-static-site-generator">Generic Static Site Generator</h1>
+    <p>
+      <a
+        href="https://gitter.im/Generic-Static-Site-Generator/community?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"
+        ><img
+          src="https://badges.gitter.im/Generic-Static-Site-Generator/community.svg"
+          alt="Join the chat at https://gitter.im/Generic-Static-Site-Generator/community"
+      /></a>
+      <a
+        href="https://openbase.io/js/generic-static-site-generator?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge"
+        ><img
+          src="https://badges.openbase.io/js/rating/generic-static-site-generator.svg"
+          alt="Rate on Openbase"
+      /></a>
+    </p>
+    <figure>
+      <img
+        src="https://theabbie.github.io/files/logo.png"
+        alt="Generic Static Site Generator"
+      />
+      <figcaption>Generic Static Site Generator</figcaption>
+    </figure>
+    <h2 id="introduction">Introduction</h2>
+    <p>
+      This is a Generic Static Site Generator, It is written in JavaScript, It
+      can be used to create static websites
+    </p>
+    <p>
+      It is an organised and completely customisable Static Site Generator, It
+      treats webpages as objects which can be evaluated.
+    </p>
+    <p>This can be used to created all kinds of websites.</p>
+    <h2 id="usage">Usage</h2>
+    <div class="sourceCode" id="cb1">
+      <pre
+        class="sourceCode sh"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">gssg</span></a></code></pre>
+    </div>
+    <h2 id="contributing">Contributing</h2>
+    <p>
+      Thank you for your interest in contributing, I would love to see your
+      contributions, So, You could just create a PR, if it’s really worth, I
+      will merge it
+    </p>
+    <h2 id="help">Help</h2>
+    <p>
+      Contact me anywhere, You can easily find me, Mail is preferable for formal
+      communication, Instagram DM for small talks
+    </p>
+    <h2 id="installation">Installation</h2>
+    <h3 id="requirements">Requirements</h3>
+    <ul>
+      <li>Node.Js installed</li>
+      <li>A website Architecture</li>
+    </ul>
+    <h3 id="installation-1">Installation</h3>
+    <p>
+      You have to install <code>GSSG</code> from
+      <a href="https://www.npmjs.com/package/generic-static-site-generator"
+        >NPM</a
+      >
+    </p>
+    <div class="sourceCode" id="cb2">
+      <pre
+        class="sourceCode sh"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">npm</span> install -g generic-static-site-generator</a></code></pre>
+    </div>
+    <h3 id="configuration">Configuration</h3>
+    <p>
+      All the configuration data should be present in a
+      <code>config.json</code> file
+    </p>
+    <h2 id="credits">Credits</h2>
+    <p>
+      Currently, I am the only one who can be credited for this, But, I was
+      inspired by lack of a simple SSG, There are very cool ones, but somehow, I
+      feel that they are unnecessarily complicated, My motive in this SSG is to
+      make it ridiculously Simple
+    </p>
+    <h2 id="contact">Contact</h2>
+    <p>
+      <a href="https://theabbie.github.io">This</a> is the gateway to my entire
+      internet presence. Find me there. If that doesn’t let you know enough
+      about me, Then I am afraid to say, Nothing can
+    </p>
+    <h2 id="license">License</h2>
+    <p>
+      This project is licensed under MIT License, See
+      <a href="/LICENSE"
+        >https://github.com/theabbie/Generic-Static-Site-Generator/blob/master/LICENSE</a
+      >
+      for more information
+    </p>
+  </body>
+</html>

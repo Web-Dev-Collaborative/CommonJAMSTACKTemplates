@@ -238,9 +238,10 @@ class CleanWebpackPlugin {
         });
       }
     } catch (error) {
-      const needsForce = /Cannot delete files\/folders outside the current working directory\./.test(
-        error.message,
-      );
+      const needsForce =
+        /Cannot delete files\/folders outside the current working directory\./.test(
+          error.message,
+        );
 
       if (needsForce) {
         const message =

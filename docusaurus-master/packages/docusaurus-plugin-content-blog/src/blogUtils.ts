@@ -112,13 +112,8 @@ export async function generateBlogPosts(
   {siteConfig, siteDir, i18n}: LoadContext,
   options: PluginOptions,
 ): Promise<BlogPost[]> {
-  const {
-    include,
-    routeBasePath,
-    truncateMarker,
-    showReadingTime,
-    editUrl,
-  } = options;
+  const {include, routeBasePath, truncateMarker, showReadingTime, editUrl} =
+    options;
 
   if (!fs.existsSync(contentPaths.contentPath)) {
     return [];

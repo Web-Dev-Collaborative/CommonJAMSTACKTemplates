@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Lambda Pad</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Lambda Pad</h1>
+    </header>
+    <p>Lambda Pad can be used to generate a static site. Here’s the gist:</p>
+    <ul>
+      <li>Maintain <em>data</em> in various formats</li>
+      <li>Maintain <em>templates</em> and related <em>static content</em></li>
+      <li>Use an Erlang module to generate a static site</li>
+    </ul>
+    <h1 id="why-another-tool">Why Another Tool?</h1>
+    <p>
+      It’s fair to say that static site generation
+      <a href="http://staticsitegenerators.net">is a solved problem</a>. Why
+      would anyone want to created yet another static site generator when there
+      are so many well established, robust, proven tools already?
+    </p>
+    <p>
+      Because the world <em>needs</em> a static site generator that embraces
+      <em>functional thinking</em>. What does that mean?
+    </p>
+    <ul>
+      <li>
+        Behavior should be obvious, or as obvious as possible without excessive
+        verbosity
+      </li>
+      <li>
+        Users should not be stupefied and confused by implicit or otherwise
+        magical behavior
+      </li>
+      <li>
+        Solutions should be small and focused to make them easier to understand
+        — in general, the principle of
+        <a href="http://en.wikipedia.org/wiki/Separation_of_concerns"
+          >separation of concerns</a
+        >
+        should be evident when using the tool
+      </li>
+    </ul>
+    <p>
+      When the goodness of functional thinking is applied to static site
+      generation, users will have more fun and be more productive!
+    </p>
+    <h1 id="why-erlang">Why Erlang?</h1>
+    <p>
+      Erlang is a simple, easy-to-learn functional language that’s incredibly
+      powerful. It’s known for building highly reliable, massively scalable
+      systems (<em
+        >shout-out to WhatsApp — hey, what do you guys think of sponsoring a six
+        week Lambda Pad sprint in Fiji?</em
+      >) but it’s also terrific for tasks like site generation. Erlang
+      <a
+        href="https://github.com/gar1t/lambdapad/blob/master/docs/index.erl#L7-L12"
+        >term syntax</a
+      >
+      is low-noise and expressive. Erlang
+      <a
+        href="https://github.com/gar1t/lambdapad/blob/master/docs/index.erl#L42-L43"
+        >functions</a
+      >
+      are beautiful and maintainable.
+    </p>
+    <p>
+      Erlang is also
+      <a
+        href="http://stackoverflow.com/questions/6964392/speed-comparison-with-project-euler-c-vs-python-vs-erlang-vs-haskell"
+        >pretty dang fast</a
+      >!
+    </p>
+    <p>
+      The question is not so much <em>Why Erlang</em>, but
+      <em>Why Not Erlang</em>?
+    </p>
+    <p>
+      Most static site generators use so called “human friendly” languages for
+      configuration and customization. A few of the more popular options include
+      YAML, JSON, Ruby, and Python. Lambda Pad will show that Erlang — yes,
+      straight up <em>Erlang</em> — should be counted among the usual suspects
+      for ease-of-use, clarity, and productivity!
+    </p>
+  </body>
+</html>

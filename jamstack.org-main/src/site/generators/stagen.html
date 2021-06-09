@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>StaGen</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">StaGen</h1>
+</header>
+<p>StaGen is the static site generator behind <a href="http://www.wiztools.org/">WizTools.org</a>.</p>
+<p>StaGen is written in Java 8, and supports:</p>
+<ul>
+<li><a href="https://daringfireball.net/projects/markdown/">Markdown</a> for content.</li>
+<li><a href="http://www.stringtemplate.org/">StringTemplate 4</a> for templating.</li>
+<li><a href="http://www.json.org/">JSON</a> for storing configuration.</li>
+</ul>
+<p>Read the <a href="https://github.com/wiztools/stagen/wiki/Tutorial">tutorial</a>.</p>
+<h3 id="extensible">Extensible</h3>
+<p>At the core of StaGen engine, Guice is used for wiring the implementations with the interfaces. StaGen can be easily extended to support any new format.</p>
+<h3 id="deliberately-minimalist">Deliberately Minimalist</h3>
+<p>This static site generator was developed for maintaining a site like <a href="http://www.wiztools.org/">WizTools.org</a>. This is best suited for sites that have few pages generated out of few templates. We do not support themes or blog-like-static-pages. Of course, by nature of flexibility of StaGen, support for themes and blogs can be easily hacked into a StaGen site.</p>
+<p>Read the <a href="https://github.com/wiztools/stagen/wiki/Tutorial">tutorial</a> to get started.</p>
+</body>
+</html>

@@ -593,11 +593,8 @@ describe('createSidebarsUtils', () => {
 
   const sidebars: Sidebars = {sidebar1, sidebar2};
 
-  const {
-    getFirstDocIdOfFirstSidebar,
-    getSidebarNameByDocId,
-    getDocNavigation,
-  } = createSidebarsUtils(sidebars);
+  const {getFirstDocIdOfFirstSidebar, getSidebarNameByDocId, getDocNavigation} =
+    createSidebarsUtils(sidebars);
 
   test('getSidebarNameByDocId', async () => {
     expect(getFirstDocIdOfFirstSidebar()).toEqual('doc1');

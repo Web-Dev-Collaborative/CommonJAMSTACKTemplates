@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Docpad</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Docpad</h1>
+    </header>
+    <p>
+      Hi! I’m DocPad, I streamline the web development process and help close
+      the gap between experts and beginners. I’ve been used in production by big
+      and small companies for over a year and a half now to create
+      <a href="http://docpad.org/docs/showcase"
+        >plenty of amazing and powerful web sites and applications</a
+      >
+      quicker than ever before. What makes me different is instead of being a
+      box to cram yourself into and hold you back, I’m a freeway to what you
+      want to accomplish, just getting out of your way and allowing you to
+      create stuff quicker than ever before without limits. Leave the redundant
+      stuff up to me, so you can focus on the awesome stuff.
+    </p>
+    <p>
+      Discover my features below, or skip ahead to the installation instructions
+      to get started with a
+      <a href="http://docpad.org/docs/skeletons"
+        >fully functional pre-made website</a
+      >
+      in a few minutes from reading this.
+    </p>
+    <h3 id="features">Features</h3>
+    <h4 id="out-of-the-box">Out of the box</h4>
+    <ul>
+      <li>
+        Completely file based meaning there is no pesky databases that need to
+        be installed, and for version control you get to use systems like Git
+        and SVN which you’re already use to (You can still hook in remote data
+        sources if you want, DocPad doesn’t impose any limits on you, ever)
+      </li>
+      <li>
+        Choose from plenty of community maintained
+        <a href="http://docpad.org/docs/skeletons">pre-made websites</a> to use
+        for your next project instead of starting from scratch everytime
+      </li>
+      <li>
+        Write your documents in any language, markup, templating engine, or
+        pre-processor you wish (we’re truly agnostic thanks to your plugin
+        system). You can even mix and match them when needed by combining their
+        extensions in a rails like fashion
+        (e.g. <code>coffee-with-some-eco.js.coffee.eco</code>)
+      </li>
+      <li>
+        Changes to your website are automatically recompiled through our built
+        in watch system
+      </li>
+      <li>
+        Add meta data to the top of your files to be used by templating engines
+        to display non-standard information such as titles and descriptions for
+        your documents
+      </li>
+      <li>
+        Display custom listings of content with our powerful
+        <a href="https://github.com/bevry/query-engine/">Query Engine</a>
+        available to your templating engines
+      </li>
+      <li>
+        Abstract out generic headers and footers into layouts using our nested
+        layout system
+      </li>
+      <li>
+        For simple static websites easily deploy your generated website to any
+        web server like apache or github pages. For dynamic projects deploy them
+        to servers like <a href="http://www.heroku.com/">heroku</a> or
+        <a href="http://nodejitsu.com/">nodejitsu</a> to take advantage of
+        custom routing with <a href="http://expressjs.com/">express.js</a>.
+        <a href="http://docpad.org/docs/deploy">Deploy guide here</a>
+      </li>
+      <li>
+        Built-in server to save you from having to startup your own, for dynamic
+        deployments this even supports things like clean urls, custom routes and
+        server-side logic
+      </li>
+      <li>
+        Robust architecture and powerful plugin system means that you are never
+        boxed in unlike traditional CMS systems, instead you can always
+        <a href="http://docpad.org/docs/extend">extend DocPad</a> to do whatever
+        you need it to do, and you can even write to bundle common custom
+        functionality and distribute them through the amazing node package
+        manager <a href="http://npmjs.org/">npm</a>
+      </li>
+      <li>
+        Built in support for dynamic documents (e.g. search pages, signup forms,
+        etc.), so you can code pages that change on each request by just adding
+        <code>dynamic: true</code> to your document’s meta data (exposes the
+        <a href="http://expressjs.com/">express.js</a> <code>req</code> and
+        <code>res</code> objects to your templating engine)
+      </li>
+      <li>
+        You can use it standalone, or even easily include it within your
+        existing systems with our <a href="http://docpad.org/docs/api">API</a>
+      </li>
+    </ul>
+    <h4 id="with-our-amazing-community-maintained-plugins">
+      With our amazing community maintained plugins
+    </h4>
+    <ul>
+      <li>
+        Use the
+        <a href="http://docpad.org/plugin/livereload/">Live Reload</a> plugin to
+        automatically refresh your web browser whenever a change is made, this
+        is amazing
+      </li>
+      <li>
+        Pull in remote RSS/Atom/JSON feeds into your templating engines allowing
+        you to display your latest twitter updates or github projects easily and
+        effortlessly using the
+        <a href="http://docpad.org/plugin/feedr/">Feedr Plugin</a>
+      </li>
+      <li>
+        Support for every templating engine and pre-processor under the sun,
+        including but not limited to CoffeeScript, CoffeeKup, ECO, HAML,
+        Handlebars, Jade, Less, Markdown, PHP, Ruby, SASS and Stylus -
+        <a href="http://docpad.org/docs/plugins">the full listing is here</a>
+      </li>
+      <li>
+        Use the
+        <a href="http://docpad.org/plugin/partials">Partials Plugin</a> to
+        abstract common pieces of code into their own individual file that can
+        be included as much as you want
+      </li>
+      <li>
+        Syntax highlight code blocks automatically with either our
+        <a href="http://docpad.org/plugin/highlightjs/">Highlight.js Plugin</a>
+        or <a href="http://docpad.org/plugin/pygments/">Pygments Plugin</a>
+      </li>
+      <li>
+        Get SEO friendly clean URLs with our
+        <a href="http://docpad.org/plugin/cleanurls/">Clean URLs Plugin</a>
+        (dynamic deployments only)
+      </li>
+      <li>
+        Lint your code automatically with our Lint Plugins:
+        <a href="https://github.com/jking90/docpad-plugin-jshint">jshint</a> and
+        <a href="https://github.com/jking90/docpad-plugin-coffeelint"
+          >coffeelint</a
+        >
+      </li>
+      <li>
+        Concatenate and minify your JavaScript and CSS assets making page loads
+        faster for your users with our Minify Plugins:
+        <a href="https://github.com/robloach/docpad-plugin-htmlmin">htmlmin</a>
+        and <a href="https://gist.github.com/balupton/3898915">grunt</a>
+      </li>
+      <li>
+        Install common javascript libraries like jQuery, Backbone and Underscore
+        directly from the command line - under construction, coming soon
+      </li>
+      <li>
+        Automatically translate your entire website into other languages with
+        our Translation Plugin - under construction, coming soon
+      </li>
+      <li>
+        Add a admin interface to your website allowing you to edit, save and
+        preview your changes on live websites then push them back to your source
+        repository with the
+        <a href="http://docpad.org/docs/plugins#admin-interfaces"
+          >Admin Plugins</a
+        >
+      </li>
+      <li>
+        Pretty much if DocPad doesn’t already do something, it is trivial to
+        <a href="http://docpad.org/docs/extend">write a plugin</a> to do it,
+        seriously DocPad can accomplish anything, it never holds you back, there
+        are no limits, it’s like super powered guardian angel
+      </li>
+      <li>
+        There are also
+        <a href="http://docpad.org/docs/plugins">plenty of other plugins</a> not
+        listed here that are still definitely worth checking out! :)
+      </li>
+    </ul>
+    <h3 id="people-love-docpad">People love DocPad</h3>
+    <p>
+      All sorts of people love DocPad, from first time web developers to even
+      industry leaders and experts. In fact, people even migrate to DocPad from
+      other systems as they love it so much. Here are some our favourite tweets
+      of what people are saying about DocPad :)
+    </p>
+    <figure>
+      <img
+        src="https://github.com/bevry/designs/raw/master/docpad/favourites/docpad-favs.gif"
+        alt="Some favourite tweets about DocPad"
+      />
+      <figcaption>Some favourite tweets about DocPad</figcaption>
+    </figure>
+  </body>
+</html>

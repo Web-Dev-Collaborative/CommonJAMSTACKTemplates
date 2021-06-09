@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>IronBeard</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">IronBeard</h1>
+    </header>
+    <p>
+      A simple and easy to use cross-platform static site generator built with
+      .NET Core. IronBeard processes your Razor <code>.cshtml</code> files and
+      markdown <code>.md</code> files into full <code>.html</code> files ready
+      for static hosting on services like Amazon S3.
+    </p>
+    <p>
+      IronBeard maintains your folder structure and copies static assets like
+      images, JS, and CSS into their respective directories to maintain the
+      correct linking on the generated site.
+    </p>
+    <p>
+      Adding a <code>beard.json</code> file to your project root allows for
+      further configuration.
+    </p>
+    <h2 id="features">Features</h2>
+    <ul>
+      <li>Support for recursive folder and file structures</li>
+      <li>Markdown Processor</li>
+      <li>Razor Processor</li>
+      <li>Static File Processor</li>
+      <li>
+        Razor Layout Support (wraps other razor files and markdown markup)
+      </li>
+      <li>Markdown metadata (YAML Frontmatter support in markdown)</li>
+      <li>Razor metadata (YAML Frontmatter support with Razor comments)</li>
+      <li>HTML Formatting to clean up file output.</li>
+      <li>
+        URL correction (properly handles relative routes and root folder routing
+        (index.html etc.))
+      </li>
+      <li>Global configuration file</li>
+      <li>Rich CLI output</li>
+      <li>Valid system errors codes (useful for automation)</li>
+      <li>
+        Watch command for automatic rebuilding on file or directory change
+      </li>
+    </ul>
+  </body>
+</html>

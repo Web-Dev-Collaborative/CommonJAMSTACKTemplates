@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>PFT</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">PFT</h1>
+    </header>
+    <p>
+      PFT It is yet another <em>Static</em>, <em>Unicode-ready</em>,
+      <em>Hacker-friendly</em>, <em>Free-as-in-freedom</em>,
+      <em>Privacy-preserving</em> website generator written in Perl.
+    </p>
+    <p>
+      <code>PFT</code> stands for <em>Plain F. Text</em>, where the meaning of
+      <em>F.</em> is up to personal interpretation. Like <em>Fancy</em> or
+      <em>Fantastic</em>.
+    </p>
+    <p>
+      I started it from scratch because as I was not entirely satisfied with the
+      similar products I tried, but also because I wanted to learn another
+      language (Perl) with a side project. I got initially inspired by
+      <a href="https://www.staticgen.com/dapper">Dapper</a>, which is similar in
+      the spirit, but maybe a bit <em>too raw</em>, even for my needs.
+    </p>
+    <h2 id="unicode-ready">Unicode-ready</h2>
+    <p>
+      While writing PFT I also learned how how to handle Unicode. As a result,
+      PFT can seamlessly handle your UTF-8 text, with ☺ emoticons and similar
+      💩.
+    </p>
+    <h2 id="hacker-friendly">Hacker Friendly</h2>
+    <p>
+      PFT is designed to be Hacker Friendly: it’s a command-line application
+      which handles your website’s boilerplate, hides you nothing, but stays out
+      of the way.
+    </p>
+    <p>It is designed as a toolkit, and comes with a number of commands:</p>
+    <ul>
+      <li>
+        <p>
+          <code>pft init</code>: Initialize a PFT site in the current directory;
+        </p>
+      </li>
+      <li>
+        <p>
+          <code>pft edit</code>: Create a content text (e.g. page or blog
+          entry);
+        </p>
+      </li>
+      <li>
+        <p><code>pft make</code>: Build the website;</p>
+      </li>
+      <li>
+        <p><code>pft pub</code>: Publish the website;</p>
+      </li>
+      <li>
+        <p><code>pft clean</code>: Clear built tree;</p>
+      </li>
+      <li>
+        <p><code>pft grab</code>: Grab a file as attachment or picture;</p>
+      </li>
+      <li>
+        <p><code>pft ls</code>: List content and properties;</p>
+      </li>
+      <li>
+        <p><code>pft show</code>: Show the compiled site in a web browser;</p>
+      </li>
+    </ul>
+    <p>
+      The manual of each sub-command is available in form of Unix Manual page,
+      and by invoking it with the <code>--help</code> flag.
+    </p>
+    <p>
+      Content pages are simple locale-encoded
+      <a href="https://daringfireball.net/projects/markdown/">Markdown</a>
+      text-files wrapped with a <a href="http://yaml.org/">YAML</a> header.
+      Everything is transformed into HTML thanks to the
+      <a href="https://metacpan.org/pod/Template::Alloy">Template::Alloy</a>
+      engine.
+    </p>
+    <h2 id="free-as-in-freedom">Free as in Freedom</h2>
+    <p>
+      PFT is
+      <a href="https://en.wikipedia.org/wiki/Free_software_movement"
+        >Free as in Freedom</a
+      >
+      and licensed as
+      <a href="https://www.gnu.org/licenses/gpl.html">GNU GPL v3</a>.
+      Contributions and suggestions are welcome.
+    </p>
+    <p>
+      PFT is also Free as in Free Beer. Which means you can
+      <em>offer me a beer</em> if you feel like doing it.
+    </p>
+    <h2 id="privacy-preserving">Privacy preserving:</h2>
+    <p>
+      By default, PFT comes with some simple templates, which do not rely on
+      client-side scripts, cookies or trackers. This means a PFT site respects
+      your privacy by default.
+    </p>
+    <p>
+      (Of course nothing prevents you from modifying it and provide something
+      more fancy, or even serve it with cookies. As you would do for tea,
+      really.)
+    </p>
+    <h1 id="running-pft">Running PFT</h1>
+    <p>
+      PFT is released as <em>CPAN</em> distribution named
+      <a href="https://metacpan.org/release/App-PFT">App::PFT</a>. If CPAN is
+      installed on your system you can simply install PFT by running the
+      following command:
+    </p>
+    <pre><code>cpan App::PFT</code></pre>
+    <h2 id="requirements">Requirements</h2>
+    <p>
+      The output of PFT is a directory containing a set of inter-connected HTML
+      pages. The pages are linked by relative links, so the whole output site is
+      relocatable. It can optionally be loaded online and served through any web
+      server.
+    </p>
+    <p>
+      Currently only <a href="https://rsync.samba.org/">RSync</a> over
+      <a href="http://www.openssh.com/">SSH</a> is supported for uploading
+      content on websites, RSync must be therefore installed on your source
+      system, and your hosting provider should support
+      <a href="http://www.openssh.com/">SSH</a>.
+    </p>
+    <h1 id="hacking">Hacking</h1>
+    <p>PFT is currently composed by:</p>
+    <ul>
+      <li>
+        <p>
+          A Perl library named
+          <a href="https://github.com/dacav/pft">PFT</a> which abstracts the
+          filesystem access
+        </p>
+      </li>
+      <li>
+        <p>
+          A toolkit of Perl scripts named
+          <a href="https://github.com/dacav/app-pft">App::PFT</a> which provides
+          a command-line interface to the <em>PFT</em> structure.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Feel free to fork or to ping me with suggestion, proposals or pull
+      requests.
+    </p>
+  </body>
+</html>

@@ -6,12 +6,12 @@
  */
 
 /* List of projects/orgs using your project for the users page */
-const users =   {
-    caption: 'DevSpace',
-    image: '/img/users/devspace.svg',
-    infoLink: 'https://devspace.cloud/docs/',
-    fbOpenSource: false,
-    pinned: false,
+const users = {
+  caption: 'DevSpace',
+  image: '/img/users/devspace.svg',
+  infoLink: 'https://devspace.cloud/docs/',
+  fbOpenSource: false,
+  pinned: false,
 };
 
 const siteConfig = {

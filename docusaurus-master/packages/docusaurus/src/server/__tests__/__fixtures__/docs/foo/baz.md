@@ -33,7 +33,7 @@ Duplicated footnote reference[^second].
 
 [^first]: Footnote **can have markup**
 
-  and multiple paragraphs.
+and multiple paragraphs.
 
 [^second]: Footnote text.
 

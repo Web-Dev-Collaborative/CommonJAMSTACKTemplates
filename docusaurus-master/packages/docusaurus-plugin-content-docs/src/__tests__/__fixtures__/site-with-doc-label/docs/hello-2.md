@@ -5,4 +5,3 @@ sidebar_label: Hello 2 From Doc
 ---
 
 Hello World 2!
-

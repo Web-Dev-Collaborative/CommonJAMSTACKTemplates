@@ -106,10 +106,8 @@ function DocVersionSuggestions(): JSX.Element {
   const {savePreferredVersionName} = useDocsPreferredVersion(pluginId);
 
   const activeVersion = useActiveVersion(pluginId);
-  const {
-    latestDocSuggestion,
-    latestVersionSuggestion,
-  } = useDocVersionSuggestions(pluginId);
+  const {latestDocSuggestion, latestVersionSuggestion} =
+    useDocVersionSuggestions(pluginId);
 
   // No suggestion to be made
   if (!latestVersionSuggestion) {

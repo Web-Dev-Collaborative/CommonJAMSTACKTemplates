@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>no-html-link-for-pages</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<h1 id="no-html-link-for-pages">No HTML link for pages</h1>
+<h3 id="why-this-error-occurred">Why This Error Occurred</h3>
+<p>An HTML anchor element, <code>&lt;a&gt;</code>, was used to navigate to a page route without using the <code>Link</code> component.</p>
+<p>The <code>Link</code> component is required in order to enable client-side route transitions between pages and provide a single-page app experience.</p>
+<h3 id="possible-ways-to-fix-it">Possible Ways to Fix It</h3>
+<p>Make sure to import the <code>Link</code> component and wrap anchor elements that route to different page routes.</p>
+<p><strong>Before:</strong></p>
+<pre class="jsx"><code>function Home() {
+  return (
+    &lt;div&gt;
+      &lt;a href=&quot;/about&quot;&gt;About Us&lt;/a&gt;
+    &lt;/div&gt;
+  )
+}</code></pre>
+<p><strong>After:</strong></p>
+<pre class="jsx"><code>import Link from &#39;next/link&#39;
+
+function Home() {
+  return (
+    &lt;div&gt;
+      &lt;Link href=&quot;/about&quot;&gt;
+        &lt;a&gt;About Us&lt;/a&gt;
+      &lt;/Link&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default Home</code></pre>
+<h3 id="useful-links">Useful Links</h3>
+<ul>
+<li><a href="https://nextjs.org/docs/api-reference/next/link">next/link API Reference</a></li>
+</ul>
+</body>
+</html>

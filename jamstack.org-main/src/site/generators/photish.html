@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Photish</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Photish</h1>
+    </header>
+    <p>
+      Photish is a simple, convention based (but configurable) static photo site
+      generator. Photish allows you to group your photo collections by folder.
+      Metadata can be written alongside the photo in a
+      <a href="http://yaml.org/">YAML</a> file with the same name as the photo.
+    </p>
+    <p>
+      Photish will crawl through your directory of photos and metadata, and
+      render the information in your website templates. Photish supports all
+      template engines implemented by
+      <a href="https://github.com/rtomayko/tilt">Tilt</a> (currently over 30
+      formats). It will also read your configuration and automatically convert
+      your images to your configured size, dimensions, colourscheme, etc using
+      <a href="http://www.imagemagick.org/script/index.php">ImageMagick</a>.
+      Using this information, Photish creates a complete static website that can
+      be hosted on an <a href="http://nginx.org/">NGINX</a>,
+      <a href="https://httpd.apache.org/">Apache HTTP Server</a>, or even on
+      <a href="https://pages.github.com/">Github Pages</a>.
+    </p>
+    <p>
+      Photish has been created with speed and efficiency in mind. Threads are
+      used to parallelize image transcoding to achieve maximum utilization of
+      your CPU during generation. A cache file is then used to ensure that
+      unless the image has changed, it is not needlessly regenerated. This
+      results in a responsive and fast local development environment, making it
+      easy to perfect the design of your photo based website without having to
+      wait for regeneration.
+    </p>
+  </body>
+</html>

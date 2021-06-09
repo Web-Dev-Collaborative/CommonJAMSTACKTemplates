@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Gostatic</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Gostatic</h1>
+    </header>
+    <p>
+      Gostatic is a static site generator. What differs it from most of other
+      tools is that it’s written in Go and tracks changes, which means it should
+      work reasonably <a href="#speed">fast</a>.
+    </p>
+    <p>Features include:</p>
+    <ul>
+      <li>
+        No run-time dependencies, just a single binary - download it and run
+      </li>
+      <li>Dependency tracking and re-rendering only changed pages</li>
+      <li>Markdown support</li>
+      <li>Flexible <a href="#processors">filter system</a></li>
+      <li>Simple <a href="#configuration">config syntax</a></li>
+      <li>HTTP server and watcher (instant rendering on changes)</li>
+    </ul>
+    <h3 id="quick-start">Quick Start</h3>
+    <p>
+      Run <code>gostatic -i my-site</code> to generate basic site in directory
+      <code>name</code>. It will have a basic <code>config</code> file, which
+      you should edit to put relevant variables at the top - it also contains
+      description of how files in your <code>src</code> directory are treated.
+    </p>
+    <p>
+      <code>src</code> directory obviously contains sources of your site (name
+      of this directory can be changed in <code>config</code>). You can follow
+      general idea of this directory to create new blog posts or new pages. All
+      files, which are not mentioned in <code>config</code>, are just copied
+      over. Run <code>gostatic -fv config</code> to see how your
+      <code>src</code> is processed.
+    </p>
+    <p>
+      <code>site.html</code> is a file that defines templates your are able to
+      use for your pages. You can see those templates mentioned in
+      <code>config</code>.
+    </p>
+    <p>
+      And, finally, there is a <code>Makefile</code>, just for convenience. Run
+      <code>make</code> to build your site once or <code>make w</code> to run
+      watcher and server, to see your site changes in real time.
+    </p>
+    <p>
+      Also, you could look at
+      <a href="https://github.com/piranha/solovyov.net">my site</a> for an
+      example of advanced usage.
+    </p>
+    <p>
+      Good luck! And remember, your contributions either to gostatic or to
+      documentation (even if it’s just this <code>README.md</code>) are always
+      very welcome!
+    </p>
+  </body>
+</html>

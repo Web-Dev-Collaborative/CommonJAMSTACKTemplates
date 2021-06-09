@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+        />
+        <title>README</title>
+        <style type="text/css">
+            code {
+                white-space: pre-wrap;
+            }
+            span.smallcaps {
+                font-variant: small-caps;
+            }
+            span.underline {
+                text-decoration: underline;
+            }
+            div.column {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="templating">Templating</h1>
+        <p>
+            GitBook uses the
+            <a href="https://mozilla.github.io/nunjucks/"
+                >Nunjucks templating language</a
+            >
+            to process pages and theme’s templates.
+        </p>
+        <p>
+            The Nunjucks syntax is very similar to <strong>Jinja2</strong> or
+            <strong>Liquid</strong>. Its syntax uses surrounding braces
+            <code>{ }</code> to mark content that needs to be processed.
+        </p>
+        <h3 id="variables">Variables</h3>
+        <p>
+            A variable looks up a value from the template context. If you wanted
+            to simply display a variable, you would use the
+            <code>{{ variable }}</code> syntax. For example :
+        </p>
+        <pre
+            class="twig"
+        ><code>My name is {{ name }}, nice to meet you</code></pre>
+        <p>
+            This looks up username from the context and displays it. Variable
+            names can have dots in them which lookup properties, just like
+            JavaScript. You can also use the square bracket syntax.
+        </p>
+        <pre class="twig"><code>{{ foo.bar }}
+{{ foo[&quot;bar&quot;] }}</code></pre>
+        <p>
+            If a value is undefined, nothing is displayed. The following all
+            output nothing if foo is undefined: <code>{{ foo }}</code>,
+            <code>{{ foo.bar }}</code>, <code>{{ foo.bar.baz }}</code>.
+        </p>
+        <p>
+            GitBook provides a set of
+            <a href="variables.md">predefined variables</a> from the context.
+        </p>
+        <h3 id="filters">Filters</h3>
+        <p>
+            Filters are essentially functions that can be applied to variables.
+            They are called with a pipe operator (<code>|</code>) and can take
+            arguments.
+        </p>
+        <pre class="twig"><code>{{ foo | title }}
+{{ foo | join(&quot;,&quot;) }}
+{{ foo | replace(&quot;foo&quot;, &quot;bar&quot;) | capitalize }}</code></pre>
+        <p>
+            The third example shows how you can chain filters. It would display
+            “Bar”, by first replacing “foo” with “bar” and then capitalizing it.
+        </p>
+        <h3 id="tags">Tags</h3>
+        <h5 id="if">if</h5>
+        <p>
+            <code>if</code> tests a condition and lets you selectively display
+            content. It behaves exactly as JavaScript’s <code>if</code> behaves.
+        </p>
+        <pre class="twig"><code>{% if variable %}
+  It is true
+{% endif %}</code></pre>
+        <p>
+            If variable is defined and evaluates to true, “It is true” will be
+            displayed. Otherwise, nothing will be.
+        </p>
+        <p>
+            You can specify alternate conditions with <code>elif</code> and
+            <code>else</code>:
+        </p>
+        <pre class="twig"><code>{% if hungry %}
+  I am hungry
+{% elif tired %}
+  I am tired
+{% else %}
+  I am good!
+{% endif %}</code></pre>
+        <h5 id="for">for</h5>
+        <p><code>for</code> iterates over arrays and dictionaries.</p>
+        <pre class="twig"><code># Chapters about GitBook
+
+{% for article in glossary.terms[&#39;gitbook&#39;].articles %}
+* [{{ article.title }}]({{ article.path }})
+{% endfor %}</code></pre>
+        <h5 id="set">set</h5>
+        <p><code>set</code> lets you create/modify a variable.</p>
+        <pre class="twig"><code>{% set softwareVersion = &quot;1.0.0&quot; %}
+
+Current version is {{ softwareVersion }}.
+[Download it](website.com/download/{{ softwareVersion }})</code></pre>
+        <h5 id="include-and-block">include and block</h5>
+        <p>
+            Inclusion and inheritance is detailled in the
+            <a href="conrefs.md">Content References</a> section.
+        </p>
+        <h3 id="escaping">Escaping</h3>
+        <p>
+            If you want GitBook to ignore any of the special templating tags,
+            you can use raw and anything inside of it will be output as plain
+            text.
+        </p>
+        <pre class="twig"><code>{% raw %}
+  this will {{ not be processed }}
+{% endraw %}</code></pre>
+    </body>
+</html>

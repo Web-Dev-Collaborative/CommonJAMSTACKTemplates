@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Halwa</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Halwa</h1>
+    </header>
+    <p>
+      Halwa is a single file static site generator written in Python. It’s
+      light-weight and the only dependencies are jinja2, hamlish-jinja, and
+      markdown.
+    </p>
+    <p>
+      Using Halwa is as easy as it should be; install it, then create a
+      configuration file and point Halwa to it!
+    </p>
+    <p>
+      Halwa is organized around two main things, content and processors. A piece
+      of content is a data source (static HTML, HAML, or Markdown) which is
+      eventually converted into an output page (or pages). Halwa uses the
+      following workflow:
+    </p>
+    <ol type="1">
+      <li>Initialize a global data dictionary.</li>
+      <li>Load each piece of content specified in sources.</li>
+      <li>
+        Run each of the processors specified in processors, generating output
+        that goes into the data dictionary.
+      </li>
+      <li>
+        Update each piece of content with the contents of the data dictionary.
+      </li>
+      <li>
+        Render each piece of content, writing it out to the output folder.
+      </li>
+    </ol>
+  </body>
+</html>

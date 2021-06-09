@@ -108,7 +108,7 @@ declare module '@docusaurus/Interpolate' {
 
   export type InterpolateValues<
     Str extends string,
-    Value extends ReactNode
+    Value extends ReactNode,
   > = Record<ExtractInterpolatePlaceholders<Str>, Value>;
 
   // TS function overload: if all the values are plain strings, then interpolate returns a simple string

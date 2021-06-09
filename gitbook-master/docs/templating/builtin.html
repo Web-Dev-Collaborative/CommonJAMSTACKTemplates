@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+        />
+        <title>builtin</title>
+        <style type="text/css">
+            code {
+                white-space: pre-wrap;
+            }
+            span.smallcaps {
+                font-variant: small-caps;
+            }
+            span.underline {
+                text-decoration: underline;
+            }
+            div.column {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="builtin-templating-helpers">Builtin Templating Helpers</h1>
+        <p>
+            GitBook provides a serie of builtin filters and blocks to help you
+            write templates.
+        </p>
+        <h3 id="filters">Filters</h3>
+        <p>
+            <code>value|default(default, [boolean])</code>If value is strictly
+            undefined, return default, otherwise value. If boolean is true, any
+            JavaScript falsy value will return default (false, "", etc)
+        </p>
+        <p>
+            <code>arr|sort(reverse, caseSens, attr)</code> Sort arr with
+            JavaScript’s arr.sort function. If reverse is true, result will be
+            reversed. Sort is case-insensitive by default, but setting caseSens
+            to true makes it case-sensitive. If attr is passed, will compare
+            attr from each item.
+        </p>
+        <h3 id="blocks">Blocks</h3>
+        <p>
+            <code>{% markdown %}Markdown string{% endmarkdown %}</code> Render
+            inline markdown
+        </p>
+        <p>
+            <code>{% asciidoc %}AsciiDoc string{% endasciidoc %}</code> Render
+            inline asciidoc
+        </p>
+    </body>
+</html>

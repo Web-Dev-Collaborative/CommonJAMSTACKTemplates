@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Bagatto</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Bagatto</h1>
+    </header>
+    <figure>
+      <img
+        src="https://git.sr.ht/~subsetpark/bagatto/blob/master/assets/logo-trans.png"
+        alt="Il Mago"
+      />
+      <figcaption>Il Mago</figcaption>
+    </figure>
+    <h2 id="a-transparent-extensible-static-site-generator">
+      A transparent, extensible static site generator
+    </h2>
+    <p>
+      Bagatto is a static site generator written in
+      <a href="https://janet-lang.org/index.html">Janet</a>.
+    </p>
+    <p>
+      It is inspired most directly by Garrett Smith’s
+      <a href="https://github.com/gar1t/lambdapad">LambdaPad</a>, a SSG in
+      Erlang. LambdaPad falls more to code side of the config–code spectrum, and
+      Bagatto follows that philosophy. Thus, it’s designed to expose the full
+      expressive power and extensiblity of the language it’s written in. Janet
+      is a lisp that’s designed for simplicity and ease of embedding, and thus
+      it’s a very good fit for this model.
+    </p>
+    <p>
+      To create a Bagatto website, you should create a single Janet source file.
+      Because you’re writing normal source code, you have the full power of the
+      Janet language at your disposal. Bagatto tries to keep the “magic” to a
+      minimum; in all cases, it tries to make the process of loading source
+      files and of generating new files completely transparent, inspectable and
+      extensible.
+    </p>
+  </body>
+</html>

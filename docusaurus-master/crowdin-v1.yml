@@ -1,6 +1,6 @@
 project_id: '290988'
 api_token_env: 'CROWDIN_PERSONAL_TOKEN'
-base_path: "."
+base_path: '.'
 preserve_hierarchy: true
 
 languages_mapping: &languages_mapping
@@ -24,15 +24,12 @@ languages_mapping: &languages_mapping
     'zh-TW': 'zh-TW'
 
 files:
-  -
-    source: '/website-1.x/docs/**/*.md'
+  - source: '/website-1.x/docs/**/*.md'
     translation: '/website-1.x/translated_docs/%locale%/**/%original_file_name%'
     languages_mapping: *languages_mapping
-  -
-    source: '/website-1.x/versioned_docs/**/*.md'
+  - source: '/website-1.x/versioned_docs/**/*.md'
     translation: '/website-1.x/translated_docs/%locale%/**/%original_file_name%'
     languages_mapping: *languages_mapping
-  -
-    source: '/website-1.x/i18n/en.json'
+  - source: '/website-1.x/i18n/en.json'
     translation: '/website-1.x/i18n/%locale%.json'
     languages_mapping: *languages_mapping

@@ -26,7 +26,6 @@ id: doc1
 title: My Document
 sidebar_label: Document
 ---
-
 ```
 
 Versioned documents have their ids altered to include the version number when they get copied. The new `id` is `version-${version}-${id}` where `${version}` is the version number of that document and `${id}` is the original `id`. Additionally, versioned documents get an added `original_id` field with the original document id.
@@ -40,7 +39,6 @@ title: My Document
 sidebar_label: Document
 original_id: doc1
 ---
-
 ```
 
 `custom_edit_url`: The URL for editing this document. If this field is not present, the document's edit URL will fall back to `editUrl` from optional fields of `siteConfig.js`. See [siteConfig.js](api-site-config.md) docs for more information.
@@ -53,7 +51,6 @@ id: doc-markdown
 title: Markdown Features
 custom_edit_url: https://github.com/facebook/docusaurus/edit/master/docs/api-doc-markdown.md
 ---
-
 ```
 
 ### Blog Posts
@@ -77,7 +74,6 @@ author: Frank Li
 authorURL: http://twitter.com/franchementli
 authorFBID: 100002976521003
 ---
-
 ```
 
 ## Extra Features

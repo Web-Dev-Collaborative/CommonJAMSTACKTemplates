@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>OrisonJS</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">OrisonJS</h1>
+    </header>
+    <p>
+      OrisonJS is a static site generator built on top of lit-html. It provides
+      a server for easy development, a preview server for previewing the built
+      site, and a build command for building a static site from your source. The
+      build command can be carefully configured to only rebuild the portions of
+      the site that you want. This makes it indefinitely scalable for websites
+      with a large number of pages or with a large number of rebuilds from
+      content updates. Layouts are contextually applied to pages based upon
+      their location in the site hierarchy and partials allow reuse of common
+      elements.
+    </p>
+    <p>
+      Pages files, layouts, and partials are all JavaScript files that export an
+      async function. This function is provided contextual data about it’s
+      location in the site hierarchy, it’s path, and accessor methods for
+      crawling up the site heirachy with <code>parent</code> methods or crawling
+      down the site hierarchy with <code>child</code> methods. This enables rich
+      contextual functionality. These JavaScript files can also call third party
+      services to pull in dynamic content, and can be hooked up to web hooks for
+      rebuilding the site as content changes. Pages can also be declared as a
+      list, so a single page file produces a list of pages on your site, useful
+      for generating a list of blog posts or product pages by connecting to a
+      CMS, for example.
+    </p>
+    <p>
+      All pages also produce fragments. These are html files with the same
+      content as the full page but without the layout applied. This makes
+      implementing single page application style redirects easy to implement,
+      and the template projects do just this.
+    </p>
+    <p>
+      Projects can be initialized for use with Netlify, Firebase, or GitHub
+      Pages, and can be easily configured for any hosting service.
+    </p>
+    <p>
+      <a
+        href="https://app.netlify.com/start/deploy?repository=https://github.com/megazear7/orison-netlify-starter-kit"
+        ><img
+          src="https://www.netlify.com/img/deploy/button.svg"
+          alt="Deploy to Netlify"
+      /></a>
+    </p>
+  </body>
+</html>

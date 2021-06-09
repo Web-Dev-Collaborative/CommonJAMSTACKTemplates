@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-module.exports = function() {
+module.exports = function () {
   return {
     name: 'plugin-preBodyTags',
     injectHtmlTags() {

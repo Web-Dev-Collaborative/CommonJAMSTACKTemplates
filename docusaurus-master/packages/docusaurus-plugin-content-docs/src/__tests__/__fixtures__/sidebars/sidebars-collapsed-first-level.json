@@ -1,20 +1,16 @@
 {
-    "docs": [
-        {
-            "type": "category",
-            "label": "Introduction",
-            "items": [
-                "doc1"
-            ],
-            "collapsed": false
-        },
-        {
-            "type": "category",
-            "label": "Powering MDX",
-            "items": [
-                "doc2"
-            ],
-            "collapsed": false
-        }
-    ]
+  "docs": [
+    {
+      "type": "category",
+      "label": "Introduction",
+      "items": ["doc1"],
+      "collapsed": false
+    },
+    {
+      "type": "category",
+      "label": "Powering MDX",
+      "items": ["doc2"],
+      "collapsed": false
+    }
+  ]
 }

@@ -7,11 +7,8 @@
 
 const React = require('react');
 
-
-
 function Index(props) {
-
-  return <></>
+  return <></>;
 }
 
 module.exports = Index;

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>css-global</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<h1 id="global-css-must-be-in-your-custom-app">Global CSS Must Be in Your Custom &lt;App&gt;</h1>
+<h4 id="why-this-error-occurred">Why This Error Occurred</h4>
+<p>An attempt to import Global CSS from a file other than <a href="https://nextjs.org/docs/advanced-features/custom-app"><code>pages/_app.js</code></a> was made.</p>
+<p>Global CSS cannot be used in files other than your <a href="https://nextjs.org/docs/advanced-features/custom-app">Custom <code>&lt;App&gt;</code></a> due to its side-effects and ordering problems.</p>
+<h4 id="possible-ways-to-fix-it">Possible Ways to Fix It</h4>
+<p>Relocate all Global CSS imports to your <a href="https://nextjs.org/docs/advanced-features/custom-app"><code>pages/_app.js</code> file</a>.</p>
+<p>Or, <a href="https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css">update your component to use local CSS (Component-Level CSS) via CSS Modules</a>. This is the preferred approach.</p>
+<h4 id="example">Example</h4>
+<pre class="jsx"><code>// pages/_app.js
+import &#39;../styles.css&#39;
+
+export default function MyApp({ Component, pageProps }) {
+  return &lt;Component {...pageProps} /&gt;
+}</code></pre>
+</body>
+</html>
