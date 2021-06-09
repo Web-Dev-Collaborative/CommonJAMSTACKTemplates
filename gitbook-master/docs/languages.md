@@ -5,9 +5,9 @@ GitBook supports building books written in multiple languages. Each language sho
 ```markdown
 # Languages
 
-* [English](en/)
-* [French](fr/)
-* [Español](es/)
+-   [English](en/)
+-   [French](fr/)
+-   [Español](es/)
 ```
 
 ### Configuration for each language

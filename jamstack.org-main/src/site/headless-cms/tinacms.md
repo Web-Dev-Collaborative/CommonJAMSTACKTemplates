@@ -38,4 +38,4 @@ If you're itching to see what Tina can do, head over to the [Quickstart Guide](h
 
 Want to help out with Tina's development? Please visit our [Contributing](https://tina.io/docs/contributing/guidelines/) section in our docs to learn more.
 
-Looking for help with Tina, or want to stay on top of the latest developments? [Join our Forum](https://community.tinacms.org 'Join the TinaCMS Forum') to chat with other Tina enthusiasts.
+Looking for help with Tina, or want to stay on top of the latest developments? [Join our Forum](https://community.tinacms.org "Join the TinaCMS Forum") to chat with other Tina enthusiasts.

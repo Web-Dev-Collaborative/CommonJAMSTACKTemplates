@@ -16,7 +16,7 @@ templates:
   - Handlebars
   - Twig
   - Marko
-description: 'Hexo is a fast, simple and powerful blog framework.'
+description: "Hexo is a fast, simple and powerful blog framework."
 twitter: hexojs
 startertemplaterepo: https://github.com/hexojs/hexo-starter
 ---

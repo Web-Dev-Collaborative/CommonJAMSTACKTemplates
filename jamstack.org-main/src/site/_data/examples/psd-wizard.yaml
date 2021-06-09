@@ -1,7 +1,6 @@
-
 title: PSD Wizard
 description: On-demand Front-End Coding Service
-link: 'https://psdwizard.com'
+link: "https://psdwizard.com"
 thumbnailurl: /img/examples/psdwizard.png
 tools:
   - Nuxt
@@ -12,4 +11,3 @@ tools:
   - HubSpot
   - Netlify
   - Google Analytics
-

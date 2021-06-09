@@ -1,29 +1,69 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Tags</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">Tags</h1>
-</header>
-<p>Brace Tags is a static site generator focused on simplicity. It does one thing: solves the problem of having to repeat the same HTML code on several web pages. (In other words, it provides “partials”)</p>
-<p>The template language provided by Brace Tags has only two tags, <code>include</code> and <code>is</code>.</p>
-<h3 id="static-site-generation-101">Static site generation 101</h3>
-<p>You can use Brace Tags to build a multi-page static website without duplicating navigation or footer code. Here’s generally how it works:</p>
-<ol type="1">
-<li><p>Find duplicated code snippets in your HTML files. Extract them into separate files called “partials”.</p></li>
-<li><p>Replace each duplicated code snippet with a special placeholder tag. The tag looks like: <code>{% include mypartial.html %}</code>. This is where the content from a partial will be injected.</p></li>
-<li><p>Run the <code>tags build</code> command to assemble the website from your source code. You can put the generated site online using any static site hosting provider.</p></li>
-</ol>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Tags</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Tags</h1>
+    </header>
+    <p>
+      Brace Tags is a static site generator focused on simplicity. It does one
+      thing: solves the problem of having to repeat the same HTML code on
+      several web pages. (In other words, it provides “partials”)
+    </p>
+    <p>
+      The template language provided by Brace Tags has only two tags,
+      <code>include</code> and <code>is</code>.
+    </p>
+    <h3 id="static-site-generation-101">Static site generation 101</h3>
+    <p>
+      You can use Brace Tags to build a multi-page static website without
+      duplicating navigation or footer code. Here’s generally how it works:
+    </p>
+    <ol type="1">
+      <li>
+        <p>
+          Find duplicated code snippets in your HTML files. Extract them into
+          separate files called “partials”.
+        </p>
+      </li>
+      <li>
+        <p>
+          Replace each duplicated code snippet with a special placeholder tag.
+          The tag looks like: <code>{% include mypartial.html %}</code>. This is
+          where the content from a partial will be injected.
+        </p>
+      </li>
+      <li>
+        <p>
+          Run the <code>tags build</code> command to assemble the website from
+          your source code. You can put the generated site online using any
+          static site hosting provider.
+        </p>
+      </li>
+    </ol>
+  </body>
 </html>

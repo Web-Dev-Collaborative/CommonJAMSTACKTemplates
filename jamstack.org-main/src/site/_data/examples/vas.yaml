@@ -1,7 +1,6 @@
-
 title: VAS
 description: VAS - At the heart of your dairy
-link: 'http://web.vas.com/'
+link: "http://web.vas.com/"
 thumbnailurl: /img/examples/vas.png
 tools:
   - Roots
@@ -12,4 +11,3 @@ tools:
   - GitHub
   - Netlify
   - Google Analytics
-

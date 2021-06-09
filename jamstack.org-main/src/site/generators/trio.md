@@ -32,7 +32,7 @@ without having to transpile your code.
  */
 
 module.exports = ({ $tag }) => {
-    $tag.append(new Date().toDateString());
+  $tag.append(new Date().toDateString());
 };
 ```
 

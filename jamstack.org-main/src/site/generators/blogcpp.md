@@ -8,7 +8,7 @@ license:
   - WTFPL
 templates:
   - Jinja2
-description: 'A static blog generator, written in C++17.'
+description: "A static blog generator, written in C++17."
 ---
 
 BlogC++ is yet another static blog generator, written in C++17.

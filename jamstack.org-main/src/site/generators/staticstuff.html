@@ -1,38 +1,84 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>ARFR</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">ARFR</h1>
-</header>
-<h2 id="arfr">ARFR</h2>
-<p>ARFR let you develop static web sites faster.</p>
-<h3 id="features">Features</h3>
-<ul>
-<li>Watch and Compiles a folder tree recursively preserving the structure using handlebars.</li>
-<li>Handlebars support</li>
-<li>ftp deploy</li>
-<li>live preview sync (firebase)</li>
-</ul>
-<h3 id="how-it-works">How it works</h3>
-<ul>
-<li><p>Compiles in memory handlebars partials files from partials folder. (Use the partial with name of the file without ext. Ex: partials/myproject1/sections/prj1-head.html becomes {{&gt; prj1-head}} )</p></li>
-<li><p>Copy (compiles) handlebars files from templates folder. (preserves the folder structure). Ex: If you have templates/index.html and templates/aboutus/index.html (both using handlebars syntax), the output will be the same, it only compiles the content.</p></li>
-<li><p>Handlebars compilation errors do not break the node proccess.</p></li>
-<li><p>Copies css from css folder to the output folder slash css. (preserves structure)</p></li>
-<li><p>Custom json or js handlebars data load for using as context.</p></li>
-<li><p>Every time a watch (on scripts, styles and templates) emits a build success event, a signal is sent to a firebase database. If your has the firebase reloading snippet (a handlebars partial), your browser will reload automatically.</p></li>
-</ul>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>ARFR</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">ARFR</h1>
+    </header>
+    <h2 id="arfr">ARFR</h2>
+    <p>ARFR let you develop static web sites faster.</p>
+    <h3 id="features">Features</h3>
+    <ul>
+      <li>
+        Watch and Compiles a folder tree recursively preserving the structure
+        using handlebars.
+      </li>
+      <li>Handlebars support</li>
+      <li>ftp deploy</li>
+      <li>live preview sync (firebase)</li>
+    </ul>
+    <h3 id="how-it-works">How it works</h3>
+    <ul>
+      <li>
+        <p>
+          Compiles in memory handlebars partials files from partials folder.
+          (Use the partial with name of the file without ext. Ex:
+          partials/myproject1/sections/prj1-head.html becomes {{&gt; prj1-head}}
+          )
+        </p>
+      </li>
+      <li>
+        <p>
+          Copy (compiles) handlebars files from templates folder. (preserves the
+          folder structure). Ex: If you have templates/index.html and
+          templates/aboutus/index.html (both using handlebars syntax), the
+          output will be the same, it only compiles the content.
+        </p>
+      </li>
+      <li>
+        <p>Handlebars compilation errors do not break the node proccess.</p>
+      </li>
+      <li>
+        <p>
+          Copies css from css folder to the output folder slash css. (preserves
+          structure)
+        </p>
+      </li>
+      <li>
+        <p>Custom json or js handlebars data load for using as context.</p>
+      </li>
+      <li>
+        <p>
+          Every time a watch (on scripts, styles and templates) emits a build
+          success event, a signal is sent to a firebase database. If your has
+          the firebase reloading snippet (a handlebars partial), your browser
+          will reload automatically.
+        </p>
+      </li>
+    </ul>
+  </body>
 </html>

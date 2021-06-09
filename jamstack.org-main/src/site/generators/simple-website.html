@@ -1,39 +1,80 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>simple-website</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">simple-website</h1>
-</header>
-<p>simple-website is a static site generator written in Go. It takes Markdown as input, and gives you a static, simple, and responsive website as output. Posts and pages are supported.</p>
-<p>simple-website has been designed with technical simplicity and readability in mind – there are no configuration options and no themes to choose from. The workflow is simple – initialize a website using <code>simple-website</code>, create and/or edit Markdown files, run <code>simple-website</code> again – and publish.</p>
-<h2 id="get-it">Get it</h2>
-<pre><code>go get github.com/alexanderte/simple-website</code></pre>
-<h2 id="initialize-website">Initialize website</h2>
-<pre><code>mkdir title-of-website
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>simple-website</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">simple-website</h1>
+    </header>
+    <p>
+      simple-website is a static site generator written in Go. It takes Markdown
+      as input, and gives you a static, simple, and responsive website as
+      output. Posts and pages are supported.
+    </p>
+    <p>
+      simple-website has been designed with technical simplicity and readability
+      in mind – there are no configuration options and no themes to choose from.
+      The workflow is simple – initialize a website using
+      <code>simple-website</code>, create and/or edit Markdown files, run
+      <code>simple-website</code> again – and publish.
+    </p>
+    <h2 id="get-it">Get it</h2>
+    <pre><code>go get github.com/alexanderte/simple-website</code></pre>
+    <h2 id="initialize-website">Initialize website</h2>
+    <pre><code>mkdir title-of-website
 cd title-of-website
 $GOPATH/bin/simple-website</code></pre>
-<h2 id="create-content">Create content</h2>
-<pre><code>$EDITOR _sections/header.md
+    <h2 id="create-content">Create content</h2>
+    <pre><code>$EDITOR _sections/header.md
 $EDITOR _posts/YYYY-MM-DD-title-of-post.md
 $EDITOR _pages/title-of-page.md</code></pre>
-<h2 id="regenerate">Regenerate</h2>
-<pre><code>$GOPATH/bin/simple-website</code></pre>
-<h2 id="mit-license">MIT License</h2>
-<p>Copyright © 2018 Alexander Teinum</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
-</body>
+    <h2 id="regenerate">Regenerate</h2>
+    <pre><code>$GOPATH/bin/simple-website</code></pre>
+    <h2 id="mit-license">MIT License</h2>
+    <p>Copyright © 2018 Alexander Teinum</p>
+    <p>
+      Permission is hereby granted, free of charge, to any person obtaining a
+      copy of this software and associated documentation files (the “Software”),
+      to deal in the Software without restriction, including without limitation
+      the rights to use, copy, modify, merge, publish, distribute, sublicense,
+      and/or sell copies of the Software, and to permit persons to whom the
+      Software is furnished to do so, subject to the following conditions:
+    </p>
+    <p>
+      The above copyright notice and this permission notice shall be included in
+      all copies or substantial portions of the Software.
+    </p>
+    <p>
+      THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+      IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+      FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+      THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+      LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+      FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+      DEALINGS IN THE SOFTWARE.
+    </p>
+  </body>
 </html>

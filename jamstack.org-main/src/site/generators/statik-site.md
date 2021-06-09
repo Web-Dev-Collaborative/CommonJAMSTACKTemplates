@@ -14,7 +14,7 @@ templates:
   - Pug
   - Art
   - Dot
-description: 'statik-site: A fast, simple and modular static site generator'
+description: "statik-site: A fast, simple and modular static site generator"
 ---
 
 A fast, simple and modular static site generator, powered by Node.js and NPM.

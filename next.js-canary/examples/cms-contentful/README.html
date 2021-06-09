@@ -1,125 +1,337 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>README</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-  <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-</head>
-<body>
-<h1 id="a-statically-generated-blog-example-using-next.js-and-contentful">A statically generated blog example using Next.js and Contentful</h1>
-<p>This example showcases Next.js’s <a href="https://nextjs.org/docs/basic-features/pages">Static Generation</a> feature using <a href="https://www.contentful.com/">Contentful</a> as the data source.</p>
-<h2 id="demo">Demo</h2>
-<h3 id="httpsnext-blog-contentful.vercel.app"><a href="https://next-blog-contentful.vercel.app/">https://next-blog-contentful.vercel.app/</a></h3>
-<h2 id="deploy-your-own">Deploy your own</h2>
-<p>Once you have access to <a href="#step-5-set-up-environment-variables">the environment variables you’ll need</a>, deploy the example using <a href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a>:</p>
-<p><a href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/cms-contentful&amp;project-name=cms-contentful&amp;repository-name=cms-contentful&amp;env=CONTENTFUL_SPACE_ID,CONTENTFUL_ACCESS_TOKEN,CONTENTFUL_PREVIEW_ACCESS_TOKEN,CONTENTFUL_PREVIEW_SECRET&amp;envDescription=Required%20to%20connect%20the%20app%20with%20Contentful&amp;envLink=https://vercel.link/cms-contentful-env"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a></p>
-<h3 id="related-examples">Related examples</h3>
-<ul>
-<li><a href="/examples/cms-wordpress">WordPress</a></li>
-<li><a href="/examples/cms-datocms">DatoCMS</a></li>
-<li><a href="/examples/cms-sanity">Sanity</a></li>
-<li><a href="/examples/cms-takeshape">TakeShape</a></li>
-<li><a href="/examples/cms-prismic">Prismic</a></li>
-<li><a href="/examples/cms-strapi">Strapi</a></li>
-<li><a href="/examples/cms-agilitycms">Agility CMS</a></li>
-<li><a href="/examples/cms-cosmic">Cosmic</a></li>
-<li><a href="/examples/cms-buttercms">ButterCMS</a></li>
-<li><a href="/examples/cms-storyblok">Storyblok</a></li>
-<li><a href="/examples/cms-graphcms">GraphCMS</a></li>
-<li><a href="/examples/cms-kontent">Kontent</a></li>
-<li><a href="/examples/cms-ghost">Ghost</a></li>
-<li><a href="/examples/blog-starter">Blog Starter</a></li>
-</ul>
-<h2 id="how-to-use">How to use</h2>
-<p>Execute <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"><code>create-next-app</code></a> with <a href="https://docs.npmjs.com/cli/init">npm</a> or <a href="https://yarnpkg.com/lang/en/docs/cli/create/">Yarn</a> to bootstrap the example:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> create-next-app --example cms-contentful cms-contentful-app</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>README</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+    <style type="text/css">
+      a.sourceLine {
+        display: inline-block;
+        line-height: 1.25;
+      }
+      a.sourceLine {
+        pointer-events: none;
+        color: inherit;
+        text-decoration: inherit;
+      }
+      a.sourceLine:empty {
+        height: 1.2em;
+      }
+      .sourceCode {
+        overflow: visible;
+      }
+      code.sourceCode {
+        white-space: pre;
+        position: relative;
+      }
+      div.sourceCode {
+        margin: 1em 0;
+      }
+      pre.sourceCode {
+        margin: 0;
+      }
+      @media screen {
+        div.sourceCode {
+          overflow: auto;
+        }
+      }
+      @media print {
+        code.sourceCode {
+          white-space: pre-wrap;
+        }
+        a.sourceLine {
+          text-indent: -1em;
+          padding-left: 1em;
+        }
+      }
+      pre.numberSource a.sourceLine {
+        position: relative;
+        left: -4em;
+      }
+      pre.numberSource a.sourceLine::before {
+        content: attr(title);
+        position: relative;
+        left: -1em;
+        text-align: right;
+        vertical-align: baseline;
+        border: none;
+        pointer-events: all;
+        display: inline-block;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 4px;
+        width: 4em;
+        color: #aaaaaa;
+      }
+      pre.numberSource {
+        margin-left: 3em;
+        border-left: 1px solid #aaaaaa;
+        padding-left: 4px;
+      }
+      div.sourceCode {
+      }
+      @media screen {
+        a.sourceLine::before {
+          text-decoration: underline;
+        }
+      }
+      code span.al {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Alert */
+      code span.an {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Annotation */
+      code span.at {
+        color: #7d9029;
+      } /* Attribute */
+      code span.bn {
+        color: #40a070;
+      } /* BaseN */
+      code span.bu {
+      } /* BuiltIn */
+      code span.cf {
+        color: #007020;
+        font-weight: bold;
+      } /* ControlFlow */
+      code span.ch {
+        color: #4070a0;
+      } /* Char */
+      code span.cn {
+        color: #880000;
+      } /* Constant */
+      code span.co {
+        color: #60a0b0;
+        font-style: italic;
+      } /* Comment */
+      code span.cv {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* CommentVar */
+      code span.do {
+        color: #ba2121;
+        font-style: italic;
+      } /* Documentation */
+      code span.dt {
+        color: #902000;
+      } /* DataType */
+      code span.dv {
+        color: #40a070;
+      } /* DecVal */
+      code span.er {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Error */
+      code span.ex {
+      } /* Extension */
+      code span.fl {
+        color: #40a070;
+      } /* Float */
+      code span.fu {
+        color: #06287e;
+      } /* Function */
+      code span.im {
+      } /* Import */
+      code span.in {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Information */
+      code span.kw {
+        color: #007020;
+        font-weight: bold;
+      } /* Keyword */
+      code span.op {
+        color: #666666;
+      } /* Operator */
+      code span.ot {
+        color: #007020;
+      } /* Other */
+      code span.pp {
+        color: #bc7a00;
+      } /* Preprocessor */
+      code span.sc {
+        color: #4070a0;
+      } /* SpecialChar */
+      code span.ss {
+        color: #bb6688;
+      } /* SpecialString */
+      code span.st {
+        color: #4070a0;
+      } /* String */
+      code span.va {
+        color: #19177c;
+      } /* Variable */
+      code span.vs {
+        color: #4070a0;
+      } /* VerbatimString */
+      code span.wa {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Warning */
+    </style>
+  </head>
+  <body>
+    <h1 id="a-statically-generated-blog-example-using-next.js-and-contentful">
+      A statically generated blog example using Next.js and Contentful
+    </h1>
+    <p>
+      This example showcases Next.js’s
+      <a href="https://nextjs.org/docs/basic-features/pages"
+        >Static Generation</a
+      >
+      feature using <a href="https://www.contentful.com/">Contentful</a> as the
+      data source.
+    </p>
+    <h2 id="demo">Demo</h2>
+    <h3 id="httpsnext-blog-contentful.vercel.app">
+      <a href="https://next-blog-contentful.vercel.app/"
+        >https://next-blog-contentful.vercel.app/</a
+      >
+    </h3>
+    <h2 id="deploy-your-own">Deploy your own</h2>
+    <p>
+      Once you have access to
+      <a href="#step-5-set-up-environment-variables"
+        >the environment variables you’ll need</a
+      >, deploy the example using
+      <a
+        href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >Vercel</a
+      >:
+    </p>
+    <p>
+      <a
+        href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/cms-contentful&amp;project-name=cms-contentful&amp;repository-name=cms-contentful&amp;env=CONTENTFUL_SPACE_ID,CONTENTFUL_ACCESS_TOKEN,CONTENTFUL_PREVIEW_ACCESS_TOKEN,CONTENTFUL_PREVIEW_SECRET&amp;envDescription=Required%20to%20connect%20the%20app%20with%20Contentful&amp;envLink=https://vercel.link/cms-contentful-env"
+        ><img src="https://vercel.com/button" alt="Deploy with Vercel"
+      /></a>
+    </p>
+    <h3 id="related-examples">Related examples</h3>
+    <ul>
+      <li><a href="/examples/cms-wordpress">WordPress</a></li>
+      <li><a href="/examples/cms-datocms">DatoCMS</a></li>
+      <li><a href="/examples/cms-sanity">Sanity</a></li>
+      <li><a href="/examples/cms-takeshape">TakeShape</a></li>
+      <li><a href="/examples/cms-prismic">Prismic</a></li>
+      <li><a href="/examples/cms-strapi">Strapi</a></li>
+      <li><a href="/examples/cms-agilitycms">Agility CMS</a></li>
+      <li><a href="/examples/cms-cosmic">Cosmic</a></li>
+      <li><a href="/examples/cms-buttercms">ButterCMS</a></li>
+      <li><a href="/examples/cms-storyblok">Storyblok</a></li>
+      <li><a href="/examples/cms-graphcms">GraphCMS</a></li>
+      <li><a href="/examples/cms-kontent">Kontent</a></li>
+      <li><a href="/examples/cms-ghost">Ghost</a></li>
+      <li><a href="/examples/blog-starter">Blog Starter</a></li>
+    </ul>
+    <h2 id="how-to-use">How to use</h2>
+    <p>
+      Execute
+      <a
+        href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"
+        ><code>create-next-app</code></a
+      >
+      with <a href="https://docs.npmjs.com/cli/init">npm</a> or
+      <a href="https://yarnpkg.com/lang/en/docs/cli/create/">Yarn</a> to
+      bootstrap the example:
+    </p>
+    <div class="sourceCode" id="cb1">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> create-next-app --example cms-contentful cms-contentful-app</a>
 <a class="sourceLine" id="cb1-2" title="2"><span class="co"># or</span></a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="ex">yarn</span> create next-app --example cms-contentful cms-contentful-app</a></code></pre></div>
-<h2 id="configuration">Configuration</h2>
-<h3 id="step-1.-create-an-account-and-a-space-on-contentful">Step 1. Create an account and a space on Contentful</h3>
-<p>First, <a href="https://www.contentful.com/sign-up/">create an account on Contentful</a>.</p>
-<p>After creating an account, create a new empty <strong>space</strong> from the <a href="https://app.contentful.com/">dashboard</a> and assign to it any name of your liking.</p>
-<h3 id="step-2.-create-a-content-model">Step 2. Create a content model</h3>
-<p>The <a href="https://www.contentful.com/developers/docs/concepts/data-model/">content model</a> defines the data structures of your application/websites. The structures are flexible and you can tailor them to your needs.</p>
-<p>For this example you need to create a content model that defines an author and a post content type. <strong>You can create these two by running a script or by doing it manually</strong> to familiarize yourself with the Contentful user interface.</p>
-<h4 id="run-a-script-to-create-the-content-model">Run a script to create the content model</h4>
-<p>This project includes a setup script which you can use to set up the content model expected by the source code.</p>
-<p>In your Contentful dashboard go to <strong>Settings &gt; General Settings</strong> and copy the <strong>Space ID</strong>.</p>
-<p>Next, go to <strong>Settings &gt; API &gt; Content management tokens</strong> and create a new token by clicking <strong>Generate personal token</strong>. This token has the same access rights as the logged in user. <strong>Do not share it publicly</strong>, you will only use it to set up your space and can delete it afterwards.</p>
-<p>With the space ID and management access token at hand run the following command:</p>
-<pre><code>npx cross-env CONTENTFUL_SPACE_ID=YOUR_SPACE_ID CONTENTFUL_MANAGEMENT_TOKEN=XXX npm run setup</code></pre>
-<p>This command will create the needed content structures and set up your Contentful space ready to use. The output should look as follows:</p>
-<pre><code>&gt; cms-contentful@1.0.0 setup /Users/stefan.judis/Projects/next.js/examples/cms-contentful
+<a class="sourceLine" id="cb1-3" title="3"><span class="ex">yarn</span> create next-app --example cms-contentful cms-contentful-app</a></code></pre>
+    </div>
+    <h2 id="configuration">Configuration</h2>
+    <h3 id="step-1.-create-an-account-and-a-space-on-contentful">
+      Step 1. Create an account and a space on Contentful
+    </h3>
+    <p>
+      First,
+      <a href="https://www.contentful.com/sign-up/"
+        >create an account on Contentful</a
+      >.
+    </p>
+    <p>
+      After creating an account, create a new empty <strong>space</strong> from
+      the <a href="https://app.contentful.com/">dashboard</a> and assign to it
+      any name of your liking.
+    </p>
+    <h3 id="step-2.-create-a-content-model">Step 2. Create a content model</h3>
+    <p>
+      The
+      <a href="https://www.contentful.com/developers/docs/concepts/data-model/"
+        >content model</a
+      >
+      defines the data structures of your application/websites. The structures
+      are flexible and you can tailor them to your needs.
+    </p>
+    <p>
+      For this example you need to create a content model that defines an author
+      and a post content type.
+      <strong
+        >You can create these two by running a script or by doing it
+        manually</strong
+      >
+      to familiarize yourself with the Contentful user interface.
+    </p>
+    <h4 id="run-a-script-to-create-the-content-model">
+      Run a script to create the content model
+    </h4>
+    <p>
+      This project includes a setup script which you can use to set up the
+      content model expected by the source code.
+    </p>
+    <p>
+      In your Contentful dashboard go to
+      <strong>Settings &gt; General Settings</strong> and copy the
+      <strong>Space ID</strong>.
+    </p>
+    <p>
+      Next, go to
+      <strong>Settings &gt; API &gt; Content management tokens</strong> and
+      create a new token by clicking <strong>Generate personal token</strong>.
+      This token has the same access rights as the logged in user.
+      <strong>Do not share it publicly</strong>, you will only use it to set up
+      your space and can delete it afterwards.
+    </p>
+    <p>
+      With the space ID and management access token at hand run the following
+      command:
+    </p>
+    <pre><code>npx cross-env CONTENTFUL_SPACE_ID=YOUR_SPACE_ID CONTENTFUL_MANAGEMENT_TOKEN=XXX npm run setup</code></pre>
+    <p>
+      This command will create the needed content structures and set up your
+      Contentful space ready to use. The output should look as follows:
+    </p>
+    <pre><code>&gt; cms-contentful@1.0.0 setup /Users/stefan.judis/Projects/next.js/examples/cms-contentful
 &gt; node ./contentful/setup.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN
 
 ┌──────────────────────────────────────────────────┐
@@ -146,108 +358,298 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    ...
    ...
    ...</code></pre>
-<h4 id="create-the-content-model-manually">Create the content model manually</h4>
-<h5 id="create-an-author-content-type">Create an <code>Author</code> content type</h5>
-<p>From your contentful space, go to <strong>Content model</strong> and add a new content type:</p>
-<ul>
-<li>Give it the <strong>Name</strong> <code>Author</code>, the <strong>Api Identifier</strong> should be <code>author</code></li>
-</ul>
-<p>Once the content model is saved, add these fields (you don’t have to modify the settings unless specified):</p>
-<ul>
-<li><code>name</code> - <strong>Text</strong> field (type <strong>short text</strong>). <strong>Field ID</strong> should be set to <code>name</code></li>
-<li><code>picture</code> - <strong>Media</strong> field (type <strong>one file</strong>). <strong>Field ID</strong> should be set to <code>picture</code></li>
-</ul>
-<p>Save the content type and continue.</p>
-<h5 id="create-a-post-type">Create a <code>post</code> type</h5>
-<p>From your contentful space, go to <strong>Content model</strong> and add another content type:</p>
-<ul>
-<li>Give it the <strong>Name</strong> <code>Post</code>, the <strong>Api Identifier</strong> should be <code>post</code></li>
-</ul>
-<p>Next, add these fields (you don’t have to modify the settings unless specified):</p>
-<ul>
-<li><code>title</code> - <strong>Text</strong> field (type <strong>short text</strong>)</li>
-<li><code>content</code> - <strong>Rich text</strong> field</li>
-<li><code>excerpt</code> - <strong>Text</strong> field (type <strong>Long text, full-text search</strong>)</li>
-<li><code>coverImage</code> - <strong>Media</strong> field (type <strong>one file</strong>)</li>
-<li><code>date</code> - <strong>Date and time</strong> field</li>
-<li><code>slug</code> - <strong>Text</strong> field. You can optionally go to the settings of this field, and under <strong>Appearance</strong>, select <strong>Slug</strong> to display it as a slug of the <code>title</code> field.</li>
-<li><code>author</code> - <strong>Reference</strong> field (type <strong>one reference</strong>)</li>
-</ul>
-<p>Save the content type and continue.</p>
-<h3 id="step-3.-validate-your-content-model">Step 3. Validate your content model</h3>
-<p>After setting up the content model (either manually or by running <code>npm run setup</code> or <code>yarn setup</code>), it should look as follows.</p>
-<p><strong>Content model overview</strong></p>
-<figure>
-<img src="./docs/content-model-overview.jpg" alt="Content model overview" /><figcaption>Content model overview</figcaption>
-</figure>
-<h3 id="step-4.-populate-content">Step 4. Populate Content</h3>
-<p>Go to the <strong>Content</strong> section in your space, then click on <strong>Add entry</strong> and select the <strong>Author</strong> content type:</p>
-<ul>
-<li>You just need <strong>1 author entry</strong>.</li>
-<li>Use dummy data for the text.</li>
-<li>For the image, you can download one from <a href="https://unsplash.com/">Unsplash</a>.</li>
-</ul>
-<p>Next, create another entry with the content type <strong>Post</strong>:</p>
-<ul>
-<li>We recommend creating at least <strong>2 post entries</strong>.</li>
-<li>Use dummy data for the text.</li>
-<li>For images, you can download them from <a href="https://unsplash.com/">Unsplash</a>.</li>
-<li>Pick the <strong>author</strong> you created earlier.</li>
-</ul>
-<p><strong>Important:</strong> For each entry and asset, you need to click on <strong>Publish</strong>. If not, the entry will be in draft state.</p>
-<figure>
-<img src="./docs/content-entry-publish.jpg" alt="Published content entry" /><figcaption>Published content entry</figcaption>
-</figure>
-<h3 id="step-5.-set-up-environment-variables">Step 5. Set up environment variables</h3>
-<p>From your contentful space, go to <strong>Settings &gt; API keys</strong>. There will be an example Content delivery / preview token - you can use these API keys. (You may also create a new key.)</p>
-<p>Next, copy the <code>.env.local.example</code> file in this directory to <code>.env.local</code> (which will be ignored by Git):</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">cp</span> .env.local.example .env.local</a></code></pre></div>
-<p>Then set each variable on <code>.env.local</code>:</p>
-<ul>
-<li><code>CONTENTFUL_SPACE_ID</code> should be the <strong>Space ID</strong> field of your API Key</li>
-<li><code>CONTENTFUL_ACCESS_TOKEN</code> should be the <strong><a href="https://www.contentful.com/developers/docs/references/content-delivery-api/">Content Delivery API</a> - access token</strong> field of your API key</li>
-<li><code>CONTENTFUL_PREVIEW_ACCESS_TOKEN</code> should be the <strong><a href="https://www.contentful.com/developers/docs/references/content-preview-api/">Content Preview API</a> - access token</strong> field of your API key</li>
-<li><code>CONTENTFUL_PREVIEW_SECRET</code> should be any value you want. It must be URL friendly as the dashboard will send it as a query parameter to enable preview mode</li>
-</ul>
-<p>Your <code>.env.local</code> file should look like this:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="va">CONTENTFUL_SPACE_ID=</span>...</a>
+    <h4 id="create-the-content-model-manually">
+      Create the content model manually
+    </h4>
+    <h5 id="create-an-author-content-type">
+      Create an <code>Author</code> content type
+    </h5>
+    <p>
+      From your contentful space, go to <strong>Content model</strong> and add a
+      new content type:
+    </p>
+    <ul>
+      <li>
+        Give it the <strong>Name</strong> <code>Author</code>, the
+        <strong>Api Identifier</strong> should be <code>author</code>
+      </li>
+    </ul>
+    <p>
+      Once the content model is saved, add these fields (you don’t have to
+      modify the settings unless specified):
+    </p>
+    <ul>
+      <li>
+        <code>name</code> - <strong>Text</strong> field (type
+        <strong>short text</strong>). <strong>Field ID</strong> should be set to
+        <code>name</code>
+      </li>
+      <li>
+        <code>picture</code> - <strong>Media</strong> field (type
+        <strong>one file</strong>). <strong>Field ID</strong> should be set to
+        <code>picture</code>
+      </li>
+    </ul>
+    <p>Save the content type and continue.</p>
+    <h5 id="create-a-post-type">Create a <code>post</code> type</h5>
+    <p>
+      From your contentful space, go to <strong>Content model</strong> and add
+      another content type:
+    </p>
+    <ul>
+      <li>
+        Give it the <strong>Name</strong> <code>Post</code>, the
+        <strong>Api Identifier</strong> should be <code>post</code>
+      </li>
+    </ul>
+    <p>
+      Next, add these fields (you don’t have to modify the settings unless
+      specified):
+    </p>
+    <ul>
+      <li>
+        <code>title</code> - <strong>Text</strong> field (type
+        <strong>short text</strong>)
+      </li>
+      <li><code>content</code> - <strong>Rich text</strong> field</li>
+      <li>
+        <code>excerpt</code> - <strong>Text</strong> field (type
+        <strong>Long text, full-text search</strong>)
+      </li>
+      <li>
+        <code>coverImage</code> - <strong>Media</strong> field (type
+        <strong>one file</strong>)
+      </li>
+      <li><code>date</code> - <strong>Date and time</strong> field</li>
+      <li>
+        <code>slug</code> - <strong>Text</strong> field. You can optionally go
+        to the settings of this field, and under <strong>Appearance</strong>,
+        select <strong>Slug</strong> to display it as a slug of the
+        <code>title</code> field.
+      </li>
+      <li>
+        <code>author</code> - <strong>Reference</strong> field (type
+        <strong>one reference</strong>)
+      </li>
+    </ul>
+    <p>Save the content type and continue.</p>
+    <h3 id="step-3.-validate-your-content-model">
+      Step 3. Validate your content model
+    </h3>
+    <p>
+      After setting up the content model (either manually or by running
+      <code>npm run setup</code> or <code>yarn setup</code>), it should look as
+      follows.
+    </p>
+    <p><strong>Content model overview</strong></p>
+    <figure>
+      <img
+        src="./docs/content-model-overview.jpg"
+        alt="Content model overview"
+      />
+      <figcaption>Content model overview</figcaption>
+    </figure>
+    <h3 id="step-4.-populate-content">Step 4. Populate Content</h3>
+    <p>
+      Go to the <strong>Content</strong> section in your space, then click on
+      <strong>Add entry</strong> and select the <strong>Author</strong> content
+      type:
+    </p>
+    <ul>
+      <li>You just need <strong>1 author entry</strong>.</li>
+      <li>Use dummy data for the text.</li>
+      <li>
+        For the image, you can download one from
+        <a href="https://unsplash.com/">Unsplash</a>.
+      </li>
+    </ul>
+    <p>
+      Next, create another entry with the content type <strong>Post</strong>:
+    </p>
+    <ul>
+      <li>We recommend creating at least <strong>2 post entries</strong>.</li>
+      <li>Use dummy data for the text.</li>
+      <li>
+        For images, you can download them from
+        <a href="https://unsplash.com/">Unsplash</a>.
+      </li>
+      <li>Pick the <strong>author</strong> you created earlier.</li>
+    </ul>
+    <p>
+      <strong>Important:</strong> For each entry and asset, you need to click on
+      <strong>Publish</strong>. If not, the entry will be in draft state.
+    </p>
+    <figure>
+      <img
+        src="./docs/content-entry-publish.jpg"
+        alt="Published content entry"
+      />
+      <figcaption>Published content entry</figcaption>
+    </figure>
+    <h3 id="step-5.-set-up-environment-variables">
+      Step 5. Set up environment variables
+    </h3>
+    <p>
+      From your contentful space, go to <strong>Settings &gt; API keys</strong>.
+      There will be an example Content delivery / preview token - you can use
+      these API keys. (You may also create a new key.)
+    </p>
+    <p>
+      Next, copy the <code>.env.local.example</code> file in this directory to
+      <code>.env.local</code> (which will be ignored by Git):
+    </p>
+    <div class="sourceCode" id="cb4">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">cp</span> .env.local.example .env.local</a></code></pre>
+    </div>
+    <p>Then set each variable on <code>.env.local</code>:</p>
+    <ul>
+      <li>
+        <code>CONTENTFUL_SPACE_ID</code> should be the
+        <strong>Space ID</strong> field of your API Key
+      </li>
+      <li>
+        <code>CONTENTFUL_ACCESS_TOKEN</code> should be the
+        <strong
+          ><a
+            href="https://www.contentful.com/developers/docs/references/content-delivery-api/"
+            >Content Delivery API</a
+          >
+          - access token</strong
+        >
+        field of your API key
+      </li>
+      <li>
+        <code>CONTENTFUL_PREVIEW_ACCESS_TOKEN</code> should be the
+        <strong
+          ><a
+            href="https://www.contentful.com/developers/docs/references/content-preview-api/"
+            >Content Preview API</a
+          >
+          - access token</strong
+        >
+        field of your API key
+      </li>
+      <li>
+        <code>CONTENTFUL_PREVIEW_SECRET</code> should be any value you want. It
+        must be URL friendly as the dashboard will send it as a query parameter
+        to enable preview mode
+      </li>
+    </ul>
+    <p>Your <code>.env.local</code> file should look like this:</p>
+    <div class="sourceCode" id="cb5">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="va">CONTENTFUL_SPACE_ID=</span>...</a>
 <a class="sourceLine" id="cb5-2" title="2"><span class="va">CONTENTFUL_ACCESS_TOKEN=</span>...</a>
 <a class="sourceLine" id="cb5-3" title="3"><span class="va">CONTENTFUL_PREVIEW_ACCESS_TOKEN=</span>...</a>
-<a class="sourceLine" id="cb5-4" title="4"><span class="va">CONTENTFUL_PREVIEW_SECRET=</span>...</a></code></pre></div>
-<h3 id="step-6.-run-next.js-in-development-mode">Step 6. Run Next.js in development mode</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">npm</span> install</a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="va">CONTENTFUL_PREVIEW_SECRET=</span>...</a></code></pre>
+    </div>
+    <h3 id="step-6.-run-next.js-in-development-mode">
+      Step 6. Run Next.js in development mode
+    </h3>
+    <div class="sourceCode" id="cb6">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">npm</span> install</a>
 <a class="sourceLine" id="cb6-2" title="2"><span class="ex">npm</span> run dev</a>
 <a class="sourceLine" id="cb6-3" title="3"></a>
 <a class="sourceLine" id="cb6-4" title="4"><span class="co"># or</span></a>
 <a class="sourceLine" id="cb6-5" title="5"></a>
 <a class="sourceLine" id="cb6-6" title="6"><span class="ex">yarn</span> install</a>
-<a class="sourceLine" id="cb6-7" title="7"><span class="ex">yarn</span> dev</a></code></pre></div>
-<p>Your blog should be up and running on <a href="http://localhost:3000">http://localhost:3000</a>! If it doesn’t work, post on <a href="https://github.com/vercel/next.js/discussions">GitHub discussions</a>.</p>
-<h3 id="step-7.-try-preview-mode">Step 7. Try preview mode</h3>
-<p>In your Contentful space, go to <strong>Settings &gt; Content preview</strong> and add a new content preview for development.</p>
-<p>The <strong>Name</strong> field may be anything, like <code>Development</code>. Then, under <strong>Content preview URLs</strong>, check <strong>Post</strong> and set its value to:</p>
-<pre><code>http://localhost:3000/api/preview?secret=&lt;CONTENTFUL_PREVIEW_SECRET&gt;&amp;slug={entry.fields.slug}</code></pre>
-<p>Replace <code>&lt;CONTENTFUL_PREVIEW_SECRET&gt;</code> with its respective value in <code>.env.local</code>.</p>
-<figure>
-<img src="./docs/content-preview-setup.jpg" alt="Content preview setup" /><figcaption>Content preview setup</figcaption>
-</figure>
-<p>Once saved, go to one of the posts you’ve created and:</p>
-<ul>
-<li><strong>Update the title</strong>. For example, you can add <code>[Draft]</code> in front of the title.</li>
-<li>The state of the post will switch to <strong>CHANGED</strong> automatically. <strong>Do not</strong> publish it. By doing this, the post will be in draft state.</li>
-<li>In the sidebar, you will see the <strong>Open preview</strong> button. Click on it!</li>
-</ul>
-<figure>
-<img src="./docs/content-entry-preview.jpg" alt="Content entry overview" /><figcaption>Content entry overview</figcaption>
-</figure>
-<p>You will now be able to see the updated title. To exit preview mode, you can click on <strong>Click here to exit preview mode</strong> at the top of the page.</p>
-<h3 id="step-8.-deploy-on-vercel">Step 8. Deploy on Vercel</h3>
-<p>You can deploy this app to the cloud with <a href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a> (<a href="https://nextjs.org/docs/deployment">Documentation</a>).</p>
-<h4 id="deploy-your-local-project">Deploy Your Local Project</h4>
-<p>To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and <a href="https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">import to Vercel</a>.</p>
-<p><strong>Important</strong>: When you import your project on Vercel, make sure to click on <strong>Environment Variables</strong> and set them to match your <code>.env.local</code> file.</p>
-<h4 id="deploy-from-our-template">Deploy from Our Template</h4>
-<p>Alternatively, you can deploy using our template by clicking on the Deploy button below.</p>
-<p><a href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/cms-contentful&amp;project-name=cms-contentful&amp;repository-name=cms-contentful&amp;env=CONTENTFUL_SPACE_ID,CONTENTFUL_ACCESS_TOKEN,CONTENTFUL_PREVIEW_ACCESS_TOKEN,CONTENTFUL_PREVIEW_SECRET&amp;envDescription=Required%20to%20connect%20the%20app%20with%20Contentful&amp;envLink=https://vercel.link/cms-contentful-env"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a></p>
-</body>
+<a class="sourceLine" id="cb6-7" title="7"><span class="ex">yarn</span> dev</a></code></pre>
+    </div>
+    <p>
+      Your blog should be up and running on
+      <a href="http://localhost:3000">http://localhost:3000</a>! If it doesn’t
+      work, post on
+      <a href="https://github.com/vercel/next.js/discussions"
+        >GitHub discussions</a
+      >.
+    </p>
+    <h3 id="step-7.-try-preview-mode">Step 7. Try preview mode</h3>
+    <p>
+      In your Contentful space, go to
+      <strong>Settings &gt; Content preview</strong> and add a new content
+      preview for development.
+    </p>
+    <p>
+      The <strong>Name</strong> field may be anything, like
+      <code>Development</code>. Then, under
+      <strong>Content preview URLs</strong>, check <strong>Post</strong> and set
+      its value to:
+    </p>
+    <pre><code>http://localhost:3000/api/preview?secret=&lt;CONTENTFUL_PREVIEW_SECRET&gt;&amp;slug={entry.fields.slug}</code></pre>
+    <p>
+      Replace <code>&lt;CONTENTFUL_PREVIEW_SECRET&gt;</code> with its respective
+      value in <code>.env.local</code>.
+    </p>
+    <figure>
+      <img src="./docs/content-preview-setup.jpg" alt="Content preview setup" />
+      <figcaption>Content preview setup</figcaption>
+    </figure>
+    <p>Once saved, go to one of the posts you’ve created and:</p>
+    <ul>
+      <li>
+        <strong>Update the title</strong>. For example, you can add
+        <code>[Draft]</code> in front of the title.
+      </li>
+      <li>
+        The state of the post will switch to
+        <strong>CHANGED</strong> automatically. <strong>Do not</strong> publish
+        it. By doing this, the post will be in draft state.
+      </li>
+      <li>
+        In the sidebar, you will see the <strong>Open preview</strong> button.
+        Click on it!
+      </li>
+    </ul>
+    <figure>
+      <img
+        src="./docs/content-entry-preview.jpg"
+        alt="Content entry overview"
+      />
+      <figcaption>Content entry overview</figcaption>
+    </figure>
+    <p>
+      You will now be able to see the updated title. To exit preview mode, you
+      can click on <strong>Click here to exit preview mode</strong> at the top
+      of the page.
+    </p>
+    <h3 id="step-8.-deploy-on-vercel">Step 8. Deploy on Vercel</h3>
+    <p>
+      You can deploy this app to the cloud with
+      <a
+        href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >Vercel</a
+      >
+      (<a href="https://nextjs.org/docs/deployment">Documentation</a>).
+    </p>
+    <h4 id="deploy-your-local-project">Deploy Your Local Project</h4>
+    <p>
+      To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket
+      and
+      <a
+        href="https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >import to Vercel</a
+      >.
+    </p>
+    <p>
+      <strong>Important</strong>: When you import your project on Vercel, make
+      sure to click on <strong>Environment Variables</strong> and set them to
+      match your <code>.env.local</code> file.
+    </p>
+    <h4 id="deploy-from-our-template">Deploy from Our Template</h4>
+    <p>
+      Alternatively, you can deploy using our template by clicking on the Deploy
+      button below.
+    </p>
+    <p>
+      <a
+        href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/cms-contentful&amp;project-name=cms-contentful&amp;repository-name=cms-contentful&amp;env=CONTENTFUL_SPACE_ID,CONTENTFUL_ACCESS_TOKEN,CONTENTFUL_PREVIEW_ACCESS_TOKEN,CONTENTFUL_PREVIEW_SECRET&amp;envDescription=Required%20to%20connect%20the%20app%20with%20Contentful&amp;envLink=https://vercel.link/cms-contentful-env"
+        ><img src="https://vercel.com/button" alt="Deploy with Vercel"
+      /></a>
+    </p>
+  </body>
 </html>

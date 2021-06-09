@@ -1,7 +1,6 @@
-
 title: Code Bushi
 description: Web development tips and resources to elevate your coding journey.
-link: 'https://codebushi.com'
+link: "https://codebushi.com"
 thumbnailurl: /img/examples/code-bushi.jpg
 tools:
   - Gatsby.js
@@ -9,4 +8,3 @@ tools:
   - Webpack
   - Sass
   - Netlify
-

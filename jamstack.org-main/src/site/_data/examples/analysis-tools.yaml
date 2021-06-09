@@ -1,7 +1,6 @@
-
 title: Analysis Tools
-description:  List of static analysis tools for all programming languages
-link: 'https://analysis-tools.dev/'
+description: List of static analysis tools for all programming languages
+link: "https://analysis-tools.dev/"
 thumbnailurl: /img/examples/analysis-tools.jpg
 tools:
   - Gatsby.js

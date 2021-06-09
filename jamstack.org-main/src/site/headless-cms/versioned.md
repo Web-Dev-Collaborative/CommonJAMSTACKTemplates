@@ -8,6 +8,7 @@ supportedgenerators:
   - All
 description: Versioned is an open source CMS API and admin UI based on Node.js/MongoDB/Vue.js
 ---
+
 ## Versioned
 
 An admin UI and API backend that deliver content faster and cheaper to your website and mobile apps. Supports custom content types with relationships, versioning, and publishing.

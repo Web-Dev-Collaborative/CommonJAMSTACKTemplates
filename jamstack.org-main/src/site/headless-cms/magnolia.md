@@ -11,20 +11,17 @@ description: A headless CMS that’s as great for content authors as it is for d
 images:
   - path: /img/cms/magnolia-admincentral.png
   - path: /img/cms/magnolia-devs-and-marketers.png
-
-
 ---
 
 # A headless CMS that’s as great for content authors as it is for developers.
 
 Magnolia gives you the tools to empower content authors. (And make them happy! 😃)
 
-*   __Content apps__ provide standard form-based content editing (as you know from every headless CMS.)
-*   __Visual SPA Editor__ allows authors to work directly in the experience with a WYSIWYG "page builder". (But don't worry, it still delivers structured content over endpoints!)
-*   __Trees__ Intrinsic support for hierarchies of content. Everyone understands trees.
-*   __IUX__ (Integrated User Experience) allows you to surface content, information and controls from other systems directly into the Magnolia authoring UI. It gives authors the tools they need, right where and when they need it.
-*   __Connectors and deep integration__ capabilities, it's the foundation of Magnolia, and what makes it so good for taking a _Best of Breed_ approach.
-
+- **Content apps** provide standard form-based content editing (as you know from every headless CMS.)
+- **Visual SPA Editor** allows authors to work directly in the experience with a WYSIWYG "page builder". (But don't worry, it still delivers structured content over endpoints!)
+- **Trees** Intrinsic support for hierarchies of content. Everyone understands trees.
+- **IUX** (Integrated User Experience) allows you to surface content, information and controls from other systems directly into the Magnolia authoring UI. It gives authors the tools they need, right where and when they need it.
+- **Connectors and deep integration** capabilities, it's the foundation of Magnolia, and what makes it so good for taking a _Best of Breed_ approach.
 
 ### Power _and_ Speed
 
@@ -32,10 +29,9 @@ In the crowded CMS landscape, we think that Magnolia is different. With its ente
 
 Magnolia is not an over-packed suite, it's modular. Just use the parts you need. And use our [comprehensive extension points](https://hd.magnolia-cms.com/docs/concepts/integration) and [connector packs](https://marketplace.magnolia-cms.com) to integrate to your other tools and systems.
 
-
 ### For Developers and marketers
 
-The __Visual SPA Editor__ is a great collaboration system for devs and authors. It brings the components concept of _CMS_ together with the component concept of _Frontend Frameworks_ in a neat way. And it lets authors do more then just fill in disconnected forms, like most headless CMS.
+The **Visual SPA Editor** is a great collaboration system for devs and authors. It brings the components concept of _CMS_ together with the component concept of _Frontend Frameworks_ in a neat way. And it lets authors do more then just fill in disconnected forms, like most headless CMS.
 
 <img class="simple" src="/img/cms/magnolia-spa-editing.jpg" alt="Visual SPA Editor - WYSIWYG page editing for marketers" />
 
@@ -65,4 +61,4 @@ Give our enterprise features a spin with a [30 day enterprise trial](https://www
 
 Or jump on in with the community edition with a [step-by-step headless tutorial](https://hd.magnolia-cms.com/docs/getting-started/start) in about an hour.
 
-[magnolia-cms.com](https://magnolia-cms.com) | [Features](https://www.magnolia-cms.com/product/use-cases-features.html) | [Customers](https://www.magnolia-cms.com/clients.html) | [Enterprise Trial](https://www.magnolia-cms.com/get-started/developer-trial.html) | [Documentation](https://hd.magnolia-cms.com/) 
+[magnolia-cms.com](https://magnolia-cms.com) | [Features](https://www.magnolia-cms.com/product/use-cases-features.html) | [Customers](https://www.magnolia-cms.com/clients.html) | [Enterprise Trial](https://www.magnolia-cms.com/get-started/developer-trial.html) | [Documentation](https://hd.magnolia-cms.com/)

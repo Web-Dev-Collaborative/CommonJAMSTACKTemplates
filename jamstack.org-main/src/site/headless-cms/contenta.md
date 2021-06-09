@@ -9,6 +9,7 @@ supportedgenerators:
   - All
 description: Contenta is the community driven API distribution for Drupal 8.
 ---
+
 ## Contenta is a decoupled Drupal 8 distribution
 
 Contenta is the community driven API distribution for Drupal 8, and provides the robustness and flexibility of Drupal in a friendly API-first package.

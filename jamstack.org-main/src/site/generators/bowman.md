@@ -29,7 +29,8 @@ Install globally:
 Create project:
 
        create-bowman-starter -y
-        
+
+
 Install dependencies:
 
         npm install

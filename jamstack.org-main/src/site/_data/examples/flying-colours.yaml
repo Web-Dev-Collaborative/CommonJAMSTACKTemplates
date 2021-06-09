@@ -1,6 +1,6 @@
 title: Flying Colours
 description: Website for Flying Colours Life financial advice services
-link: 'https://www.flyingcolourslife.com'
+link: "https://www.flyingcolourslife.com"
 thumbnailurl: /img/examples/flyingcolourslife.jpg
 tools:
   - Sculpin
@@ -11,4 +11,3 @@ tools:
   - Mithril.js
   - Netlify CMS
   - BitBucket
-

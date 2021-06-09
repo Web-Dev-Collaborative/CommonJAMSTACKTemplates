@@ -8,6 +8,7 @@ supportedgenerators:
   - All
 description: An API-based CMS that specialized for Japanese.
 ---
+
 ## microCMS
 
 [microCMS](https://microcms.io) is a REST API-based CMS. It have simple user interface and functions for Japanese.

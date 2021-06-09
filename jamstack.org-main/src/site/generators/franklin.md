@@ -22,5 +22,3 @@ Franklin is a simple, customisable static site generator oriented towards techni
 - Simple optimisation step to compress and pre-render the website
 - Simple publication step to deploy the website
 - Straightforward integration with Literate.jl.
-
-

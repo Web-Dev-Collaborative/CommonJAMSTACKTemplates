@@ -1,7 +1,6 @@
-
 title: REBEL
-description: 'A blog about movies, series and pop culture'
-link: 'https://rebelonline.nl'
+description: "A blog about movies, series and pop culture"
+link: "https://rebelonline.nl"
 thumbnailurl: /img/examples/rebelonline.jpg
 tools:
   - Hugo
@@ -9,4 +8,3 @@ tools:
   - Netlify
   - Disqus
   - Google Analytics
-

@@ -66,7 +66,6 @@ Try also one of our starters: [Gatsby catalog](https://github.com/strapi/strapi-
 [Role-Based Access Control (RBAC)](https://strapi.io/features/custom-roles-and-permissions): Role-Based Access Control is a feature available in the Administration Panel settings that let your team members have access rights only to the information they need.<br />
 [Internationalization (i18n)](https://strapi.io/features/internationalization): Internationalization (i18n) lets you create many content versions, also called locales, in different languages and for different countries.<br />
 
-
 ## Resources
 
- [Docs](https://strapi.io/documentation) • [Demo](https://strapi.io/demo) • [Starters](https://strapi.io/starters) • [Become a Strapi expert](https://academy.strapi.io/) • [Forum](https://forum.strapi.io/) • [Discord](https://discord.strapi.io) • [Youtube](https://www.youtube.com/c/Strapi/featured) • [Try Enterprise Edition](https://strapi.io/enterprise)
+[Docs](https://strapi.io/documentation) • [Demo](https://strapi.io/demo) • [Starters](https://strapi.io/starters) • [Become a Strapi expert](https://academy.strapi.io/) • [Forum](https://forum.strapi.io/) • [Discord](https://discord.strapi.io) • [Youtube](https://www.youtube.com/c/Strapi/featured) • [Try Enterprise Edition](https://strapi.io/enterprise)

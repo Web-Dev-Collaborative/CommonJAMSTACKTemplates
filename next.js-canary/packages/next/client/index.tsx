@@ -97,21 +97,17 @@ if (hasBasePath(asPath)) {
 }
 
 if (process.env.__NEXT_I18N_SUPPORT) {
-  const {
-    normalizeLocalePath,
-  } = require('../next-server/lib/i18n/normalize-locale-path') as typeof import('../next-server/lib/i18n/normalize-locale-path')
+  const { normalizeLocalePath } =
+    require('../next-server/lib/i18n/normalize-locale-path') as typeof import('../next-server/lib/i18n/normalize-locale-path')
 
-  const {
-    detectDomainLocale,
-  } = require('../next-server/lib/i18n/detect-domain-locale') as typeof import('../next-server/lib/i18n/detect-domain-locale')
+  const { detectDomainLocale } =
+    require('../next-server/lib/i18n/detect-domain-locale') as typeof import('../next-server/lib/i18n/detect-domain-locale')
 
-  const {
-    parseRelativeUrl,
-  } = require('../next-server/lib/router/utils/parse-relative-url') as typeof import('../next-server/lib/router/utils/parse-relative-url')
+  const { parseRelativeUrl } =
+    require('../next-server/lib/router/utils/parse-relative-url') as typeof import('../next-server/lib/router/utils/parse-relative-url')
 
-  const {
-    formatUrl,
-  } = require('../next-server/lib/router/utils/format-url') as typeof import('../next-server/lib/router/utils/format-url')
+  const { formatUrl } =
+    require('../next-server/lib/router/utils/format-url') as typeof import('../next-server/lib/router/utils/format-url')
 
   if (locales) {
     const parsedAs = parseRelativeUrl(asPath)
@@ -573,12 +569,9 @@ function markRenderComplete(): void {
 }
 
 function clearMarks(): void {
-  ;[
-    'beforeRender',
-    'afterHydrate',
-    'afterRender',
-    'routeChange',
-  ].forEach((mark) => performance.clearMarks(mark))
+  ;['beforeRender', 'afterHydrate', 'afterRender', 'routeChange'].forEach(
+    (mark) => performance.clearMarks(mark)
+  )
 }
 
 function AppContainer({
@@ -601,21 +594,21 @@ function AppContainer({
   )
 }
 
-const wrapApp = (App: AppComponent) => (
-  wrappedAppProps: Record<string, any>
-): JSX.Element => {
-  const appProps: AppProps = {
-    ...wrappedAppProps,
-    Component: CachedComponent,
-    err: hydrateErr,
-    router,
+const wrapApp =
+  (App: AppComponent) =>
+  (wrappedAppProps: Record<string, any>): JSX.Element => {
+    const appProps: AppProps = {
+      ...wrappedAppProps,
+      Component: CachedComponent,
+      err: hydrateErr,
+      router,
+    }
+    return (
+      <AppContainer>
+        <App {...appProps} />
+      </AppContainer>
+    )
   }
-  return (
-    <AppContainer>
-      <App {...appProps} />
-    </AppContainer>
-  )
-}
 
 let lastAppProps: AppProps
 function doRender(input: RenderRouteInfo): Promise<any> {
@@ -676,9 +669,8 @@ function doRender(input: RenderRouteInfo): Promise<any> {
     const noscript: Element | null = document.querySelector(
       'noscript[data-n-css]'
     )
-    const nonce: string | null | undefined = noscript?.getAttribute(
-      'data-n-css'
-    )
+    const nonce: string | null | undefined =
+      noscript?.getAttribute('data-n-css')
 
     styleSheets.forEach(({ href, text }: { href: string; text: any }) => {
       if (!currentHrefs.has(href)) {
@@ -709,9 +701,10 @@ function doRender(input: RenderRouteInfo): Promise<any> {
       !canceled
     ) {
       const desiredHrefs: Set<string> = new Set(styleSheets.map((s) => s.href))
-      const currentStyleTags: HTMLStyleElement[] = looseToArray<
-        HTMLStyleElement
-      >(document.querySelectorAll('style[data-n-href]'))
+      const currentStyleTags: HTMLStyleElement[] =
+        looseToArray<HTMLStyleElement>(
+          document.querySelectorAll('style[data-n-href]')
+        )
       const currentHrefs: string[] = currentStyleTags.map(
         (tag) => tag.getAttribute('data-n-href')!
       )
@@ -807,9 +800,10 @@ function Root({
 }>): React.ReactElement {
   // We use `useLayoutEffect` to guarantee the callbacks are executed
   // as soon as React flushes the update
-  React.useLayoutEffect(() => callbacks.forEach((callback) => callback()), [
-    callbacks,
-  ])
+  React.useLayoutEffect(
+    () => callbacks.forEach((callback) => callback()),
+    [callbacks]
+  )
   if (process.env.__NEXT_TEST_MODE) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     React.useEffect(() => {

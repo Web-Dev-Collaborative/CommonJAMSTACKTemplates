@@ -1,7 +1,6 @@
-
-title: DUDOS 
+title: DUDOS
 description: Premium bespoke websites with light-speed performance and rock-solid security
-link: 'https://dudos.co.uk'
+link: "https://dudos.co.uk"
 thumbnailurl: /img/examples/dudos.jpg
 tools:
   - Netlify
@@ -10,4 +9,3 @@ tools:
   - Tailwind CSS
   - GitHub
   - React
-

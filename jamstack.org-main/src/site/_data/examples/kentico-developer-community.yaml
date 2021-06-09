@@ -1,7 +1,6 @@
-
 title: Kentico Developer Community
 description: Official Kentico Developer Community site.
-link: 'https://kentico.github.io'
+link: "https://kentico.github.io"
 thumbnailurl: /img/examples/devcommunitypage.png
 tools:
   - Gatsby.js
@@ -17,4 +16,3 @@ tools:
   - Google Analytics
   - Service Workers
   - Web App Manifest
-

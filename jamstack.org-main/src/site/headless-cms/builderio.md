@@ -30,6 +30,7 @@ Builder is the only headless CMS with a complete no-code visual editor that allo
 - Marketing content across pages (promotional sections, overlays, etc)
 
 ### Who is it good for?
+
 - Marketing teams with ever-changing needs that templates can't keep up with
 - Developers who are tired of marketing requests and pushing pixels
 

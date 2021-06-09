@@ -1,14 +1,14 @@
 ---
 title: Spike
 repo: static-dev/spike
-homepage: 'https://spike.js.org/'
+homepage: "https://spike.js.org/"
 language:
   - JavaScript
 license:
   - MIT
 templates:
   - Reshape
-description: 'An opinionated static build tool, powered by webpack'
+description: "An opinionated static build tool, powered by webpack"
 ---
 
 ## Why should you care?

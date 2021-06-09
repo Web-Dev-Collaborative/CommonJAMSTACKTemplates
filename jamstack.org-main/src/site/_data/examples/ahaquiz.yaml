@@ -1,6 +1,6 @@
 title: AhaQuiz Vietnam
 description: Ahaquiz - Learn new things everyday by quizzes
-link: 'https://ahaquiz.com'
+link: "https://ahaquiz.com"
 thumbnailurl: /img/examples/ahaquiz.jpg
 tools:
   - ReactJS

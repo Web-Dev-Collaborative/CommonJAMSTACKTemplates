@@ -1,11 +1,10 @@
 > ## ⚠️ Deprecation warning:
+>
 > As the efforts of the GitBook team are focused on the [GitBook.com](https://www.gitbook.com) platform, the CLI is no longer under active development.  
 > All content supported by the CLI are mostly supported by our [GitBook.com / GitHub integration](https://docs.gitbook.com/integrations/github).  
 > Content hosted on the [legacy.gitbook.com](https://legacy.gitbook.com) will continue working until further notice. For differences with the new vesion, check out our [documentation](https://docs.gitbook.com/v2-changes/important-differences).
 
-
-GitBook
-=======
+# GitBook
 
 [![NPM version](https://badge.fury.io/js/gitbook.svg)](http://badge.fury.io/js/gitbook)
 [![Linux Build Status](https://travis-ci.org/GitbookIO/gitbook.png?branch=master)](https://travis-ci.org/GitbookIO/gitbook)
@@ -38,15 +37,15 @@ We're always happy to help out with your books or any other questions you might 
 
 ## Features
 
-* Write using [Markdown](http://toolchain.gitbook.com/syntax/markdown.html) or [AsciiDoc](http://toolchain.gitbook.com/syntax/asciidoc.html)
-* Output as a website or [ebook (pdf, epub, mobi)](http://toolchain.gitbook.com/ebook.html)
-* [Multi-Languages](http://toolchain.gitbook.com/languages.html)
-* [Lexicon / Glossary](http://toolchain.gitbook.com/lexicon.html)
-* [Cover](http://toolchain.gitbook.com/ebook.html)
-* [Variables and Templating](http://toolchain.gitbook.com/templating/)
-* [Content References](http://toolchain.gitbook.com/templating/conrefs.html)
-* [Plugins](http://toolchain.gitbook.com/plugins/)
-* [Beautiful default theme](https://github.com/GitbookIO/theme-default)
+-   Write using [Markdown](http://toolchain.gitbook.com/syntax/markdown.html) or [AsciiDoc](http://toolchain.gitbook.com/syntax/asciidoc.html)
+-   Output as a website or [ebook (pdf, epub, mobi)](http://toolchain.gitbook.com/ebook.html)
+-   [Multi-Languages](http://toolchain.gitbook.com/languages.html)
+-   [Lexicon / Glossary](http://toolchain.gitbook.com/lexicon.html)
+-   [Cover](http://toolchain.gitbook.com/ebook.html)
+-   [Variables and Templating](http://toolchain.gitbook.com/templating/)
+-   [Content References](http://toolchain.gitbook.com/templating/conrefs.html)
+-   [Plugins](http://toolchain.gitbook.com/plugins/)
+-   [Beautiful default theme](https://github.com/GitbookIO/theme-default)
 
 ## Publish your book
 

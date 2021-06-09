@@ -1001,10 +1001,8 @@ export async function renderToHTML(
       )
     }
 
-    const {
-      App: EnhancedApp,
-      Component: EnhancedComponent,
-    } = enhanceComponents(options, App, Component)
+    const { App: EnhancedApp, Component: EnhancedComponent } =
+      enhanceComponents(options, App, Component)
 
     const html = renderToString(
       <AppContainer>

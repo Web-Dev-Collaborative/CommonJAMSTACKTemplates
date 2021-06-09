@@ -1,7 +1,6 @@
-
 title: TNTUX Digital Agency
 description: We design and code websites.
-link: 'https://www.tntux.com'
+link: "https://www.tntux.com"
 thumbnailurl: /img/examples/tntux.jpg
 tools:
   - Hugo
@@ -10,4 +9,3 @@ tools:
   - NetlifyCMS
   - Disqus
   - Crisp
-

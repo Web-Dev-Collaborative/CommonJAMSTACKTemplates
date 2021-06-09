@@ -1,7 +1,6 @@
-
 title: Education Lessons
 description: Education Made Easy
-link: 'https://educationlessons.co.in/'
+link: "https://educationlessons.co.in/"
 thumbnailurl: /img/examples/education-lessons.jpg
 tools:
   - Gatsby.js
@@ -12,4 +11,3 @@ tools:
   - Google Sheets API
   - YouTube API
   - GitLab
-

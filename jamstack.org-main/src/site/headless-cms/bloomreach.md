@@ -10,6 +10,7 @@ description: Open-source headless CMS without compomising on the authoring exper
 images:
   - path: /img/cms/bloomreach_headless_cms.png
 ---
+
 ## Headless. Open-Source. Bloomreach Experience Manager.
 
 The fast and flexible java CMS. Bloomreach's open, standards-based platform integrates data, content and services to empower developers and marketers alike.
@@ -28,13 +29,12 @@ Every site has different needs. brXM offers the full spectrum of delivery, from 
 
 ### Enterprise-grade
 
-The last CMS you’ll ever need. Efficient caching, high-availability, industry-standard security and all-you-can-cluster.  Develop on a rock solid foundation.
+The last CMS you’ll ever need. Efficient caching, high-availability, industry-standard security and all-you-can-cluster. Develop on a rock solid foundation.
 
 ### Get Started
 
 Bloomreach has been proudly open source for over a decade. We are a member and active contributor to the Apache Software Foundation. Get started by downloading Bloomreach Experience Manager today.
 
 [Try for free](https://developers.bloomreach.com/products/cms)
-
 
 [Bloomreach.com](https://developers.bloomreach.com/) | [Features](https://developers.bloomreach.com/products/cms) | [Open Source](https://developers.bloomreach.com/open-source) | [Github](https://github.com/bloomreach) | [Forum](https://community.bloomreach.com) | [Documentation](https://documentation.bloomreach.com)

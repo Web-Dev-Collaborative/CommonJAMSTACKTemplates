@@ -13,9 +13,13 @@ class SortContainer extends HTMLElement {
   }
 
   bindEvents() {
-    this.select.addEventListener("change", e => {
-      this.sort(e.target.value);
-    }, false);
+    this.select.addEventListener(
+      "change",
+      (e) => {
+        this.sort(e.target.value);
+      },
+      false
+    );
   }
 
   sort(key) {
@@ -26,19 +30,23 @@ class SortContainer extends HTMLElement {
       let bVal = b.getAttribute(`data-sort-${key}`);
 
       // numeric sorts
-      if(key.endsWith("-numeric") || key.endsWith("-numeric-ascending") || key.endsWith("-numeric-descending")) {
+      if (
+        key.endsWith("-numeric") ||
+        key.endsWith("-numeric-ascending") ||
+        key.endsWith("-numeric-descending")
+      ) {
         aVal = parseFloat(aVal) || 0;
         bVal = parseFloat(bVal) || 0;
 
-        if(key.endsWith("-numeric-descending")) {
+        if (key.endsWith("-numeric-descending")) {
           [aVal, bVal] = [bVal, aVal];
         }
         return aVal - bVal;
       }
 
-      if(bVal < aVal) {
+      if (bVal < aVal) {
         return 1;
-      } else if(aVal < bVal) {
+      } else if (aVal < bVal) {
         return -1;
       }
       return 0;

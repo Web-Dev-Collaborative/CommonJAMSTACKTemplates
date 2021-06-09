@@ -332,7 +332,8 @@ export function tryGetPreviewData(
 
   const tokenPreviewData = cookies[COOKIE_NAME_PRERENDER_DATA]
 
-  const jsonwebtoken = require('next/dist/compiled/jsonwebtoken') as typeof import('jsonwebtoken')
+  const jsonwebtoken =
+    require('next/dist/compiled/jsonwebtoken') as typeof import('jsonwebtoken')
   let encryptedPreviewData: {
     data: string
   }
@@ -387,7 +388,8 @@ function setPreviewData<T>(
     throw new Error('invariant: invalid previewModeSigningKey')
   }
 
-  const jsonwebtoken = require('next/dist/compiled/jsonwebtoken') as typeof import('jsonwebtoken')
+  const jsonwebtoken =
+    require('next/dist/compiled/jsonwebtoken') as typeof import('jsonwebtoken')
 
   const payload = jsonwebtoken.sign(
     {
@@ -413,9 +415,8 @@ function setPreviewData<T>(
     )
   }
 
-  const {
-    serialize,
-  } = require('next/dist/compiled/cookie') as typeof import('cookie')
+  const { serialize } =
+    require('next/dist/compiled/cookie') as typeof import('cookie')
   const previous = res.getHeader('Set-Cookie')
   res.setHeader(`Set-Cookie`, [
     ...(typeof previous === 'string'
@@ -450,9 +451,8 @@ function clearPreviewData<T>(res: NextApiResponse<T>): NextApiResponse<T> {
     return res
   }
 
-  const {
-    serialize,
-  } = require('next/dist/compiled/cookie') as typeof import('cookie')
+  const { serialize } =
+    require('next/dist/compiled/cookie') as typeof import('cookie')
   const previous = res.getHeader('Set-Cookie')
   res.setHeader(`Set-Cookie`, [
     ...(typeof previous === 'string'

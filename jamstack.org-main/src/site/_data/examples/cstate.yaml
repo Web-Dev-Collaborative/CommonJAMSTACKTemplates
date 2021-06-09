@@ -1,7 +1,6 @@
-
 title: cState
-description: 'Hugo status page. Fast, IE8+, and customizable.'
-link: 'https://github.com/mistermantas/cstate'
+description: "Hugo status page. Fast, IE8+, and customizable."
+link: "https://github.com/mistermantas/cstate"
 thumbnailurl: /img/examples/cstate.jpg
 tools:
   - Netlify
@@ -10,4 +9,3 @@ tools:
   - GitHub
   - Google Analytics
   - Git
-

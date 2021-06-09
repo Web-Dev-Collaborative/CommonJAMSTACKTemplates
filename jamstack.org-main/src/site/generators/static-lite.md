@@ -1,7 +1,7 @@
 ---
 title: Static Lite
 repo: BrandonRomano/static-lite
-homepage: 'https://github.com/BrandonRomano/static-lite'
+homepage: "https://github.com/BrandonRomano/static-lite"
 language:
   - JavaScript
 license:

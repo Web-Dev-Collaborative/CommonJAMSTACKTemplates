@@ -1,7 +1,6 @@
-
 title: AMZScout Blog
 description: AMZScout - Instant Amazon product research in your browser
-link: 'https://amzscout.net/blog/'
+link: "https://amzscout.net/blog/"
 thumbnailurl: /img/examples/amzscout-blog.jpg
 tools:
   - Gatsby.js
@@ -10,4 +9,3 @@ tools:
   - Styled Components
   - Webhooks
   - Disqus
-

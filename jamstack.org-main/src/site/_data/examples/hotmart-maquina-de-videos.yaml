@@ -1,10 +1,9 @@
-
 title: Hotmart - Máquina de Vídeos
 description: >-
   Contents chosen by experts that help users and break their objections
   regarding the process of transforming their digital content into video
   classes.
-link: 'https://www.hotmart.com/maquinadevideos/'
+link: "https://www.hotmart.com/maquinadevideos/"
 thumbnailurl: /img/examples/hotmart-maquinadevideos.jpg
 tools:
   - Nuxt
@@ -17,4 +16,3 @@ tools:
   - AWS Cloudfront
   - AWS Route 53
   - AWS Amazon S3azon S3
-

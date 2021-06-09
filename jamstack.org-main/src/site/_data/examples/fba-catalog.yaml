@@ -1,7 +1,6 @@
-
 title: FBA Catalog
 description: Handbook for amazon sellers
-link: 'https://www.fbacatalog.com'
+link: "https://www.fbacatalog.com"
 thumbnailurl: /img/examples/fbacatalog.png
 tools:
   - Middleman
@@ -14,4 +13,3 @@ tools:
   - PostCss
   - GitHub
   - Yarn
-

@@ -8,7 +8,7 @@ license:
   - MIT
 templates:
   - Jinja2
-description: 'A rapid documentation tool to blow you away!  Batteries and style included; you just need to type. '
+description: "A rapid documentation tool to blow you away!  Batteries and style included; you just need to type. "
 twitter: heinventions
 ---
 

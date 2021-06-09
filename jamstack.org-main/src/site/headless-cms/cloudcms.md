@@ -8,6 +8,7 @@ supportedgenerators:
   - All
 description: An API-first approach, built around JSON and a high performance cloud architecture.
 ---
+
 ## Definitions for Cloud CMS (noun)
 
 1. A decoupled JSON and binary content platform that provides a high performance, transactional API to Create Once and Publish Everywhere

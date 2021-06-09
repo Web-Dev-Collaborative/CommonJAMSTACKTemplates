@@ -11,6 +11,7 @@ description: Superdesk is an end-to-end, api-driven open source headless CMS for
 images:
   - path: /img/cms/superdesk-ui.png
 ---
+
 ## Superdesk: Your digital newsroom
 
 Superdesk is a state-of-the-art digital newsroom system. It combines headless CMS functionality with powerful workflow features for an end-to-end news creation, production, curation and distribution platform.

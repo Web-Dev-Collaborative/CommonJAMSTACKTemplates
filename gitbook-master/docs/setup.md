@@ -14,8 +14,8 @@ It integrates well with the [GitBook Editor](https://legacy.gitbook.com/editor).
 
 Installing GitBook is easy and straightforward. Your system just needs to meet these two requirements:
 
-* NodeJS (v4.0.0 and above is recommended)
-* Windows, Linux, Unix, or Mac OS X
+-   NodeJS (v4.0.0 and above is recommended)
+-   Windows, Linux, Unix, or Mac OS X
 
 ##### Install with NPM
 
@@ -66,4 +66,3 @@ You can use the options `--log=debug` and `--debug` to get better error messages
 ```
 $ gitbook build ./ --log=debug --debug
 ```
-

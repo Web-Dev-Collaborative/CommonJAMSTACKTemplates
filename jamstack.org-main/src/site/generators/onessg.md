@@ -8,7 +8,7 @@ license:
   - MIT
 templates:
   - Any JS
-description: 'The Static Site Generator that does only one thing: compile your html and markdown.'
+description: "The Static Site Generator that does only one thing: compile your html and markdown."
 ---
 
 onessg (One Static Site Generator) is the Static Site Generator that does only one thing: compile your html and markdown. It won't minify your JS, concat your CSS, or optimize your images. Why? You most likely already have a favorite tool for doing that.

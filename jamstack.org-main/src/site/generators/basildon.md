@@ -17,4 +17,4 @@ it produces PDF output via LaTeX (the LaTeX source is generated in the same way 
 and it can pull in data (including images) from Wikimedia Commons, Wikidata, and Flickr.
 
 To use it you need PHP installed, and should be familiar with Twig and SQL
-(as well as whatever output formats you want to use, such as HTML, LaTeX, CSV, RSS, etc.). 
+(as well as whatever output formats you want to use, such as HTML, LaTeX, CSV, RSS, etc.).

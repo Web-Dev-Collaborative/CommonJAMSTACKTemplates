@@ -1,12 +1,12 @@
 sudo: false
 language: node_js
 os:
-  - linux
-  - osx
+    - linux
+    - osx
 node_js:
-  - "stable"
-  - "4.1"
+    - "stable"
+    - "4.1"
 before_install:
-  - npm install svgexport -g
+    - npm install svgexport -g
 after_success:
-  - npm run lint
+    - npm run lint

@@ -51,10 +51,10 @@ or an external script. You can also export the site index to JSON for further pr
 
 Some things soupault can do out of the box:
 
-* Create a (fully static) ToC from the page headings.
-* Insert external files or external program outputs into pages.
-* Create footnotes, LaTeX style.
-* Add breadcrumbs.
+- Create a (fully static) ToC from the page headings.
+- Insert external files or external program outputs into pages.
+- Create footnotes, LaTeX style.
+- Add breadcrumbs.
 
 ## Example
 

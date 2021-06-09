@@ -2,7 +2,7 @@ title: SmokeyFro
 description: >-
   The personal portfolio of Chris Rault (aka SmokeyFro), a front-end designer
   and occasional entrepreneur working remotely from South Africa.
-link: 'https://smokeyfro.com'
+link: "https://smokeyfro.com"
 thumbnailurl: /img/examples/smokeyfro.jpg
 tools:
   - Vue
@@ -19,4 +19,3 @@ tools:
   - Sendy
   - Matamo
   - PurgeCSS
-

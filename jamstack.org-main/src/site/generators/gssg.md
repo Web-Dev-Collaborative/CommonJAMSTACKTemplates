@@ -46,8 +46,8 @@ Contact me anywhere, You can easily find me, Mail is preferable for formal commu
 
 ### Requirements
 
-* Node.Js installed
-* A website Architecture
+- Node.Js installed
+- A website Architecture
 
 ### Installation
 

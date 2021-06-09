@@ -1,1 +1,6 @@
-{"name":"bfj","main":"index.js","author":"Phil Booth (https://gitlab.com/philbooth)","license":"MIT"}
+{
+  "name": "bfj",
+  "main": "index.js",
+  "author": "Phil Booth (https://gitlab.com/philbooth)",
+  "license": "MIT"
+}

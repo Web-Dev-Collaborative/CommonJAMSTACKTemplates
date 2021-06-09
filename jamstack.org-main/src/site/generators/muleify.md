@@ -8,7 +8,7 @@ license:
   - MPL-2.0
 templates:
   - Custom
-description: 'A zero configuration static site generator and asset preprocessor compiler.'
+description: "A zero configuration static site generator and asset preprocessor compiler."
 ---
 
 **Static Site Generator | Website Bundler | Asset Compiler | HTML Templates | Preprocessor**

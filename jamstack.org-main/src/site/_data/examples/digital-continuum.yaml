@@ -1,9 +1,8 @@
-
 title: Digital Continuum
 description: >-
   A knowledge base that documents how organizations can optimize all aspects of
   their digital value delivery at the enterprise level.
-link: 'https://www.digitalcontinuum.com/'
+link: "https://www.digitalcontinuum.com/"
 thumbnailurl: /img/examples/digital-continuum.jpg
 tools:
   - Hexo
@@ -12,4 +11,3 @@ tools:
   - Google Analytics
   - Algolia
   - Netlify
-

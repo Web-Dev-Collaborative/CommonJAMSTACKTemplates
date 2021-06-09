@@ -263,9 +263,8 @@ export default async function build(
       )
     const pageKeys = Object.keys(mappedPages)
     const conflictingPublicFiles: string[] = []
-    const hasCustomErrorPage: boolean = mappedPages['/_error'].startsWith(
-      'private-next-pages'
-    )
+    const hasCustomErrorPage: boolean =
+      mappedPages['/_error'].startsWith('private-next-pages')
     const hasPages404 = Boolean(
       mappedPages['/404'] &&
         mappedPages['/404'].startsWith('private-next-pages')
@@ -688,13 +687,14 @@ export default async function build(
       // from _error instead
       const appPageToCheck = isLikeServerless ? '/_error' : '/_app'
 
-      const customAppGetInitialPropsPromise = staticCheckWorkers.hasCustomGetInitialProps(
-        appPageToCheck,
-        distDir,
-        isLikeServerless,
-        runtimeEnvConfig,
-        true
-      )
+      const customAppGetInitialPropsPromise =
+        staticCheckWorkers.hasCustomGetInitialProps(
+          appPageToCheck,
+          distDir,
+          isLikeServerless,
+          runtimeEnvConfig,
+          true
+        )
 
       const namedExportsPromise = staticCheckWorkers.getNamedExports(
         appPageToCheck,
@@ -739,9 +739,8 @@ export default async function build(
 
             if (nonReservedPage) {
               try {
-                let isPageStaticSpan = checkPageSpan.traceChild(
-                  'is-page-static'
-                )
+                let isPageStaticSpan =
+                  checkPageSpan.traceChild('is-page-static')
                 let workerResult = await isPageStaticSpan.traceAsyncFn(() => {
                   return staticCheckWorkers.isPageStatic(
                     page,

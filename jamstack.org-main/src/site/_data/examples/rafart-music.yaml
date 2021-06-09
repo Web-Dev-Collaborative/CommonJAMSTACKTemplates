@@ -1,7 +1,6 @@
-
 title: Rafart Music
 description: Chapman Stick player Rafart music project website
-link: 'https://www.rafartmusic.com'
+link: "https://www.rafartmusic.com"
 thumbnailurl: /img/examples/rafartmusic.jpg
 tools:
   - Netlify
@@ -9,4 +8,3 @@ tools:
   - Solidity.io
   - Next.js
   - GitHub
-

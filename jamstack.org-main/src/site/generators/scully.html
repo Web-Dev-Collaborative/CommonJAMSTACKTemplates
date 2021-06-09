@@ -1,38 +1,101 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Scully</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">Scully</h1>
-</header>
-<p>The best way to build the fastest Angular apps. Scully is a static site generator for Angular projects looking to embrace the JAMStack.</p>
-<ul>
-<li><a href="https://scully.io/docs/getting-started">Getting Started</a></li>
-<li><a href="https://scully.io/docs/scully">Full Documentation</a></li>
-<li><a href="https://www.youtube.com/watch?v=Sh37rIUL-d4">Live Demo</a> (<em>from Dec 16, 2019</em>)</li>
-</ul>
-<h1 id="what-is-scully">What is Scully?</h1>
-<p>Scully pre-renders each page in your app to plain HTML &amp; CSS. To do this, Scully uses machine learning techniques to find all of the routes in your project. Scully then visits each route, rendering the view and saving it to an HTML file.</p>
-<p>You can then ship all of those HTML files to production. Each view in your app can now be delivered to your users in just a few KBs, as opposed to the hundreds/thousands of KBs require to download your entire Angular app.</p>
-<p>Your app appears INSTANTLY on any device (including mobile 3G).</p>
-<p>Once the fully-rendered HTML arrives/appears on the user’s view, your Angular app will them load and bootstrap ontop of the existing view. This means that Scully gives you the best of both worlds:</p>
-<ol type="1">
-<li>The ability to pre-render your entire app to the most base form of HTML &amp; CSS.</li>
-<li>The ability to still have a full powered SPA written in Angular.</li>
-</ol>
-<p>When your app is pre-rendered, users no longer wait until all the JavaScript has downloaded, parsed and executed before they can see and interact with your website. They can immediately begin to see and interact with the page. When your page is IMMEDIATELY available, you will have less abandoned sessions and a much higher conversion rate on our website.</p>
-<p>This also means that may not need to ship your backend to production. Because the view is pre-rendered and the data is fetched at build time, all views that can run without the backend in prod CAN run without the backend in prod. The security an cost implications to that fact can be mind blowing when you think about them.</p>
-<p>For those wanting to know more about this process, please read the <a href="https://github.com/scullyio/scully/blob/master/docs/getting-started.md">Getting Started</a> guide. For those who want to know more about the theory behind pre-rendering JavaScript SPAs, our friends at <a href="https://netlify.com">Netlify</a> wrote a <a href="https://www.netlify.com/pdf/oreilly-modern-web-development-on-the-jamstack.pdf">free book about the JAMStack</a>. Check that out today.</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Scully</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Scully</h1>
+    </header>
+    <p>
+      The best way to build the fastest Angular apps. Scully is a static site
+      generator for Angular projects looking to embrace the JAMStack.
+    </p>
+    <ul>
+      <li>
+        <a href="https://scully.io/docs/getting-started">Getting Started</a>
+      </li>
+      <li><a href="https://scully.io/docs/scully">Full Documentation</a></li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=Sh37rIUL-d4">Live Demo</a> (<em
+          >from Dec 16, 2019</em
+        >)
+      </li>
+    </ul>
+    <h1 id="what-is-scully">What is Scully?</h1>
+    <p>
+      Scully pre-renders each page in your app to plain HTML &amp; CSS. To do
+      this, Scully uses machine learning techniques to find all of the routes in
+      your project. Scully then visits each route, rendering the view and saving
+      it to an HTML file.
+    </p>
+    <p>
+      You can then ship all of those HTML files to production. Each view in your
+      app can now be delivered to your users in just a few KBs, as opposed to
+      the hundreds/thousands of KBs require to download your entire Angular app.
+    </p>
+    <p>Your app appears INSTANTLY on any device (including mobile 3G).</p>
+    <p>
+      Once the fully-rendered HTML arrives/appears on the user’s view, your
+      Angular app will them load and bootstrap ontop of the existing view. This
+      means that Scully gives you the best of both worlds:
+    </p>
+    <ol type="1">
+      <li>
+        The ability to pre-render your entire app to the most base form of HTML
+        &amp; CSS.
+      </li>
+      <li>The ability to still have a full powered SPA written in Angular.</li>
+    </ol>
+    <p>
+      When your app is pre-rendered, users no longer wait until all the
+      JavaScript has downloaded, parsed and executed before they can see and
+      interact with your website. They can immediately begin to see and interact
+      with the page. When your page is IMMEDIATELY available, you will have less
+      abandoned sessions and a much higher conversion rate on our website.
+    </p>
+    <p>
+      This also means that may not need to ship your backend to production.
+      Because the view is pre-rendered and the data is fetched at build time,
+      all views that can run without the backend in prod CAN run without the
+      backend in prod. The security an cost implications to that fact can be
+      mind blowing when you think about them.
+    </p>
+    <p>
+      For those wanting to know more about this process, please read the
+      <a
+        href="https://github.com/scullyio/scully/blob/master/docs/getting-started.md"
+        >Getting Started</a
+      >
+      guide. For those who want to know more about the theory behind
+      pre-rendering JavaScript SPAs, our friends at
+      <a href="https://netlify.com">Netlify</a> wrote a
+      <a
+        href="https://www.netlify.com/pdf/oreilly-modern-web-development-on-the-jamstack.pdf"
+        >free book about the JAMStack</a
+      >. Check that out today.
+    </p>
+  </body>
 </html>

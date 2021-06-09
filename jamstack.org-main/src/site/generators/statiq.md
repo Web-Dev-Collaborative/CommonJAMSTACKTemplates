@@ -12,17 +12,15 @@ templates:
 description: Statiq Web is a flexible static site generator written in .NET
 ---
 
-
 Statiq Web is a powerful static web site generation toolkit suitable for most use cases. It's built on top of [Statiq Framework](https://statiq.dev/framework/) so you can always extend or customize it beyond those base capabilities as well.
 
 Statiq is powerful because it combines a few simple building blocks that can be rearranged and used in limitless combinations. Think of it like LEGO® for static generation.
 
-* Content and data can come from a variety of sources including **input files**, **databases**, and **services**.
-* [Documents](https://statiq.dev/framework/documents/) are created that each contain **content** and **metadata**.
-* The documents are processed by [pipelines](https://statiq.dev/framework/pipelines/).
-* Each pipeline consists of one or more [modules](https://statiq.dev/framework/pipelines/modules/) that manipulate the documents given to it by transforming, aggregating, filtering, or producing entirely new documents.
-* The final output of each pipeline is made available to other pipelines and may be written to output files or deployed to hosting services.
-
+- Content and data can come from a variety of sources including **input files**, **databases**, and **services**.
+- [Documents](https://statiq.dev/framework/documents/) are created that each contain **content** and **metadata**.
+- The documents are processed by [pipelines](https://statiq.dev/framework/pipelines/).
+- Each pipeline consists of one or more [modules](https://statiq.dev/framework/pipelines/modules/) that manipulate the documents given to it by transforming, aggregating, filtering, or producing entirely new documents.
+- The final output of each pipeline is made available to other pipelines and may be written to output files or deployed to hosting services.
 
 ### Templating Choice
 

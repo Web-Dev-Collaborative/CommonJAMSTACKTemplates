@@ -8,6 +8,7 @@ supportedgenerators:
   - All
 description: Contentful is a content management developer platform with an API at its core.
 ---
+
 ## Contentful
 
 Contentful is a content management developer platform with an API at its core.

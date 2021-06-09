@@ -1,9 +1,8 @@
-
 title: Fullstack HQ
 description: >-
   Get immediate access to a battle-tested team of designers and developers on a
   pay-as-you-go monthly subscription.
-link: 'https://fullstackhq.com'
+link: "https://fullstackhq.com"
 thumbnailurl: /img/examples/fullstackhq.jpg
 tools:
   - Gatsby.js
@@ -13,4 +12,3 @@ tools:
   - Bootstrap
   - Sass
   - GitHub
-

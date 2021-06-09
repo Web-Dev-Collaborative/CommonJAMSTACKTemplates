@@ -1,7 +1,6 @@
-
 title: Scott Young
-description: 'The portfolio site of Scott Young, Sound Designer & Front-End Developer'
-link: 'https://parodybiz.co.uk'
+description: "The portfolio site of Scott Young, Sound Designer & Front-End Developer"
+link: "https://parodybiz.co.uk"
 thumbnailurl: /img/examples/scott-young.jpg
 tools:
   - React
@@ -11,4 +10,3 @@ tools:
   - GitHub
   - Matter.js
   - Sass
-

@@ -1,7 +1,6 @@
-
 title: Binaria
 description: Digital product connecting technics & creativity
-link: 'https://binaria.com/en/'
+link: "https://binaria.com/en/"
 thumbnailurl: /img/examples/binaria.png
 tools:
   - Gatsby.js
@@ -16,4 +15,3 @@ tools:
   - GitLab
   - styled-components
   - Web App Manifest
-

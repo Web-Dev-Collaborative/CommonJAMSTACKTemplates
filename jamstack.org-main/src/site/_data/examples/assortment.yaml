@@ -1,7 +1,6 @@
-
 title: Assortment
 description: Web Development blog for the practical developer
-link: 'https://assortment.io'
+link: "https://assortment.io"
 thumbnailurl: /img/examples/assortment.png
 tools:
   - Gatsby.js
@@ -12,4 +11,3 @@ tools:
   - Lunr.js
   - Emotion
   - Prism.js
-

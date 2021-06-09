@@ -12,11 +12,11 @@ Blocks are defined by the plugin, blocks is a map of name associated with a bloc
 module.exports = {
     blocks: {
         tag1: {
-            process: function(block) {
-                return "Hello "+block.body+", How are you?";
-            }
-        }
-    }
+            process: function (block) {
+                return "Hello " + block.body + ", How are you?";
+            },
+        },
+    },
 };
 ```
 
@@ -38,12 +38,12 @@ And arguments are easily accessible in the `process` method:
 module.exports = {
     blocks: {
         tag1: {
-            process: function(block) {
+            process: function (block) {
                 // block.args equals ["argument 1", "argument 2"]
                 // block.kwargs equals { "name": "Test" }
-            }
-        }
-    }
+            },
+        },
+    },
 };
 ```
 

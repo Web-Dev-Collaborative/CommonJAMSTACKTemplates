@@ -34,4 +34,3 @@ Ulka uses [remarkable](https://github.com/jonschlinkert/remarkable) and supports
 ### Plugins
 
 Ulka is pluggable. You can extend or add new feature using ulka's plugin system. You can even change how ulka works. Official plugins made by ulka are maintained in [this repo](https://github.com/ulkajs/ulka-plugins).
-

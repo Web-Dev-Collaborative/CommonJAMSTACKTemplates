@@ -1,7 +1,6 @@
-
 title: DiscoverIT
-description: 'Digital Agency in Reading, UK'
-link: 'https://discoverit.digital'
+description: "Digital Agency in Reading, UK"
+link: "https://discoverit.digital"
 thumbnailurl: /img/examples/discoverit.png
 tools:
   - Vue.js
@@ -9,4 +8,3 @@ tools:
   - Kentico Cloud
   - TeamCity
   - Octopus Deploy
-

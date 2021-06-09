@@ -1,9 +1,8 @@
-
 title: Universal Mind
 description: >-
   A digital solutions agency focused on services from innovation and design
   through development
-link: 'http://www.universalmind.com/'
+link: "http://www.universalmind.com/"
 thumbnailurl: /img/examples/universalmind.jpg
 tools:
   - Hexo
@@ -13,4 +12,3 @@ tools:
   - Google Analytics
   - Algolia
   - Netlify
-

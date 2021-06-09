@@ -1,7 +1,6 @@
-
 title: Appristas
 description: Web and Mobile development team from Azerbaijan
-link: 'https://www.appristas.io'
+link: "https://www.appristas.io"
 thumbnailurl: /img/examples/appristas.jpg
 tools:
   - Firebase Hosting
@@ -11,4 +10,3 @@ tools:
   - GitLab
   - Sass
   - Custom API
-

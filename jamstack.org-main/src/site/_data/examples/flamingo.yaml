@@ -1,7 +1,6 @@
-
 title: Flamingo
-description: 'E-commerce site for Flamingo, a women''s body care brand'
-link: 'https://www.shopflamingo.com'
+description: "E-commerce site for Flamingo, a women's body care brand"
+link: "https://www.shopflamingo.com"
 thumbnailurl: /img/examples/flamingo.png
 tools:
   - Gatsby.js
@@ -10,4 +9,3 @@ tools:
   - Fastly
   - Amazon S3
   - styled-components
-

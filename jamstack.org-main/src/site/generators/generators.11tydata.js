@@ -5,7 +5,9 @@ module.exports = {
   tags: ["generators"],
   eleventyComputed: {
     license: (data) => {
-      return (data.license || []).map(license => correctLicense(license, data.title));
-    }
-  }
-}
+      return (data.license || []).map((license) =>
+        correctLicense(license, data.title)
+      );
+    },
+  },
+};

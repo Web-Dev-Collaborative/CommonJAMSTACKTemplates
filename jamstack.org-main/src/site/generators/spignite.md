@@ -1,14 +1,14 @@
 ---
 title: Spignite
 repo: igr/spig
-homepage: 'https://www.spignite.com/'
+homepage: "https://www.spignite.com/"
 language:
   - JavaScript
 license:
   - BSD-2-Clause
 templates:
   - Nunjucks
-description: 'Lightweight static website generator: low-ceremony files processor with proven javascript tools'
+description: "Lightweight static website generator: low-ceremony files processor with proven javascript tools"
 ---
 
 **Spignite** works in Javascript; and uses existing, mature, libraries. In a nutshell, **Spignite** is a generic _file processor_, applied to a special case of building web sites. Simple file processing is the core concept **Spignite** is built upon.

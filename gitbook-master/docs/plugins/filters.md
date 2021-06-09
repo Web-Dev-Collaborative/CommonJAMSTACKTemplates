@@ -18,10 +18,10 @@ Refer to [Context and APIs](./api.md) to learn more about `this` and GitBook API
 ```js
 module.exports = {
     filters: {
-        hello: function(name) {
-            return 'Hello '+name;
-        }
-    }
+        hello: function (name) {
+            return "Hello " + name;
+        },
+    },
 };
 ```
 
@@ -44,14 +44,14 @@ Arguments are passed to the function, named-arguments are passed as a last argum
 ```js
 module.exports = {
     filters: {
-        fullName: function(firstName, lastName, kwargs) {
-            var name = firstName + ' ' + lastName;
+        fullName: function (firstName, lastName, kwargs) {
+            var name = firstName + " " + lastName;
 
             if (kwargs.man) name = "Mr" + name;
             else name = "Mrs" + name;
 
             return name;
-        }
-    }
+        },
+    },
 };
 ```

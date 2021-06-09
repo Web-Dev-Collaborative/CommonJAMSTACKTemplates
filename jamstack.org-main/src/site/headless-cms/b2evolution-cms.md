@@ -9,6 +9,7 @@ supportedgenerators:
   - All
 description: b2evolution is a full-featured CMS with complete data schema configuration and advanced user permissions. RESTful API.
 ---
+
 ## b2evolution CMS: The most integrated CMS ever
 
 b2evolution is a Content Management System aimed at making it easy to build and maintain websites for sharing information and collaborating with your community.

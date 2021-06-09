@@ -1,6 +1,6 @@
 title: Digital Nature
-description: 'JAMstack Web Development Studio in Beautiful British Columbia'
-link: 'https://www.digitalnature.io/'
+description: "JAMstack Web Development Studio in Beautiful British Columbia"
+link: "https://www.digitalnature.io/"
 thumbnailurl: /img/examples/digital-nature.png
 tools:
   - Vue.js

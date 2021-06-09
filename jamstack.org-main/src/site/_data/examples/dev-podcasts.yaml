@@ -1,7 +1,6 @@
-
 title: Dev Podcasts
 description: Programming podcast discovery service
-link: 'https://devpodcasts.app/'
+link: "https://devpodcasts.app/"
 thumbnailurl: /img/examples/devpodcasts.png
 tools:
   - Netlify
@@ -9,4 +8,3 @@ tools:
   - Azure Search
   - Bootstrap
   - GitHub
-

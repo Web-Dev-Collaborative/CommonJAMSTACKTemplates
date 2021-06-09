@@ -68,6 +68,7 @@ Umbraco uses .NET, but even if you've never worked with Umbraco or .NET before, 
 Umbraco Heartcore is a paid and managed product, but you can take a free 14-day trial if you’re interested to test it out before you buy it. [You can get started right here](https://umbraco.com/try-umbraco-heartcore/).
 
 Links for further info:
-* [Umbraco Heartcore](https://umbraco.com/products/umbraco-heartcore/)
-* [Pricing](https://umbraco.com/umbraco-heartcore-pricing/)
-* [Documentation](https://our.umbraco.com/documentation/Umbraco-Heartcore/)
+
+- [Umbraco Heartcore](https://umbraco.com/products/umbraco-heartcore/)
+- [Pricing](https://umbraco.com/umbraco-heartcore-pricing/)
+- [Documentation](https://our.umbraco.com/documentation/Umbraco-Heartcore/)

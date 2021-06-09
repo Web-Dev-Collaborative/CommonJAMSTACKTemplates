@@ -8,7 +8,7 @@ license:
   - GPL-2.0-only
 templates:
   - Haml
-description: 'Simple static site generator for Scala and middleman lovers'
+description: "Simple static site generator for Scala and middleman lovers"
 ---
 
 Monkeyman is a Scala static web site generator, similar to

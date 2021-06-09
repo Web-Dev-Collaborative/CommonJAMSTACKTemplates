@@ -1,48 +1,104 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Zas</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">Zas</h1>
-</header>
-<h1 id="zas"><img src="https://i.imgur.com/e9abWRX.png" alt="Zas" /></h1>
-<p>Most. Zen. Static. Website. Generator. Ever.</p>
-<h2 id="why-another-one-cmon-you-must-be-kidding">Why another one? C’mon, you must be kidding…</h2>
-<p>I just wanted to set up a very simple website (just a few pages) with Jekyll and it didn’t feel right. I didn’t want a blog.</p>
-<p>I checked other projects but they were incomplete, cumbersome or solved the wrong problem (blogs, blogs everywhere). I wanted a zen-like experience. Just a layout and some Markdown files as pages with unobstrusive structure and configuration.</p>
-<p>Yes, it is another NIH but… I think Zas is a different kind of beast. I admit that I probably overlooked some projects.</p>
-<h3 id="where-is-the-difference">Where is the difference?</h3>
-<ol type="1">
-<li>Gophers. Yes, there is <a href="http://gohugo.io/">Hugo</a> (kudos!) but… Who wants to learn another directory layout? There is also <a href="https://github.com/mkaz/hastie">Hastie</a> too. If you want a blog.</li>
-<li>Markdown only. And HTML, if you want.</li>
-<li>Just a loop. Zas just loops over all .md and .html files in current directory (and subdirectories), ignoring all any other file (including dot-files).</li>
-<li>Your imagination as limit. Zas has a simple extension mechanism based in subcommands. Do you really need to handle a blog with Zas? Install/create a new extension and do it!</li>
-<li>Unobstrutive structure, no ‘_’ files. More in <a href="#usage">Usage</a> section.</li>
-</ol>
-<h2 id="usage">Usage</h2>
-<p>Install:</p>
-<pre><code>$ go get github.com/imdario/zas</code></pre>
-<p>Go to your site’s directory and do:</p>
-<pre><code>$ zas init</code></pre>
-<p>A .zas directory will be created with sane defaults. Put your layout in .zas/layout.html and you are ready.</p>
-<pre><code>$ zas</code></pre>
-<p>Yes. Enough. Your delightful site is on .zas/deploy. Enjoy.</p>
-<p>What is happening here? Well, “generate” subcommand is called by default. This subcommand accepts the following flags:</p>
-<ul>
-<li>-verbose: print ALL the things!</li>
-<li>-full: generates all the input files. By default, zas has an incremental mode which keeps source and deploy directories in sync.</li>
-</ul>
-<p>More at <a href="https://github.com/imdario/zas/blob/master/README.md">Zas repository</a>.</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Zas</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Zas</h1>
+    </header>
+    <h1 id="zas"><img src="https://i.imgur.com/e9abWRX.png" alt="Zas" /></h1>
+    <p>Most. Zen. Static. Website. Generator. Ever.</p>
+    <h2 id="why-another-one-cmon-you-must-be-kidding">
+      Why another one? C’mon, you must be kidding…
+    </h2>
+    <p>
+      I just wanted to set up a very simple website (just a few pages) with
+      Jekyll and it didn’t feel right. I didn’t want a blog.
+    </p>
+    <p>
+      I checked other projects but they were incomplete, cumbersome or solved
+      the wrong problem (blogs, blogs everywhere). I wanted a zen-like
+      experience. Just a layout and some Markdown files as pages with
+      unobstrusive structure and configuration.
+    </p>
+    <p>
+      Yes, it is another NIH but… I think Zas is a different kind of beast. I
+      admit that I probably overlooked some projects.
+    </p>
+    <h3 id="where-is-the-difference">Where is the difference?</h3>
+    <ol type="1">
+      <li>
+        Gophers. Yes, there is <a href="http://gohugo.io/">Hugo</a> (kudos!)
+        but… Who wants to learn another directory layout? There is also
+        <a href="https://github.com/mkaz/hastie">Hastie</a> too. If you want a
+        blog.
+      </li>
+      <li>Markdown only. And HTML, if you want.</li>
+      <li>
+        Just a loop. Zas just loops over all .md and .html files in current
+        directory (and subdirectories), ignoring all any other file (including
+        dot-files).
+      </li>
+      <li>
+        Your imagination as limit. Zas has a simple extension mechanism based in
+        subcommands. Do you really need to handle a blog with Zas?
+        Install/create a new extension and do it!
+      </li>
+      <li>
+        Unobstrutive structure, no ‘_’ files. More in
+        <a href="#usage">Usage</a> section.
+      </li>
+    </ol>
+    <h2 id="usage">Usage</h2>
+    <p>Install:</p>
+    <pre><code>$ go get github.com/imdario/zas</code></pre>
+    <p>Go to your site’s directory and do:</p>
+    <pre><code>$ zas init</code></pre>
+    <p>
+      A .zas directory will be created with sane defaults. Put your layout in
+      .zas/layout.html and you are ready.
+    </p>
+    <pre><code>$ zas</code></pre>
+    <p>Yes. Enough. Your delightful site is on .zas/deploy. Enjoy.</p>
+    <p>
+      What is happening here? Well, “generate” subcommand is called by default.
+      This subcommand accepts the following flags:
+    </p>
+    <ul>
+      <li>-verbose: print ALL the things!</li>
+      <li>
+        -full: generates all the input files. By default, zas has an incremental
+        mode which keeps source and deploy directories in sync.
+      </li>
+    </ul>
+    <p>
+      More at
+      <a href="https://github.com/imdario/zas/blob/master/README.md"
+        >Zas repository</a
+      >.
+    </p>
+  </body>
 </html>

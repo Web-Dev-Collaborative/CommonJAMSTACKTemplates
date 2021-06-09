@@ -1,7 +1,6 @@
-
 title: BrowserSmart
 description: A pithy browser selection guide
-link: 'https://browsersmart.com'
+link: "https://browsersmart.com"
 thumbnailurl: /img/examples/browsersmart.png
 tools:
   - Platframe
@@ -11,4 +10,3 @@ tools:
   - Platform.js
   - GitLab
   - Netlify
-

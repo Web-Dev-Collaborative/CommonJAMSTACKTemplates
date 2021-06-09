@@ -1,7 +1,6 @@
-
 title: Official Nift Website
 description: Cross-Platform Open Source Website Generator
-link: 'https://www.nift.cc/'
+link: "https://www.nift.cc/"
 thumbnailurl: /img/examples/nift.png
 tools:
   - Nift
@@ -15,4 +14,3 @@ tools:
   - Google Code Prettify
   - MathJax
   - FontAwesome
-

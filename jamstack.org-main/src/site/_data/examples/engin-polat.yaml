@@ -1,7 +1,6 @@
-
 title: Engin Polat
 description: Programcidan Programciya.
-link: 'https://enginpolat.com/'
+link: "https://enginpolat.com/"
 thumbnailurl: /img/examples/enginpolat.png
 tools:
   - GitHub
@@ -10,4 +9,3 @@ tools:
   - Cloudflare
   - Bootstrap
   - Disqus
-

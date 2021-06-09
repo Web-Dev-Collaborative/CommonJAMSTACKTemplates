@@ -8,6 +8,7 @@ supportedgenerators:
   - All
 description: Kentico Kontent offers Content as a Service to gain full control over content presentation across all digital channels.
 ---
+
 ## Kentico Kontent
 
 Kentico Kontent offers Content as a Service to gain full control over content presentation across all digital channels.

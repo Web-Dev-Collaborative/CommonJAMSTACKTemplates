@@ -1,49 +1,170 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Magnolia</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">Magnolia</h1>
-</header>
-<h1 id="a-headless-cms-thats-as-great-for-content-authors-as-it-is-for-developers.">A headless CMS that’s as great for content authors as it is for developers.</h1>
-<p>Magnolia gives you the tools to empower content authors. (And make them happy! 😃)</p>
-<ul>
-<li><strong>Content apps</strong> provide standard form-based content editing (as you know from every headless CMS.)</li>
-<li><strong>Visual SPA Editor</strong> allows authors to work directly in the experience with a WYSIWYG “page builder”. (But don’t worry, it still delivers structured content over endpoints!)</li>
-<li><strong>Trees</strong> Intrinsic support for hierarchies of content. Everyone understands trees.</li>
-<li><strong>IUX</strong> (Integrated User Experience) allows you to surface content, information and controls from other systems directly into the Magnolia authoring UI. It gives authors the tools they need, right where and when they need it.</li>
-<li><strong>Connectors and deep integration</strong> capabilities, it’s the foundation of Magnolia, and what makes it so good for taking a <em>Best of Breed</em> approach.</li>
-</ul>
-<h3 id="power-and-speed">Power <em>and</em> Speed</h3>
-<p>In the crowded CMS landscape, we think that Magnolia is different. With its enterprise heritage, it has the power of the big DXP’s like Sitecore and AEM. Yet, we’ve honed the developer experience to make a product that is fast and light, like you expect from a modern Headless CMS. We call it <a href="https://hd.magnolia-cms.com/docs/concepts/light-development">Light Development</a>.</p>
-<p>Magnolia is not an over-packed suite, it’s modular. Just use the parts you need. And use our <a href="https://hd.magnolia-cms.com/docs/concepts/integration">comprehensive extension points</a> and <a href="https://marketplace.magnolia-cms.com">connector packs</a> to integrate to your other tools and systems.</p>
-<h3 id="for-developers-and-marketers">For Developers and marketers</h3>
-<p>The <strong>Visual SPA Editor</strong> is a great collaboration system for devs and authors. It brings the components concept of <em>CMS</em> together with the component concept of <em>Frontend Frameworks</em> in a neat way. And it lets authors do more then just fill in disconnected forms, like most headless CMS.</p>
-<p><img class="simple" src="/img/cms/magnolia-spa-editing.jpg" alt="Visual SPA Editor - WYSIWYG page editing for marketers" /></p>
-<p>You can look at it as the developer putting ‘<em>handles</em>’ and ‘<em>knobs</em>’ on frontend components - so that marketers and content authors can move them around and tune them with custom content.</p>
-<p>Once a developer provisions them, authors can go to town. And since the SPA is now way more flexible, developers don’t need to constantly maintain it after launch. Authors and marketers can do that themselves now.</p>
-<p><img class="simple" src="/img/cms/magnolia-component.png" alt="A frontend component, with 'handles and knobs' for marketers." /></p>
-<h3 id="enterprise-class">Enterprise-class</h3>
-<p>Employ full featured role-based security. Implement your governance processes with customizable four-eye (and more) publishing workflows. Enable your authors to target personalized content with ease. Serve multiple languages, across multiple sites and multiple channels, from multiple sources of content. Run in our cloud, or on your own servers, and much more with our Enterprise edition.</p>
-<h3 id="open-source-community-edition">Open-Source Community edition</h3>
-<p>Run your smaller projects for free on our flexible Community edition.</p>
-<h3 id="example-customers">Example Customers</h3>
-<p>Companies who want to truly own their stack choose us. Like Atlassian, Virgin Holidays, Fendi, The New York Times, Tesco, Avis, Generali, Adyen, Allianz and <a href="https://www.magnolia-cms.com/clients.html">many more</a>.</p>
-<p><img class="simple" src="/img/cms/magnolia-component-sheet.png" alt="A frontend component, with 'handles and knobs' for marketers." /></p>
-<h3 id="try-magnolia">Try Magnolia</h3>
-<p>Give our enterprise features a spin with a <a href="https://www.magnolia-cms.com/get-started/developer-trial.html">30 day enterprise trial</a></p>
-<p>Or jump on in with the community edition with a <a href="https://hd.magnolia-cms.com/docs/getting-started/start">step-by-step headless tutorial</a> in about an hour.</p>
-<p><a href="https://magnolia-cms.com">magnolia-cms.com</a> | <a href="https://www.magnolia-cms.com/product/use-cases-features.html">Features</a> | <a href="https://www.magnolia-cms.com/clients.html">Customers</a> | <a href="https://www.magnolia-cms.com/get-started/developer-trial.html">Enterprise Trial</a> | <a href="https://hd.magnolia-cms.com/">Documentation</a></p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Magnolia</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Magnolia</h1>
+    </header>
+    <h1
+      id="a-headless-cms-thats-as-great-for-content-authors-as-it-is-for-developers."
+    >
+      A headless CMS that’s as great for content authors as it is for
+      developers.
+    </h1>
+    <p>
+      Magnolia gives you the tools to empower content authors. (And make them
+      happy! 😃)
+    </p>
+    <ul>
+      <li>
+        <strong>Content apps</strong> provide standard form-based content
+        editing (as you know from every headless CMS.)
+      </li>
+      <li>
+        <strong>Visual SPA Editor</strong> allows authors to work directly in
+        the experience with a WYSIWYG “page builder”. (But don’t worry, it still
+        delivers structured content over endpoints!)
+      </li>
+      <li>
+        <strong>Trees</strong> Intrinsic support for hierarchies of content.
+        Everyone understands trees.
+      </li>
+      <li>
+        <strong>IUX</strong> (Integrated User Experience) allows you to surface
+        content, information and controls from other systems directly into the
+        Magnolia authoring UI. It gives authors the tools they need, right where
+        and when they need it.
+      </li>
+      <li>
+        <strong>Connectors and deep integration</strong> capabilities, it’s the
+        foundation of Magnolia, and what makes it so good for taking a
+        <em>Best of Breed</em> approach.
+      </li>
+    </ul>
+    <h3 id="power-and-speed">Power <em>and</em> Speed</h3>
+    <p>
+      In the crowded CMS landscape, we think that Magnolia is different. With
+      its enterprise heritage, it has the power of the big DXP’s like Sitecore
+      and AEM. Yet, we’ve honed the developer experience to make a product that
+      is fast and light, like you expect from a modern Headless CMS. We call it
+      <a href="https://hd.magnolia-cms.com/docs/concepts/light-development"
+        >Light Development</a
+      >.
+    </p>
+    <p>
+      Magnolia is not an over-packed suite, it’s modular. Just use the parts you
+      need. And use our
+      <a href="https://hd.magnolia-cms.com/docs/concepts/integration"
+        >comprehensive extension points</a
+      >
+      and <a href="https://marketplace.magnolia-cms.com">connector packs</a> to
+      integrate to your other tools and systems.
+    </p>
+    <h3 id="for-developers-and-marketers">For Developers and marketers</h3>
+    <p>
+      The <strong>Visual SPA Editor</strong> is a great collaboration system for
+      devs and authors. It brings the components concept of
+      <em>CMS</em> together with the component concept of
+      <em>Frontend Frameworks</em> in a neat way. And it lets authors do more
+      then just fill in disconnected forms, like most headless CMS.
+    </p>
+    <p>
+      <img
+        class="simple"
+        src="/img/cms/magnolia-spa-editing.jpg"
+        alt="Visual SPA Editor - WYSIWYG page editing for marketers"
+      />
+    </p>
+    <p>
+      You can look at it as the developer putting ‘<em>handles</em>’ and
+      ‘<em>knobs</em>’ on frontend components - so that marketers and content
+      authors can move them around and tune them with custom content.
+    </p>
+    <p>
+      Once a developer provisions them, authors can go to town. And since the
+      SPA is now way more flexible, developers don’t need to constantly maintain
+      it after launch. Authors and marketers can do that themselves now.
+    </p>
+    <p>
+      <img
+        class="simple"
+        src="/img/cms/magnolia-component.png"
+        alt="A frontend component, with 'handles and knobs' for marketers."
+      />
+    </p>
+    <h3 id="enterprise-class">Enterprise-class</h3>
+    <p>
+      Employ full featured role-based security. Implement your governance
+      processes with customizable four-eye (and more) publishing workflows.
+      Enable your authors to target personalized content with ease. Serve
+      multiple languages, across multiple sites and multiple channels, from
+      multiple sources of content. Run in our cloud, or on your own servers, and
+      much more with our Enterprise edition.
+    </p>
+    <h3 id="open-source-community-edition">Open-Source Community edition</h3>
+    <p>Run your smaller projects for free on our flexible Community edition.</p>
+    <h3 id="example-customers">Example Customers</h3>
+    <p>
+      Companies who want to truly own their stack choose us. Like Atlassian,
+      Virgin Holidays, Fendi, The New York Times, Tesco, Avis, Generali, Adyen,
+      Allianz and
+      <a href="https://www.magnolia-cms.com/clients.html">many more</a>.
+    </p>
+    <p>
+      <img
+        class="simple"
+        src="/img/cms/magnolia-component-sheet.png"
+        alt="A frontend component, with 'handles and knobs' for marketers."
+      />
+    </p>
+    <h3 id="try-magnolia">Try Magnolia</h3>
+    <p>
+      Give our enterprise features a spin with a
+      <a href="https://www.magnolia-cms.com/get-started/developer-trial.html"
+        >30 day enterprise trial</a
+      >
+    </p>
+    <p>
+      Or jump on in with the community edition with a
+      <a href="https://hd.magnolia-cms.com/docs/getting-started/start"
+        >step-by-step headless tutorial</a
+      >
+      in about an hour.
+    </p>
+    <p>
+      <a href="https://magnolia-cms.com">magnolia-cms.com</a> |
+      <a href="https://www.magnolia-cms.com/product/use-cases-features.html"
+        >Features</a
+      >
+      | <a href="https://www.magnolia-cms.com/clients.html">Customers</a> |
+      <a href="https://www.magnolia-cms.com/get-started/developer-trial.html"
+        >Enterprise Trial</a
+      >
+      | <a href="https://hd.magnolia-cms.com/">Documentation</a>
+    </p>
+  </body>
 </html>

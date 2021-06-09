@@ -1,97 +1,306 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>README</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-  <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-</head>
-<body>
-<h1 id="redux-persist-example">Redux Persist example</h1>
-<p>This example shows how to integrate Redux with the power of Redux Persist in Next.js.</p>
-<p>With the advantage of having a global state for your app using <code>redux</code>. You’ll also require some of your state values to be available offline. There comes <code>redux-persist</code> using which you can persist your states in browser’s local storage. While there are various ways of persisting your states which you can always find in there <a href="https://github.com/rt2zz/redux-persist/blob/master/README.md">documentation</a>. This is an example of how you can integrate <code>redux-persist</code> with redux along with Next.js’s universal rendering approach.</p>
-<h2 id="deploy-your-own">Deploy your own</h2>
-<p>Deploy the example using <a href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a>:</p>
-<p><a href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-redux-persist&amp;project-name=with-redux-persist&amp;repository-name=with-redux-persist"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a></p>
-<h2 id="how-to-use">How to use</h2>
-<p>Execute <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"><code>create-next-app</code></a> with <a href="https://docs.npmjs.com/cli/init">npm</a> or <a href="https://yarnpkg.com/lang/en/docs/cli/create/">Yarn</a> to bootstrap the example:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> create-next-app --example with-redux-persist with-redux-persist-app</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>README</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+    <style type="text/css">
+      a.sourceLine {
+        display: inline-block;
+        line-height: 1.25;
+      }
+      a.sourceLine {
+        pointer-events: none;
+        color: inherit;
+        text-decoration: inherit;
+      }
+      a.sourceLine:empty {
+        height: 1.2em;
+      }
+      .sourceCode {
+        overflow: visible;
+      }
+      code.sourceCode {
+        white-space: pre;
+        position: relative;
+      }
+      div.sourceCode {
+        margin: 1em 0;
+      }
+      pre.sourceCode {
+        margin: 0;
+      }
+      @media screen {
+        div.sourceCode {
+          overflow: auto;
+        }
+      }
+      @media print {
+        code.sourceCode {
+          white-space: pre-wrap;
+        }
+        a.sourceLine {
+          text-indent: -1em;
+          padding-left: 1em;
+        }
+      }
+      pre.numberSource a.sourceLine {
+        position: relative;
+        left: -4em;
+      }
+      pre.numberSource a.sourceLine::before {
+        content: attr(title);
+        position: relative;
+        left: -1em;
+        text-align: right;
+        vertical-align: baseline;
+        border: none;
+        pointer-events: all;
+        display: inline-block;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 4px;
+        width: 4em;
+        color: #aaaaaa;
+      }
+      pre.numberSource {
+        margin-left: 3em;
+        border-left: 1px solid #aaaaaa;
+        padding-left: 4px;
+      }
+      div.sourceCode {
+      }
+      @media screen {
+        a.sourceLine::before {
+          text-decoration: underline;
+        }
+      }
+      code span.al {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Alert */
+      code span.an {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Annotation */
+      code span.at {
+        color: #7d9029;
+      } /* Attribute */
+      code span.bn {
+        color: #40a070;
+      } /* BaseN */
+      code span.bu {
+      } /* BuiltIn */
+      code span.cf {
+        color: #007020;
+        font-weight: bold;
+      } /* ControlFlow */
+      code span.ch {
+        color: #4070a0;
+      } /* Char */
+      code span.cn {
+        color: #880000;
+      } /* Constant */
+      code span.co {
+        color: #60a0b0;
+        font-style: italic;
+      } /* Comment */
+      code span.cv {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* CommentVar */
+      code span.do {
+        color: #ba2121;
+        font-style: italic;
+      } /* Documentation */
+      code span.dt {
+        color: #902000;
+      } /* DataType */
+      code span.dv {
+        color: #40a070;
+      } /* DecVal */
+      code span.er {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Error */
+      code span.ex {
+      } /* Extension */
+      code span.fl {
+        color: #40a070;
+      } /* Float */
+      code span.fu {
+        color: #06287e;
+      } /* Function */
+      code span.im {
+      } /* Import */
+      code span.in {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Information */
+      code span.kw {
+        color: #007020;
+        font-weight: bold;
+      } /* Keyword */
+      code span.op {
+        color: #666666;
+      } /* Operator */
+      code span.ot {
+        color: #007020;
+      } /* Other */
+      code span.pp {
+        color: #bc7a00;
+      } /* Preprocessor */
+      code span.sc {
+        color: #4070a0;
+      } /* SpecialChar */
+      code span.ss {
+        color: #bb6688;
+      } /* SpecialString */
+      code span.st {
+        color: #4070a0;
+      } /* String */
+      code span.va {
+        color: #19177c;
+      } /* Variable */
+      code span.vs {
+        color: #4070a0;
+      } /* VerbatimString */
+      code span.wa {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Warning */
+    </style>
+  </head>
+  <body>
+    <h1 id="redux-persist-example">Redux Persist example</h1>
+    <p>
+      This example shows how to integrate Redux with the power of Redux Persist
+      in Next.js.
+    </p>
+    <p>
+      With the advantage of having a global state for your app using
+      <code>redux</code>. You’ll also require some of your state values to be
+      available offline. There comes <code>redux-persist</code> using which you
+      can persist your states in browser’s local storage. While there are
+      various ways of persisting your states which you can always find in there
+      <a href="https://github.com/rt2zz/redux-persist/blob/master/README.md"
+        >documentation</a
+      >. This is an example of how you can integrate
+      <code>redux-persist</code> with redux along with Next.js’s universal
+      rendering approach.
+    </p>
+    <h2 id="deploy-your-own">Deploy your own</h2>
+    <p>
+      Deploy the example using
+      <a
+        href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >Vercel</a
+      >:
+    </p>
+    <p>
+      <a
+        href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-redux-persist&amp;project-name=with-redux-persist&amp;repository-name=with-redux-persist"
+        ><img src="https://vercel.com/button" alt="Deploy with Vercel"
+      /></a>
+    </p>
+    <h2 id="how-to-use">How to use</h2>
+    <p>
+      Execute
+      <a
+        href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"
+        ><code>create-next-app</code></a
+      >
+      with <a href="https://docs.npmjs.com/cli/init">npm</a> or
+      <a href="https://yarnpkg.com/lang/en/docs/cli/create/">Yarn</a> to
+      bootstrap the example:
+    </p>
+    <div class="sourceCode" id="cb1">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> create-next-app --example with-redux-persist with-redux-persist-app</a>
 <a class="sourceLine" id="cb1-2" title="2"><span class="co"># or</span></a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="ex">yarn</span> create next-app --example with-redux-persist with-redux-persist-app</a></code></pre></div>
-<p>Deploy it to the cloud with <a href="https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a> (<a href="https://nextjs.org/docs/deployment">Documentation</a>).</p>
-<h2 id="notes">Notes</h2>
-<p>In this example, we are going to use the Next.js example <a href="https://github.com/vercel/next.js/tree/master/examples/with-redux-persist">with-redux</a> to see how you can add a layer of persistence for one of the state from global redux state. To know more about how to create a Next.js project with Redux, you can browse the example project <a href="https://github.com/vercel/next.js/tree/master/examples/with-redux">with-redux</a> to know more about its implementation.</p>
-<p>The Redux Persist has been initialized in <code>store.js</code>. You can modify the <code>redux-persist</code> configuration (In this example, we are persisting only one state termed <code>exampleData</code> which is added in the <code>persist configuration</code>) if you need something more with <code>redux-persist</code> by following their <a href="https://github.com/rt2zz/redux-persist/blob/master/README.md">docs</a>. To wrap out our component in the <code>Persist Gate</code> which rehydrates the global state with combining the persisted values and global state values, we’ll have to make some modifications in the implementation of Redux in <code>pages/_app.js</code>.</p>
-<p>The example under <code>components/data-list.js</code>, shows a simple component that fetches data after being mounted and then dispatches an action to populate the redux state <code>exampleData</code> with the fetched data. And in <code>store.js</code>, since we have included the <code>exampleData</code> state to be persisted, So once the redux state receives the persisted data from browser’s local storage, it will be then updated to the global redux state. So if you open the app next time and there is no Internet connection or whatsoever condition, the app will load the persisted data and will render it on the screen.</p>
-<p>For simplicity and readability, Reducers, Actions, Redux Persist configuration, and Store creators are all in the same file: <code>store.js</code></p>
-</body>
+<a class="sourceLine" id="cb1-3" title="3"><span class="ex">yarn</span> create next-app --example with-redux-persist with-redux-persist-app</a></code></pre>
+    </div>
+    <p>
+      Deploy it to the cloud with
+      <a
+        href="https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >Vercel</a
+      >
+      (<a href="https://nextjs.org/docs/deployment">Documentation</a>).
+    </p>
+    <h2 id="notes">Notes</h2>
+    <p>
+      In this example, we are going to use the Next.js example
+      <a
+        href="https://github.com/vercel/next.js/tree/master/examples/with-redux-persist"
+        >with-redux</a
+      >
+      to see how you can add a layer of persistence for one of the state from
+      global redux state. To know more about how to create a Next.js project
+      with Redux, you can browse the example project
+      <a
+        href="https://github.com/vercel/next.js/tree/master/examples/with-redux"
+        >with-redux</a
+      >
+      to know more about its implementation.
+    </p>
+    <p>
+      The Redux Persist has been initialized in <code>store.js</code>. You can
+      modify the <code>redux-persist</code> configuration (In this example, we
+      are persisting only one state termed <code>exampleData</code> which is
+      added in the <code>persist configuration</code>) if you need something
+      more with <code>redux-persist</code> by following their
+      <a href="https://github.com/rt2zz/redux-persist/blob/master/README.md"
+        >docs</a
+      >. To wrap out our component in the <code>Persist Gate</code> which
+      rehydrates the global state with combining the persisted values and global
+      state values, we’ll have to make some modifications in the implementation
+      of Redux in <code>pages/_app.js</code>.
+    </p>
+    <p>
+      The example under <code>components/data-list.js</code>, shows a simple
+      component that fetches data after being mounted and then dispatches an
+      action to populate the redux state <code>exampleData</code> with the
+      fetched data. And in <code>store.js</code>, since we have included the
+      <code>exampleData</code> state to be persisted, So once the redux state
+      receives the persisted data from browser’s local storage, it will be then
+      updated to the global redux state. So if you open the app next time and
+      there is no Internet connection or whatsoever condition, the app will load
+      the persisted data and will render it on the screen.
+    </p>
+    <p>
+      For simplicity and readability, Reducers, Actions, Redux Persist
+      configuration, and Store creators are all in the same file:
+      <code>store.js</code>
+    </p>
+  </body>
 </html>

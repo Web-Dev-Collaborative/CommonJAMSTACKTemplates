@@ -1,9 +1,8 @@
-
 title: Carrot Creative
 description: >-
   Creative, technology, and distribution under one roof. Carrot is the
   full-service digital agency within VICE.
-link: 'https://carrot.is/'
+link: "https://carrot.is/"
 thumbnailurl: /img/examples/carrot.jpg
 tools:
   - Roots
@@ -17,4 +16,3 @@ tools:
   - GitHub
   - Netlify
   - Google Analytics
-

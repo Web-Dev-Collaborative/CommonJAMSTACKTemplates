@@ -22,9 +22,7 @@ function parseParameter(param: string) {
   return { key: param, repeat, optional }
 }
 
-export function getRouteRegex(
-  normalizedRoute: string
-): {
+export function getRouteRegex(normalizedRoute: string): {
   re: RegExp
   namedRegex?: string
   routeKeys?: { [named: string]: string }

@@ -1,100 +1,293 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>README</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-  <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-</head>
-<body>
-<h1 id="rematch-example">Rematch example</h1>
-<p>This example has two pages. The first page has a counter which can be incremented synchronously or asynchronously. The second page is a page which shows a list of github users. It fetches data from the github api using this <a href="api.github.com/users">endpoint</a>.</p>
-<p>Since rematch is utility which uses redux under the hood, some elements like <code>store.js</code> and <code>withRematch</code> are very similar to the <code>with-redux</code> example. Please go through the <code>with-redux</code> example <a href="https://github.com/vercel/next.js/tree/master/examples/with-redux">here</a> before reading further if you are not familiar with how redux is integrated with nextjs. Rematch is just an extension for Redux so a lot of elements are the same.</p>
-<h2 id="deploy-your-own">Deploy your own</h2>
-<p>Deploy the example using <a href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a>:</p>
-<p><a href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-rematch&amp;project-name=with-rematch&amp;repository-name=with-rematch"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a></p>
-<h2 id="how-to-use">How to use</h2>
-<p>Execute <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"><code>create-next-app</code></a> with <a href="https://docs.npmjs.com/cli/init">npm</a> or <a href="https://yarnpkg.com/lang/en/docs/cli/create/">Yarn</a> to bootstrap the example::</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> create-next-app --example with-rematch with-rematch-app</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>README</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+    <style type="text/css">
+      a.sourceLine {
+        display: inline-block;
+        line-height: 1.25;
+      }
+      a.sourceLine {
+        pointer-events: none;
+        color: inherit;
+        text-decoration: inherit;
+      }
+      a.sourceLine:empty {
+        height: 1.2em;
+      }
+      .sourceCode {
+        overflow: visible;
+      }
+      code.sourceCode {
+        white-space: pre;
+        position: relative;
+      }
+      div.sourceCode {
+        margin: 1em 0;
+      }
+      pre.sourceCode {
+        margin: 0;
+      }
+      @media screen {
+        div.sourceCode {
+          overflow: auto;
+        }
+      }
+      @media print {
+        code.sourceCode {
+          white-space: pre-wrap;
+        }
+        a.sourceLine {
+          text-indent: -1em;
+          padding-left: 1em;
+        }
+      }
+      pre.numberSource a.sourceLine {
+        position: relative;
+        left: -4em;
+      }
+      pre.numberSource a.sourceLine::before {
+        content: attr(title);
+        position: relative;
+        left: -1em;
+        text-align: right;
+        vertical-align: baseline;
+        border: none;
+        pointer-events: all;
+        display: inline-block;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 4px;
+        width: 4em;
+        color: #aaaaaa;
+      }
+      pre.numberSource {
+        margin-left: 3em;
+        border-left: 1px solid #aaaaaa;
+        padding-left: 4px;
+      }
+      div.sourceCode {
+      }
+      @media screen {
+        a.sourceLine::before {
+          text-decoration: underline;
+        }
+      }
+      code span.al {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Alert */
+      code span.an {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Annotation */
+      code span.at {
+        color: #7d9029;
+      } /* Attribute */
+      code span.bn {
+        color: #40a070;
+      } /* BaseN */
+      code span.bu {
+      } /* BuiltIn */
+      code span.cf {
+        color: #007020;
+        font-weight: bold;
+      } /* ControlFlow */
+      code span.ch {
+        color: #4070a0;
+      } /* Char */
+      code span.cn {
+        color: #880000;
+      } /* Constant */
+      code span.co {
+        color: #60a0b0;
+        font-style: italic;
+      } /* Comment */
+      code span.cv {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* CommentVar */
+      code span.do {
+        color: #ba2121;
+        font-style: italic;
+      } /* Documentation */
+      code span.dt {
+        color: #902000;
+      } /* DataType */
+      code span.dv {
+        color: #40a070;
+      } /* DecVal */
+      code span.er {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Error */
+      code span.ex {
+      } /* Extension */
+      code span.fl {
+        color: #40a070;
+      } /* Float */
+      code span.fu {
+        color: #06287e;
+      } /* Function */
+      code span.im {
+      } /* Import */
+      code span.in {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Information */
+      code span.kw {
+        color: #007020;
+        font-weight: bold;
+      } /* Keyword */
+      code span.op {
+        color: #666666;
+      } /* Operator */
+      code span.ot {
+        color: #007020;
+      } /* Other */
+      code span.pp {
+        color: #bc7a00;
+      } /* Preprocessor */
+      code span.sc {
+        color: #4070a0;
+      } /* SpecialChar */
+      code span.ss {
+        color: #bb6688;
+      } /* SpecialString */
+      code span.st {
+        color: #4070a0;
+      } /* String */
+      code span.va {
+        color: #19177c;
+      } /* Variable */
+      code span.vs {
+        color: #4070a0;
+      } /* VerbatimString */
+      code span.wa {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Warning */
+    </style>
+  </head>
+  <body>
+    <h1 id="rematch-example">Rematch example</h1>
+    <p>
+      This example has two pages. The first page has a counter which can be
+      incremented synchronously or asynchronously. The second page is a page
+      which shows a list of github users. It fetches data from the github api
+      using this <a href="api.github.com/users">endpoint</a>.
+    </p>
+    <p>
+      Since rematch is utility which uses redux under the hood, some elements
+      like <code>store.js</code> and <code>withRematch</code> are very similar
+      to the <code>with-redux</code> example. Please go through the
+      <code>with-redux</code> example
+      <a
+        href="https://github.com/vercel/next.js/tree/master/examples/with-redux"
+        >here</a
+      >
+      before reading further if you are not familiar with how redux is
+      integrated with nextjs. Rematch is just an extension for Redux so a lot of
+      elements are the same.
+    </p>
+    <h2 id="deploy-your-own">Deploy your own</h2>
+    <p>
+      Deploy the example using
+      <a
+        href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >Vercel</a
+      >:
+    </p>
+    <p>
+      <a
+        href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-rematch&amp;project-name=with-rematch&amp;repository-name=with-rematch"
+        ><img src="https://vercel.com/button" alt="Deploy with Vercel"
+      /></a>
+    </p>
+    <h2 id="how-to-use">How to use</h2>
+    <p>
+      Execute
+      <a
+        href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"
+        ><code>create-next-app</code></a
+      >
+      with <a href="https://docs.npmjs.com/cli/init">npm</a> or
+      <a href="https://yarnpkg.com/lang/en/docs/cli/create/">Yarn</a> to
+      bootstrap the example::
+    </p>
+    <div class="sourceCode" id="cb1">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> create-next-app --example with-rematch with-rematch-app</a>
 <a class="sourceLine" id="cb1-2" title="2"><span class="co"># or</span></a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="ex">yarn</span> create next-app --example with-rematch with-rematch-app</a></code></pre></div>
-<p>Deploy it to the cloud with <a href="https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a> (<a href="https://nextjs.org/docs/deployment">Documentation</a>).</p>
-<h2 id="directory-structure">Directory structure</h2>
-<p>Besides the <code>pages</code> directory, there is a directory called shared which holds all of the code belonging to rematch. <code>Rematch</code> has a lot lesser boilerplate than <code>Redux</code> because it is able to put actions(including async actions), <em>models</em> and reducers together. Hence, a <code>models</code> directory is present, which contains the logic for <code>counter</code> and <code>github</code> users.</p>
-<p>Some features of this example are :</p>
-<ul>
-<li>Pages are connected to rematch using <code>withRematch</code> util. These pages are capable of accessing values from the store and dispatching changes</li>
-<li>Components are inside the <code>shared/components</code> folder. The <code>counter-display</code> component is connected to the store using the <code>connect</code> function to show how components which are not pages, can connect with Rematch.</li>
-<li>The file <code>shared/store</code> exports an initStore function which is used by <code>withRematch</code> to create store universally on the server and on the client.</li>
-</ul>
-</body>
+<a class="sourceLine" id="cb1-3" title="3"><span class="ex">yarn</span> create next-app --example with-rematch with-rematch-app</a></code></pre>
+    </div>
+    <p>
+      Deploy it to the cloud with
+      <a
+        href="https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >Vercel</a
+      >
+      (<a href="https://nextjs.org/docs/deployment">Documentation</a>).
+    </p>
+    <h2 id="directory-structure">Directory structure</h2>
+    <p>
+      Besides the <code>pages</code> directory, there is a directory called
+      shared which holds all of the code belonging to rematch.
+      <code>Rematch</code> has a lot lesser boilerplate than
+      <code>Redux</code> because it is able to put actions(including async
+      actions), <em>models</em> and reducers together. Hence, a
+      <code>models</code> directory is present, which contains the logic for
+      <code>counter</code> and <code>github</code> users.
+    </p>
+    <p>Some features of this example are :</p>
+    <ul>
+      <li>
+        Pages are connected to rematch using <code>withRematch</code> util.
+        These pages are capable of accessing values from the store and
+        dispatching changes
+      </li>
+      <li>
+        Components are inside the <code>shared/components</code> folder. The
+        <code>counter-display</code> component is connected to the store using
+        the <code>connect</code> function to show how components which are not
+        pages, can connect with Rematch.
+      </li>
+      <li>
+        The file <code>shared/store</code> exports an initStore function which
+        is used by <code>withRematch</code> to create store universally on the
+        server and on the client.
+      </li>
+    </ul>
+  </body>
 </html>

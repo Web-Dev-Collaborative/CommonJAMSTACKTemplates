@@ -7,5 +7,4 @@ featured: true
 excludeFromSitemap: true
 type:
   - article
-
 ---

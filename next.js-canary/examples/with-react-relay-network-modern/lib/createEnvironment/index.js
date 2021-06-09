@@ -1,5 +1,3 @@
-export const { initEnvironment, createEnvironment } = (typeof window ===
-'undefined'
-  ? require('./server')
-  : require('./client')
+export const { initEnvironment, createEnvironment } = (
+  typeof window === 'undefined' ? require('./server') : require('./client')
 ).default

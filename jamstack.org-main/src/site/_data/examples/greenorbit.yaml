@@ -1,9 +1,8 @@
-
 title: GreenOrbit
 description: >-
   Cloud-based intranet software. Get your people going with everything you need,
   built in.
-link: 'https://www.greenorbit.com'
+link: "https://www.greenorbit.com"
 thumbnailurl: /img/examples/greenrobit.jpg
 tools:
   - Serverless Framework
@@ -19,4 +18,3 @@ tools:
   - GraphQL
   - Sass
   - ESLint
-

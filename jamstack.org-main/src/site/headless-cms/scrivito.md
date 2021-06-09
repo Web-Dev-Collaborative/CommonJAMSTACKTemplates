@@ -10,7 +10,6 @@ supportedgenerators:
 description: Scrivito is a cloud-based CMS, based on ReactJS, built for digital agencies and medium to large-sized businesses.
 images:
   - path: /img/cms/scrivito-1.png
-
 ---
 
 ## Scrivito

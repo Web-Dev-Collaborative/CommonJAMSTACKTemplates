@@ -1,60 +1,128 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>simple</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">simple</h1>
-</header>
-<p>#Simple</p>
-<p>Simple is a static blog generator with a single static page. You can write you blog online, and it will generate static html files at your repo named <code>username.github.io</code> which is supported by <a href="https://pages.github.com">github pages</a></p>
-<p>##Demo</p>
-<p><a href="http://isnowfy.github.io/simple">Simple</a></p>
-<p><a href="http://isnowfy.github.io/">Blog demo</a></p>
-<p><a href="http://isnowfy.github.io/simple/editor.html">Lightweight markdown editor</a></p>
-<p>##Usage</p>
-<p>With Simple and github pages you can easily create your static blog. Here is what you need to do.</p>
-<ol type="1">
-<li>Create a github account.</li>
-<li>Create a repo named <code>your_user_name.github.io</code> (remember to check <code>Initilize and create README</code>).</li>
-<li>Sign in <a href="http://isnowfy.github.io/simple">Simple</a> with your github account.</li>
-<li>Click <code>Initilize</code> to set up basic files for your static blog site.(maybe a little slow)</li>
-<li>Click <code>Go</code> and start writing.</li>
-<li>Click <code>New post</code> to create a new post and when finish writing click <code>save</code> to generate the static page.</li>
-<li>Now you can browse the <code>your_user_name.github.io</code> site and enjoy it!</li>
-</ol>
-<figure>
-<img src="https://isnowfy.github.io/img/Simple.png" alt="simple" /><figcaption>simple</figcaption>
-</figure>
-<ul>
-<li><p>You can use your own blog name, just modify the <code>main.json</code> file, and change <code>name="username"</code>.</p></li>
-<li><p>You can use disqus comment system, just modify the <code>main.json</code> file, and change <code>disqus_shortname=""</code> to <code>disqus_shortname="your_shortname"</code>.</p></li>
-<li><p>You can use your own custom domain, just modify the <code>CNAME</code> file.(see <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages">also</a>)</p></li>
-</ul>
-<p>##Features</p>
-<ul>
-<li>Simple, no backend need</li>
-<li>Static blog</li>
-<li>Markdown editor</li>
-<li>Code highlight support</li>
-<li>Tex formula support</li>
-<li>Responsive html</li>
-</ul>
-<p>##Custom</p>
-<p>The template files are at <code>/src/template</code>, so you can modify the template files and css files. If you want use your own theme you can clone the project, modify the template files and push the entire <code>src</code> folder in your <code>gh-pages</code> branch which will allow you generate your own static blog.</p>
-<p>##Todo</p>
-<p>Enhance error display, Search, Sitemap, Rss</p>
-<p>##License</p>
-<p>MIT licensed.</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>simple</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">simple</h1>
+    </header>
+    <p>#Simple</p>
+    <p>
+      Simple is a static blog generator with a single static page. You can write
+      you blog online, and it will generate static html files at your repo named
+      <code>username.github.io</code> which is supported by
+      <a href="https://pages.github.com">github pages</a>
+    </p>
+    <p>##Demo</p>
+    <p><a href="http://isnowfy.github.io/simple">Simple</a></p>
+    <p><a href="http://isnowfy.github.io/">Blog demo</a></p>
+    <p>
+      <a href="http://isnowfy.github.io/simple/editor.html"
+        >Lightweight markdown editor</a
+      >
+    </p>
+    <p>##Usage</p>
+    <p>
+      With Simple and github pages you can easily create your static blog. Here
+      is what you need to do.
+    </p>
+    <ol type="1">
+      <li>Create a github account.</li>
+      <li>
+        Create a repo named <code>your_user_name.github.io</code> (remember to
+        check <code>Initilize and create README</code>).
+      </li>
+      <li>
+        Sign in <a href="http://isnowfy.github.io/simple">Simple</a> with your
+        github account.
+      </li>
+      <li>
+        Click <code>Initilize</code> to set up basic files for your static blog
+        site.(maybe a little slow)
+      </li>
+      <li>Click <code>Go</code> and start writing.</li>
+      <li>
+        Click <code>New post</code> to create a new post and when finish writing
+        click <code>save</code> to generate the static page.
+      </li>
+      <li>
+        Now you can browse the <code>your_user_name.github.io</code> site and
+        enjoy it!
+      </li>
+    </ol>
+    <figure>
+      <img src="https://isnowfy.github.io/img/Simple.png" alt="simple" />
+      <figcaption>simple</figcaption>
+    </figure>
+    <ul>
+      <li>
+        <p>
+          You can use your own blog name, just modify the
+          <code>main.json</code> file, and change <code>name="username"</code>.
+        </p>
+      </li>
+      <li>
+        <p>
+          You can use disqus comment system, just modify the
+          <code>main.json</code> file, and change
+          <code>disqus_shortname=""</code> to
+          <code>disqus_shortname="your_shortname"</code>.
+        </p>
+      </li>
+      <li>
+        <p>
+          You can use your own custom domain, just modify the
+          <code>CNAME</code> file.(see
+          <a
+            href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages"
+            >also</a
+          >)
+        </p>
+      </li>
+    </ul>
+    <p>##Features</p>
+    <ul>
+      <li>Simple, no backend need</li>
+      <li>Static blog</li>
+      <li>Markdown editor</li>
+      <li>Code highlight support</li>
+      <li>Tex formula support</li>
+      <li>Responsive html</li>
+    </ul>
+    <p>##Custom</p>
+    <p>
+      The template files are at <code>/src/template</code>, so you can modify
+      the template files and css files. If you want use your own theme you can
+      clone the project, modify the template files and push the entire
+      <code>src</code> folder in your <code>gh-pages</code> branch which will
+      allow you generate your own static blog.
+    </p>
+    <p>##Todo</p>
+    <p>Enhance error display, Search, Sitemap, Rss</p>
+    <p>##License</p>
+    <p>MIT licensed.</p>
+  </body>
 </html>

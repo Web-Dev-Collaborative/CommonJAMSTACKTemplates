@@ -6,13 +6,13 @@ repo: CrystallizeAPI/crystallize-cli
 opensource: "No"
 typeofcms: "API Driven"
 supportedgenerators:
-    - All
+  - All
 description: Headless PIM with a twist, product information and marketing content as a fast & scalable GraphQL service. Commerce + Content. JAMStack ready.
 images:
-    - path: /img/cms/crystallize-JAMStack-ecommerce-boilerplate.png
-    - path: /img/cms/crystallize-beautiful-editorial-ui.png
-    - path: /img/cms/crystallize-topic-maps-taxonomies.png
-    - path: /img/cms/crystallize-fast-graphql-api.png
+  - path: /img/cms/crystallize-JAMStack-ecommerce-boilerplate.png
+  - path: /img/cms/crystallize-beautiful-editorial-ui.png
+  - path: /img/cms/crystallize-topic-maps-taxonomies.png
+  - path: /img/cms/crystallize-fast-graphql-api.png
 ---
 
 <img class="simple" src="/img/cms/crystallize-beautiful-editorial-ui.png" alt="Crystallize Admin UI" />

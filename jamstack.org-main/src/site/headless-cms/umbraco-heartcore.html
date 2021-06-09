@@ -1,47 +1,177 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Umbraco Heartcore</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">Umbraco Heartcore</h1>
-</header>
-<p>Umbraco Heartcore is a headless CMS with a strong core. This means you will get a backend and editor experience that makes working with content delightful, structured, logical and scalable.</p>
-<p>The strong core allows you to worry less about time-consuming administrative tasks and lets you focus on what’s important: creating great content and displaying it beautifully on any frontend you build.</p>
-<h3 id="managed-serviced-and-updated-headless-cms">Managed, serviced and updated Headless CMS</h3>
-<p>With Umbraco Heartcore you don’t need to worry about keeping an extra codebase up to date - it’s taken care of it for you.</p>
-<p>This not only covers the backend, which is kept updated and secure, but also the API. Umbraco Heartcore comes with a managed API, which means all of your content is automatically exposed via the RESTful API, without you having to worry about keeping it updated.</p>
-<p>Of course this also means that all the new features that are added along the way will be automatically added to your projects (<a href="https://umbraco.com/products/roadmap/">see roadmap for upcoming features</a>).</p>
-<p><img class="simple" src="/img/cms/umbraco-heartcore-backoffice.png" alt="Umbraco Heartcore" /></p>
-<h3 id="smooth-editing-experience">Smooth editing experience</h3>
-<p>Umbraco Heartcore’s content management experience is largely based on the Open Source Umbraco CMS. It has been around since 2005 and has always had one focus: making content management simpler and more intuitive for developers and editors alike.</p>
-<p>Since the beginning it has kept improving and all the best content management features from the CMS has been put into Umbraco Heartcore - the Headless CMS - giving you a delightful experience when creating and managing content.</p>
-<p>The editor experience is called <strong>Infinite Editing</strong>, which helps reduce interruptions in your workflow. Infinite Editing allows you to create, manage and publish content - anything from multilingual content to rich media such as images and videos - without ever losing track of the context.</p>
-<p><img class="simple" src="/img/cms/umbraco-heartcore-channels.png" alt="Umbraco Heartcore" /></p>
-<h3 id="cdn-included-in-all-projects">CDN included in all projects</h3>
-<p>To ensure that users get the best user experience every time they visit your frontend - no matter where on the globe they might be - Umbraco Heartcore includes Cloudflare CDN. With a Content Delivery Network from Cloudflare you get a stable platform and fast delivery of your content to any of your frontends.</p>
-<p>The CDN is taken care of (just like the managed API and backend), so you don’t have to worry about yet another service to manage. And best of all - CDN is included in all pricing tiers. No matter the size of your project and your other needs, you’ll always have a rock-solid CDN to power your content.</p>
-<p><img class="simple" src="/img/cms/umbraco-heartcore-cdn.png" alt="Umbraco Heartcore" /></p>
-<h3 id="webhooks-lets-you-integrate-with-anything">Webhooks lets you integrate with anything</h3>
-<p>Webhooks allow you to set up triggers in Umbraco Heartcore that will send a POST request to a URL that you define. This allows you to set up solutions where the platforms you connect to Umbraco Heartcore are notified when content is saved or published, so they can react to what happens in the CMS.</p>
-<p>With Webhooks being part of Heartcore, you can hookup to Ecommerce, Line of business apps, build Environments or anything else that you’ll need. This enables you to use all the best-of-breed tools you love, without compromising on your workflows.</p>
-<p><img class="simple" src="/img/cms/umbraco-heartcore-webhooks.gif" alt="Umbraco Heartcore" /></p>
-<h3 id="front-end-agnostic">Front-end agnostic</h3>
-<p>Do you already have a preferred tech stack that you want to use to display your amazing content? No problem!</p>
-<p>With Umbraco Heartcore you can essentially use anything that supports HTTP. And with the different (and expanding) client libraries your developers are provided with a little code to get started without any steep learning curve or code-language barrier.</p>
-<p>Umbraco uses .NET, but even if you’ve never worked with Umbraco or .NET before, you won’t need to worry about it to build websites, apps or screens powered by Umbraco Heartcore. You can get up and running with your project in no time in the programming languages you feel confident in!</p>
-<h3 id="try-umbraco-heartcore">Try Umbraco Heartcore</h3>
-<p>Umbraco Heartcore is a paid and managed product, but you can take a free 14-day trial if you’re interested to test it out before you buy it. <a href="https://umbraco.com/try-umbraco-heartcore/">You can get started right here</a>.</p>
-<p>Links for further info: * <a href="https://umbraco.com/products/umbraco-heartcore/">Umbraco Heartcore</a> * <a href="https://umbraco.com/umbraco-heartcore-pricing/">Pricing</a> * <a href="https://our.umbraco.com/documentation/Umbraco-Heartcore/">Documentation</a></p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Umbraco Heartcore</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Umbraco Heartcore</h1>
+    </header>
+    <p>
+      Umbraco Heartcore is a headless CMS with a strong core. This means you
+      will get a backend and editor experience that makes working with content
+      delightful, structured, logical and scalable.
+    </p>
+    <p>
+      The strong core allows you to worry less about time-consuming
+      administrative tasks and lets you focus on what’s important: creating
+      great content and displaying it beautifully on any frontend you build.
+    </p>
+    <h3 id="managed-serviced-and-updated-headless-cms">
+      Managed, serviced and updated Headless CMS
+    </h3>
+    <p>
+      With Umbraco Heartcore you don’t need to worry about keeping an extra
+      codebase up to date - it’s taken care of it for you.
+    </p>
+    <p>
+      This not only covers the backend, which is kept updated and secure, but
+      also the API. Umbraco Heartcore comes with a managed API, which means all
+      of your content is automatically exposed via the RESTful API, without you
+      having to worry about keeping it updated.
+    </p>
+    <p>
+      Of course this also means that all the new features that are added along
+      the way will be automatically added to your projects (<a
+        href="https://umbraco.com/products/roadmap/"
+        >see roadmap for upcoming features</a
+      >).
+    </p>
+    <p>
+      <img
+        class="simple"
+        src="/img/cms/umbraco-heartcore-backoffice.png"
+        alt="Umbraco Heartcore"
+      />
+    </p>
+    <h3 id="smooth-editing-experience">Smooth editing experience</h3>
+    <p>
+      Umbraco Heartcore’s content management experience is largely based on the
+      Open Source Umbraco CMS. It has been around since 2005 and has always had
+      one focus: making content management simpler and more intuitive for
+      developers and editors alike.
+    </p>
+    <p>
+      Since the beginning it has kept improving and all the best content
+      management features from the CMS has been put into Umbraco Heartcore - the
+      Headless CMS - giving you a delightful experience when creating and
+      managing content.
+    </p>
+    <p>
+      The editor experience is called <strong>Infinite Editing</strong>, which
+      helps reduce interruptions in your workflow. Infinite Editing allows you
+      to create, manage and publish content - anything from multilingual content
+      to rich media such as images and videos - without ever losing track of the
+      context.
+    </p>
+    <p>
+      <img
+        class="simple"
+        src="/img/cms/umbraco-heartcore-channels.png"
+        alt="Umbraco Heartcore"
+      />
+    </p>
+    <h3 id="cdn-included-in-all-projects">CDN included in all projects</h3>
+    <p>
+      To ensure that users get the best user experience every time they visit
+      your frontend - no matter where on the globe they might be - Umbraco
+      Heartcore includes Cloudflare CDN. With a Content Delivery Network from
+      Cloudflare you get a stable platform and fast delivery of your content to
+      any of your frontends.
+    </p>
+    <p>
+      The CDN is taken care of (just like the managed API and backend), so you
+      don’t have to worry about yet another service to manage. And best of all -
+      CDN is included in all pricing tiers. No matter the size of your project
+      and your other needs, you’ll always have a rock-solid CDN to power your
+      content.
+    </p>
+    <p>
+      <img
+        class="simple"
+        src="/img/cms/umbraco-heartcore-cdn.png"
+        alt="Umbraco Heartcore"
+      />
+    </p>
+    <h3 id="webhooks-lets-you-integrate-with-anything">
+      Webhooks lets you integrate with anything
+    </h3>
+    <p>
+      Webhooks allow you to set up triggers in Umbraco Heartcore that will send
+      a POST request to a URL that you define. This allows you to set up
+      solutions where the platforms you connect to Umbraco Heartcore are
+      notified when content is saved or published, so they can react to what
+      happens in the CMS.
+    </p>
+    <p>
+      With Webhooks being part of Heartcore, you can hookup to Ecommerce, Line
+      of business apps, build Environments or anything else that you’ll need.
+      This enables you to use all the best-of-breed tools you love, without
+      compromising on your workflows.
+    </p>
+    <p>
+      <img
+        class="simple"
+        src="/img/cms/umbraco-heartcore-webhooks.gif"
+        alt="Umbraco Heartcore"
+      />
+    </p>
+    <h3 id="front-end-agnostic">Front-end agnostic</h3>
+    <p>
+      Do you already have a preferred tech stack that you want to use to display
+      your amazing content? No problem!
+    </p>
+    <p>
+      With Umbraco Heartcore you can essentially use anything that supports
+      HTTP. And with the different (and expanding) client libraries your
+      developers are provided with a little code to get started without any
+      steep learning curve or code-language barrier.
+    </p>
+    <p>
+      Umbraco uses .NET, but even if you’ve never worked with Umbraco or .NET
+      before, you won’t need to worry about it to build websites, apps or
+      screens powered by Umbraco Heartcore. You can get up and running with your
+      project in no time in the programming languages you feel confident in!
+    </p>
+    <h3 id="try-umbraco-heartcore">Try Umbraco Heartcore</h3>
+    <p>
+      Umbraco Heartcore is a paid and managed product, but you can take a free
+      14-day trial if you’re interested to test it out before you buy it.
+      <a href="https://umbraco.com/try-umbraco-heartcore/"
+        >You can get started right here</a
+      >.
+    </p>
+    <p>
+      Links for further info: *
+      <a href="https://umbraco.com/products/umbraco-heartcore/"
+        >Umbraco Heartcore</a
+      >
+      * <a href="https://umbraco.com/umbraco-heartcore-pricing/">Pricing</a> *
+      <a href="https://our.umbraco.com/documentation/Umbraco-Heartcore/"
+        >Documentation</a
+      >
+    </p>
+  </body>
 </html>

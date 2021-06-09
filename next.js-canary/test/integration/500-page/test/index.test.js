@@ -25,7 +25,8 @@ const pages500 = join(appDir, 'pages/500.js')
 const pagesApp = join(appDir, 'pages/_app.js')
 const pagesError = join(appDir, 'pages/_error.js')
 const nextConfig = join(appDir, 'next.config.js')
-const gip500Err = /`pages\/500` can not have getInitialProps\/getServerSideProps/
+const gip500Err =
+  /`pages\/500` can not have getInitialProps\/getServerSideProps/
 
 let nextConfigContent
 let appPort
@@ -123,7 +124,11 @@ describe('500 Page Support', () => {
     `
     )
     await fs.remove(join(appDir, '.next'))
-    const { stderr, stdout: buildStdout, code } = await nextBuild(appDir, [], {
+    const {
+      stderr,
+      stdout: buildStdout,
+      code,
+    } = await nextBuild(appDir, [], {
       stderr: true,
       stdout: true,
     })

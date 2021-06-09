@@ -1,197 +1,566 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>README</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-  <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-</head>
-<body>
-<h1 id="example-using-stripe-with-typescript-and-react-stripe-js">Example using Stripe with TypeScript and react-stripe-js</h1>
-<p>This is a full-stack TypeScript example using:</p>
-<ul>
-<li>Frontend:
-<ul>
-<li>Next.js and <a href="https://github.com/zeit/swr">SWR</a></li>
-<li><a href="https://github.com/stripe/react-stripe-js">react-stripe-js</a> for <a href="https://stripe.com/checkout">Checkout</a> and <a href="https://stripe.com/elements">Elements</a></li>
-</ul></li>
-<li>Backend
-<ul>
-<li>Next.js <a href="https://nextjs.org/docs/api-routes/introduction">API routes</a></li>
-<li><a href="https://github.com/stripe/stripe-node#usage-with-typescript">stripe-node with TypeScript</a></li>
-</ul></li>
-</ul>
-<h2 id="demo">Demo</h2>
-<ul>
-<li>Live demo: https://nextjs-typescript-react-stripe-js.vercel.app/</li>
-<li>CodeSandbox: https://codesandbox.io/s/github/stripe-samples/nextjs-typescript-react-stripe-js</li>
-<li>Tutorial: https://dev.to/thorwebdev/type-safe-payments-with-next-js-typescript-and-stripe-4jo7</li>
-</ul>
-<p>The demo is running in test mode – use <code>4242424242424242</code> as a test card number with any CVC + future expiration date.</p>
-<p>Use the <code>4000000000003220</code> test card number to trigger a 3D Secure challenge flow.</p>
-<p>Read more about testing on Stripe at https://stripe.com/docs/testing.</p>
-<details open>
-<summary>Shopping Cart Checkout Demo</summary> <img src="./public/shopping_cart_demo.gif" alt="A gif of the Shopping Cart Checkout payment page." align="center">
-</details>
-<details>
-<summary>Checkout Donations Demo</summary> <img src="./public/checkout_demo.gif" alt="A gif of the Checkout payment page." align="center">
-</details>
-<details>
-<summary>Elements Donations Demo</summary> <img src="./public/elements_demo.gif" alt="A gif of the custom Elements checkout page." align="center">
-</details>
-<h2 id="deploy-your-own">Deploy your own</h2>
-<p>Once you have access to <a href="#required-configuration">the environment variables you’ll need</a> from the <a href="https://dashboard.stripe.com/apikeys">Stripe Dashboard</a>, deploy the example using <a href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a>:</p>
-<p><a href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-stripe-typescript&amp;project-name=with-stripe-typescript&amp;repository-name=with-stripe-typescript&amp;env=NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,STRIPE_SECRET_KEY&amp;envDescription=Enter%20your%20Stripe%20Keys&amp;envLink=https://github.com/vercel/next.js/tree/canary/examples/with-stripe-typescript%23required-configuration"><img src="https://vercel.com/button" alt="Deploy to Vercel" /></a></p>
-<h2 id="included-functionality">Included functionality</h2>
-<ul>
-<li><a href="https://nextjs.org/blog/next-9-2#built-in-css-support-for-global-stylesheets">Global CSS styles</a></li>
-<li>Implementation of a Layout component that loads and sets up Stripe.js and Elements for usage with SSR via <code>loadStripe</code> helper: <a href="components/Layout.tsx">components/Layout.tsx</a>.</li>
-<li>Stripe Checkout
-<ul>
-<li>Custom Amount Donation with redirect to Stripe Checkout:
-<ul>
-<li>Frontend: <a href="pages/donate-with-checkout.tsx">pages/donate-with-checkout.tsx</a></li>
-<li>Backend: <a href="pages/api/checkout_sessions/">pages/api/checkout_sessions/</a></li>
-<li>Checkout payment result page that uses <a href="https://github.com/zeit/swr">SWR</a> hooks to fetch the CheckoutSession status from the API route: <a href="pages/result.tsx">pages/result.tsx</a>.</li>
-</ul></li>
-</ul></li>
-<li>Stripe Elements
-<ul>
-<li>Custom Amount Donation with Stripe Elements &amp; PaymentIntents (no redirect):
-<ul>
-<li>Frontend: <a href="pages/donate-with-checkout.tsx">pages/donate-with-elements.tsx</a></li>
-<li>Backend: <a href="pages/api/payment_intents/">pages/api/payment_intents/</a></li>
-</ul></li>
-</ul></li>
-<li>Webhook handling for <a href="https://stripe.com/docs/payments/accept-a-payment#web-fulfillment">post-payment events</a>
-<ul>
-<li>By default Next.js API routes are same-origin only. To allow Stripe webhook event requests to reach our API route, we need to add <code>micro-cors</code> and <a href="https://stripe.com/docs/webhooks/signatures">verify the webhook signature</a> of the event. All of this happens in <a href="pages/api/webhooks/index.ts">pages/api/webhooks/index.ts</a>.</li>
-</ul></li>
-<li>Helpers
-<ul>
-<li><a href="utils/api-helpers.ts">utils/api-helpers.ts</a>
-<ul>
-<li>helpers for GET and POST requests.</li>
-</ul></li>
-<li><a href="utils/stripe-helpers.ts">utils/stripe-helpers.ts</a>
-<ul>
-<li>Format amount strings properly using <code>Intl.NumberFormat</code>.</li>
-<li>Format amount for usage with Stripe, including zero decimal currency detection.</li>
-</ul></li>
-</ul></li>
-</ul>
-<h2 id="how-to-use">How to use</h2>
-<p>Execute <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"><code>create-next-app</code></a> with <a href="https://docs.npmjs.com/cli/init">npm</a> or <a href="https://yarnpkg.com/lang/en/docs/cli/create/">Yarn</a> to bootstrap the example:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> create-next-app --example with-stripe-typescript with-stripe-typescript-app</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>README</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+    <style type="text/css">
+      a.sourceLine {
+        display: inline-block;
+        line-height: 1.25;
+      }
+      a.sourceLine {
+        pointer-events: none;
+        color: inherit;
+        text-decoration: inherit;
+      }
+      a.sourceLine:empty {
+        height: 1.2em;
+      }
+      .sourceCode {
+        overflow: visible;
+      }
+      code.sourceCode {
+        white-space: pre;
+        position: relative;
+      }
+      div.sourceCode {
+        margin: 1em 0;
+      }
+      pre.sourceCode {
+        margin: 0;
+      }
+      @media screen {
+        div.sourceCode {
+          overflow: auto;
+        }
+      }
+      @media print {
+        code.sourceCode {
+          white-space: pre-wrap;
+        }
+        a.sourceLine {
+          text-indent: -1em;
+          padding-left: 1em;
+        }
+      }
+      pre.numberSource a.sourceLine {
+        position: relative;
+        left: -4em;
+      }
+      pre.numberSource a.sourceLine::before {
+        content: attr(title);
+        position: relative;
+        left: -1em;
+        text-align: right;
+        vertical-align: baseline;
+        border: none;
+        pointer-events: all;
+        display: inline-block;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 4px;
+        width: 4em;
+        color: #aaaaaa;
+      }
+      pre.numberSource {
+        margin-left: 3em;
+        border-left: 1px solid #aaaaaa;
+        padding-left: 4px;
+      }
+      div.sourceCode {
+      }
+      @media screen {
+        a.sourceLine::before {
+          text-decoration: underline;
+        }
+      }
+      code span.al {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Alert */
+      code span.an {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Annotation */
+      code span.at {
+        color: #7d9029;
+      } /* Attribute */
+      code span.bn {
+        color: #40a070;
+      } /* BaseN */
+      code span.bu {
+      } /* BuiltIn */
+      code span.cf {
+        color: #007020;
+        font-weight: bold;
+      } /* ControlFlow */
+      code span.ch {
+        color: #4070a0;
+      } /* Char */
+      code span.cn {
+        color: #880000;
+      } /* Constant */
+      code span.co {
+        color: #60a0b0;
+        font-style: italic;
+      } /* Comment */
+      code span.cv {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* CommentVar */
+      code span.do {
+        color: #ba2121;
+        font-style: italic;
+      } /* Documentation */
+      code span.dt {
+        color: #902000;
+      } /* DataType */
+      code span.dv {
+        color: #40a070;
+      } /* DecVal */
+      code span.er {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Error */
+      code span.ex {
+      } /* Extension */
+      code span.fl {
+        color: #40a070;
+      } /* Float */
+      code span.fu {
+        color: #06287e;
+      } /* Function */
+      code span.im {
+      } /* Import */
+      code span.in {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Information */
+      code span.kw {
+        color: #007020;
+        font-weight: bold;
+      } /* Keyword */
+      code span.op {
+        color: #666666;
+      } /* Operator */
+      code span.ot {
+        color: #007020;
+      } /* Other */
+      code span.pp {
+        color: #bc7a00;
+      } /* Preprocessor */
+      code span.sc {
+        color: #4070a0;
+      } /* SpecialChar */
+      code span.ss {
+        color: #bb6688;
+      } /* SpecialString */
+      code span.st {
+        color: #4070a0;
+      } /* String */
+      code span.va {
+        color: #19177c;
+      } /* Variable */
+      code span.vs {
+        color: #4070a0;
+      } /* VerbatimString */
+      code span.wa {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Warning */
+    </style>
+  </head>
+  <body>
+    <h1 id="example-using-stripe-with-typescript-and-react-stripe-js">
+      Example using Stripe with TypeScript and react-stripe-js
+    </h1>
+    <p>This is a full-stack TypeScript example using:</p>
+    <ul>
+      <li>
+        Frontend:
+        <ul>
+          <li>Next.js and <a href="https://github.com/zeit/swr">SWR</a></li>
+          <li>
+            <a href="https://github.com/stripe/react-stripe-js"
+              >react-stripe-js</a
+            >
+            for <a href="https://stripe.com/checkout">Checkout</a> and
+            <a href="https://stripe.com/elements">Elements</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Backend
+        <ul>
+          <li>
+            Next.js
+            <a href="https://nextjs.org/docs/api-routes/introduction"
+              >API routes</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/stripe/stripe-node#usage-with-typescript"
+              >stripe-node with TypeScript</a
+            >
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h2 id="demo">Demo</h2>
+    <ul>
+      <li>Live demo: https://nextjs-typescript-react-stripe-js.vercel.app/</li>
+      <li>
+        CodeSandbox:
+        https://codesandbox.io/s/github/stripe-samples/nextjs-typescript-react-stripe-js
+      </li>
+      <li>
+        Tutorial:
+        https://dev.to/thorwebdev/type-safe-payments-with-next-js-typescript-and-stripe-4jo7
+      </li>
+    </ul>
+    <p>
+      The demo is running in test mode – use <code>4242424242424242</code> as a
+      test card number with any CVC + future expiration date.
+    </p>
+    <p>
+      Use the <code>4000000000003220</code> test card number to trigger a 3D
+      Secure challenge flow.
+    </p>
+    <p>Read more about testing on Stripe at https://stripe.com/docs/testing.</p>
+    <details open>
+      <summary>Shopping Cart Checkout Demo</summary>
+      <img
+        src="./public/shopping_cart_demo.gif"
+        alt="A gif of the Shopping Cart Checkout payment page."
+        align="center"
+      />
+    </details>
+    <details>
+      <summary>Checkout Donations Demo</summary>
+      <img
+        src="./public/checkout_demo.gif"
+        alt="A gif of the Checkout payment page."
+        align="center"
+      />
+    </details>
+    <details>
+      <summary>Elements Donations Demo</summary>
+      <img
+        src="./public/elements_demo.gif"
+        alt="A gif of the custom Elements checkout page."
+        align="center"
+      />
+    </details>
+    <h2 id="deploy-your-own">Deploy your own</h2>
+    <p>
+      Once you have access to
+      <a href="#required-configuration"
+        >the environment variables you’ll need</a
+      >
+      from the
+      <a href="https://dashboard.stripe.com/apikeys">Stripe Dashboard</a>,
+      deploy the example using
+      <a
+        href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >Vercel</a
+      >:
+    </p>
+    <p>
+      <a
+        href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-stripe-typescript&amp;project-name=with-stripe-typescript&amp;repository-name=with-stripe-typescript&amp;env=NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,STRIPE_SECRET_KEY&amp;envDescription=Enter%20your%20Stripe%20Keys&amp;envLink=https://github.com/vercel/next.js/tree/canary/examples/with-stripe-typescript%23required-configuration"
+        ><img src="https://vercel.com/button" alt="Deploy to Vercel"
+      /></a>
+    </p>
+    <h2 id="included-functionality">Included functionality</h2>
+    <ul>
+      <li>
+        <a
+          href="https://nextjs.org/blog/next-9-2#built-in-css-support-for-global-stylesheets"
+          >Global CSS styles</a
+        >
+      </li>
+      <li>
+        Implementation of a Layout component that loads and sets up Stripe.js
+        and Elements for usage with SSR via <code>loadStripe</code> helper:
+        <a href="components/Layout.tsx">components/Layout.tsx</a>.
+      </li>
+      <li>
+        Stripe Checkout
+        <ul>
+          <li>
+            Custom Amount Donation with redirect to Stripe Checkout:
+            <ul>
+              <li>
+                Frontend:
+                <a href="pages/donate-with-checkout.tsx"
+                  >pages/donate-with-checkout.tsx</a
+                >
+              </li>
+              <li>
+                Backend:
+                <a href="pages/api/checkout_sessions/"
+                  >pages/api/checkout_sessions/</a
+                >
+              </li>
+              <li>
+                Checkout payment result page that uses
+                <a href="https://github.com/zeit/swr">SWR</a> hooks to fetch the
+                CheckoutSession status from the API route:
+                <a href="pages/result.tsx">pages/result.tsx</a>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Stripe Elements
+        <ul>
+          <li>
+            Custom Amount Donation with Stripe Elements &amp; PaymentIntents (no
+            redirect):
+            <ul>
+              <li>
+                Frontend:
+                <a href="pages/donate-with-checkout.tsx"
+                  >pages/donate-with-elements.tsx</a
+                >
+              </li>
+              <li>
+                Backend:
+                <a href="pages/api/payment_intents/"
+                  >pages/api/payment_intents/</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Webhook handling for
+        <a
+          href="https://stripe.com/docs/payments/accept-a-payment#web-fulfillment"
+          >post-payment events</a
+        >
+        <ul>
+          <li>
+            By default Next.js API routes are same-origin only. To allow Stripe
+            webhook event requests to reach our API route, we need to add
+            <code>micro-cors</code> and
+            <a href="https://stripe.com/docs/webhooks/signatures"
+              >verify the webhook signature</a
+            >
+            of the event. All of this happens in
+            <a href="pages/api/webhooks/index.ts">pages/api/webhooks/index.ts</a
+            >.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Helpers
+        <ul>
+          <li>
+            <a href="utils/api-helpers.ts">utils/api-helpers.ts</a>
+            <ul>
+              <li>helpers for GET and POST requests.</li>
+            </ul>
+          </li>
+          <li>
+            <a href="utils/stripe-helpers.ts">utils/stripe-helpers.ts</a>
+            <ul>
+              <li>
+                Format amount strings properly using
+                <code>Intl.NumberFormat</code>.
+              </li>
+              <li>
+                Format amount for usage with Stripe, including zero decimal
+                currency detection.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h2 id="how-to-use">How to use</h2>
+    <p>
+      Execute
+      <a
+        href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"
+        ><code>create-next-app</code></a
+      >
+      with <a href="https://docs.npmjs.com/cli/init">npm</a> or
+      <a href="https://yarnpkg.com/lang/en/docs/cli/create/">Yarn</a> to
+      bootstrap the example:
+    </p>
+    <div class="sourceCode" id="cb1">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> create-next-app --example with-stripe-typescript with-stripe-typescript-app</a>
 <a class="sourceLine" id="cb1-2" title="2"><span class="co"># or</span></a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="ex">yarn</span> create next-app --example with-stripe-typescript with-stripe-typescript-app</a></code></pre></div>
-<h3 id="required-configuration">Required configuration</h3>
-<p>Copy the <code>.env.local.example</code> file into a file named <code>.env.local</code> in the root directory of this project:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">cp</span> .env.local.example .env.local</a></code></pre></div>
-<p>You will need a Stripe account (<a href="https://dashboard.stripe.com/register">register</a>) to run this sample. Go to the Stripe <a href="https://stripe.com/docs/development#api-keys">developer dashboard</a> to find your API keys and replace them in the <code>.env.local</code> file.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="va">NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=</span><span class="op">&lt;</span><span class="ex">replace-with-your-publishable-key</span><span class="op">&gt;</span></a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="va">STRIPE_SECRET_KEY=</span><span class="op">&lt;</span><span class="ex">replace-with-your-secret-key</span><span class="op">&gt;</span></a></code></pre></div>
-<p>Now install the dependencies and start the development server.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">npm</span> install</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="ex">yarn</span> create next-app --example with-stripe-typescript with-stripe-typescript-app</a></code></pre>
+    </div>
+    <h3 id="required-configuration">Required configuration</h3>
+    <p>
+      Copy the <code>.env.local.example</code> file into a file named
+      <code>.env.local</code> in the root directory of this project:
+    </p>
+    <div class="sourceCode" id="cb2">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">cp</span> .env.local.example .env.local</a></code></pre>
+    </div>
+    <p>
+      You will need a Stripe account (<a
+        href="https://dashboard.stripe.com/register"
+        >register</a
+      >) to run this sample. Go to the Stripe
+      <a href="https://stripe.com/docs/development#api-keys"
+        >developer dashboard</a
+      >
+      to find your API keys and replace them in the
+      <code>.env.local</code> file.
+    </p>
+    <div class="sourceCode" id="cb3">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="va">NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=</span><span class="op">&lt;</span><span class="ex">replace-with-your-publishable-key</span><span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="va">STRIPE_SECRET_KEY=</span><span class="op">&lt;</span><span class="ex">replace-with-your-secret-key</span><span class="op">&gt;</span></a></code></pre>
+    </div>
+    <p>Now install the dependencies and start the development server.</p>
+    <div class="sourceCode" id="cb4">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">npm</span> install</a>
 <a class="sourceLine" id="cb4-2" title="2"><span class="ex">npm</span> run dev</a>
 <a class="sourceLine" id="cb4-3" title="3"><span class="co"># or</span></a>
 <a class="sourceLine" id="cb4-4" title="4"><span class="ex">yarn</span></a>
-<a class="sourceLine" id="cb4-5" title="5"><span class="ex">yarn</span> dev</a></code></pre></div>
-<h3 id="forward-webhooks-to-your-local-dev-server">Forward webhooks to your local dev server</h3>
-<p>First <a href="https://stripe.com/docs/stripe-cli">install the CLI</a> and <a href="https://stripe.com/docs/stripe-cli#link-account">link your Stripe account</a>.</p>
-<p>Next, start the webhook forwarding:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">stripe</span> listen --forward-to localhost:3000/api/webhooks</a></code></pre></div>
-<p>The CLI will print a webhook secret key to the console. Set <code>STRIPE_WEBHOOK_SECRET</code> to this value in your <code>.env.local</code> file.</p>
-<h3 id="setting-up-a-live-webhook-endpoint">Setting up a live webhook endpoint</h3>
-<p>After deploying, copy the deployment URL with the webhook path (<code>https://your-url.vercel.app/api/webhooks</code>) and create a live webhook endpoint <a href="https://stripe.com/docs/webhooks/setup#configure-webhook-settings">in your Stripe dashboard</a>.</p>
-<p>Once created, you can click to reveal your webhook’s signing secret. Copy the webhook secret (<code>whsec_***</code>) and add it as a new environment variable in your <a href="https://vercel.com/dashboard">Vercel Dashboard</a>:</p>
-<ul>
-<li>Select your newly created project.</li>
-<li>Navigate to the Settings tab.</li>
-<li>In the general settings scroll to the “Environment Variables” section.</li>
-</ul>
-<p>After adding an environment variable you will need to rebuild your project for it to become within your code. Within your project Dashboard, navigate to the “Deployments” tab, select the most recent deployment, click the overflow menu button (next to the “Visit” button) and select “Redeploy”.</p>
-<h3 id="deploy-on-vercel">Deploy on Vercel</h3>
-<p>You can deploy this app to the cloud with <a href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a> (<a href="https://nextjs.org/docs/deployment">Documentation</a>).</p>
-<h4 id="deploy-your-local-project">Deploy Your Local Project</h4>
-<p>To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and <a href="https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">import to Vercel</a>.</p>
-<p><strong>Important</strong>: When you import your project on Vercel, make sure to click on <strong>Environment Variables</strong> and set them to match your <code>.env.local</code> file.</p>
-<h4 id="deploy-from-our-template">Deploy from Our Template</h4>
-<p>Alternatively, you can deploy using our template by clicking on the Deploy button below.</p>
-<p><a href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-stripe-typescript&amp;project-name=with-stripe-typescript&amp;repository-name=with-stripe-typescript&amp;env=NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,STRIPE_SECRET_KEY&amp;envDescription=Enter%20your%20Stripe%20Keys&amp;envLink=https://github.com/vercel/next.js/tree/canary/examples/with-stripe-typescript%23required-configuration"><img src="https://vercel.com/button" alt="Deploy to Vercel" /></a></p>
-<h2 id="authors">Authors</h2>
-<ul>
-<li><span class="citation" data-cites="thorsten-stripe">[@thorsten-stripe]</span>(https://twitter.com/thorwebdev)</li>
-<li><span class="citation" data-cites="lfades">[@lfades]</span>(https://twitter.com/luis_fades)</li>
-</ul>
-</body>
+<a class="sourceLine" id="cb4-5" title="5"><span class="ex">yarn</span> dev</a></code></pre>
+    </div>
+    <h3 id="forward-webhooks-to-your-local-dev-server">
+      Forward webhooks to your local dev server
+    </h3>
+    <p>
+      First <a href="https://stripe.com/docs/stripe-cli">install the CLI</a> and
+      <a href="https://stripe.com/docs/stripe-cli#link-account"
+        >link your Stripe account</a
+      >.
+    </p>
+    <p>Next, start the webhook forwarding:</p>
+    <div class="sourceCode" id="cb5">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">stripe</span> listen --forward-to localhost:3000/api/webhooks</a></code></pre>
+    </div>
+    <p>
+      The CLI will print a webhook secret key to the console. Set
+      <code>STRIPE_WEBHOOK_SECRET</code> to this value in your
+      <code>.env.local</code> file.
+    </p>
+    <h3 id="setting-up-a-live-webhook-endpoint">
+      Setting up a live webhook endpoint
+    </h3>
+    <p>
+      After deploying, copy the deployment URL with the webhook path
+      (<code>https://your-url.vercel.app/api/webhooks</code>) and create a live
+      webhook endpoint
+      <a
+        href="https://stripe.com/docs/webhooks/setup#configure-webhook-settings"
+        >in your Stripe dashboard</a
+      >.
+    </p>
+    <p>
+      Once created, you can click to reveal your webhook’s signing secret. Copy
+      the webhook secret (<code>whsec_***</code>) and add it as a new
+      environment variable in your
+      <a href="https://vercel.com/dashboard">Vercel Dashboard</a>:
+    </p>
+    <ul>
+      <li>Select your newly created project.</li>
+      <li>Navigate to the Settings tab.</li>
+      <li>
+        In the general settings scroll to the “Environment Variables” section.
+      </li>
+    </ul>
+    <p>
+      After adding an environment variable you will need to rebuild your project
+      for it to become within your code. Within your project Dashboard, navigate
+      to the “Deployments” tab, select the most recent deployment, click the
+      overflow menu button (next to the “Visit” button) and select “Redeploy”.
+    </p>
+    <h3 id="deploy-on-vercel">Deploy on Vercel</h3>
+    <p>
+      You can deploy this app to the cloud with
+      <a
+        href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >Vercel</a
+      >
+      (<a href="https://nextjs.org/docs/deployment">Documentation</a>).
+    </p>
+    <h4 id="deploy-your-local-project">Deploy Your Local Project</h4>
+    <p>
+      To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket
+      and
+      <a
+        href="https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >import to Vercel</a
+      >.
+    </p>
+    <p>
+      <strong>Important</strong>: When you import your project on Vercel, make
+      sure to click on <strong>Environment Variables</strong> and set them to
+      match your <code>.env.local</code> file.
+    </p>
+    <h4 id="deploy-from-our-template">Deploy from Our Template</h4>
+    <p>
+      Alternatively, you can deploy using our template by clicking on the Deploy
+      button below.
+    </p>
+    <p>
+      <a
+        href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-stripe-typescript&amp;project-name=with-stripe-typescript&amp;repository-name=with-stripe-typescript&amp;env=NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,STRIPE_SECRET_KEY&amp;envDescription=Enter%20your%20Stripe%20Keys&amp;envLink=https://github.com/vercel/next.js/tree/canary/examples/with-stripe-typescript%23required-configuration"
+        ><img src="https://vercel.com/button" alt="Deploy to Vercel"
+      /></a>
+    </p>
+    <h2 id="authors">Authors</h2>
+    <ul>
+      <li>
+        <span class="citation" data-cites="thorsten-stripe"
+          >[@thorsten-stripe]</span
+        >(https://twitter.com/thorwebdev)
+      </li>
+      <li>
+        <span class="citation" data-cites="lfades">[@lfades]</span
+        >(https://twitter.com/luis_fades)
+      </li>
+    </ul>
+  </body>
 </html>

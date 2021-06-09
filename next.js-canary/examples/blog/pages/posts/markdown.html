@@ -1,54 +1,67 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="You" />
-  <title>Markdown Examples</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">Markdown Examples</h1>
-<p class="author">You</p>
-<p class="date">2021/3/19</p>
-</header>
-<h1 id="markdown-examples">Markdown Examples</h1>
-<h2 id="h2-heading">h2 Heading</h2>
-<h3 id="h3-heading">h3 Heading</h3>
-<h4 id="h4-heading">h4 Heading</h4>
-<h5 id="h5-heading">h5 Heading</h5>
-<h6 id="h6-heading">h6 Heading</h6>
-<h2 id="emphasis">Emphasis</h2>
-<p><strong>This is bold text</strong></p>
-<p><em>This is italic text</em></p>
-<p><del>Strikethrough</del></p>
-<h2 id="blockquotes">Blockquotes</h2>
-<blockquote>
-<p>Develop. Preview. Ship. – Vercel</p>
-</blockquote>
-<h2 id="lists">Lists</h2>
-<p>Unordered</p>
-<ul>
-<li>Lorem ipsum dolor sit amet</li>
-<li>Consectetur adipiscing elit</li>
-<li>Integer molestie lorem at massa</li>
-</ul>
-<p>Ordered</p>
-<ol type="1">
-<li>Lorem ipsum dolor sit amet</li>
-<li>Consectetur adipiscing elit</li>
-<li>Integer molestie lorem at massa</li>
-</ol>
-<h2 id="code">Code</h2>
-<p>Inline <code>code</code></p>
-<pre><code>export default function Nextra({ Component, pageProps }) {
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <meta name="author" content="You" />
+    <title>Markdown Examples</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Markdown Examples</h1>
+      <p class="author">You</p>
+      <p class="date">2021/3/19</p>
+    </header>
+    <h1 id="markdown-examples">Markdown Examples</h1>
+    <h2 id="h2-heading">h2 Heading</h2>
+    <h3 id="h3-heading">h3 Heading</h3>
+    <h4 id="h4-heading">h4 Heading</h4>
+    <h5 id="h5-heading">h5 Heading</h5>
+    <h6 id="h6-heading">h6 Heading</h6>
+    <h2 id="emphasis">Emphasis</h2>
+    <p><strong>This is bold text</strong></p>
+    <p><em>This is italic text</em></p>
+    <p><del>Strikethrough</del></p>
+    <h2 id="blockquotes">Blockquotes</h2>
+    <blockquote>
+      <p>Develop. Preview. Ship. – Vercel</p>
+    </blockquote>
+    <h2 id="lists">Lists</h2>
+    <p>Unordered</p>
+    <ul>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+    </ul>
+    <p>Ordered</p>
+    <ol type="1">
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+    </ol>
+    <h2 id="code">Code</h2>
+    <p>Inline <code>code</code></p>
+    <pre><code>export default function Nextra({ Component, pageProps }) {
   return (
     &lt;&gt;
       &lt;Head&gt;
@@ -70,51 +83,73 @@
     &lt;/&gt;
   )
 }</code></pre>
-<h2 id="tables">Tables</h2>
-<table>
-<colgroup>
-<col style="width: 7%" />
-<col style="width: 92%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Option</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>First</td>
-<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-</tr>
-<tr class="even">
-<td>Second</td>
-<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-</tr>
-<tr class="odd">
-<td>Third</td>
-<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="links">Links</h2>
-<ul>
-<li><a href="https://nextjs.org">Next.js</a></li>
-<li><a href="https://nextra.vercel.app/">Nextra</a></li>
-<li><a href="http://vercel.com">Vercel</a></li>
-</ul>
-<h3 id="footnotes">Footnotes</h3>
-<ul>
-<li>Footnote <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</li>
-<li>Footnote <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</li>
-</ul>
-<p>and multiple paragraphs.</p>
-<section class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>Footnote <strong>can have markup</strong><a href="#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>Footnote text.<a href="#fnref2" class="footnote-back">↩</a></p></li>
-</ol>
-</section>
-</body>
+    <h2 id="tables">Tables</h2>
+    <table>
+      <colgroup>
+        <col style="width: 7%" />
+        <col style="width: 92%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th><strong>Option</strong></th>
+          <th><strong>Description</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>First</td>
+          <td>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </td>
+        </tr>
+        <tr class="even">
+          <td>Second</td>
+          <td>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </td>
+        </tr>
+        <tr class="odd">
+          <td>Third</td>
+          <td>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 id="links">Links</h2>
+    <ul>
+      <li><a href="https://nextjs.org">Next.js</a></li>
+      <li><a href="https://nextra.vercel.app/">Nextra</a></li>
+      <li><a href="http://vercel.com">Vercel</a></li>
+    </ul>
+    <h3 id="footnotes">Footnotes</h3>
+    <ul>
+      <li>
+        Footnote <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a
+        >.
+      </li>
+      <li>
+        Footnote <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a
+        >.
+      </li>
+    </ul>
+    <p>and multiple paragraphs.</p>
+    <section class="footnotes">
+      <hr />
+      <ol>
+        <li id="fn1">
+          <p>
+            Footnote <strong>can have markup</strong
+            ><a href="#fnref1" class="footnote-back">↩</a>
+          </p>
+        </li>
+        <li id="fn2">
+          <p>Footnote text.<a href="#fnref2" class="footnote-back">↩</a></p>
+        </li>
+      </ol>
+    </section>
+  </body>
 </html>

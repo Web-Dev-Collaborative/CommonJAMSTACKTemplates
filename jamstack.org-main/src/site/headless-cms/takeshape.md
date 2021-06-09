@@ -13,6 +13,7 @@ images:
   - path: /img/cms/takeshape-dashboard.png
   - path: /img/cms/takeshape-add-content-type.png
 ---
+
 ## TakeShape
 
 [TakeShape](http://www.takeshape.io/) is a GraphQL API-first Content Management-as-a-service cloud platform with an integrated Static Content Generator that removes the cost and effort of building and running a cloud-scale content experience.
@@ -29,7 +30,7 @@ The integrated Static Content Generator allows you to get your site or product u
 
 ### Infinitely Customizable Content Schema
 
-Bring your own content model. Your content is unique to your product. TakeShape provides an easy to use drag-and-drop content modeling interface. 
+Bring your own content model. Your content is unique to your product. TakeShape provides an easy to use drag-and-drop content modeling interface.
 
 ### Be Creative
 

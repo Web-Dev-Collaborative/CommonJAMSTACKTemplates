@@ -32,4 +32,3 @@ power of the Janet language at your disposal. Bagatto tries to keep
 the "magic" to a minimum; in all cases, it tries to make the process
 of loading source files and of generating new files completely
 transparent, inspectable and extensible.
-

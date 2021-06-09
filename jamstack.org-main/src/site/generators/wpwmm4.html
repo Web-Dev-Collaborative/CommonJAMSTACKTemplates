@@ -1,42 +1,70 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>WPWMM4</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">WPWMM4</h1>
-</header>
-<p>With wpwmm4 can create web pages with simply ‘make’ and ‘m4’.</p>
-<p>Requirements:</p>
-<ul>
-<li>make (BSD’s make, use bmake package of your distro)</li>
-<li>m4 (compatible with BSD’s m4 and GNU’s m4 too)</li>
-<li>some knowledge about HTML and programming</li>
-</ul>
-<p>Features:</p>
-<ul>
-<li>incremental build (with make)</li>
-<li>automatically generated pages (similar webpage with different content)</li>
-<li>layouts</li>
-<li>expandable, programmable via m4 or can insert output of any program</li>
-</ul>
-<p>Nutshell:</p>
-<ul>
-<li>convert items of ${TARGETS}: ${SRC<em>DIR}/</em>.m4 -&gt; ${DEST<em>DIR}/</em>.html</li>
-<li>create items of ${TARGETS_MANUAL}: use own programs, scripts</li>
-<li>create items of ${VIRTUALS}: use templates from ${VIRT_DIR}</li>
-<li>can call scripts from scripts/ directory and use their outputs</li>
-</ul>
-<p>Example web page is <a href="http://uzsolt.hu/">uzsolt.hu</a> (only hungarian language). It has multi-level menu (without Javascript, only pure HTML), automatically generated pages (for example <a href="http://uzsolt.hu/pict/personal/summer2014/">galleries</a> with <code>next</code> and <code>prev</code> buttons). Its source is available at <a href="https://github.com/uzsolt/wpwmm4-uzsolt.hu">github</a> or <a href="http://git.uzsolt.hu/wpwmm4-uzsolt.hu/">own git repo</a>.</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>WPWMM4</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">WPWMM4</h1>
+    </header>
+    <p>With wpwmm4 can create web pages with simply ‘make’ and ‘m4’.</p>
+    <p>Requirements:</p>
+    <ul>
+      <li>make (BSD’s make, use bmake package of your distro)</li>
+      <li>m4 (compatible with BSD’s m4 and GNU’s m4 too)</li>
+      <li>some knowledge about HTML and programming</li>
+    </ul>
+    <p>Features:</p>
+    <ul>
+      <li>incremental build (with make)</li>
+      <li>
+        automatically generated pages (similar webpage with different content)
+      </li>
+      <li>layouts</li>
+      <li>
+        expandable, programmable via m4 or can insert output of any program
+      </li>
+    </ul>
+    <p>Nutshell:</p>
+    <ul>
+      <li>
+        convert items of ${TARGETS}: ${SRC<em>DIR}/</em>.m4 -&gt;
+        ${DEST<em>DIR}/</em>.html
+      </li>
+      <li>create items of ${TARGETS_MANUAL}: use own programs, scripts</li>
+      <li>create items of ${VIRTUALS}: use templates from ${VIRT_DIR}</li>
+      <li>can call scripts from scripts/ directory and use their outputs</li>
+    </ul>
+    <p>
+      Example web page is <a href="http://uzsolt.hu/">uzsolt.hu</a> (only
+      hungarian language). It has multi-level menu (without Javascript, only
+      pure HTML), automatically generated pages (for example
+      <a href="http://uzsolt.hu/pict/personal/summer2014/">galleries</a> with
+      <code>next</code> and <code>prev</code> buttons). Its source is available
+      at <a href="https://github.com/uzsolt/wpwmm4-uzsolt.hu">github</a> or
+      <a href="http://git.uzsolt.hu/wpwmm4-uzsolt.hu/">own git repo</a>.
+    </p>
+  </body>
 </html>

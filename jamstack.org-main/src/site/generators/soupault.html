@@ -1,48 +1,105 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>soupault</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">soupault</h1>
-</header>
-<h2 id="based-on-element-tree-rewriting">Based on element tree rewriting</h2>
-<p>Soupault is an automated HTML <em>editor</em> rather than a just <em>generator</em>. It can parse HTML into an element tree, manipulate it and save to a file. Like DOM manipulation, but without a browser.</p>
-<p>You can use it as a website generator and insert different content into a “template”—an empty page. However, it can also be a post-processor for a hand-written website or for output of another HTML generator.</p>
-<h2 id="static-binary-extensible-with-plugins">Static binary, extensible with plugins</h2>
-<p>Soupault is a single, static binary with no dependencies. Precompiled binaries are available for Linux, Windows, and macOS.</p>
-<p>However, it has a built-in Lua interpreter and provides an element tree API somewhat similar to the JavaScript DOM API. Plugins have access to the page element tree and to the metadata extracted from pages, so you can do everything you could do with JavaScript and more, but statically.</p>
-<h2 id="unix-way">UNIX way</h2>
-<p>Soupault can pipe the content of HTML elements through external programs and read the output. You have options to replace the original element with that output or just add the output to the page.</p>
-<p>For example, you can statically render equations with KaTeX, or do syntax highligting with any tool of your choice.</p>
-<p>You can also set preprocessors for specific file extensions. For example, pipe <code>.md</code> files through a Markdown to HTML convertor of your choice before parsing and processing.</p>
-<h2 id="no-front-matter">No front matter</h2>
-<p>Soupault can extract metadata from pages using CSS3 selectors, in the spirit of microformats and web scraping libraries. You can create your own content model and tell soupault what to extract.</p>
-<p>Then you can render the site index into HTML using built-in Jingoo template processor (syntax similar to Jinja2) or an external script. You can also export the site index to JSON for further processing.</p>
-<h2 id="built-in-functionality">Built-in functionality</h2>
-<p>Some things soupault can do out of the box:</p>
-<ul>
-<li>Create a (fully static) ToC from the page headings.</li>
-<li>Insert external files or external program outputs into pages.</li>
-<li>Create footnotes, LaTeX style.</li>
-<li>Add breadcrumbs.</li>
-</ul>
-<h2 id="example">Example</h2>
-<p>This config snippet will insert the content of <code>includes/menu.html</code> inside a <code>&lt;div id="menu"&gt;</code> in every page that has that element, except <code>404.html</code> and <code>splash.html</code>:</p>
-<pre><code>[widgets.navigation-menu]
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>soupault</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">soupault</h1>
+    </header>
+    <h2 id="based-on-element-tree-rewriting">
+      Based on element tree rewriting
+    </h2>
+    <p>
+      Soupault is an automated HTML <em>editor</em> rather than a just
+      <em>generator</em>. It can parse HTML into an element tree, manipulate it
+      and save to a file. Like DOM manipulation, but without a browser.
+    </p>
+    <p>
+      You can use it as a website generator and insert different content into a
+      “template”—an empty page. However, it can also be a post-processor for a
+      hand-written website or for output of another HTML generator.
+    </p>
+    <h2 id="static-binary-extensible-with-plugins">
+      Static binary, extensible with plugins
+    </h2>
+    <p>
+      Soupault is a single, static binary with no dependencies. Precompiled
+      binaries are available for Linux, Windows, and macOS.
+    </p>
+    <p>
+      However, it has a built-in Lua interpreter and provides an element tree
+      API somewhat similar to the JavaScript DOM API. Plugins have access to the
+      page element tree and to the metadata extracted from pages, so you can do
+      everything you could do with JavaScript and more, but statically.
+    </p>
+    <h2 id="unix-way">UNIX way</h2>
+    <p>
+      Soupault can pipe the content of HTML elements through external programs
+      and read the output. You have options to replace the original element with
+      that output or just add the output to the page.
+    </p>
+    <p>
+      For example, you can statically render equations with KaTeX, or do syntax
+      highligting with any tool of your choice.
+    </p>
+    <p>
+      You can also set preprocessors for specific file extensions. For example,
+      pipe <code>.md</code> files through a Markdown to HTML convertor of your
+      choice before parsing and processing.
+    </p>
+    <h2 id="no-front-matter">No front matter</h2>
+    <p>
+      Soupault can extract metadata from pages using CSS3 selectors, in the
+      spirit of microformats and web scraping libraries. You can create your own
+      content model and tell soupault what to extract.
+    </p>
+    <p>
+      Then you can render the site index into HTML using built-in Jingoo
+      template processor (syntax similar to Jinja2) or an external script. You
+      can also export the site index to JSON for further processing.
+    </p>
+    <h2 id="built-in-functionality">Built-in functionality</h2>
+    <p>Some things soupault can do out of the box:</p>
+    <ul>
+      <li>Create a (fully static) ToC from the page headings.</li>
+      <li>Insert external files or external program outputs into pages.</li>
+      <li>Create footnotes, LaTeX style.</li>
+      <li>Add breadcrumbs.</li>
+    </ul>
+    <h2 id="example">Example</h2>
+    <p>
+      This config snippet will insert the content of
+      <code>includes/menu.html</code> inside a
+      <code>&lt;div id="menu"&gt;</code> in every page that has that element,
+      except <code>404.html</code> and <code>splash.html</code>:
+    </p>
+    <pre><code>[widgets.navigation-menu]
   widget = &quot;include&quot;
   file = &quot;includes/menu.html&quot;
   selector = &quot;div#menu&quot;
   exclude_page = [&quot;404.html&quot;, &quot;splash.html&quot;]</code></pre>
-</body>
+  </body>
 </html>

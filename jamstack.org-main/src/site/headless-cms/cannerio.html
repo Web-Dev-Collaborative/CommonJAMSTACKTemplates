@@ -1,57 +1,177 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Canner</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">Canner</h1>
-</header>
-<h2 id="cannerio-cms">CannerIO CMS</h2>
-<blockquote>
-<p>Canner is a universal Content Management System (CMS) framework that allows you to build CMS in React JSX(XML-like) for Firebase, GraphQL, Restful API, Prisma. In other words, an agnostic CMS framework for any applications and data sources.</p>
-</blockquote>
-<figure>
-<img src="https://cdn.canner.io/images/home/flow.gif" alt="Canner flow" /><figcaption>Canner flow</figcaption>
-</figure>
-<h2 id="benefits-and-advantages">Benefits and advantages</h2>
-<h3 id="universal-cms-framework">🌍 Universal CMS framework</h3>
-<p>Canner is flexible and agnostic, that you can <strong><em>learn once and create any form of CMS for many different databases.</em></strong></p>
-<h3 id="create-data-model-and-ui-design-at-the-same-time.">⛄ Create data model and UI design at the same time.</h3>
-<p>By defining a Canner schema in JSX, you can determine how the CMS stores data in your databases and the appearance of the CMS UI/UX.</p>
-<figure>
-<img src="https://cdn.canner.io/images/home/schema.png" alt="schema" /><figcaption>schema</figcaption>
-</figure>
-<h3 id="one-schema-to-any-database">👩‍💻 One schema to any database</h3>
-<p>With different connectors, you are able to create a CMS to interact with <strong><em>Firebase, MySQL, PostgreSQL, GraphQL with the same schema</em></strong>.</p>
-<h3 id="easy-to-maintain-and-extend">😎 Easy to maintain and extend</h3>
-<p>Since Canner schema <strong><em>is only a JSX (XML-like) language without any logistic code</em></strong>, in other words, you can maintain your code in a configuration file and easy to maintain using version controls.</p>
-<h2 id="why-create-canner">🙌 Why create Canner?</h2>
-<p>Before we built Canner CMS framework, we’ve tried other CMS frameworks such as Wordpress, Drupal, etc. What we found was that getting simple functions to work was easy enough, but once you try to build and scale into your product or your service you ran into deeper issues…</p>
-<ol type="1">
-<li><strong>Humongous codebase:</strong> Each CMS framework is humongous and complex, if you want to use them you have to install a huge codebase into your system, and most of the time it’ll affect and mess with all your existing code. &gt; Canner’s CMS is only a React component.</li>
-<li><strong>Hardcoded and limited APIs:</strong> APIs should not be predefined and even hard coded into the codebase, which is critical for building advanced use cases and impossible to build into your system. &gt; Canner doesn’t predefine any API and data structure.</li>
-<li><strong>Re-inventing the view layer seemed inefficient and limiting:</strong> Most CMS rolled their own views, instead of using existing technologies like <code>React</code>, so you have to learn a whole new system, in order to make some changes. &gt; Canner natively allows you to use <code>React</code> components without any side-effect.</li>
-<li><strong>CMSes are binded with frontend code:</strong> Many CMSes bind with frontend code, so there are many needless and complex conventional namings and settings in your codebase, you have to learn all the system before start designing your theme. &gt; Canner is an agnostic CMS for any application, includes websites, mobile apps, IoTs, and even chatbots.</li>
-<li><strong>Vendor lock-in:</strong> Many CMSes are locked into a specific database and service, it’s impossible to switch existing cloud services or databases later. &gt; Canner allows you to connect any database and host anywhere, we even allow you to use Canner in hybrid clouds.</li>
-<li><strong>Building complex, nested CMS was impossible:</strong> Many CMS are design for simple use cases such as blog, ecommerce websites. As your service grow larger and complex, you’ll run into several bottlenecks to grow your CMS that fits. &gt; Canner uses schema to define your CMS, it could scale, and could be built into large applications and usages.</li>
-<li><strong>Building CMS fit your APIs was impossible:</strong> Most CMS are <strong>not purely</strong> CMS, they are design for building templates in it’s own structure and platform. So it’s nearly impossible to build CMS that fit into your existing infrastructure. &gt; Canner adapts to your APIs.</li>
-<li><strong>Design CMS structure is like managing a huge code base:</strong> Maintaining your CMS structure is like mess with huge code base with lots of conventions that you must follows. &gt; Canner is only a <code>React</code> component.</li>
-</ol>
-<p>Of course not every CMS exhibits all these issues, but if you tried using another CMS you might have run into similar problems.</p>
-<p>If that sounds familiar, you might like <strong><em>Canner</em></strong>. Which motivates us to solve these problems.</p>
-<blockquote>
-<p>If you are interested in how we solve these problems see <a href="https://www.canner.io/docs/why-mission.html">Our mission</a></p>
-</blockquote>
-<p><strong>More demo visit <a href="https://github.com/Canner/canner/tree/master/examples">/examples folder</a> &amp; <a href="https://github.com/Canner/canner-demo">canner-demo</a> and <a href="https://www.canner.io/">canner.io</a></strong></p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Canner</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Canner</h1>
+    </header>
+    <h2 id="cannerio-cms">CannerIO CMS</h2>
+    <blockquote>
+      <p>
+        Canner is a universal Content Management System (CMS) framework that
+        allows you to build CMS in React JSX(XML-like) for Firebase, GraphQL,
+        Restful API, Prisma. In other words, an agnostic CMS framework for any
+        applications and data sources.
+      </p>
+    </blockquote>
+    <figure>
+      <img src="https://cdn.canner.io/images/home/flow.gif" alt="Canner flow" />
+      <figcaption>Canner flow</figcaption>
+    </figure>
+    <h2 id="benefits-and-advantages">Benefits and advantages</h2>
+    <h3 id="universal-cms-framework">🌍 Universal CMS framework</h3>
+    <p>
+      Canner is flexible and agnostic, that you can
+      <strong
+        ><em
+          >learn once and create any form of CMS for many different
+          databases.</em
+        ></strong
+      >
+    </p>
+    <h3 id="create-data-model-and-ui-design-at-the-same-time.">
+      ⛄ Create data model and UI design at the same time.
+    </h3>
+    <p>
+      By defining a Canner schema in JSX, you can determine how the CMS stores
+      data in your databases and the appearance of the CMS UI/UX.
+    </p>
+    <figure>
+      <img src="https://cdn.canner.io/images/home/schema.png" alt="schema" />
+      <figcaption>schema</figcaption>
+    </figure>
+    <h3 id="one-schema-to-any-database">👩‍💻 One schema to any database</h3>
+    <p>
+      With different connectors, you are able to create a CMS to interact with
+      <strong
+        ><em
+          >Firebase, MySQL, PostgreSQL, GraphQL with the same schema</em
+        ></strong
+      >.
+    </p>
+    <h3 id="easy-to-maintain-and-extend">😎 Easy to maintain and extend</h3>
+    <p>
+      Since Canner schema
+      <strong
+        ><em
+          >is only a JSX (XML-like) language without any logistic code</em
+        ></strong
+      >, in other words, you can maintain your code in a configuration file and
+      easy to maintain using version controls.
+    </p>
+    <h2 id="why-create-canner">🙌 Why create Canner?</h2>
+    <p>
+      Before we built Canner CMS framework, we’ve tried other CMS frameworks
+      such as Wordpress, Drupal, etc. What we found was that getting simple
+      functions to work was easy enough, but once you try to build and scale
+      into your product or your service you ran into deeper issues…
+    </p>
+    <ol type="1">
+      <li>
+        <strong>Humongous codebase:</strong> Each CMS framework is humongous and
+        complex, if you want to use them you have to install a huge codebase
+        into your system, and most of the time it’ll affect and mess with all
+        your existing code. &gt; Canner’s CMS is only a React component.
+      </li>
+      <li>
+        <strong>Hardcoded and limited APIs:</strong> APIs should not be
+        predefined and even hard coded into the codebase, which is critical for
+        building advanced use cases and impossible to build into your system.
+        &gt; Canner doesn’t predefine any API and data structure.
+      </li>
+      <li>
+        <strong
+          >Re-inventing the view layer seemed inefficient and limiting:</strong
+        >
+        Most CMS rolled their own views, instead of using existing technologies
+        like <code>React</code>, so you have to learn a whole new system, in
+        order to make some changes. &gt; Canner natively allows you to use
+        <code>React</code> components without any side-effect.
+      </li>
+      <li>
+        <strong>CMSes are binded with frontend code:</strong> Many CMSes bind
+        with frontend code, so there are many needless and complex conventional
+        namings and settings in your codebase, you have to learn all the system
+        before start designing your theme. &gt; Canner is an agnostic CMS for
+        any application, includes websites, mobile apps, IoTs, and even
+        chatbots.
+      </li>
+      <li>
+        <strong>Vendor lock-in:</strong> Many CMSes are locked into a specific
+        database and service, it’s impossible to switch existing cloud services
+        or databases later. &gt; Canner allows you to connect any database and
+        host anywhere, we even allow you to use Canner in hybrid clouds.
+      </li>
+      <li>
+        <strong>Building complex, nested CMS was impossible:</strong> Many CMS
+        are design for simple use cases such as blog, ecommerce websites. As
+        your service grow larger and complex, you’ll run into several
+        bottlenecks to grow your CMS that fits. &gt; Canner uses schema to
+        define your CMS, it could scale, and could be built into large
+        applications and usages.
+      </li>
+      <li>
+        <strong>Building CMS fit your APIs was impossible:</strong> Most CMS are
+        <strong>not purely</strong> CMS, they are design for building templates
+        in it’s own structure and platform. So it’s nearly impossible to build
+        CMS that fit into your existing infrastructure. &gt; Canner adapts to
+        your APIs.
+      </li>
+      <li>
+        <strong>Design CMS structure is like managing a huge code base:</strong>
+        Maintaining your CMS structure is like mess with huge code base with
+        lots of conventions that you must follows. &gt; Canner is only a
+        <code>React</code> component.
+      </li>
+    </ol>
+    <p>
+      Of course not every CMS exhibits all these issues, but if you tried using
+      another CMS you might have run into similar problems.
+    </p>
+    <p>
+      If that sounds familiar, you might like <strong><em>Canner</em></strong
+      >. Which motivates us to solve these problems.
+    </p>
+    <blockquote>
+      <p>
+        If you are interested in how we solve these problems see
+        <a href="https://www.canner.io/docs/why-mission.html">Our mission</a>
+      </p>
+    </blockquote>
+    <p>
+      <strong
+        >More demo visit
+        <a href="https://github.com/Canner/canner/tree/master/examples"
+          >/examples folder</a
+        >
+        &amp;
+        <a href="https://github.com/Canner/canner-demo">canner-demo</a> and
+        <a href="https://www.canner.io/">canner.io</a></strong
+      >
+    </p>
+  </body>
 </html>

@@ -1,235 +1,611 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>README</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-  <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-</head>
-<body>
-<h1 id="a-statically-generated-blog-example-using-next.js-and-kontent">A statically generated blog example using Next.js and Kontent</h1>
-<p>This example showcases Next.js’s <a href="https://nextjs.org/docs/basic-features/pages">Static Generation</a> feature using <a href="https://kontent.ai">Kentico Kontent</a> as the data source.</p>
-<h2 id="demo">Demo</h2>
-<p><a href="https://next-blog-kontent.vercel.app/">https://next-blog-kontent.vercel.app/</a></p>
-<h2 id="deploy-your-own">Deploy your own</h2>
-<p>Once you have access to <a href="#step-3-set-up-environment-variables">the environment variables you’ll need</a>, deploy the example using <a href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a>:</p>
-<p><a href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/cms-kontent&amp;project-name=cms-kontent&amp;repository-name=cms-kontent&amp;env=KONTENT_PROJECT_ID,KONTENT_PREVIEW_API_KEY,KONTENT_PREVIEW_SECRET&amp;envDescription=Required%20to%20connect%20the%20app%20with%20Kontent&amp;envLink=https://github.com/vercel/next.js/tree/canary/examples/cms-kontent%23step-3-set-up-environment-variables"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a></p>
-<h3 id="related-examples">Related examples</h3>
-<ul>
-<li><a href="/examples/cms-wordpress">WordPress</a></li>
-<li><a href="/examples/cms-datocms">DatoCMS</a></li>
-<li><a href="/examples/cms-sanity">Sanity</a></li>
-<li><a href="/examples/cms-takeshape">TakeShape</a></li>
-<li><a href="/examples/cms-prismic">Prismic</a></li>
-<li><a href="/examples/cms-contentful">Contentful</a></li>
-<li><a href="/examples/cms-strapi">Strapi</a></li>
-<li><a href="/examples/cms-agilitycms">Agility CMS</a></li>
-<li><a href="/examples/cms-cosmic">Cosmic</a></li>
-<li><a href="/examples/cms-buttercms">ButterCMS</a></li>
-<li><a href="/examples/cms-storyblok">Storyblok</a></li>
-<li><a href="/examples/cms-graphcms">GraphCMS</a></li>
-<li><a href="/examples/cms-ghost">Ghost</a></li>
-<li><a href="/examples/blog-starter">Blog Starter</a></li>
-</ul>
-<h2 id="how-to-use">How to use</h2>
-<p>Execute <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"><code>create-next-app</code></a> with <a href="https://docs.npmjs.com/cli/init">npm</a> or <a href="https://yarnpkg.com/lang/en/docs/cli/create/">Yarn</a> to bootstrap the example:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> create-next-app --example cms-kontent cms-kontent-app</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>README</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+    <style type="text/css">
+      a.sourceLine {
+        display: inline-block;
+        line-height: 1.25;
+      }
+      a.sourceLine {
+        pointer-events: none;
+        color: inherit;
+        text-decoration: inherit;
+      }
+      a.sourceLine:empty {
+        height: 1.2em;
+      }
+      .sourceCode {
+        overflow: visible;
+      }
+      code.sourceCode {
+        white-space: pre;
+        position: relative;
+      }
+      div.sourceCode {
+        margin: 1em 0;
+      }
+      pre.sourceCode {
+        margin: 0;
+      }
+      @media screen {
+        div.sourceCode {
+          overflow: auto;
+        }
+      }
+      @media print {
+        code.sourceCode {
+          white-space: pre-wrap;
+        }
+        a.sourceLine {
+          text-indent: -1em;
+          padding-left: 1em;
+        }
+      }
+      pre.numberSource a.sourceLine {
+        position: relative;
+        left: -4em;
+      }
+      pre.numberSource a.sourceLine::before {
+        content: attr(title);
+        position: relative;
+        left: -1em;
+        text-align: right;
+        vertical-align: baseline;
+        border: none;
+        pointer-events: all;
+        display: inline-block;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 4px;
+        width: 4em;
+        color: #aaaaaa;
+      }
+      pre.numberSource {
+        margin-left: 3em;
+        border-left: 1px solid #aaaaaa;
+        padding-left: 4px;
+      }
+      div.sourceCode {
+      }
+      @media screen {
+        a.sourceLine::before {
+          text-decoration: underline;
+        }
+      }
+      code span.al {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Alert */
+      code span.an {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Annotation */
+      code span.at {
+        color: #7d9029;
+      } /* Attribute */
+      code span.bn {
+        color: #40a070;
+      } /* BaseN */
+      code span.bu {
+      } /* BuiltIn */
+      code span.cf {
+        color: #007020;
+        font-weight: bold;
+      } /* ControlFlow */
+      code span.ch {
+        color: #4070a0;
+      } /* Char */
+      code span.cn {
+        color: #880000;
+      } /* Constant */
+      code span.co {
+        color: #60a0b0;
+        font-style: italic;
+      } /* Comment */
+      code span.cv {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* CommentVar */
+      code span.do {
+        color: #ba2121;
+        font-style: italic;
+      } /* Documentation */
+      code span.dt {
+        color: #902000;
+      } /* DataType */
+      code span.dv {
+        color: #40a070;
+      } /* DecVal */
+      code span.er {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Error */
+      code span.ex {
+      } /* Extension */
+      code span.fl {
+        color: #40a070;
+      } /* Float */
+      code span.fu {
+        color: #06287e;
+      } /* Function */
+      code span.im {
+      } /* Import */
+      code span.in {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Information */
+      code span.kw {
+        color: #007020;
+        font-weight: bold;
+      } /* Keyword */
+      code span.op {
+        color: #666666;
+      } /* Operator */
+      code span.ot {
+        color: #007020;
+      } /* Other */
+      code span.pp {
+        color: #bc7a00;
+      } /* Preprocessor */
+      code span.sc {
+        color: #4070a0;
+      } /* SpecialChar */
+      code span.ss {
+        color: #bb6688;
+      } /* SpecialString */
+      code span.st {
+        color: #4070a0;
+      } /* String */
+      code span.va {
+        color: #19177c;
+      } /* Variable */
+      code span.vs {
+        color: #4070a0;
+      } /* VerbatimString */
+      code span.wa {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Warning */
+    </style>
+  </head>
+  <body>
+    <h1 id="a-statically-generated-blog-example-using-next.js-and-kontent">
+      A statically generated blog example using Next.js and Kontent
+    </h1>
+    <p>
+      This example showcases Next.js’s
+      <a href="https://nextjs.org/docs/basic-features/pages"
+        >Static Generation</a
+      >
+      feature using <a href="https://kontent.ai">Kentico Kontent</a> as the data
+      source.
+    </p>
+    <h2 id="demo">Demo</h2>
+    <p>
+      <a href="https://next-blog-kontent.vercel.app/"
+        >https://next-blog-kontent.vercel.app/</a
+      >
+    </p>
+    <h2 id="deploy-your-own">Deploy your own</h2>
+    <p>
+      Once you have access to
+      <a href="#step-3-set-up-environment-variables"
+        >the environment variables you’ll need</a
+      >, deploy the example using
+      <a
+        href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >Vercel</a
+      >:
+    </p>
+    <p>
+      <a
+        href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/cms-kontent&amp;project-name=cms-kontent&amp;repository-name=cms-kontent&amp;env=KONTENT_PROJECT_ID,KONTENT_PREVIEW_API_KEY,KONTENT_PREVIEW_SECRET&amp;envDescription=Required%20to%20connect%20the%20app%20with%20Kontent&amp;envLink=https://github.com/vercel/next.js/tree/canary/examples/cms-kontent%23step-3-set-up-environment-variables"
+        ><img src="https://vercel.com/button" alt="Deploy with Vercel"
+      /></a>
+    </p>
+    <h3 id="related-examples">Related examples</h3>
+    <ul>
+      <li><a href="/examples/cms-wordpress">WordPress</a></li>
+      <li><a href="/examples/cms-datocms">DatoCMS</a></li>
+      <li><a href="/examples/cms-sanity">Sanity</a></li>
+      <li><a href="/examples/cms-takeshape">TakeShape</a></li>
+      <li><a href="/examples/cms-prismic">Prismic</a></li>
+      <li><a href="/examples/cms-contentful">Contentful</a></li>
+      <li><a href="/examples/cms-strapi">Strapi</a></li>
+      <li><a href="/examples/cms-agilitycms">Agility CMS</a></li>
+      <li><a href="/examples/cms-cosmic">Cosmic</a></li>
+      <li><a href="/examples/cms-buttercms">ButterCMS</a></li>
+      <li><a href="/examples/cms-storyblok">Storyblok</a></li>
+      <li><a href="/examples/cms-graphcms">GraphCMS</a></li>
+      <li><a href="/examples/cms-ghost">Ghost</a></li>
+      <li><a href="/examples/blog-starter">Blog Starter</a></li>
+    </ul>
+    <h2 id="how-to-use">How to use</h2>
+    <p>
+      Execute
+      <a
+        href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"
+        ><code>create-next-app</code></a
+      >
+      with <a href="https://docs.npmjs.com/cli/init">npm</a> or
+      <a href="https://yarnpkg.com/lang/en/docs/cli/create/">Yarn</a> to
+      bootstrap the example:
+    </p>
+    <div class="sourceCode" id="cb1">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> create-next-app --example cms-kontent cms-kontent-app</a>
 <a class="sourceLine" id="cb1-2" title="2"><span class="co"># or</span></a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="ex">yarn</span> create next-app --example cms-kontent cms-kontent-app</a></code></pre></div>
-<h2 id="configuration">Configuration</h2>
-<h3 id="step-1.-create-an-account-on-kontent">Step 1. Create an account on Kontent</h3>
-<p>First, <a href="https://app.kontent.ai/sign-up?utm_source=nextjs_docs_example&amp;utm_medium=devrel&amp;utm_campaign=extended_trial">create an account on Kontent.ai</a>.</p>
-<blockquote>
-<p>The link above will provide you with the 90-days trial. Once you finish the trial, or even during the trial period, you could switch to the <a href="https://kontent.ai/developer-plan"><strong>developer plan</strong></a> which is <strong>free of charge</strong> and offers all the features you’ll need to test out the example capabilities.</p>
-</blockquote>
-<p>After signing up, <a href="https://docs.kontent.ai/tutorials/set-up-kontent/projects/manage-projects#a-creating-projects">create an empty project</a>.</p>
-<h3 id="step-2.-create-the-content-models-and-fill-them-with-data">Step 2. Create the content models and fill them with data</h3>
-<p>The <a href="https://docs.kontent.ai/tutorials/set-up-kontent/content-modeling/what-is-content-modeling">content model</a> defines the data structures of your application/websites. The structures are flexible and you can tailor them to your needs.</p>
-<p>For this example you need to create a content model that defines an <code>author</code> and a <code>post</code> content type. <strong>You can import these automatically or by doing it manually</strong> to familiarize yourself with the Kontent user interface.</p>
-<p>To import the content models with their data follow the next steps:</p>
-<ol type="1">
-<li>Enter <a href="https://app.kontent.ai">Kontent application</a></li>
-<li>Go to “Project Settings”, select API keys</li>
-<li>Activate Management API</li>
-<li>Copy <code>Project ID</code> and <code>Management API</code> key</li>
-<li><p>Install <a href="https://github.com/Kentico/kontent-backup-manager-js">Kontent Backup Manager</a> and import data to newly created project from kontent-backup.zip file (place appropriate values for apiKey and projectId arguments):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">npm</span> i -g @kentico/kontent-backup-manager</a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="ex">kbm</span> --action=restore --apiKey=<span class="op">&lt;</span>Management API key<span class="op">&gt;</span> --projectId=<span class="op">&lt;</span>Project ID<span class="op">&gt;</span> --zipFilename=kontent-backup</a></code></pre></div>
-<blockquote>
-<p><strong>💡 Alternatively, you can use the <a href="https://kentico.github.io/kontent-template-manager/import">Template Manager UI</a> for importing the content.</strong></p>
-</blockquote></li>
-<li><p>Go to your Kontent project and publish all the imported items. &gt; You could deactivate Management API key, it is not necessary any more.</p></li>
-</ol>
-<h3 id="step-2.1.-optionally-create-the-content-models-manually">Step 2.1. Optionally create the content models manually</h3>
-<p>You can safely ignore this step if you already imported the content models in Step 2.</p>
-<h4 id="create-an-author-content-type">Create an <code>Author</code> content type</h4>
-<p>From your Kontent project, go to <strong>Content models</strong> and add a new <code>Content type</code>:</p>
-<blockquote>
-<p>you don’t have to modify the element configuration unless specified</p>
-</blockquote>
-<ul>
-<li>Content type name: <code>Author</code></li>
-<li>Add the following content elements
-<ul>
-<li><code>Name</code> - <strong>Text</strong> element</li>
-<li><code>Picture</code> - <strong>Asset</strong> element - configure to allow to select <code>At most 1</code> asset and <code>Limit file types</code> only to <code>Adjustable images</code></li>
-</ul></li>
-</ul>
-<p>Save the content type and continue.</p>
-<p>The content type should look like this:</p>
-<figure>
-<img src="./docs/author-content-type.png" alt="Content type Author" /><figcaption>Content type Author</figcaption>
-</figure>
-<h4 id="create-a-post-content-type">Create a <code>Post</code> content type</h4>
-<p>From your Kontent project, go to <strong>Content models</strong> and add a new content type:</p>
-<blockquote>
-<p>you don’t have to modify the element configuration unless specified</p>
-</blockquote>
-<ul>
-<li>Content type name: <code>Post</code></li>
-<li>Add the following content elements
-<ul>
-<li><code>Title</code> - <strong>Text</strong> element</li>
-<li><code>Date</code> - <strong>Date &amp; time</strong> element</li>
-<li><code>Excerpt</code> - <strong>Text</strong> element</li>
-<li><code>Content</code> - <strong>Rich Text</strong> element</li>
-<li><code>Cover Image</code> - <strong>Asset Text</strong> element - configure to allow to select <code>At most 1</code> asset and <code>Limit file types</code> only to <code>Adjustable images</code> - <code>Content</code> - <code>Slug</code> - <strong>URL slug</strong> element - auto-generated from <code>Title</code> element</li>
-<li><code>Author</code> - <strong>Linked items</strong> element - configure to accept <code>Exactly 1</code> item of type <code>Author</code></li>
-</ul></li>
-</ul>
-<p>Save the content type and continue.</p>
-<p>The content type should look like this:</p>
-<figure>
-<img src="./docs/post-content-type.png" alt="Content type Author" /><figcaption>Content type Author</figcaption>
-</figure>
-<h4 id="fill-content-models-with-data">Fill content models with data</h4>
-<p>Go to <code>Content &amp; Assets</code> section in your project and click <code>Create new</code> on the <code>Content</code> tab and select <code>Author</code> content type.</p>
-<ul>
-<li>You just need <strong>1 author item</strong> first.</li>
-<li>Use dummy data for his name.</li>
-<li>For the image, you can download one from <a href="https://unsplash.com/">Unsplash</a>.</li>
-</ul>
-<p>Next, create another item based on <strong>Post</strong> content type:</p>
-<ul>
-<li>It’s recommend to create at least <strong>2 post items</strong>.</li>
-<li>Use dummy data for the text.</li>
-<li>For images, you can download them from <a href="https://unsplash.com/">Unsplash</a>.</li>
-<li>Pick the <strong>author</strong> you created earlier.</li>
-</ul>
-<p><strong>Important:</strong> For each item, you need to click on <strong>Publish</strong>. If not, the entry will be in draft workflow step.</p>
-<figure>
-<img src="./docs/publish-post-overview.png" alt="Published post item overview" /><figcaption>Published post item overview</figcaption>
-</figure>
-<h3 id="step-3.-set-up-environment-variables">Step 3. Set up environment variables</h3>
-<p>Copy the <code>.env.local.example</code> file in this directory to <code>.env.local</code> (which will be ignored by Git):</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">cp</span> .env.local.example .env.local</a></code></pre></div>
-<p>Then set each variable on <code>.env.local</code> using the keys <code>Project settings</code> &gt; <code>API keys</code>:</p>
-<ul>
-<li><code>KONTENT_PROJECT_ID</code> - Should be the Project ID in <code>Project settings</code> &gt; <code>API keys</code>.</li>
-<li><code>KONTENT_PREVIEW_API_KEY</code> - One of the Preview API keys in <code>Project settings</code> &gt; <code>API keys</code>.</li>
-<li><code>KONTENT_PREVIEW_SECRET</code> - Can be any random string (but avoid spaces), like <code>MY_SECRET</code> - this is used for <a href="https://nextjs.org/docs/advanced-features/preview-mode">Preview Mode</a>.</li>
-</ul>
-<h3 id="step-4.-run-next.js-in-development-mode">Step 4. Run Next.js in development mode</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">npm</span> install</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="ex">yarn</span> create next-app --example cms-kontent cms-kontent-app</a></code></pre>
+    </div>
+    <h2 id="configuration">Configuration</h2>
+    <h3 id="step-1.-create-an-account-on-kontent">
+      Step 1. Create an account on Kontent
+    </h3>
+    <p>
+      First,
+      <a
+        href="https://app.kontent.ai/sign-up?utm_source=nextjs_docs_example&amp;utm_medium=devrel&amp;utm_campaign=extended_trial"
+        >create an account on Kontent.ai</a
+      >.
+    </p>
+    <blockquote>
+      <p>
+        The link above will provide you with the 90-days trial. Once you finish
+        the trial, or even during the trial period, you could switch to the
+        <a href="https://kontent.ai/developer-plan"
+          ><strong>developer plan</strong></a
+        >
+        which is <strong>free of charge</strong> and offers all the features
+        you’ll need to test out the example capabilities.
+      </p>
+    </blockquote>
+    <p>
+      After signing up,
+      <a
+        href="https://docs.kontent.ai/tutorials/set-up-kontent/projects/manage-projects#a-creating-projects"
+        >create an empty project</a
+      >.
+    </p>
+    <h3 id="step-2.-create-the-content-models-and-fill-them-with-data">
+      Step 2. Create the content models and fill them with data
+    </h3>
+    <p>
+      The
+      <a
+        href="https://docs.kontent.ai/tutorials/set-up-kontent/content-modeling/what-is-content-modeling"
+        >content model</a
+      >
+      defines the data structures of your application/websites. The structures
+      are flexible and you can tailor them to your needs.
+    </p>
+    <p>
+      For this example you need to create a content model that defines an
+      <code>author</code> and a <code>post</code> content type.
+      <strong
+        >You can import these automatically or by doing it manually</strong
+      >
+      to familiarize yourself with the Kontent user interface.
+    </p>
+    <p>To import the content models with their data follow the next steps:</p>
+    <ol type="1">
+      <li>Enter <a href="https://app.kontent.ai">Kontent application</a></li>
+      <li>Go to “Project Settings”, select API keys</li>
+      <li>Activate Management API</li>
+      <li>Copy <code>Project ID</code> and <code>Management API</code> key</li>
+      <li>
+        <p>
+          Install
+          <a href="https://github.com/Kentico/kontent-backup-manager-js"
+            >Kontent Backup Manager</a
+          >
+          and import data to newly created project from kontent-backup.zip file
+          (place appropriate values for apiKey and projectId arguments):
+        </p>
+        <div class="sourceCode" id="cb2">
+          <pre
+            class="sourceCode sh"
+          ><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">npm</span> i -g @kentico/kontent-backup-manager</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="ex">kbm</span> --action=restore --apiKey=<span class="op">&lt;</span>Management API key<span class="op">&gt;</span> --projectId=<span class="op">&lt;</span>Project ID<span class="op">&gt;</span> --zipFilename=kontent-backup</a></code></pre>
+        </div>
+        <blockquote>
+          <p>
+            <strong
+              >💡 Alternatively, you can use the
+              <a
+                href="https://kentico.github.io/kontent-template-manager/import"
+                >Template Manager UI</a
+              >
+              for importing the content.</strong
+            >
+          </p>
+        </blockquote>
+      </li>
+      <li>
+        <p>
+          Go to your Kontent project and publish all the imported items. &gt;
+          You could deactivate Management API key, it is not necessary any more.
+        </p>
+      </li>
+    </ol>
+    <h3 id="step-2.1.-optionally-create-the-content-models-manually">
+      Step 2.1. Optionally create the content models manually
+    </h3>
+    <p>
+      You can safely ignore this step if you already imported the content models
+      in Step 2.
+    </p>
+    <h4 id="create-an-author-content-type">
+      Create an <code>Author</code> content type
+    </h4>
+    <p>
+      From your Kontent project, go to <strong>Content models</strong> and add a
+      new <code>Content type</code>:
+    </p>
+    <blockquote>
+      <p>you don’t have to modify the element configuration unless specified</p>
+    </blockquote>
+    <ul>
+      <li>Content type name: <code>Author</code></li>
+      <li>
+        Add the following content elements
+        <ul>
+          <li><code>Name</code> - <strong>Text</strong> element</li>
+          <li>
+            <code>Picture</code> - <strong>Asset</strong> element - configure to
+            allow to select <code>At most 1</code> asset and
+            <code>Limit file types</code> only to <code>Adjustable images</code>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <p>Save the content type and continue.</p>
+    <p>The content type should look like this:</p>
+    <figure>
+      <img src="./docs/author-content-type.png" alt="Content type Author" />
+      <figcaption>Content type Author</figcaption>
+    </figure>
+    <h4 id="create-a-post-content-type">
+      Create a <code>Post</code> content type
+    </h4>
+    <p>
+      From your Kontent project, go to <strong>Content models</strong> and add a
+      new content type:
+    </p>
+    <blockquote>
+      <p>you don’t have to modify the element configuration unless specified</p>
+    </blockquote>
+    <ul>
+      <li>Content type name: <code>Post</code></li>
+      <li>
+        Add the following content elements
+        <ul>
+          <li><code>Title</code> - <strong>Text</strong> element</li>
+          <li><code>Date</code> - <strong>Date &amp; time</strong> element</li>
+          <li><code>Excerpt</code> - <strong>Text</strong> element</li>
+          <li><code>Content</code> - <strong>Rich Text</strong> element</li>
+          <li>
+            <code>Cover Image</code> - <strong>Asset Text</strong> element -
+            configure to allow to select <code>At most 1</code> asset and
+            <code>Limit file types</code> only to
+            <code>Adjustable images</code> - <code>Content</code> -
+            <code>Slug</code> - <strong>URL slug</strong> element -
+            auto-generated from <code>Title</code> element
+          </li>
+          <li>
+            <code>Author</code> - <strong>Linked items</strong> element -
+            configure to accept <code>Exactly 1</code> item of type
+            <code>Author</code>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <p>Save the content type and continue.</p>
+    <p>The content type should look like this:</p>
+    <figure>
+      <img src="./docs/post-content-type.png" alt="Content type Author" />
+      <figcaption>Content type Author</figcaption>
+    </figure>
+    <h4 id="fill-content-models-with-data">Fill content models with data</h4>
+    <p>
+      Go to <code>Content &amp; Assets</code> section in your project and click
+      <code>Create new</code> on the <code>Content</code> tab and select
+      <code>Author</code> content type.
+    </p>
+    <ul>
+      <li>You just need <strong>1 author item</strong> first.</li>
+      <li>Use dummy data for his name.</li>
+      <li>
+        For the image, you can download one from
+        <a href="https://unsplash.com/">Unsplash</a>.
+      </li>
+    </ul>
+    <p>
+      Next, create another item based on <strong>Post</strong> content type:
+    </p>
+    <ul>
+      <li>It’s recommend to create at least <strong>2 post items</strong>.</li>
+      <li>Use dummy data for the text.</li>
+      <li>
+        For images, you can download them from
+        <a href="https://unsplash.com/">Unsplash</a>.
+      </li>
+      <li>Pick the <strong>author</strong> you created earlier.</li>
+    </ul>
+    <p>
+      <strong>Important:</strong> For each item, you need to click on
+      <strong>Publish</strong>. If not, the entry will be in draft workflow
+      step.
+    </p>
+    <figure>
+      <img
+        src="./docs/publish-post-overview.png"
+        alt="Published post item overview"
+      />
+      <figcaption>Published post item overview</figcaption>
+    </figure>
+    <h3 id="step-3.-set-up-environment-variables">
+      Step 3. Set up environment variables
+    </h3>
+    <p>
+      Copy the <code>.env.local.example</code> file in this directory to
+      <code>.env.local</code> (which will be ignored by Git):
+    </p>
+    <div class="sourceCode" id="cb3">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">cp</span> .env.local.example .env.local</a></code></pre>
+    </div>
+    <p>
+      Then set each variable on <code>.env.local</code> using the keys
+      <code>Project settings</code> &gt; <code>API keys</code>:
+    </p>
+    <ul>
+      <li>
+        <code>KONTENT_PROJECT_ID</code> - Should be the Project ID in
+        <code>Project settings</code> &gt; <code>API keys</code>.
+      </li>
+      <li>
+        <code>KONTENT_PREVIEW_API_KEY</code> - One of the Preview API keys in
+        <code>Project settings</code> &gt; <code>API keys</code>.
+      </li>
+      <li>
+        <code>KONTENT_PREVIEW_SECRET</code> - Can be any random string (but
+        avoid spaces), like <code>MY_SECRET</code> - this is used for
+        <a href="https://nextjs.org/docs/advanced-features/preview-mode"
+          >Preview Mode</a
+        >.
+      </li>
+    </ul>
+    <h3 id="step-4.-run-next.js-in-development-mode">
+      Step 4. Run Next.js in development mode
+    </h3>
+    <div class="sourceCode" id="cb4">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">npm</span> install</a>
 <a class="sourceLine" id="cb4-2" title="2"><span class="ex">npm</span> run dev</a>
 <a class="sourceLine" id="cb4-3" title="3"></a>
 <a class="sourceLine" id="cb4-4" title="4"><span class="co"># or</span></a>
 <a class="sourceLine" id="cb4-5" title="5"></a>
 <a class="sourceLine" id="cb4-6" title="6"><span class="ex">yarn</span></a>
-<a class="sourceLine" id="cb4-7" title="7"><span class="ex">yarn</span> dev</a></code></pre></div>
-<p>Your blog should be up and running on <a href="http://localhost:3000">http://localhost:3000</a>! If it doesn’t work, post on <a href="https://github.com/vercel/next.js/discussions">GitHub discussions</a>.</p>
-<h3 id="step-5.-try-preview-mode">Step 5. Try preview mode</h3>
-<p>In your Kontent project, go to <strong>Project Settings &gt; Preview URLs</strong> and set a new preview URL for the <code>Post</code> content type to:</p>
-<pre class="plain"><code>http://localhost:3000/api/preview?secret=&lt;KONTENT_PREVIEW_SECRET&gt;&amp;slug={URLslug}</code></pre>
-<p>Replace <code>&lt;KONTENT_PREVIEW_SECRET&gt;</code> with its respective value in <code>.env.local</code>:</p>
-<figure>
-<img src="./docs/preview-URLs-setup.png" alt="Preview URL setup" /><figcaption>Preview URL setup</figcaption>
-</figure>
-<p>Once saved, go to one of the posts you’ve created and:</p>
-<ul>
-<li>Create a new version of the post</li>
-<li><strong>Update the title</strong>. For example, you can add <code>[Draft]</code> in front of the title. &gt; Mind the title also regenerates the URL slug, if you want to change any other field that does not influence URL slug, feel free to do so.</li>
-<li><strong>Do not</strong> publish it. By doing this, the post will be in draft workflow step.</li>
-<li>On the menu, you will see the <strong>Preview</strong> button. Click on it!</li>
-</ul>
-<p><img src="./docs/post-preview-button.png" alt="Post preview button" />.</p>
-<p>You will now be able to see the updated title. To exit preview mode, you can click on <strong>Click here to exit preview mode</strong> at the top of the page.</p>
-<h3 id="step-6.-deploy-on-vercel">Step 6. Deploy on Vercel</h3>
-<p>You can deploy this app to the cloud with <a href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a> (<a href="https://nextjs.org/docs/deployment">Documentation</a>).</p>
-<h4 id="deploy-your-local-project">Deploy Your Local Project</h4>
-<p>To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and <a href="https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">import to Vercel</a>.</p>
-<p><strong>Important</strong>: When you import your project on Vercel, make sure to click on <strong>Environment Variables</strong> and set them to match your <code>.env.local</code> file.</p>
-<h4 id="deploy-from-our-template">Deploy from Our Template</h4>
-<p>Alternatively, you can deploy using our template by clicking on the Deploy button below.</p>
-<p><a href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/cms-kontent&amp;project-name=cms-kontent&amp;repository-name=cms-kontent&amp;env=KONTENT_PROJECT_ID,KONTENT_PREVIEW_API_KEY,KONTENT_PREVIEW_SECRET&amp;envDescription=Required%20to%20connect%20the%20app%20with%20Kontent&amp;envLink=https://github.com/vercel/next.js/tree/canary/examples/cms-kontent%23step-3-set-up-environment-variables"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a></p>
-</body>
+<a class="sourceLine" id="cb4-7" title="7"><span class="ex">yarn</span> dev</a></code></pre>
+    </div>
+    <p>
+      Your blog should be up and running on
+      <a href="http://localhost:3000">http://localhost:3000</a>! If it doesn’t
+      work, post on
+      <a href="https://github.com/vercel/next.js/discussions"
+        >GitHub discussions</a
+      >.
+    </p>
+    <h3 id="step-5.-try-preview-mode">Step 5. Try preview mode</h3>
+    <p>
+      In your Kontent project, go to
+      <strong>Project Settings &gt; Preview URLs</strong> and set a new preview
+      URL for the <code>Post</code> content type to:
+    </p>
+    <pre
+      class="plain"
+    ><code>http://localhost:3000/api/preview?secret=&lt;KONTENT_PREVIEW_SECRET&gt;&amp;slug={URLslug}</code></pre>
+    <p>
+      Replace <code>&lt;KONTENT_PREVIEW_SECRET&gt;</code> with its respective
+      value in <code>.env.local</code>:
+    </p>
+    <figure>
+      <img src="./docs/preview-URLs-setup.png" alt="Preview URL setup" />
+      <figcaption>Preview URL setup</figcaption>
+    </figure>
+    <p>Once saved, go to one of the posts you’ve created and:</p>
+    <ul>
+      <li>Create a new version of the post</li>
+      <li>
+        <strong>Update the title</strong>. For example, you can add
+        <code>[Draft]</code> in front of the title. &gt; Mind the title also
+        regenerates the URL slug, if you want to change any other field that
+        does not influence URL slug, feel free to do so.
+      </li>
+      <li>
+        <strong>Do not</strong> publish it. By doing this, the post will be in
+        draft workflow step.
+      </li>
+      <li>
+        On the menu, you will see the <strong>Preview</strong> button. Click on
+        it!
+      </li>
+    </ul>
+    <p>
+      <img src="./docs/post-preview-button.png" alt="Post preview button" />.
+    </p>
+    <p>
+      You will now be able to see the updated title. To exit preview mode, you
+      can click on <strong>Click here to exit preview mode</strong> at the top
+      of the page.
+    </p>
+    <h3 id="step-6.-deploy-on-vercel">Step 6. Deploy on Vercel</h3>
+    <p>
+      You can deploy this app to the cloud with
+      <a
+        href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >Vercel</a
+      >
+      (<a href="https://nextjs.org/docs/deployment">Documentation</a>).
+    </p>
+    <h4 id="deploy-your-local-project">Deploy Your Local Project</h4>
+    <p>
+      To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket
+      and
+      <a
+        href="https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >import to Vercel</a
+      >.
+    </p>
+    <p>
+      <strong>Important</strong>: When you import your project on Vercel, make
+      sure to click on <strong>Environment Variables</strong> and set them to
+      match your <code>.env.local</code> file.
+    </p>
+    <h4 id="deploy-from-our-template">Deploy from Our Template</h4>
+    <p>
+      Alternatively, you can deploy using our template by clicking on the Deploy
+      button below.
+    </p>
+    <p>
+      <a
+        href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/cms-kontent&amp;project-name=cms-kontent&amp;repository-name=cms-kontent&amp;env=KONTENT_PROJECT_ID,KONTENT_PREVIEW_API_KEY,KONTENT_PREVIEW_SECRET&amp;envDescription=Required%20to%20connect%20the%20app%20with%20Kontent&amp;envLink=https://github.com/vercel/next.js/tree/canary/examples/cms-kontent%23step-3-set-up-environment-variables"
+        ><img src="https://vercel.com/button" alt="Deploy with Vercel"
+      /></a>
+    </p>
+  </body>
 </html>

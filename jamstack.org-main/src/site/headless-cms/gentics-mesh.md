@@ -9,5 +9,7 @@ supportedgenerators:
   - All
 description: Gentics Mesh is an open source API-first headless CMS.
 ---
+
 ## Gentics Mesh
+
 Gentics Mesh is an open source API-first CMS, complete with multi‑language support, versioning and roles & permissions.

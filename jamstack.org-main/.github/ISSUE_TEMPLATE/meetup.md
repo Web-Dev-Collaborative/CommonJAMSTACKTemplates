@@ -1,9 +1,9 @@
 ---
 name: Start a meetup
 about: Talk to us about starting an official Jamstack meetup
-title: 'Starting a meetup group in [this beautiful city]'
-labels: 'community: new'
-assignees: 'philhawksworth'
+title: "Starting a meetup group in [this beautiful city]"
+labels: "community: new"
+assignees: "philhawksworth"
 ---
 
 You're interested in starting a Jamstack community in your area?
@@ -27,12 +27,10 @@ Please take a look at this information before submitting your issue.
 1. **[Check if there is already an official community](https://jamstack.org/community) in or near your city** - If so, it would be worth joining and supporting that group before deciding to add another. And the organizers of Jamstack groups are likely to welcome some support.
 1. **Organizing an official group takes some commitment** - We're so excited that you've come this far, and we want you to succeed. We ask orgaizers to aim to hold meetings (physical or virtual) at least 3 times a year.
 
-
 ## What you need
 
 1. **An online event space** - Most groups use Meetup.com or Facebook to coordinate their events, but you can use a different tool of your preference. What we encourage is that organizers publish events publicly on a neutral platform.
-1. **A published and actionable code of conduct** - To help the community stay inclusive, safe, and welcoming. 
-
+1. **A published and actionable code of conduct** - To help the community stay inclusive, safe, and welcoming.
 
 ## Where we can help
 

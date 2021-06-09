@@ -14,6 +14,7 @@ images:
   - path: /img/cms/netlify-cms2.png
   - path: /img/cms/netlify-cms3.png
 ---
+
 ## Netlify CMS
 
 A CMS for static site generators. Give non-technical users a simple way to edit and add content to any site built with a static site generator.

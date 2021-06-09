@@ -1,7 +1,6 @@
-
 title: Syntac Studio
 description: We Bring Miracles to your Website & Mobile App.
-link: 'https://syntac.co/'
+link: "https://syntac.co/"
 thumbnailurl: /img/examples/syntac.png
 tools:
   - Jekyll
@@ -10,4 +9,3 @@ tools:
   - GitHub
   - Netlify
   - Netlify CMS
-

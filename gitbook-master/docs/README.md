@@ -18,7 +18,7 @@ Check out the [GitBook Community Slack Channel](https://slack.gitbook.com) for h
 
 ### FAQ
 
-Some questions are frequently asked. If you have a problem you should  [check this out](faq.md) first.
+Some questions are frequently asked. If you have a problem you should [check this out](faq.md) first.
 
 ### Contribute to this documentation
 

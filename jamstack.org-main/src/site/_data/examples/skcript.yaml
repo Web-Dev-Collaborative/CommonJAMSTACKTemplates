@@ -1,7 +1,6 @@
-
 title: Skcript
 description: We build Artificial Intelligence powered products for today’s businesses.
-link: 'https://www.skcript.com/'
+link: "https://www.skcript.com/"
 thumbnailurl: /img/examples/skcript.jpg
 tools:
   - Middleman
@@ -12,4 +11,3 @@ tools:
   - Amazon S3
   - Progressive Web App
   - Google Analytics
-

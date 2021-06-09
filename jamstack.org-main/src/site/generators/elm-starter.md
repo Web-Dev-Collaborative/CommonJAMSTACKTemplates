@@ -16,19 +16,19 @@ description: An Elm-based bootstrapper for Elm applications that supports server
 
 # Characteristics
 
-* Generate a PWA (Progressive Web Application)
-* Mostly written in Elm
-* Pages are pre-rendered at build time
-* Works offline
-* Works without Javascript(\*)
-* SEO
-* Preview cards (Facebook, Twitter, etc.) work as expected
-* Installable both on desktop and on mobile
-* High score with Lighthouse
-* Friendly notifications: "Loading...", "Must enable Javascript...", "Better enable Javascript..."
-* Potentially compatible with all Elm libraries (elm-ui, elm-spa, etc.)
-* Hopefully relatively simple to use and maintain
-* Works with Netlify, Surge, etc.
+- Generate a PWA (Progressive Web Application)
+- Mostly written in Elm
+- Pages are pre-rendered at build time
+- Works offline
+- Works without Javascript(\*)
+- SEO
+- Preview cards (Facebook, Twitter, etc.) work as expected
+- Installable both on desktop and on mobile
+- High score with Lighthouse
+- Friendly notifications: "Loading...", "Must enable Javascript...", "Better enable Javascript..."
+- Potentially compatible with all Elm libraries (elm-ui, elm-spa, etc.)
+- Hopefully relatively simple to use and maintain
+- Works with Netlify, Surge, etc.
 
 # Install
 

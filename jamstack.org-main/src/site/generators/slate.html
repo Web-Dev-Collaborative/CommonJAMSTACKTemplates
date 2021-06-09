@@ -1,33 +1,122 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Slate</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">Slate</h1>
-</header>
-<p><strong>Slate</strong> helps you create beautiful, intelligent, responsive API documentation.</p>
-<h2 id="features">Features</h2>
-<ul>
-<li><p><strong>Clean, intuitive design</strong> — With Slate, the description of your API is on the left side of your documentation, and all the code examples are on the right side. Inspired by <a href="https://stripe.com/docs/api">Stripe’s</a> and <a href="https://developer.paypal.com/webapps/developer/docs/api/">PayPal’s</a> API docs. Slate is responsive, so it looks great on tablets, phones, and even in print.</p></li>
-<li><p><strong>Everything on a single page</strong> — Gone are the days when your users had to search through a million pages to find what they wanted. Slate puts the entire documentation on a single page. We haven’t sacrificed linkability, though. As you scroll, your browser’s hash will update to the nearest header, so linking to a particular point in the documentation is still natural and easy.</p></li>
-<li><p><strong>Slate is just Markdown</strong> — When you write docs with Slate, you’re just writing Markdown, which makes it simple to edit and understand. Everything is written in Markdown — even the code samples are just Markdown code blocks.</p></li>
-<li><p><strong>Write code samples in multiple languages</strong> — If your API has bindings in multiple programming languages, you can easily put in tabs to switch between them. In your document, you’ll distinguish different languages by specifying the language name at the top of each code block, just like with GitHub Flavored Markdown.</p></li>
-<li><p><strong>Out-of-the-box syntax highlighting</strong> for <a href="https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers">over 100 languages</a>, no configuration required.</p></li>
-<li><p><strong>Automatic, smoothly scrolling table of contents</strong> on the far left of the page. As you scroll, it displays your current position in the document. It’s fast, too. We’re using Slate at TripIt to build documentation for our new API, where our table of contents has over 180 entries. We’ve made sure that the performance remains excellent, even for larger documents.</p></li>
-<li><p><strong>Let your users update your documentation for you</strong> — By default, your Slate-generated documentation is hosted in a public GitHub repository. Not only does this mean you get free hosting for your docs with GitHub Pages, but it also makes it simple for other developers to make pull requests to your docs if they find typos or other problems. Of course, if you don’t want to use GitHub, you’re also welcome to host your docs elsewhere.</p></li>
-<li><p><strong>RTL Support</strong> Full right-to-left layout for RTL languages such as Arabic, Persian (Farsi), Hebrew etc.</p></li>
-</ul>
-<p>Getting started with Slate is super easy! Simply fork this repository and follow the instructions below. Or, if you’d like to check out what Slate is capable of, take a look at the <a href="http://slatedocs.github.io/slate">sample docs</a>.</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Slate</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Slate</h1>
+    </header>
+    <p>
+      <strong>Slate</strong> helps you create beautiful, intelligent, responsive
+      API documentation.
+    </p>
+    <h2 id="features">Features</h2>
+    <ul>
+      <li>
+        <p>
+          <strong>Clean, intuitive design</strong> — With Slate, the description
+          of your API is on the left side of your documentation, and all the
+          code examples are on the right side. Inspired by
+          <a href="https://stripe.com/docs/api">Stripe’s</a> and
+          <a href="https://developer.paypal.com/webapps/developer/docs/api/"
+            >PayPal’s</a
+          >
+          API docs. Slate is responsive, so it looks great on tablets, phones,
+          and even in print.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Everything on a single page</strong> — Gone are the days when
+          your users had to search through a million pages to find what they
+          wanted. Slate puts the entire documentation on a single page. We
+          haven’t sacrificed linkability, though. As you scroll, your browser’s
+          hash will update to the nearest header, so linking to a particular
+          point in the documentation is still natural and easy.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Slate is just Markdown</strong> — When you write docs with
+          Slate, you’re just writing Markdown, which makes it simple to edit and
+          understand. Everything is written in Markdown — even the code samples
+          are just Markdown code blocks.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Write code samples in multiple languages</strong> — If your
+          API has bindings in multiple programming languages, you can easily put
+          in tabs to switch between them. In your document, you’ll distinguish
+          different languages by specifying the language name at the top of each
+          code block, just like with GitHub Flavored Markdown.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Out-of-the-box syntax highlighting</strong> for
+          <a
+            href="https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers"
+            >over 100 languages</a
+          >, no configuration required.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Automatic, smoothly scrolling table of contents</strong> on
+          the far left of the page. As you scroll, it displays your current
+          position in the document. It’s fast, too. We’re using Slate at TripIt
+          to build documentation for our new API, where our table of contents
+          has over 180 entries. We’ve made sure that the performance remains
+          excellent, even for larger documents.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Let your users update your documentation for you</strong> — By
+          default, your Slate-generated documentation is hosted in a public
+          GitHub repository. Not only does this mean you get free hosting for
+          your docs with GitHub Pages, but it also makes it simple for other
+          developers to make pull requests to your docs if they find typos or
+          other problems. Of course, if you don’t want to use GitHub, you’re
+          also welcome to host your docs elsewhere.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>RTL Support</strong> Full right-to-left layout for RTL
+          languages such as Arabic, Persian (Farsi), Hebrew etc.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Getting started with Slate is super easy! Simply fork this repository and
+      follow the instructions below. Or, if you’d like to check out what Slate
+      is capable of, take a look at the
+      <a href="http://slatedocs.github.io/slate">sample docs</a>.
+    </p>
+  </body>
 </html>

@@ -18,7 +18,7 @@ templates:
 description: 🔥 Easy and flexible static site generator for Deno 🦕
 ---
 
-**🔥 Lume** is the galician word for *fire,* but also a (yet another) static site generator for Deno.
+**🔥 Lume** is the galician word for _fire,_ but also a (yet another) static site generator for Deno.
 
 It's inspired in other general purpose static site generators such Jekyll or Eleventy but it's simpler and easier to use and configure, besides being super flexible.
 

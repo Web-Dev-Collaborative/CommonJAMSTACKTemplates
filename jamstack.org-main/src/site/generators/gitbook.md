@@ -8,7 +8,7 @@ license:
   - Apache-2.0
 templates:
   - Jinja2
-description: 'A modern publishing toolchain. Simply taking you from ideas to finished, polished books.'
+description: "A modern publishing toolchain. Simply taking you from ideas to finished, polished books."
 twitter: GitBookIO
 ---
 

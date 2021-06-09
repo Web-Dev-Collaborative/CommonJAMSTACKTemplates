@@ -1,42 +1,121 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>LexasCMS</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">LexasCMS</h1>
-</header>
-<h2 id="lexascms">LexasCMS</h2>
-<p>LexasCMS is an API-based CMS that combines powerful content scheduling capabilities with a clean and modern content editing experience. Planning future content delivery has never been easier!</p>
-<p>👉 <a href="https://app.lexascms.com/signup">Start your free trial today!</a></p>
-<h3 id="powerful-content-scheduling-capabilities">Powerful Content Scheduling Capabilities 📅</h3>
-<p>LexasCMS enables you to create multiple variations of each of your content items. You can then optionally define when each variation should become active, and when they should expire.</p>
-<p>As well as allowing you to temporarily override your content, this flexibility enables you to accurately control how and when your content should change over time, minute by minute.</p>
-<h3 id="simple-content-editing-experience-️">Simple Content Editing Experience ✏️</h3>
-<p>Our clean and intuitive content editor is free from distractions and ensures that you can create content as quickly and efficiently as possible.</p>
-<h3 id="bring-your-own-frontend">Bring your own frontend 🎨</h3>
-<p>Develop your websites and applications using whatever tools and frameworks you’re used to. LexasCMS delivers content as raw data making it 100% agnostic about the way your content is displayed.</p>
-<p>See the <a href="https://www.lexascms.com/docs/api-reference/content-delivery/">content delivery API documentation</a>.</p>
-<h3 id="flexible-content-model">Flexible Content Model 🚧</h3>
-<p>Define your perfect content structure using a visual drag and drop editor.</p>
-<p>You’re free to structure your content however you choose, enabling you easily reuse content across multiple websites or applications over multiple platforms and devices.</p>
-<h3 id="graphql-or-jsonapi-rest">GraphQL or JSON:API (REST) 🛠</h3>
-<p>We support delivering content via either <a href="https://www.lexascms.com/docs/api-reference/content-delivery/graphql/">GraphQL</a> or a <a href="https://www.lexascms.com/docs/api-reference/content-delivery/jsonapi/">JSON:API compliant REST API</a>. This ensures that you can request content in a format that suits your specific needs.</p>
-<h3 id="translations">Translations 🌍</h3>
-<p>LexasCMS offers full support for translating your content into as many languages as you need.</p>
-<p>You can even configure locale fallbacks to handle cases when content has not yet been translated.</p>
-<h3 id="integration-guides">Integration Guides 📕</h3>
-<p>If you’re looking to get started quickly, we have a number integration guides available for many popular tools and frameworks.</p>
-<p>These currently include guides for getting started with <a href="https://www.lexascms.com/docs/integrations/ember-js">Ember.js</a>, <a href="https://www.lexascms.com/docs/integrations/gatsby">Gatsby</a>, <a href="https://www.lexascms.com/docs/integrations/next-js">Next.js</a> and <a href="https://www.lexascms.com/docs/integrations/nuxt-js">Nuxt.js</a>.</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>LexasCMS</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">LexasCMS</h1>
+    </header>
+    <h2 id="lexascms">LexasCMS</h2>
+    <p>
+      LexasCMS is an API-based CMS that combines powerful content scheduling
+      capabilities with a clean and modern content editing experience. Planning
+      future content delivery has never been easier!
+    </p>
+    <p>
+      👉
+      <a href="https://app.lexascms.com/signup">Start your free trial today!</a>
+    </p>
+    <h3 id="powerful-content-scheduling-capabilities">
+      Powerful Content Scheduling Capabilities 📅
+    </h3>
+    <p>
+      LexasCMS enables you to create multiple variations of each of your content
+      items. You can then optionally define when each variation should become
+      active, and when they should expire.
+    </p>
+    <p>
+      As well as allowing you to temporarily override your content, this
+      flexibility enables you to accurately control how and when your content
+      should change over time, minute by minute.
+    </p>
+    <h3 id="simple-content-editing-experience-️">
+      Simple Content Editing Experience ✏️
+    </h3>
+    <p>
+      Our clean and intuitive content editor is free from distractions and
+      ensures that you can create content as quickly and efficiently as
+      possible.
+    </p>
+    <h3 id="bring-your-own-frontend">Bring your own frontend 🎨</h3>
+    <p>
+      Develop your websites and applications using whatever tools and frameworks
+      you’re used to. LexasCMS delivers content as raw data making it 100%
+      agnostic about the way your content is displayed.
+    </p>
+    <p>
+      See the
+      <a href="https://www.lexascms.com/docs/api-reference/content-delivery/"
+        >content delivery API documentation</a
+      >.
+    </p>
+    <h3 id="flexible-content-model">Flexible Content Model 🚧</h3>
+    <p>
+      Define your perfect content structure using a visual drag and drop editor.
+    </p>
+    <p>
+      You’re free to structure your content however you choose, enabling you
+      easily reuse content across multiple websites or applications over
+      multiple platforms and devices.
+    </p>
+    <h3 id="graphql-or-jsonapi-rest">GraphQL or JSON:API (REST) 🛠</h3>
+    <p>
+      We support delivering content via either
+      <a
+        href="https://www.lexascms.com/docs/api-reference/content-delivery/graphql/"
+        >GraphQL</a
+      >
+      or a
+      <a
+        href="https://www.lexascms.com/docs/api-reference/content-delivery/jsonapi/"
+        >JSON:API compliant REST API</a
+      >. This ensures that you can request content in a format that suits your
+      specific needs.
+    </p>
+    <h3 id="translations">Translations 🌍</h3>
+    <p>
+      LexasCMS offers full support for translating your content into as many
+      languages as you need.
+    </p>
+    <p>
+      You can even configure locale fallbacks to handle cases when content has
+      not yet been translated.
+    </p>
+    <h3 id="integration-guides">Integration Guides 📕</h3>
+    <p>
+      If you’re looking to get started quickly, we have a number integration
+      guides available for many popular tools and frameworks.
+    </p>
+    <p>
+      These currently include guides for getting started with
+      <a href="https://www.lexascms.com/docs/integrations/ember-js">Ember.js</a
+      >, <a href="https://www.lexascms.com/docs/integrations/gatsby">Gatsby</a>,
+      <a href="https://www.lexascms.com/docs/integrations/next-js">Next.js</a>
+      and
+      <a href="https://www.lexascms.com/docs/integrations/nuxt-js">Nuxt.js</a>.
+    </p>
+  </body>
 </html>

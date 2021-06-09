@@ -1,3 +1,5 @@
-export default withAppContainer(withAuth(props => {
-  const test = props.url
-}))
+export default withAppContainer(
+  withAuth((props) => {
+    const test = props.url
+  })
+)

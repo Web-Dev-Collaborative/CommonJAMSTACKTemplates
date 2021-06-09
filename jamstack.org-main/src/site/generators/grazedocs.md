@@ -8,8 +8,9 @@ license:
   - MIT
 templates:
   - Razor
-description: 'GrazeDocs is a static site generator for creating documentation for your projects.'
+description: "GrazeDocs is a static site generator for creating documentation for your projects."
 ---
+
 ```
 dotnet tool install -g GrazeDocs
 ```

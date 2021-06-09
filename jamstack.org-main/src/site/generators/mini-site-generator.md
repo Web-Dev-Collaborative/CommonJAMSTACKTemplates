@@ -22,12 +22,12 @@ MSG is used in the food industry as a flavor enhancer with an umami taste that i
 
 ```js
 //Inside ___.page.js
-module.exports = function() {
+module.exports = function () {
   return html`
     <p>
       I'm honestly not kidding,<br />
       It's just JavaScript!
     </p>
-  `
-}
+  `;
+};
 ```

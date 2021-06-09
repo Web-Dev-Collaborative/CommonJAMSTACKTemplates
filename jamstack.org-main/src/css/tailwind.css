@@ -2,10 +2,9 @@
 @import "../site/css/ticker.css";
 
 /* purgecss start ignore */
-@tailwind  base;
-@tailwind  components;
+@tailwind base;
+@tailwind components;
 /* purgecss end ignore */
-
 
 @layer base {
   h1 {
@@ -26,9 +25,6 @@
   }
 }
 
-
-
-
 /*
   Content sections conventions
 */
@@ -37,7 +33,6 @@ section {
   @apply max-w-4xl;
   @apply mx-auto;
 }
-
 
 section a,
 dd a {
@@ -51,10 +46,9 @@ dd a:hover,
 dd a:focus {
   @apply border-pink-500;
 }
-p+p {
+p + p {
   @apply mt-4;
 }
-
 
 /*
   CTA links
@@ -79,7 +73,6 @@ a.cta:focus {
   box-shadow: 0px 3px 15px rgba(241, 86, 77, 0.6);
 }
 
-
 /*
   Footer links
 */
@@ -93,7 +86,6 @@ footer p a:focus {
   @apply border-red-500;
 }
 
-
 /*
   left/right flip-flopping lists
 */
@@ -103,7 +95,6 @@ footer p a:focus {
     @apply ml-auto;
   }
 }
-
 
 .videowrapper {
   position: relative;
@@ -120,31 +111,32 @@ footer p a:focus {
 
 /* purgecss start ignore */
 .bg-gradient-jams {
-  background: #D1036F linear-gradient(91.78deg, #D1036F 2.57%, #B6005F 96.33%);
+  background: #d1036f linear-gradient(91.78deg, #d1036f 2.57%, #b6005f 96.33%);
 }
 .bg-gradient-pink-orange,
 .hover\:bg-gradient-pink-orange:hover,
 .hover\:bg-gradient-pink-orange:focus {
-  background: #E7017A linear-gradient(91.78deg, #E7017A 2.57%, #DF4A1F 96.33%);
+  background: #e7017a linear-gradient(91.78deg, #e7017a 2.57%, #df4a1f 96.33%);
 }
 .bg-gradient-blue-green {
-  background: #0090CA linear-gradient(101.87deg, #0090CA 0%, #00BFAD 105.55%);
+  background: #0090ca linear-gradient(101.87deg, #0090ca 0%, #00bfad 105.55%);
 }
 
 .bg-gradient-card-sunrise {
-  --tw-gradient-stops: #F0047F 0%, #FC814A 100%;
+  --tw-gradient-stops: #f0047f 0%, #fc814a 100%;
 }
 .bg-gradient-card-blue {
-  --tw-gradient-stops: #04A2DD 0%, #4FF3EA 100%;
+  --tw-gradient-stops: #04a2dd 0%, #4ff3ea 100%;
 }
 .bg-gradient-card-seafoam {
-  --tw-gradient-stops: #88F9ED 0%, #00FFB2 100%;
+  --tw-gradient-stops: #88f9ed 0%, #00ffb2 100%;
 }
 .bg-gradient-card-gold {
-  --tw-gradient-stops: #FFC803 0%, #FC814A 100%;
+  --tw-gradient-stops: #ffc803 0%, #fc814a 100%;
 }
 .bg-gradient-card-blue-seafoam.bg-gradient-card-blue-seafoam {
-  background: linear-gradient(101.87deg, #0090CA 0%, #00BFAD 105.55%), linear-gradient(180deg, #009DDC 0%, #58FCEC 100%);
+  background: linear-gradient(101.87deg, #0090ca 0%, #00bfad 105.55%),
+    linear-gradient(180deg, #009ddc 0%, #58fcec 100%);
 }
 
 .card-shadow {
@@ -254,7 +246,8 @@ details[open] .summary-swap-open {
 }
 
 /* Desktop sticky nav */
-@media (min-width: 640px) and (min-height: 41.25em) { /* 660px */
+@media (min-width: 640px) and (min-height: 41.25em) {
+  /* 660px */
   .page-header {
     position: sticky;
     top: 0;
@@ -271,12 +264,14 @@ details[open] .summary-swap-open {
 .hero-text {
   font-size: 2.5em;
 }
-@media (min-width: 40em) { /* 640px */
+@media (min-width: 40em) {
+  /* 640px */
   .hero-text {
     font-size: 3em; /* 48px /16 */
   }
 }
-@media (min-width: 64em) { /* 1024px */
+@media (min-width: 64em) {
+  /* 1024px */
   .hero-text {
     font-size: 4em; /* 64px /16 */
   }
@@ -295,7 +290,7 @@ details[open] .summary-swap-open {
 .tool-content h1,
 .tool-content h2,
 .tool-content h3 {
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 .tool-content h1,
 .tool-content h2,
@@ -323,7 +318,7 @@ details[open] .summary-swap-open {
 
 /* Filters */
 .filter-form {
-  opacity: .4;
+  opacity: 0.4;
   pointer-events: none;
 }
 .filter-container--js .filter-form {
@@ -348,7 +343,7 @@ details[open] .summary-swap-open {
   @apply pl-14;
   @apply mx-auto;
   @apply border;
-  border-color: #5A5F75;
+  border-color: #5a5f75;
   @apply rounded-full;
   @apply block;
   @apply w-full;
@@ -369,7 +364,7 @@ details[open] .summary-swap-open {
 @supports (box-shadow: none) {
   .ais-SearchBox-input:focus {
     outline: none;
-    box-shadow: 0 0 1px 4px #E7017A;
+    box-shadow: 0 0 1px 4px #e7017a;
   }
 }
 
@@ -398,8 +393,8 @@ details[open] .summary-swap-open {
   @apply text-sm;
   @apply font-bold;
   position: absolute;
-  right: .4em;
-  top: .4em;
+  right: 0.4em;
+  top: 0.4em;
 }
 .jamstacktv-time {
   display: inline-block;
@@ -446,10 +441,10 @@ details[open] .summary-swap-open {
   @apply italic;
 }
 .jamstacktv-caption-quote:before {
-  content: "“"
+  content: "“";
 }
 .jamstacktv-caption-quote:after {
-  content: "”"
+  content: "”";
 }
 .jamstacktv-no-skip .jamstacktv-title {
   @apply text-2xl;

@@ -2,8 +2,8 @@
 title: Aventum
 repo: TryAventum
 homepage: https://aventum.org/
-opensource: 'Yes'
-typeofcms: 'API Driven'
+opensource: "Yes"
+typeofcms: "API Driven"
 supportedgenerators:
   - All
 description: Aventum is a high-performance, fast, and open-source Headless CMS or you can call it API visual builder, backend visual builder, or Headless CMS visual builder because it is content-agnostic! create your content, no matter how complex it is, and manage it easily!

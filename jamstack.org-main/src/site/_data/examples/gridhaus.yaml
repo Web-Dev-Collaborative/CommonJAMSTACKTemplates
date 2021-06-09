@@ -1,9 +1,8 @@
-
 title: Gridhaus
 description: >-
   Gridhaus is a branding and digital design consultancy based in Singapore and
   Melbourne.
-link: 'https://www.gridhaus.com'
+link: "https://www.gridhaus.com"
 thumbnailurl: /img/examples/gridhaus.jpg
 tools:
   - Netlify
@@ -12,4 +11,3 @@ tools:
   - GitLab
   - Sass
   - Webpack
-

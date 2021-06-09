@@ -7,7 +7,7 @@ language:
 license:
   - MIT
 templates: []
-description: 'QPage or QuickPage is a free project for creating academic homepage without any code'
+description: "QPage or QuickPage is a free project for creating academic homepage without any code"
 ---
 
 QPage or QuickPage is a free project for creating academic homepage without any programming or markup languages.

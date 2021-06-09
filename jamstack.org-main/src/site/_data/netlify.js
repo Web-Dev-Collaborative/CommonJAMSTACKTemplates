@@ -10,5 +10,8 @@ module.exports = {
   via https://docs.netlify.com/configure-builds/environment-variables/
 
    */
-  deployUrl: process.env.CONTEXT === "production" ? PROD_URL : process.env.DEPLOY_PRIME_URL
+  deployUrl:
+    process.env.CONTEXT === "production"
+      ? PROD_URL
+      : process.env.DEPLOY_PRIME_URL,
 };

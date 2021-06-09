@@ -1,7 +1,6 @@
-
 title: Damian Nowak's Blog
 description: Blog & Resume
-link: 'https://www.nowaker.net/'
+link: "https://www.nowaker.net/"
 thumbnailurl: /img/examples/nowaker.png
 tools:
   - Middleman
@@ -12,4 +11,3 @@ tools:
   - jQuery
   - GitLab
   - Firebase
-

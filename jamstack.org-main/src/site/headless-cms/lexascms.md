@@ -10,6 +10,7 @@ description: An API-based CMS that combines powerful content scheduling capabili
 images:
   - path: /img/cms/lexascms-1.jpg
 ---
+
 ## LexasCMS
 
 LexasCMS is an API-based CMS that combines powerful content scheduling capabilities with a clean and modern content editing experience. Planning future content delivery has never been easier!

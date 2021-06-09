@@ -1,7 +1,6 @@
-
 title: a+ Saúde
 description: An even better experience in using health services
-link: 'https://www.amaissaude.com.br/'
+link: "https://www.amaissaude.com.br/"
 thumbnailurl: /img/examples/amaissaude.jpg
 tools:
   - Gatsby.js
@@ -11,4 +10,3 @@ tools:
   - styled-components
   - GitLab
   - Cloudflare
-

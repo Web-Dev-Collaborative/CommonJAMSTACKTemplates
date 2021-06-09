@@ -11,6 +11,7 @@ description: Directus is a database-first platform that provides an instant REST
 images:
   - path: https://docs.directus.io/assets/img/item-detail.dacd91c4.png
 ---
+
 Directus is an open-source suite of software that provides an instant API wrapper for SQL databases and an intuitive Admin App for non-technical users to manage that content. It's like a safe, friendly, and super-powered "database client" (eg: _PHP-my-Admin_ or _Sequel Pro_). Created in 2004, our premium platform powers hundreds-of-thousands of data-driven applications around the world. With our JSON API, webhooks, and complete control over where and how your content is used — what will you build with Directus?
 
 <img class="simple" src="https://docs.directus.io/assets/img/item-detail.dacd91c4.png" alt="Directus 7 — Item Edit" />

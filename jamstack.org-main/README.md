@@ -4,13 +4,11 @@ This is the repo for https://jamstack.org
 
 An entry-point for learning about this architectural model. A place to learn what Jamstack is, for sharing tools, tips, examples and articles. This is also a place to find a local community meetup, or to seek support in starting one of your own.
 
-
 ## Contributing resources
 
 The site includes a showcase of Jamstack examples sites. You can submit a site to be included in this list. We've also collected a set of videos, presentation, articles and other learning resources about Jamstack. You can contribute content to that pool of resources too.
 
 We accept contributions submitted as [pull requests](https://github.com/jamstack/jamstack.org/pulls).
-
 
 ### Contribute a site example
 
@@ -21,6 +19,7 @@ To contribute a site:
 1. Submit a pull request
 
 _example site yaml reference:_
+
 ```yaml
 title: Your site title
 description: A short description of the site.
@@ -34,7 +33,6 @@ tools:
   - used
 ```
 
-
 ### Contribute links to resources
 
 To contribute a link to a resource:
@@ -44,6 +42,7 @@ To contribute a link to a resource:
 1. Submit a pull request
 
 _resource yaml reference:_
+
 ```yaml
 title: Resource title
 date: Publish date (YYYY-MM-DD)
@@ -55,13 +54,11 @@ type:
 
 Before submitting a pull request, or if you are suggesting/contributing code or content changes, it is wise to preview your change in a local build. We've tried to make the process of running a local build as low as possible.
 
-
 ## Running a local build
 
 ### Prerequisites
 
 - [Node and NPM](https://nodejs.org/)
-
 
 ### Installing and running the build
 
@@ -78,7 +75,6 @@ npm install
 # run the build and dev server locally
 npm start
 ```
-
 
 ## Styling with TailwindCSS
 

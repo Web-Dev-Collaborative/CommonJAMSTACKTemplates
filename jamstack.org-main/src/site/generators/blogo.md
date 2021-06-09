@@ -8,7 +8,7 @@ license:
   - MIT
 templates:
   - Jade
-description: 'Blogo is a blog generator based on JS and Jade'
+description: "Blogo is a blog generator based on JS and Jade"
 ---
 
 Blogo is a blog generator based on JS and Jade.

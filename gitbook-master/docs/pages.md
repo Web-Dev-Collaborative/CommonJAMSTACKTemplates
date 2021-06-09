@@ -13,12 +13,12 @@ Adding a nested list to a parent chapter will create subchapters.
 ```markdown
 # Summary
 
-* [Part I](part1/README.md)
-    * [Writing is nice](part1/writing.md)
-    * [GitBook is nice](part1/gitbook.md)
-* [Part II](part2/README.md)
-    * [We love feedback](part2/feedback_please.md)
-    * [Better tools for authors](part2/better_tools.md)
+-   [Part I](part1/README.md)
+    -   [Writing is nice](part1/writing.md)
+    -   [GitBook is nice](part1/gitbook.md)
+-   [Part II](part2/README.md)
+    -   [We love feedback](part2/feedback_please.md)
+    -   [Better tools for authors](part2/better_tools.md)
 ```
 
 Each chapter has a dedicated page (`part#/README.md`) and is split into subchapters.
@@ -32,14 +32,13 @@ Chapters in the Table of Contents can be pointing to specific part of a file usi
 
 ### Part I
 
-* [Part I](part1/README.md)
-    * [Writing is nice](part1/README.md#writing)
-    * [GitBook is nice](part1/README.md#gitbook)
-* [Part II](part2/README.md)
-    * [We love feedback](part2/README.md#feedback)
-    * [Better tools for authors](part2/README.md#tools)
+-   [Part I](part1/README.md)
+    -   [Writing is nice](part1/README.md#writing)
+    -   [GitBook is nice](part1/README.md#gitbook)
+-   [Part II](part2/README.md)
+    -   [We love feedback](part2/README.md#feedback)
+    -   [Better tools for authors](part2/README.md#tools)
 ```
-
 
 ##### Parts
 
@@ -50,17 +49,17 @@ The Table of Contents can be divided into parts separated by headings or horizon
 
 ### Part I
 
-* [Writing is nice](part1/writing.md)
-* [GitBook is nice](part1/gitbook.md)
+-   [Writing is nice](part1/writing.md)
+-   [GitBook is nice](part1/gitbook.md)
 
 ### Part II
 
-* [We love feedback](part2/feedback_please.md)
-* [Better tools for authors](part2/better_tools.md)
+-   [We love feedback](part2/feedback_please.md)
+-   [Better tools for authors](part2/better_tools.md)
 
-----
+---
 
-* [Last part without title](part3/title.md)
+-   [Last part without title](part3/title.md)
 ```
 
 Parts are just groups of chapters and do not have dedicated pages, but according to the theme, it will show in the navigation.
@@ -73,7 +72,7 @@ Most of the files for GitBook use the Markdown syntax by default. GitBook infers
 
 ##### Example of a chapter file
 
-``` markdown
+```markdown
 # Title of the chapter
 
 This is a great introduction.
@@ -85,7 +84,6 @@ Markdown will dictates _most_ of your **book's structure**
 ## Section 2
 
 ...
-
 ```
 
 #### Front Matter
@@ -96,9 +94,7 @@ Pages can contain an optional front matter. It can be used to define the page's 
 ---
 description: This is a short description of my page
 ---
-
 # The content of my page
-...
 ```
 
 The front matter can define variables of your own, they will be added to the [page variable](templating/variables.md) so you can use them in your templating.

@@ -1,7 +1,6 @@
-
 title: Camilia Coiffure
-description: 'Website for the Camilia Coiffure hair salon based in Lyon, France'
-link: 'https://camilia-coiffure.fr'
+description: "Website for the Camilia Coiffure hair salon based in Lyon, France"
+link: "https://camilia-coiffure.fr"
 thumbnailurl: /img/examples/camilia-coiffure.jpg
 tools:
   - React
@@ -11,4 +10,3 @@ tools:
   - Service Workers
   - Tailwind CSS
   - PurgeCSS
-

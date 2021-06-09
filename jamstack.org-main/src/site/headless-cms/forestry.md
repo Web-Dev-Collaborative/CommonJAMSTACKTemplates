@@ -12,13 +12,14 @@ images:
   - path: /img/cms/forestry-ui-2.png
   - path: /img/cms/forestry-ui-3.png
 ---
+
 ## Forestry.io
 
 A customizable Content Manager that focuses on what's important - Editing and Managing Content.
 
 **Content Editors**
 
-Our *clean UI* let's your editors focus on what's important. A powerful WYSIWYG editor and custom editing fields enables them to write with ease and no unnecessary distractions.
+Our _clean UI_ let's your editors focus on what's important. A powerful WYSIWYG editor and custom editing fields enables them to write with ease and no unnecessary distractions.
 
 **Developers**
 
@@ -34,5 +35,4 @@ To have you try our Content Manager out you can either jump right in and let us 
 
 <a href="http://bit.ly/2DbXpL4" class="button primary big" style="padding: 1.25rem 2rem; background-color: #20c997; color: #fff; text-decoration: none;     border: 1px solid transparent; border-radius: 0.15em; cursor: pointer; display: inline-block; font-size: 16px; font-weight: 500; line-height: 1em;">Start building now</a>
 
-<a href="mailto:support@forestry.io" style="font-size: 0.8em; color: #20c997;">*Tell us what you think.*</a>
-
+<a href="mailto:support@forestry.io" style="font-size: 0.8em; color: #20c997;">_Tell us what you think._</a>

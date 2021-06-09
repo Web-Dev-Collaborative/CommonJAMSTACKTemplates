@@ -1,7 +1,6 @@
-
 title: Rye and Beyond Cottages
 description: A holiday rental property site
-link: 'https://ryeandbeyondcottages.co.uk/'
+link: "https://ryeandbeyondcottages.co.uk/"
 thumbnailurl: /img/examples/ryeandbeyondcottages.png
 tools:
   - Gridsome
@@ -10,4 +9,3 @@ tools:
   - Netlify Functions
   - Netlify Large Media
   - Smoobu API
-

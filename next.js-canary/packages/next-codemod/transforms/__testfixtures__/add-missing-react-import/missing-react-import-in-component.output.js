@@ -1,16 +1,15 @@
-import React, { Children, isValidElement } from 'react';
+import React, { Children, isValidElement } from 'react'
 
 function Heading(props) {
-  const { component, className, children, ...rest } = props;
+  const { component, className, children, ...rest } = props
   return React.cloneElement(
     component,
     {
       className: [className, component.props.className || ''].join(' '),
-      ...rest
+      ...rest,
     },
     children
-  );
+  )
 }
 
-
-export default Heading;
+export default Heading

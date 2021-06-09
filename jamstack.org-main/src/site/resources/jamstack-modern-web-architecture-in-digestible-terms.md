@@ -6,5 +6,4 @@ excludeFromSitemap: true
 featured: true
 type:
   - article
-
 ---

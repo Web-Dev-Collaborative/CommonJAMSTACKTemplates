@@ -7,24 +7,21 @@ supportedgenerators:
   - All
 opensource: No
 description: A collaborative headless CMS for multilingual games-as-a-service projects with a powerful API, browser-based spreadsheet UI, and built-in functions to handle localization and frequent updates.
-
 ---
 
 Gridly is a collaborative headless CMS for multilingual games-as-a-service projects with a powerful API, browser-based spreadsheet UI, and built-in functions to handle localization and frequent updates.
 
 Store your structured content in Gridly; create, translate, manage, and update content in one place. Gridly will adapt to your data structures and provide you with granular user access control
 
-
 ### Features
 
-* Version control & Undo
-* Granular user access control
-* Adaptive interface
-* Localization support
-* Instant filtering
-* Developer-friendly API
-* Real-time updates
-
+- Version control & Undo
+- Granular user access control
+- Adaptive interface
+- Localization support
+- Instant filtering
+- Developer-friendly API
+- Real-time updates
 
 ### Try Gridly
 

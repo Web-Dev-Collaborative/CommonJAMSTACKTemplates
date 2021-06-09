@@ -56,21 +56,21 @@ All javascript files in your project are automatically [browserified](https://gi
 You can use node-style `require` statements to include node and npm modules in your code:
 
 ```js
-const url = require('url').parse('https://example.com')
+const url = require("url").parse("https://example.com");
 
-console.log(`the domain is ${url.host}`)
+console.log(`the domain is ${url.host}`);
 ```
 
 You can also use [ES6-style imports](http://babeljs.io/docs/learn-es2015/#modules), if you prefer:
 
 ```js
-import React from 'react'
-import ReactDOM from 'react-dom'
-import domready from 'domready'
+import React from "react";
+import ReactDOM from "react-dom";
+import domready from "domready";
 
 domready(() => {
   // do some React magic
-})
+});
 ```
 
 Scripts are browserified using [`babel-preset-react`](https://babeljs.io/docs/plugins/preset-react/), so you
@@ -170,8 +170,7 @@ lobars includes **comparison helpers** like
 Here's an example use of the `gte` (greater than or equal to) helper:
 
 ```handlebars
-\{{#gte age 21}}
-  You are old enough to drink in the United States.
+\{{#gte age 21}} You are old enough to drink in the United States.
 \{{/gte}}
 ```
 

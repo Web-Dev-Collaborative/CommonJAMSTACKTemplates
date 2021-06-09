@@ -1,120 +1,318 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>contributing</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-  <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-</head>
-<body>
-<h1 id="contributing-to-next.js">Contributing to Next.js</h1>
-<p>Our Commitment to Open Source can be found <a href="https://vercel.com/oss">here</a>.</p>
-<ol type="1">
-<li><a href="https://help.github.com/articles/fork-a-repo/">Fork</a> this repository to your own GitHub account and then <a href="https://help.github.com/articles/cloning-a-repository/">clone</a> it to your local device.</li>
-<li>Create a new branch: <code>git checkout -b MY_BRANCH_NAME</code></li>
-<li>Install yarn: <code>npm install -g yarn</code></li>
-<li>Install the dependencies: <code>yarn</code></li>
-<li>Run <code>yarn dev</code> to build and watch for code changes</li>
-<li>In a new terminal, run <code>yarn types</code> to compile declaration files from TypeScript</li>
-<li>The development branch is <code>canary</code> (this is the branch pull requests should be made against). On a release, the relevant parts of the changes in the <code>canary</code> branch are rebased into <code>master</code>.</li>
-</ol>
-<blockquote>
-<p>You may need to run <code>yarn types</code> again if your types get outdated.</p>
-</blockquote>
-<p>To contribute to <a href="examples">our examples</a>, take a look at the <a href="#adding-examples">“Adding examples” section</a>.</p>
-<h2 id="to-run-tests">To run tests</h2>
-<p>Make sure you have <code>chromedriver</code> installed for your Chrome version. You can install it with</p>
-<ul>
-<li><code>brew install --cask chromedriver</code> on Mac OS X</li>
-<li><code>chocolatey install chromedriver</code> on Windows</li>
-<li>Or manually download the version that matches your installed chrome version (if there’s no match, download a version under it, but not above) from the <a href="https://chromedriver.storage.googleapis.com/index.html">chromedriver repo</a> and add the binary to <code>&lt;next-repo&gt;/node_modules/.bin</code></li>
-</ul>
-<p>Running all tests:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">yarn</span> testonly</a></code></pre></div>
-<p>If you would like to run the tests in headless mode (with the browser windows hidden) you can do</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">yarn</span> testheadless</a></code></pre></div>
-<p>If you would like to use a specific Chrome/Chromium binary to run tests you can specify it with</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="va">CHROME_BIN=</span><span class="st">&#39;path/to/chrome/bin&#39;</span> <span class="ex">yarn</span> testonly</a></code></pre></div>
-<p>Running a specific test suite inside of the <code>test/integration</code> directory:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">yarn</span> testonly --testPathPattern <span class="st">&quot;production&quot;</span></a></code></pre></div>
-<p>Running just one test in the <code>production</code> test suite:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">yarn</span> testonly --testPathPattern <span class="st">&quot;production&quot;</span> -t <span class="st">&quot;should allow etag header support&quot;</span></a></code></pre></div>
-<h2 id="running-the-integration-apps">Running the integration apps</h2>
-<p>Running examples can be done with:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">yarn</span> next ./test/integration/basic</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>contributing</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+    <style type="text/css">
+      a.sourceLine {
+        display: inline-block;
+        line-height: 1.25;
+      }
+      a.sourceLine {
+        pointer-events: none;
+        color: inherit;
+        text-decoration: inherit;
+      }
+      a.sourceLine:empty {
+        height: 1.2em;
+      }
+      .sourceCode {
+        overflow: visible;
+      }
+      code.sourceCode {
+        white-space: pre;
+        position: relative;
+      }
+      div.sourceCode {
+        margin: 1em 0;
+      }
+      pre.sourceCode {
+        margin: 0;
+      }
+      @media screen {
+        div.sourceCode {
+          overflow: auto;
+        }
+      }
+      @media print {
+        code.sourceCode {
+          white-space: pre-wrap;
+        }
+        a.sourceLine {
+          text-indent: -1em;
+          padding-left: 1em;
+        }
+      }
+      pre.numberSource a.sourceLine {
+        position: relative;
+        left: -4em;
+      }
+      pre.numberSource a.sourceLine::before {
+        content: attr(title);
+        position: relative;
+        left: -1em;
+        text-align: right;
+        vertical-align: baseline;
+        border: none;
+        pointer-events: all;
+        display: inline-block;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 4px;
+        width: 4em;
+        color: #aaaaaa;
+      }
+      pre.numberSource {
+        margin-left: 3em;
+        border-left: 1px solid #aaaaaa;
+        padding-left: 4px;
+      }
+      div.sourceCode {
+      }
+      @media screen {
+        a.sourceLine::before {
+          text-decoration: underline;
+        }
+      }
+      code span.al {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Alert */
+      code span.an {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Annotation */
+      code span.at {
+        color: #7d9029;
+      } /* Attribute */
+      code span.bn {
+        color: #40a070;
+      } /* BaseN */
+      code span.bu {
+      } /* BuiltIn */
+      code span.cf {
+        color: #007020;
+        font-weight: bold;
+      } /* ControlFlow */
+      code span.ch {
+        color: #4070a0;
+      } /* Char */
+      code span.cn {
+        color: #880000;
+      } /* Constant */
+      code span.co {
+        color: #60a0b0;
+        font-style: italic;
+      } /* Comment */
+      code span.cv {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* CommentVar */
+      code span.do {
+        color: #ba2121;
+        font-style: italic;
+      } /* Documentation */
+      code span.dt {
+        color: #902000;
+      } /* DataType */
+      code span.dv {
+        color: #40a070;
+      } /* DecVal */
+      code span.er {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Error */
+      code span.ex {
+      } /* Extension */
+      code span.fl {
+        color: #40a070;
+      } /* Float */
+      code span.fu {
+        color: #06287e;
+      } /* Function */
+      code span.im {
+      } /* Import */
+      code span.in {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Information */
+      code span.kw {
+        color: #007020;
+        font-weight: bold;
+      } /* Keyword */
+      code span.op {
+        color: #666666;
+      } /* Operator */
+      code span.ot {
+        color: #007020;
+      } /* Other */
+      code span.pp {
+        color: #bc7a00;
+      } /* Preprocessor */
+      code span.sc {
+        color: #4070a0;
+      } /* SpecialChar */
+      code span.ss {
+        color: #bb6688;
+      } /* SpecialString */
+      code span.st {
+        color: #4070a0;
+      } /* String */
+      code span.va {
+        color: #19177c;
+      } /* Variable */
+      code span.vs {
+        color: #4070a0;
+      } /* VerbatimString */
+      code span.wa {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Warning */
+    </style>
+  </head>
+  <body>
+    <h1 id="contributing-to-next.js">Contributing to Next.js</h1>
+    <p>
+      Our Commitment to Open Source can be found
+      <a href="https://vercel.com/oss">here</a>.
+    </p>
+    <ol type="1">
+      <li>
+        <a href="https://help.github.com/articles/fork-a-repo/">Fork</a> this
+        repository to your own GitHub account and then
+        <a href="https://help.github.com/articles/cloning-a-repository/"
+          >clone</a
+        >
+        it to your local device.
+      </li>
+      <li>Create a new branch: <code>git checkout -b MY_BRANCH_NAME</code></li>
+      <li>Install yarn: <code>npm install -g yarn</code></li>
+      <li>Install the dependencies: <code>yarn</code></li>
+      <li>Run <code>yarn dev</code> to build and watch for code changes</li>
+      <li>
+        In a new terminal, run <code>yarn types</code> to compile declaration
+        files from TypeScript
+      </li>
+      <li>
+        The development branch is <code>canary</code> (this is the branch pull
+        requests should be made against). On a release, the relevant parts of
+        the changes in the <code>canary</code> branch are rebased into
+        <code>master</code>.
+      </li>
+    </ol>
+    <blockquote>
+      <p>
+        You may need to run <code>yarn types</code> again if your types get
+        outdated.
+      </p>
+    </blockquote>
+    <p>
+      To contribute to <a href="examples">our examples</a>, take a look at the
+      <a href="#adding-examples">“Adding examples” section</a>.
+    </p>
+    <h2 id="to-run-tests">To run tests</h2>
+    <p>
+      Make sure you have <code>chromedriver</code> installed for your Chrome
+      version. You can install it with
+    </p>
+    <ul>
+      <li><code>brew install --cask chromedriver</code> on Mac OS X</li>
+      <li><code>chocolatey install chromedriver</code> on Windows</li>
+      <li>
+        Or manually download the version that matches your installed chrome
+        version (if there’s no match, download a version under it, but not
+        above) from the
+        <a href="https://chromedriver.storage.googleapis.com/index.html"
+          >chromedriver repo</a
+        >
+        and add the binary to <code>&lt;next-repo&gt;/node_modules/.bin</code>
+      </li>
+    </ul>
+    <p>Running all tests:</p>
+    <div class="sourceCode" id="cb1">
+      <pre
+        class="sourceCode sh"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">yarn</span> testonly</a></code></pre>
+    </div>
+    <p>
+      If you would like to run the tests in headless mode (with the browser
+      windows hidden) you can do
+    </p>
+    <div class="sourceCode" id="cb2">
+      <pre
+        class="sourceCode sh"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">yarn</span> testheadless</a></code></pre>
+    </div>
+    <p>
+      If you would like to use a specific Chrome/Chromium binary to run tests
+      you can specify it with
+    </p>
+    <div class="sourceCode" id="cb3">
+      <pre
+        class="sourceCode sh"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="va">CHROME_BIN=</span><span class="st">&#39;path/to/chrome/bin&#39;</span> <span class="ex">yarn</span> testonly</a></code></pre>
+    </div>
+    <p>
+      Running a specific test suite inside of the
+      <code>test/integration</code> directory:
+    </p>
+    <div class="sourceCode" id="cb4">
+      <pre
+        class="sourceCode sh"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">yarn</span> testonly --testPathPattern <span class="st">&quot;production&quot;</span></a></code></pre>
+    </div>
+    <p>Running just one test in the <code>production</code> test suite:</p>
+    <div class="sourceCode" id="cb5">
+      <pre
+        class="sourceCode sh"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">yarn</span> testonly --testPathPattern <span class="st">&quot;production&quot;</span> -t <span class="st">&quot;should allow etag header support&quot;</span></a></code></pre>
+    </div>
+    <h2 id="running-the-integration-apps">Running the integration apps</h2>
+    <p>Running examples can be done with:</p>
+    <div class="sourceCode" id="cb6">
+      <pre
+        class="sourceCode sh"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">yarn</span> next ./test/integration/basic</a>
 <a class="sourceLine" id="cb6-2" title="2"><span class="co"># OR</span></a>
-<a class="sourceLine" id="cb6-3" title="3"><span class="ex">yarn</span> next ./examples/basic-css/</a></code></pre></div>
-<p>To figure out which pages are available for the given example, you can run:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="va">EXAMPLE=</span>./test/integration/basic</a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="ex">yarn</span> next ./examples/basic-css/</a></code></pre>
+    </div>
+    <p>
+      To figure out which pages are available for the given example, you can
+      run:
+    </p>
+    <div class="sourceCode" id="cb7">
+      <pre
+        class="sourceCode sh"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="va">EXAMPLE=</span>./test/integration/basic</a>
 <a class="sourceLine" id="cb7-2" title="2"><span class="kw">(\</span></a>
 <a class="sourceLine" id="cb7-3" title="3">  <span class="bu">cd</span> <span class="va">$EXAMPLE</span>/pages<span class="kw">;</span> <span class="kw">\</span></a>
 <a class="sourceLine" id="cb7-4" title="4">  <span class="fu">find</span> . -type f \</a>
@@ -123,33 +321,91 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb7-7" title="7">  <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&#39;s#index\.js##&#39;</span> \</a>
 <a class="sourceLine" id="cb7-8" title="8">  <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&#39;s#\.js$##&#39;</span> \</a>
 <a class="sourceLine" id="cb7-9" title="9">  <span class="kw">|</span> <span class="fu">xargs</span> -I{} <span class="bu">echo</span> localhost:3000{} <span class="kw">\</span></a>
-<a class="sourceLine" id="cb7-10" title="10"><span class="kw">)</span></a></code></pre></div>
-<h2 id="running-your-own-app-with-locally-compiled-version-of-next.js">Running your own app with locally compiled version of Next.js</h2>
-<ol type="1">
-<li><p>In your app’s <code>package.json</code>, replace:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb8-1" title="1"><span class="er">&quot;next&quot;:</span> <span class="er">&quot;&lt;next-version&gt;&quot;,</span></a></code></pre></div>
-<p>with:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode json"><code class="sourceCode json"><a class="sourceLine" id="cb9-1" title="1"><span class="er">&quot;next&quot;:</span> <span class="er">&quot;file:&lt;local-path-to-cloned-nextjs-repo&gt;/packages/next&quot;,</span></a></code></pre></div></li>
-<li><p>In your app’s root directory, make sure to remove <code>next</code> from <code>node_modules</code> with:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="fu">rm</span> -rf ./node_modules/next</a></code></pre></div></li>
-<li><p>In your app’s root directory, run:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1"><span class="ex">yarn</span></a></code></pre></div>
-<p>to re-install all of the dependencies.</p>
-<p>Note that Next will be copied from the locally compiled version as opposed to from being downloaded from the NPM registry.</p></li>
-<li><p>Run your application as you normally would.</p></li>
-<li><p>To update your app’s dependencies, after you’ve made changes to your local <code>next</code> repository. In your app’s root directory, run:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="ex">yarn</span> install --force</a></code></pre></div></li>
-</ol>
-<h2 id="adding-examples">Adding examples</h2>
-<p>When you add an example to the <a href="examples">examples</a> directory, don’t forget to add a <code>README.md</code> file with the following format:</p>
-<ul>
-<li>Replace <code>DIRECTORY_NAME</code> with the directory name you’re adding.</li>
-<li>Fill in <code>Example Name</code> and <code>Description</code>.</li>
-<li>To add additional installation instructions, please add it where appropriate.</li>
-<li>To add additional notes, add <code>## Notes</code> section at the end.</li>
-<li>Remove the <code>Deploy your own</code> section if your example can’t be immediately deployed to Vercel.</li>
-</ul>
-<div class="sourceCode" id="cb13"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb13-1" title="1"><span class="fu"># Example Name</span></a>
+<a class="sourceLine" id="cb7-10" title="10"><span class="kw">)</span></a></code></pre>
+    </div>
+    <h2 id="running-your-own-app-with-locally-compiled-version-of-next.js">
+      Running your own app with locally compiled version of Next.js
+    </h2>
+    <ol type="1">
+      <li>
+        <p>In your app’s <code>package.json</code>, replace:</p>
+        <div class="sourceCode" id="cb8">
+          <pre
+            class="sourceCode json"
+          ><code class="sourceCode json"><a class="sourceLine" id="cb8-1" title="1"><span class="er">&quot;next&quot;:</span> <span class="er">&quot;&lt;next-version&gt;&quot;,</span></a></code></pre>
+        </div>
+        <p>with:</p>
+        <div class="sourceCode" id="cb9">
+          <pre
+            class="sourceCode json"
+          ><code class="sourceCode json"><a class="sourceLine" id="cb9-1" title="1"><span class="er">&quot;next&quot;:</span> <span class="er">&quot;file:&lt;local-path-to-cloned-nextjs-repo&gt;/packages/next&quot;,</span></a></code></pre>
+        </div>
+      </li>
+      <li>
+        <p>
+          In your app’s root directory, make sure to remove
+          <code>next</code> from <code>node_modules</code> with:
+        </p>
+        <div class="sourceCode" id="cb10">
+          <pre
+            class="sourceCode sh"
+          ><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="fu">rm</span> -rf ./node_modules/next</a></code></pre>
+        </div>
+      </li>
+      <li>
+        <p>In your app’s root directory, run:</p>
+        <div class="sourceCode" id="cb11">
+          <pre
+            class="sourceCode sh"
+          ><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1"><span class="ex">yarn</span></a></code></pre>
+        </div>
+        <p>to re-install all of the dependencies.</p>
+        <p>
+          Note that Next will be copied from the locally compiled version as
+          opposed to from being downloaded from the NPM registry.
+        </p>
+      </li>
+      <li><p>Run your application as you normally would.</p></li>
+      <li>
+        <p>
+          To update your app’s dependencies, after you’ve made changes to your
+          local <code>next</code> repository. In your app’s root directory, run:
+        </p>
+        <div class="sourceCode" id="cb12">
+          <pre
+            class="sourceCode sh"
+          ><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="ex">yarn</span> install --force</a></code></pre>
+        </div>
+      </li>
+    </ol>
+    <h2 id="adding-examples">Adding examples</h2>
+    <p>
+      When you add an example to the <a href="examples">examples</a> directory,
+      don’t forget to add a <code>README.md</code> file with the following
+      format:
+    </p>
+    <ul>
+      <li>
+        Replace <code>DIRECTORY_NAME</code> with the directory name you’re
+        adding.
+      </li>
+      <li>Fill in <code>Example Name</code> and <code>Description</code>.</li>
+      <li>
+        To add additional installation instructions, please add it where
+        appropriate.
+      </li>
+      <li>
+        To add additional notes, add <code>## Notes</code> section at the end.
+      </li>
+      <li>
+        Remove the <code>Deploy your own</code> section if your example can’t be
+        immediately deployed to Vercel.
+      </li>
+    </ul>
+    <div class="sourceCode" id="cb13">
+      <pre
+        class="sourceCode markdown"
+      ><code class="sourceCode markdown"><a class="sourceLine" id="cb13-1" title="1"><span class="fu"># Example Name</span></a>
 <a class="sourceLine" id="cb13-2" title="2"></a>
 <a class="sourceLine" id="cb13-3" title="3">Description</a>
 <a class="sourceLine" id="cb13-4" title="4"></a>
@@ -169,6 +425,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb13-18" title="18"><span class="bn">yarn create next-app --example DIRECTORY_NAME DIRECTORY_NAME-app</span></a>
 <a class="sourceLine" id="cb13-19" title="19"><span class="bn">```</span></a>
 <a class="sourceLine" id="cb13-20" title="20"></a>
-<a class="sourceLine" id="cb13-21" title="21">Deploy it to the cloud with <span class="ot">[Vercel](https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example)</span> (<span class="ot">[Documentation](https://nextjs.org/docs/deployment))</span>.</a></code></pre></div>
-</body>
+<a class="sourceLine" id="cb13-21" title="21">Deploy it to the cloud with <span class="ot">[Vercel](https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example)</span> (<span class="ot">[Documentation](https://nextjs.org/docs/deployment))</span>.</a></code></pre>
+    </div>
+  </body>
 </html>

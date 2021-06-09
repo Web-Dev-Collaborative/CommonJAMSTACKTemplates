@@ -223,10 +223,8 @@ export class TerserPlugin {
 
             return minifySpan.traceAsyncFn(async () => {
               if (!output) {
-                const {
-                  source: sourceFromInputSource,
-                  map: inputSourceMap,
-                } = inputSource.sourceAndMap()
+                const { source: sourceFromInputSource, map: inputSourceMap } =
+                  inputSource.sourceAndMap()
 
                 const input = Buffer.isBuffer(sourceFromInputSource)
                   ? sourceFromInputSource.toString()
@@ -337,9 +335,10 @@ export class TerserPlugin {
       }
 
       if (isWebpack5) {
-        const JSModulesHooks = webpack.javascript.JavascriptModulesPlugin.getCompilationHooks(
-          compilation
-        )
+        const JSModulesHooks =
+          webpack.javascript.JavascriptModulesPlugin.getCompilationHooks(
+            compilation
+          )
         JSModulesHooks.chunkHash.tap(pluginName, (chunk, hash) => {
           if (!chunk.hasRuntime()) return
           return handleHashForChunk(hash, chunk)

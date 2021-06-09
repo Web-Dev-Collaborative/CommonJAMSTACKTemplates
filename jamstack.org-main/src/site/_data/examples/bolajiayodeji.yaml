@@ -1,7 +1,6 @@
-
 title: BolajiAyodeji
 description: Articles on web and frontend development written by Bolaji Ayodeji.
-link: 'https://www.bolajiayodeji.com/'
+link: "https://www.bolajiayodeji.com/"
 thumbnailurl: /img/examples/bolajiayodeji.png
 tools:
   - Hugo
@@ -16,4 +15,3 @@ tools:
   - GitHub
   - Netlify
   - Google Analytics
-

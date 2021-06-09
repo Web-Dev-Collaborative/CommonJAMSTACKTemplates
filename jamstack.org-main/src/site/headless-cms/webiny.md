@@ -13,6 +13,7 @@ images:
   - path: /img/cms/webiny-form-builder.gif
   - path: /img/cms/webiny-file-manager.gif
 ---
+
 ## CMS for Serverless Web Development
 
 The way we build, deploy and operate the web is evolving. Webiny is a developer-friendly serverless CMS powered by Node, React and a GraphQL API.
@@ -47,39 +48,39 @@ One language is all you need to know, no matter if you’re coding a SPA or an A
 
 Build Websites, Apps and APIs With Webiny. As a Developer You Will Benefit From Several Features.
 
-* Comes with an admin theme with over 30 React components
-* Built-in server side rendering
-* CSS-in-JS via Emotion
-* Deployment CLI with support for multiple environments
-* Foundation for building dynamic serverless sites and apps
-* Designed and optimized to run inside AWS Lambda
+- Comes with an admin theme with over 30 React components
+- Built-in server side rendering
+- CSS-in-JS via Emotion
+- Deployment CLI with support for multiple environments
+- Foundation for building dynamic serverless sites and apps
+- Designed and optimized to run inside AWS Lambda
 
 ### Webiny Comes With Several Ready-Made Serverless Apps
 
-* [**Page Builder**](https://www.webiny.com/serverless-app/page-builder)
+- [**Page Builder**](https://www.webiny.com/serverless-app/page-builder)
 
-   For when you need a quick landing page created without any coding.
+  For when you need a quick landing page created without any coding.
 
-* [**Form Builder**](https://www.webiny.com/serverless-app/form-builder)
+- [**Form Builder**](https://www.webiny.com/serverless-app/form-builder)
 
-   Create forms using a drag&drop interface and track how they convert.
+  Create forms using a drag&drop interface and track how they convert.
 
-* [**File Manager**](https://www.webiny.com/serverless-app/file-manager)
+- [**File Manager**](https://www.webiny.com/serverless-app/file-manager)
 
-   Upload, categorize, search and edit your files.
+  Upload, categorize, search and edit your files.
 
-* [**Headless CMS**](https://www.webiny.com/serverless-app/headless-cms)
+- [**Headless CMS**](https://www.webiny.com/serverless-app/headless-cms)
 
-   GraphQL based headless CMS with powerful content modeling features.
+  GraphQL based headless CMS with powerful content modeling features.
 
 ### Using Webiny You Get the Full Spectrum of Serverless Benefits Out of the Box
 
-* High-availability and fault tolerance built in
-* 99.999999999% (11 9’s) of data durability
-* Event-driven scalability - pay for what you use
-* Enterprise-grade secure and scalable ACL
-* Great performance using a global CDN
-* DDoS Protection of your APIs
+- High-availability and fault tolerance built in
+- 99.999999999% (11 9’s) of data durability
+- Event-driven scalability - pay for what you use
+- Enterprise-grade secure and scalable ACL
+- Great performance using a global CDN
+- DDoS Protection of your APIs
 
 ### Get Started
 

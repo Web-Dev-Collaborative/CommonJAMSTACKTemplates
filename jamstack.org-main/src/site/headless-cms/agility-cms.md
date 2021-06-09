@@ -8,6 +8,7 @@ supportedgenerators:
   - All
 description: The fastest Headless CMS to prototype, build, and deploy with. Agility CMS is a cloud-based, SaaS, and API platform with Free and Paid pricing tiers.
 ---
+
 ## Agility CMS
 
 The fastest Headless CMS to prototype, build, and deploy with. Agility CMS is a cloud-based, SaaS, and API driven platform with Free and Paid pricing tiers.
@@ -19,6 +20,7 @@ Agility CMS was built by developers for developers to get things done faster and
 ![Agility CMS](https://cdn.agilitycms.com/content-manager/images/screenshots/for-devs-screenshot.png)
 
 ### Architecture
+
 Agility is a Headless CMS. Get started immediately and build your solution on your own terms.
 
 - Agility has APIs for everything. Use the REST API or our sync SDK (or both) to interact with your content.
@@ -27,6 +29,7 @@ Agility is a Headless CMS. Get started immediately and build your solution on yo
 - Database?! What database? Agility hosts and completely abstracts away your database so you never have to worry about maintenance, backups, or connection strings ever again.
 
 ### Configuration
+
 We believe in a content first approach. Configure your CMS instance to suit your needs. Not the other way around.
 
 - Built-in page management allows you to intuitively build out your website tree.
@@ -38,6 +41,7 @@ We believe in a content first approach. Configure your CMS instance to suit your
 - Integrate with anything! With custom fields, webhooks and REST APIs, you have the tools to work with any third-party system.
 
 ### Development
+
 You shouldn't have to re-invent the wheel for each of your projects. Finally, a Headless CMS that can take care of traditional features for you, but gets out the way when you need it.
 
 - Take advantage of the built-in page management, routing, and rendering framework to kickstart your project or roll your own.
@@ -48,11 +52,10 @@ You shouldn't have to re-invent the wheel for each of your projects. Finally, a 
 - Get support when you need it, whether it's by chat, our forum, or email. We are always here to help!
 
 ### DevOps
+
 We don't dictate how or where to deploy your project. Agility CMS will fit perfectly into your DevOps.
 You can host and deploy your projects anywhere.
 
 - Compatible with any DevOps pipeline.
 - Need to know when content has been updated? We have webhooks for that.
 - Agility CMS works with static site generators and we are working towards providing native plugins for Gatsby, VuePress, Gridsome, and Jekyll.
-
-

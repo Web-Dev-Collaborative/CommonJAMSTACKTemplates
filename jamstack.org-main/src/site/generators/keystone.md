@@ -13,9 +13,13 @@ description: Zero config static-site generator & dev server. Templates, partials
 ---
 
 ![Keystone logo](https://github.com/CTNicholas/keystone-ssg/raw/master/keystone_logo_small.png)
+
 # Why Keystone?
+
 Keystone is a static-site generator ideal for quickly building small websites. No setup required, and a collection of handy features are enabled by default.
+
 # Features
+
 - Easy install & setup, one command and ready to go
 - Auto-refresh development server
 - Use templates and reusable partials/imports, with slots
@@ -26,16 +30,25 @@ Keystone is a static-site generator ideal for quickly building small websites. N
 - Search index file generator, for easy website searching
 
 # Getting Started
+
 ## Install
-Create a new directory and run the following command to setup Keystone, package.json, & git. *Node 14.x.x required.*
+
+Create a new directory and run the following command to setup Keystone, package.json, & git. _Node 14.x.x required._
+
 ```
 $  npm install keystone-ssg
 ```
+
 Great, you're installed!
+
 ## Development server
+
 Start the Keystone development server, and then go to `http://localhost:8080` to see the example website.
+
 ```
 $ npm run dev
 ```
+
 # What's next?
+
 Read the rest of the tutorial on our [GitHub page](https://github.com/CTNicholas/keystone-ssg#readme)!

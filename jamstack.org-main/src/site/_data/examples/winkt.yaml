@@ -1,7 +1,6 @@
-
 title: Winkt
 description: Entertainment site for tattoo inspiration
-link: 'https://www.winkt.io'
+link: "https://www.winkt.io"
 thumbnailurl: /img/examples/winkt.jpg
 tools:
   - Next.js
@@ -11,4 +10,3 @@ tools:
   - CSS Modules
   - Express
   - MongoDB
-

@@ -11,4 +11,3 @@ description: Leverage WordPress as a great CMS, but benefit from the speed, secu
 ---
 
 WordPress plugin to publish a static copy of your site to S3, Cloudflare, GitHub Pages, Netlify or anywhere else you can pipe into your CI/CD workflow.
-

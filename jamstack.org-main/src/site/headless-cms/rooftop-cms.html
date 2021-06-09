@@ -1,62 +1,170 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Rooftop</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">Rooftop</h1>
-</header>
-<h2 id="what-is-rooftop">What is Rooftop?</h2>
-<p>Rooftop is a hosted, API-only implementation of the <a href="http://wordpress.org">WordPress</a> CMS. Write your content from the comfort of the familiar WordPress content management tools, and use it anywhere you like, across mobile applications and websites. For more information visit https://www.rooftopcms.com. Documentation is available at https://rooftopcms.readme.io</p>
-<h2 id="what-problem-does-this-solve">What problem does this solve?</h2>
-<p>At <a href="http://www.errorstudio.co.uk">Error</a> we have built many projects where we needed to expose content in several different ways: a web application and marketing site, for example. Or maybe a native mobile app and a website. It’s been fraught with complexity, and the solution is simple. Expose the content as data, without style, so we can display as we want.</p>
-<h3 id="wordpress-the-cms-you-know">WordPress: the CMS you know</h3>
-<p>There are loads of CMSs in the marketplace, but not all of them are open-source or used by millions of websites. You will almost certainly be familiar with WordPress, and so will your clients. Why introduce something else to learn? With Rooftop you don’t need to. Under the bonnet it’s just WordPress. You write a very simple theme to set up content types and taxonomies, and the Rooftop API takes care of the rest.</p>
-<h3 id="the-site-or-application-you-want">The site or application you want</h3>
-<p>With Rooftop responsible for exposing the content as data, you need to consume it. There are solid libraries for Ruby and Node, with more on the way.</p>
-<h2 id="whats-included">What’s included?</h2>
-<h3 id="wordpress-plugins">WordPress plugins</h3>
-<p>Our aim for Rooftop is that you can make use of a set of well-used plugins, and get the data out of the Rooftop API to use in your own applications and sites. We’ve built the following plugins:</p>
-<ul>
-<li><code>rooftop-api-authentication</code>: authenticate using a predefined key, which you add in the admin interface of your Rooftop instance.</li>
-<li><code>rooftop-admin-theme</code>: hide a lot of the WordPress complexity which we take care of, leaving you to concentrate on content</li>
-<li><code>rooftop-preview-mode</code>: allow API clients to see content in draft if they pass the correct header</li>
-<li><code>rooftop-admin-iframe</code>: include the Rooftop admin bar in your site, when the user is logged in</li>
-<li><code>rooftop-response-sanitiser</code>: clean up output to the API, so the content is truly destination-agnostic</li>
-<li><code>rooftop-queue-pusher</code>: send messages to a queue when data in Rooftop is updated</li>
-<li><code>rooftop-events</code>: an extensible model for events management</li>
-<li><code>rooftop-posts2posts-exposer</code>: expose https://github.com/scribu/wp-posts-to-posts data as part of your API responses</li>
-<li><code>rooftop-gravityforms-exposer</code>: expose http://www.gravityforms.com/ data as part of your API responses. If you use the hosted Rooftop solution, you won’t need to pay a separate licence fee.</li>
-<li><code>rooftop-acf-exposer</code>: expose http://www.advancedcustomfields.com/ data as part of your API responses. If you use the hosted Rooftop solution, you won’t need to pay a separate licence fee.</li>
-<li><code>rooftop-search</code>: a more powerful search, based on ElasticSearch.</li>
-</ul>
-<h3 id="other-services">Other Services</h3>
-<ul>
-<li>A ruby gem to send webhook messages to your configured endpoint</li>
-</ul>
-<h3 id="client-libraries">Client libraries</h3>
-<p>These are a work-in-progress. We want to build an ecosystem of open client libraries for many languages. At the moment we’re working on:</p>
-<ul>
-<li><code>rooftop_model</code>: a Ruby client gem for the Rooftop API, following a similar approach to ActiveRecord</li>
-<li><code>rooftop_rails</code>: building on <code>rooftop_model</code> and providing Rails-specific features</li>
-<li><a href="https://github.com/carrot/rooftop-node">rooftop-client</a>: a node client for the Rooftop API</li>
-<li><a href="https://github.com/static-dev/spike-rooftop">spike-rooftop</a>: a <a href="https://github.com/static-dev/spike">spike</a> plugin for the Rooftop API</li>
-</ul>
-<p>Of course Rooftop exposes a sensible REST API to access your data, so there’s no reason why you can’t use any REST library which is capable of adding a couple of custom headers. FORTRAN anyone?</p>
-<h2 id="whats-the-licence-for-rooftop">What’s the licence for Rooftop?</h2>
-<p>This project is GPLv3 licenced (see the LICENCE file in this repo), so if you want to host it yourself, you can.</p>
-<p>Of course, there’s a non-trivial amount of hassle involved in maintaining a secure WordPress multisite installation, so we do the hard work for you at http://www.rooftopcms.com.</p>
-<h2 id="how-do-i-get-started">How do I get started?</h2>
-<p>The docs are available at https://rooftopcms.readme.io.</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Rooftop</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title-block-header">
+      <h1 class="title">Rooftop</h1>
+    </header>
+    <h2 id="what-is-rooftop">What is Rooftop?</h2>
+    <p>
+      Rooftop is a hosted, API-only implementation of the
+      <a href="http://wordpress.org">WordPress</a> CMS. Write your content from
+      the comfort of the familiar WordPress content management tools, and use it
+      anywhere you like, across mobile applications and websites. For more
+      information visit https://www.rooftopcms.com. Documentation is available
+      at https://rooftopcms.readme.io
+    </p>
+    <h2 id="what-problem-does-this-solve">What problem does this solve?</h2>
+    <p>
+      At <a href="http://www.errorstudio.co.uk">Error</a> we have built many
+      projects where we needed to expose content in several different ways: a
+      web application and marketing site, for example. Or maybe a native mobile
+      app and a website. It’s been fraught with complexity, and the solution is
+      simple. Expose the content as data, without style, so we can display as we
+      want.
+    </p>
+    <h3 id="wordpress-the-cms-you-know">WordPress: the CMS you know</h3>
+    <p>
+      There are loads of CMSs in the marketplace, but not all of them are
+      open-source or used by millions of websites. You will almost certainly be
+      familiar with WordPress, and so will your clients. Why introduce something
+      else to learn? With Rooftop you don’t need to. Under the bonnet it’s just
+      WordPress. You write a very simple theme to set up content types and
+      taxonomies, and the Rooftop API takes care of the rest.
+    </p>
+    <h3 id="the-site-or-application-you-want">
+      The site or application you want
+    </h3>
+    <p>
+      With Rooftop responsible for exposing the content as data, you need to
+      consume it. There are solid libraries for Ruby and Node, with more on the
+      way.
+    </p>
+    <h2 id="whats-included">What’s included?</h2>
+    <h3 id="wordpress-plugins">WordPress plugins</h3>
+    <p>
+      Our aim for Rooftop is that you can make use of a set of well-used
+      plugins, and get the data out of the Rooftop API to use in your own
+      applications and sites. We’ve built the following plugins:
+    </p>
+    <ul>
+      <li>
+        <code>rooftop-api-authentication</code>: authenticate using a predefined
+        key, which you add in the admin interface of your Rooftop instance.
+      </li>
+      <li>
+        <code>rooftop-admin-theme</code>: hide a lot of the WordPress complexity
+        which we take care of, leaving you to concentrate on content
+      </li>
+      <li>
+        <code>rooftop-preview-mode</code>: allow API clients to see content in
+        draft if they pass the correct header
+      </li>
+      <li>
+        <code>rooftop-admin-iframe</code>: include the Rooftop admin bar in your
+        site, when the user is logged in
+      </li>
+      <li>
+        <code>rooftop-response-sanitiser</code>: clean up output to the API, so
+        the content is truly destination-agnostic
+      </li>
+      <li>
+        <code>rooftop-queue-pusher</code>: send messages to a queue when data in
+        Rooftop is updated
+      </li>
+      <li>
+        <code>rooftop-events</code>: an extensible model for events management
+      </li>
+      <li>
+        <code>rooftop-posts2posts-exposer</code>: expose
+        https://github.com/scribu/wp-posts-to-posts data as part of your API
+        responses
+      </li>
+      <li>
+        <code>rooftop-gravityforms-exposer</code>: expose
+        http://www.gravityforms.com/ data as part of your API responses. If you
+        use the hosted Rooftop solution, you won’t need to pay a separate
+        licence fee.
+      </li>
+      <li>
+        <code>rooftop-acf-exposer</code>: expose
+        http://www.advancedcustomfields.com/ data as part of your API responses.
+        If you use the hosted Rooftop solution, you won’t need to pay a separate
+        licence fee.
+      </li>
+      <li>
+        <code>rooftop-search</code>: a more powerful search, based on
+        ElasticSearch.
+      </li>
+    </ul>
+    <h3 id="other-services">Other Services</h3>
+    <ul>
+      <li>A ruby gem to send webhook messages to your configured endpoint</li>
+    </ul>
+    <h3 id="client-libraries">Client libraries</h3>
+    <p>
+      These are a work-in-progress. We want to build an ecosystem of open client
+      libraries for many languages. At the moment we’re working on:
+    </p>
+    <ul>
+      <li>
+        <code>rooftop_model</code>: a Ruby client gem for the Rooftop API,
+        following a similar approach to ActiveRecord
+      </li>
+      <li>
+        <code>rooftop_rails</code>: building on <code>rooftop_model</code> and
+        providing Rails-specific features
+      </li>
+      <li>
+        <a href="https://github.com/carrot/rooftop-node">rooftop-client</a>: a
+        node client for the Rooftop API
+      </li>
+      <li>
+        <a href="https://github.com/static-dev/spike-rooftop">spike-rooftop</a>:
+        a <a href="https://github.com/static-dev/spike">spike</a> plugin for the
+        Rooftop API
+      </li>
+    </ul>
+    <p>
+      Of course Rooftop exposes a sensible REST API to access your data, so
+      there’s no reason why you can’t use any REST library which is capable of
+      adding a couple of custom headers. FORTRAN anyone?
+    </p>
+    <h2 id="whats-the-licence-for-rooftop">What’s the licence for Rooftop?</h2>
+    <p>
+      This project is GPLv3 licenced (see the LICENCE file in this repo), so if
+      you want to host it yourself, you can.
+    </p>
+    <p>
+      Of course, there’s a non-trivial amount of hassle involved in maintaining
+      a secure WordPress multisite installation, so we do the hard work for you
+      at http://www.rooftopcms.com.
+    </p>
+    <h2 id="how-do-i-get-started">How do I get started?</h2>
+    <p>The docs are available at https://rooftopcms.readme.io.</p>
+  </body>
 </html>

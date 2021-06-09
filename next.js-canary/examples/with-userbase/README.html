@@ -1,121 +1,342 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>README</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-  <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-</head>
-<body>
-<h1 id="userbase-example">Userbase Example</h1>
-<p>This is an example of using <a href="https://userbase.com">Userbase</a> in a Next.js project.</p>
-<p>Deployed Demo: <a href="https://next-userbase.vercel.app">https://next-userbase.vercel.app</a></p>
-<h2 id="deploy-your-own">Deploy your own</h2>
-<p>Once you have access to <a href="#step-2-setting-up-environment-variables">the environment variables you’ll need</a>, deploy the example using <a href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a>:</p>
-<p><a href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-userbase&amp;project-name=with-userbase&amp;repository-name=with-userbase&amp;env=NEXT_PUBLIC_USERBASE_APP_ID&amp;envDescription=The%20Userbase%20app%20ID,%20found%20in%20the%20Userbase%20dashboard&amp;envLink=https://v1.userbase.com/"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a></p>
-<h2 id="how-to-use">How to use</h2>
-<p>Execute <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"><code>create-next-app</code></a> with <a href="https://docs.npmjs.com/cli/init">npm</a> or <a href="https://yarnpkg.com/lang/en/docs/cli/create/">Yarn</a> to bootstrap the example:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> create-next-app --example with-userbase next-userbase-app</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>README</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+    <style type="text/css">
+      a.sourceLine {
+        display: inline-block;
+        line-height: 1.25;
+      }
+      a.sourceLine {
+        pointer-events: none;
+        color: inherit;
+        text-decoration: inherit;
+      }
+      a.sourceLine:empty {
+        height: 1.2em;
+      }
+      .sourceCode {
+        overflow: visible;
+      }
+      code.sourceCode {
+        white-space: pre;
+        position: relative;
+      }
+      div.sourceCode {
+        margin: 1em 0;
+      }
+      pre.sourceCode {
+        margin: 0;
+      }
+      @media screen {
+        div.sourceCode {
+          overflow: auto;
+        }
+      }
+      @media print {
+        code.sourceCode {
+          white-space: pre-wrap;
+        }
+        a.sourceLine {
+          text-indent: -1em;
+          padding-left: 1em;
+        }
+      }
+      pre.numberSource a.sourceLine {
+        position: relative;
+        left: -4em;
+      }
+      pre.numberSource a.sourceLine::before {
+        content: attr(title);
+        position: relative;
+        left: -1em;
+        text-align: right;
+        vertical-align: baseline;
+        border: none;
+        pointer-events: all;
+        display: inline-block;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 4px;
+        width: 4em;
+        color: #aaaaaa;
+      }
+      pre.numberSource {
+        margin-left: 3em;
+        border-left: 1px solid #aaaaaa;
+        padding-left: 4px;
+      }
+      div.sourceCode {
+      }
+      @media screen {
+        a.sourceLine::before {
+          text-decoration: underline;
+        }
+      }
+      code span.al {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Alert */
+      code span.an {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Annotation */
+      code span.at {
+        color: #7d9029;
+      } /* Attribute */
+      code span.bn {
+        color: #40a070;
+      } /* BaseN */
+      code span.bu {
+      } /* BuiltIn */
+      code span.cf {
+        color: #007020;
+        font-weight: bold;
+      } /* ControlFlow */
+      code span.ch {
+        color: #4070a0;
+      } /* Char */
+      code span.cn {
+        color: #880000;
+      } /* Constant */
+      code span.co {
+        color: #60a0b0;
+        font-style: italic;
+      } /* Comment */
+      code span.cv {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* CommentVar */
+      code span.do {
+        color: #ba2121;
+        font-style: italic;
+      } /* Documentation */
+      code span.dt {
+        color: #902000;
+      } /* DataType */
+      code span.dv {
+        color: #40a070;
+      } /* DecVal */
+      code span.er {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Error */
+      code span.ex {
+      } /* Extension */
+      code span.fl {
+        color: #40a070;
+      } /* Float */
+      code span.fu {
+        color: #06287e;
+      } /* Function */
+      code span.im {
+      } /* Import */
+      code span.in {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Information */
+      code span.kw {
+        color: #007020;
+        font-weight: bold;
+      } /* Keyword */
+      code span.op {
+        color: #666666;
+      } /* Operator */
+      code span.ot {
+        color: #007020;
+      } /* Other */
+      code span.pp {
+        color: #bc7a00;
+      } /* Preprocessor */
+      code span.sc {
+        color: #4070a0;
+      } /* SpecialChar */
+      code span.ss {
+        color: #bb6688;
+      } /* SpecialString */
+      code span.st {
+        color: #4070a0;
+      } /* String */
+      code span.va {
+        color: #19177c;
+      } /* Variable */
+      code span.vs {
+        color: #4070a0;
+      } /* VerbatimString */
+      code span.wa {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Warning */
+    </style>
+  </head>
+  <body>
+    <h1 id="userbase-example">Userbase Example</h1>
+    <p>
+      This is an example of using <a href="https://userbase.com">Userbase</a> in
+      a Next.js project.
+    </p>
+    <p>
+      Deployed Demo:
+      <a href="https://next-userbase.vercel.app"
+        >https://next-userbase.vercel.app</a
+      >
+    </p>
+    <h2 id="deploy-your-own">Deploy your own</h2>
+    <p>
+      Once you have access to
+      <a href="#step-2-setting-up-environment-variables"
+        >the environment variables you’ll need</a
+      >, deploy the example using
+      <a
+        href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >Vercel</a
+      >:
+    </p>
+    <p>
+      <a
+        href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-userbase&amp;project-name=with-userbase&amp;repository-name=with-userbase&amp;env=NEXT_PUBLIC_USERBASE_APP_ID&amp;envDescription=The%20Userbase%20app%20ID,%20found%20in%20the%20Userbase%20dashboard&amp;envLink=https://v1.userbase.com/"
+        ><img src="https://vercel.com/button" alt="Deploy with Vercel"
+      /></a>
+    </p>
+    <h2 id="how-to-use">How to use</h2>
+    <p>
+      Execute
+      <a
+        href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"
+        ><code>create-next-app</code></a
+      >
+      with <a href="https://docs.npmjs.com/cli/init">npm</a> or
+      <a href="https://yarnpkg.com/lang/en/docs/cli/create/">Yarn</a> to
+      bootstrap the example:
+    </p>
+    <div class="sourceCode" id="cb1">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> create-next-app --example with-userbase next-userbase-app</a>
 <a class="sourceLine" id="cb1-2" title="2"><span class="co"># or</span></a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="ex">yarn</span> create next-app --example with-userbase next-userbase-app</a></code></pre></div>
-<h2 id="configuration">Configuration</h2>
-<h3 id="step-1.-create-an-account-on-userbase">Step 1. Create an account on Userbase</h3>
-<p>First, <a href="https://userbase.com">create an account on Userbase</a>.</p>
-<p>After creating an account, make note of your <em>App ID</em> which you’ll be needing later.</p>
-<h3 id="step-2.-setting-up-environment-variables">Step 2. Setting up environment variables</h3>
-<p>Copy the <code>.env.local.example</code> file in this directory to <code>.env.local</code> (which will be ignored by Git):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">cp</span> .env.local.example .env.local</a></code></pre></div>
-<p>Then set the variable on <code>.env.local</code>:</p>
-<ul>
-<li><code>NEXT_PUBLIC_USERBASE_APP_ID</code> should be the <em>App ID</em> from when you created your Userbase account.</li>
-</ul>
-<p>Your <code>.env.local</code> file should look like this:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="va">NEXT_PUBLIC_USERBASE_APP_ID=</span>...</a></code></pre></div>
-<h3 id="step-3.-run-next.js-in-development-mode">Step 3. Run Next.js in development mode</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">npm</span> install</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="ex">yarn</span> create next-app --example with-userbase next-userbase-app</a></code></pre>
+    </div>
+    <h2 id="configuration">Configuration</h2>
+    <h3 id="step-1.-create-an-account-on-userbase">
+      Step 1. Create an account on Userbase
+    </h3>
+    <p>
+      First, <a href="https://userbase.com">create an account on Userbase</a>.
+    </p>
+    <p>
+      After creating an account, make note of your <em>App ID</em> which you’ll
+      be needing later.
+    </p>
+    <h3 id="step-2.-setting-up-environment-variables">
+      Step 2. Setting up environment variables
+    </h3>
+    <p>
+      Copy the <code>.env.local.example</code> file in this directory to
+      <code>.env.local</code> (which will be ignored by Git):
+    </p>
+    <div class="sourceCode" id="cb2">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">cp</span> .env.local.example .env.local</a></code></pre>
+    </div>
+    <p>Then set the variable on <code>.env.local</code>:</p>
+    <ul>
+      <li>
+        <code>NEXT_PUBLIC_USERBASE_APP_ID</code> should be the
+        <em>App ID</em> from when you created your Userbase account.
+      </li>
+    </ul>
+    <p>Your <code>.env.local</code> file should look like this:</p>
+    <div class="sourceCode" id="cb3">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="va">NEXT_PUBLIC_USERBASE_APP_ID=</span>...</a></code></pre>
+    </div>
+    <h3 id="step-3.-run-next.js-in-development-mode">
+      Step 3. Run Next.js in development mode
+    </h3>
+    <div class="sourceCode" id="cb4">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">npm</span> install</a>
 <a class="sourceLine" id="cb4-2" title="2"><span class="ex">npm</span> run dev</a>
 <a class="sourceLine" id="cb4-3" title="3"></a>
 <a class="sourceLine" id="cb4-4" title="4"><span class="co"># or</span></a>
 <a class="sourceLine" id="cb4-5" title="5"></a>
 <a class="sourceLine" id="cb4-6" title="6"><span class="ex">yarn</span> install</a>
-<a class="sourceLine" id="cb4-7" title="7"><span class="ex">yarn</span> dev</a></code></pre></div>
-<p>Your todo app should be up and running on <a href="http://localhost:3000">http://localhost:3000</a>! If it doesn’t work, post on <a href="https://github.com/vercel/next.js/discussions">GitHub discussions</a>.</p>
-<h3 id="step-4.-deploy-on-vercel">Step 4. Deploy on Vercel</h3>
-<p>You can deploy this app to the cloud with <a href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a> (<a href="https://nextjs.org/docs/deployment">Documentation</a>).</p>
-<h4 id="deploy-your-local-project">Deploy Your Local Project</h4>
-<p>To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and <a href="https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">import to Vercel</a>.</p>
-<p><strong>Important</strong>: When you import your project on Vercel, make sure to click on <strong>Environment Variables</strong> and set them to match your <code>.env.local</code> file.</p>
-<h4 id="deploy-from-our-template">Deploy from Our Template</h4>
-<p>Alternatively, you can deploy using our template by clicking on the Deploy button below.</p>
-<p><a href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-userbase&amp;project-name=with-userbase&amp;repository-name=with-userbase&amp;env=NEXT_PUBLIC_USERBASE_APP_ID&amp;envDescription=The%20Userbase%20app%20ID,%20found%20in%20the%20Userbase%20dashboard&amp;envLink=https://v1.userbase.com/"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a></p>
-</body>
+<a class="sourceLine" id="cb4-7" title="7"><span class="ex">yarn</span> dev</a></code></pre>
+    </div>
+    <p>
+      Your todo app should be up and running on
+      <a href="http://localhost:3000">http://localhost:3000</a>! If it doesn’t
+      work, post on
+      <a href="https://github.com/vercel/next.js/discussions"
+        >GitHub discussions</a
+      >.
+    </p>
+    <h3 id="step-4.-deploy-on-vercel">Step 4. Deploy on Vercel</h3>
+    <p>
+      You can deploy this app to the cloud with
+      <a
+        href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >Vercel</a
+      >
+      (<a href="https://nextjs.org/docs/deployment">Documentation</a>).
+    </p>
+    <h4 id="deploy-your-local-project">Deploy Your Local Project</h4>
+    <p>
+      To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket
+      and
+      <a
+        href="https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >import to Vercel</a
+      >.
+    </p>
+    <p>
+      <strong>Important</strong>: When you import your project on Vercel, make
+      sure to click on <strong>Environment Variables</strong> and set them to
+      match your <code>.env.local</code> file.
+    </p>
+    <h4 id="deploy-from-our-template">Deploy from Our Template</h4>
+    <p>
+      Alternatively, you can deploy using our template by clicking on the Deploy
+      button below.
+    </p>
+    <p>
+      <a
+        href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-userbase&amp;project-name=with-userbase&amp;repository-name=with-userbase&amp;env=NEXT_PUBLIC_USERBASE_APP_ID&amp;envDescription=The%20Userbase%20app%20ID,%20found%20in%20the%20Userbase%20dashboard&amp;envLink=https://v1.userbase.com/"
+        ><img src="https://vercel.com/button" alt="Deploy with Vercel"
+      /></a>
+    </p>
+  </body>
 </html>

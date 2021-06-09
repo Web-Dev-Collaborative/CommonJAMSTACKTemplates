@@ -19,12 +19,12 @@ A basic GitBook usually looks something like this:
 
 An overview of what each of these does:
 
-| File | Description |
-| -------- | ----------- |
-| `book.json` | Stores [configuration](config.md) data (__optional__) |
-| `README.md` | Preface / Introduction for your book (**required**) |
-| `SUMMARY.md` | Table of Contents (See [Pages](pages.md)) (__optional__) |
-| `GLOSSARY.md` | Lexicon / List of terms to annotate (See [Glossary](lexicon.md)) (__optional__) |
+| File          | Description                                                                     |
+| ------------- | ------------------------------------------------------------------------------- |
+| `book.json`   | Stores [configuration](config.md) data (**optional**)                           |
+| `README.md`   | Preface / Introduction for your book (**required**)                             |
+| `SUMMARY.md`  | Table of Contents (See [Pages](pages.md)) (**optional**)                        |
+| `GLOSSARY.md` | Lexicon / List of terms to annotate (See [Glossary](lexicon.md)) (**optional**) |
 
 ### Static files and Images
 

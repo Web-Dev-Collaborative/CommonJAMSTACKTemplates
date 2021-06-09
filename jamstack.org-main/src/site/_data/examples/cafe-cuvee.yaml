@@ -1,7 +1,6 @@
-
 title: Café Cuvée
 description: French/Swedish restaurant in Stockholm.
-link: 'https://www.cafecuvee.se'
+link: "https://www.cafecuvee.se"
 thumbnailurl: /img/examples/cafe-cuvee.jpg
 tools:
   - Netlify
@@ -12,4 +11,3 @@ tools:
   - Zapier
   - Mailchimp
   - Google Analytics
-

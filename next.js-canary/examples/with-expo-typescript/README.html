@@ -1,133 +1,383 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>README</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-  <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-</head>
-<body>
-<h1 id="with-expo-typescript">With Expo TypeScript</h1>
-<p><a href="https://itunes.apple.com/app/apple-store/id982107779"><img src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&amp;logo=APPLE&amp;labelColor=999999&amp;logoColor=fff" alt="supports iOS" /></a> <a href="https://play.google.com/store/apps/details?id=host.exp.exponent&amp;referrer=www"><img src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&amp;logo=ANDROID&amp;labelColor=A4C639&amp;logoColor=fff" alt="supports Android" /></a> <a href="https://docs.expo.io/workflow/web/"><img src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&amp;logo=GOOGLE-CHROME&amp;labelColor=4285F4&amp;logoColor=fff" alt="supports web" /></a></p>
-<p>This is a starter project for creating universal React apps with Next.js, Expo, and TypeScript.</p>
-<blockquote>
-<p>💡 For the most updated info, see the <a href="https://docs.expo.io/guides/using-nextjs/">Expo + Next.js Docs</a>!</p>
-</blockquote>
-<figure>
-<img src="./public/demo.png" alt="iOS, Android, and web running with Expo and Next.js" /><figcaption>iOS, Android, and web running with Expo and Next.js</figcaption>
-</figure>
-<ul>
-<li>Next.js cannot be used for SSR in your native app.</li>
-<li>The native bundle is built using the <a href="https://facebook.github.io/metro/">Metro bundler</a> and may not have the same level of optimization as the web bundle which is compiled using the Next.js Webpack configuration.</li>
-<li>Expo transpiles <code>react-native-web</code> packages by default to enable the use of <code>react-native</code> in a browser or Node.js environment.</li>
-<li>All <a href="https://docs.expo.io/versions/latest/">Expo packages</a> work in the browser. If you experience issues using them in a Node environment, please report them here: <a href="https://github.com/expo/expo/issues">Expo issues</a>.</li>
-<li>Most community <code>react-native-*</code> packages do not support web, please refer to <a href="https://reactnative.directory/?web=true">reactnative.directory</a> for a list of web compatible packages.</li>
-<li>Eject the <code>pages/_document</code> component by running <code>yarn next-expo customize</code>.</li>
-<li>To use fonts and images, see <a href="https://docs.expo.io/guides/using-nextjs/#image-support">the Expo docs</a>.</li>
-</ul>
-<h2 id="deploy-your-own">Deploy your own</h2>
-<p>Deploy the example using <a href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a> (web only):</p>
-<p><a href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-expo&amp;project-name=with-expo&amp;repository-name=with-expo"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a></p>
-<p>Deploy the native app to the App store and Play store using <a href="https://docs.expo.io/distribution/app-stores/">Expo deployment</a>.</p>
-<h2 id="how-to-use">How to use</h2>
-<p>Execute <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"><code>create-next-app</code></a> with <a href="https://docs.npmjs.com/cli/init">npm</a> or <a href="https://yarnpkg.com/lang/en/docs/cli/create/">Yarn</a> to bootstrap the example:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> create-next-app --example with-expo-typescript with-expo-typescript-app</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>README</title>
+    <style type="text/css">
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+    </style>
+    <style type="text/css">
+      a.sourceLine {
+        display: inline-block;
+        line-height: 1.25;
+      }
+      a.sourceLine {
+        pointer-events: none;
+        color: inherit;
+        text-decoration: inherit;
+      }
+      a.sourceLine:empty {
+        height: 1.2em;
+      }
+      .sourceCode {
+        overflow: visible;
+      }
+      code.sourceCode {
+        white-space: pre;
+        position: relative;
+      }
+      div.sourceCode {
+        margin: 1em 0;
+      }
+      pre.sourceCode {
+        margin: 0;
+      }
+      @media screen {
+        div.sourceCode {
+          overflow: auto;
+        }
+      }
+      @media print {
+        code.sourceCode {
+          white-space: pre-wrap;
+        }
+        a.sourceLine {
+          text-indent: -1em;
+          padding-left: 1em;
+        }
+      }
+      pre.numberSource a.sourceLine {
+        position: relative;
+        left: -4em;
+      }
+      pre.numberSource a.sourceLine::before {
+        content: attr(title);
+        position: relative;
+        left: -1em;
+        text-align: right;
+        vertical-align: baseline;
+        border: none;
+        pointer-events: all;
+        display: inline-block;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 4px;
+        width: 4em;
+        color: #aaaaaa;
+      }
+      pre.numberSource {
+        margin-left: 3em;
+        border-left: 1px solid #aaaaaa;
+        padding-left: 4px;
+      }
+      div.sourceCode {
+      }
+      @media screen {
+        a.sourceLine::before {
+          text-decoration: underline;
+        }
+      }
+      code span.al {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Alert */
+      code span.an {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Annotation */
+      code span.at {
+        color: #7d9029;
+      } /* Attribute */
+      code span.bn {
+        color: #40a070;
+      } /* BaseN */
+      code span.bu {
+      } /* BuiltIn */
+      code span.cf {
+        color: #007020;
+        font-weight: bold;
+      } /* ControlFlow */
+      code span.ch {
+        color: #4070a0;
+      } /* Char */
+      code span.cn {
+        color: #880000;
+      } /* Constant */
+      code span.co {
+        color: #60a0b0;
+        font-style: italic;
+      } /* Comment */
+      code span.cv {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* CommentVar */
+      code span.do {
+        color: #ba2121;
+        font-style: italic;
+      } /* Documentation */
+      code span.dt {
+        color: #902000;
+      } /* DataType */
+      code span.dv {
+        color: #40a070;
+      } /* DecVal */
+      code span.er {
+        color: #ff0000;
+        font-weight: bold;
+      } /* Error */
+      code span.ex {
+      } /* Extension */
+      code span.fl {
+        color: #40a070;
+      } /* Float */
+      code span.fu {
+        color: #06287e;
+      } /* Function */
+      code span.im {
+      } /* Import */
+      code span.in {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Information */
+      code span.kw {
+        color: #007020;
+        font-weight: bold;
+      } /* Keyword */
+      code span.op {
+        color: #666666;
+      } /* Operator */
+      code span.ot {
+        color: #007020;
+      } /* Other */
+      code span.pp {
+        color: #bc7a00;
+      } /* Preprocessor */
+      code span.sc {
+        color: #4070a0;
+      } /* SpecialChar */
+      code span.ss {
+        color: #bb6688;
+      } /* SpecialString */
+      code span.st {
+        color: #4070a0;
+      } /* String */
+      code span.va {
+        color: #19177c;
+      } /* Variable */
+      code span.vs {
+        color: #4070a0;
+      } /* VerbatimString */
+      code span.wa {
+        color: #60a0b0;
+        font-weight: bold;
+        font-style: italic;
+      } /* Warning */
+    </style>
+  </head>
+  <body>
+    <h1 id="with-expo-typescript">With Expo TypeScript</h1>
+    <p>
+      <a href="https://itunes.apple.com/app/apple-store/id982107779"
+        ><img
+          src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&amp;logo=APPLE&amp;labelColor=999999&amp;logoColor=fff"
+          alt="supports iOS"
+      /></a>
+      <a
+        href="https://play.google.com/store/apps/details?id=host.exp.exponent&amp;referrer=www"
+        ><img
+          src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&amp;logo=ANDROID&amp;labelColor=A4C639&amp;logoColor=fff"
+          alt="supports Android"
+      /></a>
+      <a href="https://docs.expo.io/workflow/web/"
+        ><img
+          src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&amp;logo=GOOGLE-CHROME&amp;labelColor=4285F4&amp;logoColor=fff"
+          alt="supports web"
+      /></a>
+    </p>
+    <p>
+      This is a starter project for creating universal React apps with Next.js,
+      Expo, and TypeScript.
+    </p>
+    <blockquote>
+      <p>
+        💡 For the most updated info, see the
+        <a href="https://docs.expo.io/guides/using-nextjs/"
+          >Expo + Next.js Docs</a
+        >!
+      </p>
+    </blockquote>
+    <figure>
+      <img
+        src="./public/demo.png"
+        alt="iOS, Android, and web running with Expo and Next.js"
+      />
+      <figcaption>
+        iOS, Android, and web running with Expo and Next.js
+      </figcaption>
+    </figure>
+    <ul>
+      <li>Next.js cannot be used for SSR in your native app.</li>
+      <li>
+        The native bundle is built using the
+        <a href="https://facebook.github.io/metro/">Metro bundler</a> and may
+        not have the same level of optimization as the web bundle which is
+        compiled using the Next.js Webpack configuration.
+      </li>
+      <li>
+        Expo transpiles <code>react-native-web</code> packages by default to
+        enable the use of <code>react-native</code> in a browser or Node.js
+        environment.
+      </li>
+      <li>
+        All
+        <a href="https://docs.expo.io/versions/latest/">Expo packages</a> work
+        in the browser. If you experience issues using them in a Node
+        environment, please report them here:
+        <a href="https://github.com/expo/expo/issues">Expo issues</a>.
+      </li>
+      <li>
+        Most community <code>react-native-*</code> packages do not support web,
+        please refer to
+        <a href="https://reactnative.directory/?web=true"
+          >reactnative.directory</a
+        >
+        for a list of web compatible packages.
+      </li>
+      <li>
+        Eject the <code>pages/_document</code> component by running
+        <code>yarn next-expo customize</code>.
+      </li>
+      <li>
+        To use fonts and images, see
+        <a href="https://docs.expo.io/guides/using-nextjs/#image-support"
+          >the Expo docs</a
+        >.
+      </li>
+    </ul>
+    <h2 id="deploy-your-own">Deploy your own</h2>
+    <p>
+      Deploy the example using
+      <a
+        href="https://vercel.com?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >Vercel</a
+      >
+      (web only):
+    </p>
+    <p>
+      <a
+        href="https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-expo&amp;project-name=with-expo&amp;repository-name=with-expo"
+        ><img src="https://vercel.com/button" alt="Deploy with Vercel"
+      /></a>
+    </p>
+    <p>
+      Deploy the native app to the App store and Play store using
+      <a href="https://docs.expo.io/distribution/app-stores/">Expo deployment</a
+      >.
+    </p>
+    <h2 id="how-to-use">How to use</h2>
+    <p>
+      Execute
+      <a
+        href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"
+        ><code>create-next-app</code></a
+      >
+      with <a href="https://docs.npmjs.com/cli/init">npm</a> or
+      <a href="https://yarnpkg.com/lang/en/docs/cli/create/">Yarn</a> to
+      bootstrap the example:
+    </p>
+    <div class="sourceCode" id="cb1">
+      <pre
+        class="sourceCode bash"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">npx</span> create-next-app --example with-expo-typescript with-expo-typescript-app</a>
 <a class="sourceLine" id="cb1-2" title="2"><span class="co"># or</span></a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="ex">yarn</span> create next-app --example with-expo-typescript with-expo-typescript-app</a></code></pre></div>
-<h3 id="running-web">Running web</h3>
-<blockquote>
-<p>🚨 Using default Expo web with Next.js is not supported.</p>
-</blockquote>
-<ul>
-<li>Start the Next.js project with <code>yarn dev</code> (<code>yarn next dev</code>).</li>
-</ul>
-<p>Deploy the web app to the cloud with <a href="https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example">Vercel</a> (<a href="https://nextjs.org/docs/deployment">Documentation</a>).</p>
-<h3 id="running-native">Running native</h3>
-<ul>
-<li>Install the Expo CLI <code>npm i -g expo-cli</code>.</li>
-<li>Start the Metro bundler with <code>yarn ios</code> or <code>yarn android</code> – This runs <code>expo start</code> with the Expo CLI.</li>
-<li>You can run the mobile app using the <a href="https://expo.io/tools">Expo client app</a>, or by running <code>yarn eject</code> and building the project manually (this requires a macbook for iOS).</li>
-</ul>
-<p>Deploy the native app to the App store and Play store using <a href="https://docs.expo.io/distribution/app-stores/">Expo deployment</a>.</p>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p>You may find that certain packages like <code>@ui-kitten/components</code> do not work in the browser. This is because they need to be transpiled by Next.js, you can fix this by doing the following:</p>
-<ul>
-<li>Install the following:</li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">yarn</span> add -D next-compose-plugins next-transpile-modules</a></code></pre></div>
-<ul>
-<li>Modify the Next.js config <code>next.config.js</code>:</li>
-</ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">const</span> <span class="op">{</span> withExpo <span class="op">}</span> <span class="op">=</span> <span class="at">require</span>(<span class="st">&#39;@expo/next-adapter&#39;</span>)</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="ex">yarn</span> create next-app --example with-expo-typescript with-expo-typescript-app</a></code></pre>
+    </div>
+    <h3 id="running-web">Running web</h3>
+    <blockquote>
+      <p>🚨 Using default Expo web with Next.js is not supported.</p>
+    </blockquote>
+    <ul>
+      <li>
+        Start the Next.js project with <code>yarn dev</code> (<code
+          >yarn next dev</code
+        >).
+      </li>
+    </ul>
+    <p>
+      Deploy the web app to the cloud with
+      <a
+        href="https://vercel.com/new?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=next-example"
+        >Vercel</a
+      >
+      (<a href="https://nextjs.org/docs/deployment">Documentation</a>).
+    </p>
+    <h3 id="running-native">Running native</h3>
+    <ul>
+      <li>Install the Expo CLI <code>npm i -g expo-cli</code>.</li>
+      <li>
+        Start the Metro bundler with <code>yarn ios</code> or
+        <code>yarn android</code> – This runs <code>expo start</code> with the
+        Expo CLI.
+      </li>
+      <li>
+        You can run the mobile app using the
+        <a href="https://expo.io/tools">Expo client app</a>, or by running
+        <code>yarn eject</code> and building the project manually (this requires
+        a macbook for iOS).
+      </li>
+    </ul>
+    <p>
+      Deploy the native app to the App store and Play store using
+      <a href="https://docs.expo.io/distribution/app-stores/">Expo deployment</a
+      >.
+    </p>
+    <h2 id="troubleshooting">Troubleshooting</h2>
+    <p>
+      You may find that certain packages like
+      <code>@ui-kitten/components</code> do not work in the browser. This is
+      because they need to be transpiled by Next.js, you can fix this by doing
+      the following:
+    </p>
+    <ul>
+      <li>Install the following:</li>
+    </ul>
+    <div class="sourceCode" id="cb2">
+      <pre
+        class="sourceCode sh"
+      ><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">yarn</span> add -D next-compose-plugins next-transpile-modules</a></code></pre>
+    </div>
+    <ul>
+      <li>Modify the Next.js config <code>next.config.js</code>:</li>
+    </ul>
+    <div class="sourceCode" id="cb3">
+      <pre
+        class="sourceCode js"
+      ><code class="sourceCode javascript"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">const</span> <span class="op">{</span> withExpo <span class="op">}</span> <span class="op">=</span> <span class="at">require</span>(<span class="st">&#39;@expo/next-adapter&#39;</span>)</a>
 <a class="sourceLine" id="cb3-2" title="2"><span class="kw">const</span> withPlugins <span class="op">=</span> <span class="at">require</span>(<span class="st">&#39;next-compose-plugins&#39;</span>)</a>
 <a class="sourceLine" id="cb3-3" title="3"><span class="kw">const</span> withTM <span class="op">=</span> <span class="at">require</span>(<span class="st">&#39;next-transpile-modules&#39;</span>)([</a>
 <a class="sourceLine" id="cb3-4" title="4">  <span class="co">// Add the name of your package here...</span></a>
@@ -136,6 +386,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb3-7" title="7"></a>
 <a class="sourceLine" id="cb3-8" title="8"><span class="va">module</span>.<span class="at">exports</span> <span class="op">=</span> <span class="at">withPlugins</span>([withTM<span class="op">,</span> [withExpo<span class="op">,</span> <span class="op">{</span> <span class="dt">projectRoot</span><span class="op">:</span> __dirname <span class="op">}</span>]]<span class="op">,</span> <span class="op">{</span></a>
 <a class="sourceLine" id="cb3-9" title="9">  <span class="co">// ...</span></a>
-<a class="sourceLine" id="cb3-10" title="10"><span class="op">}</span>)</a></code></pre></div>
-</body>
+<a class="sourceLine" id="cb3-10" title="10"><span class="op">}</span>)</a></code></pre>
+    </div>
+  </body>
 </html>

@@ -8,7 +8,7 @@ license:
   - MIT
 templates:
   - Handlebars
-description: 'Minimalistic, lean & mean, node.js static page generator'
+description: "Minimalistic, lean & mean, node.js static page generator"
 startertemplaterepo: https://github.com/gottwik/enduro_mirror
 ---
 
